@@ -157,7 +157,6 @@ Healthy teams deliver better products.
 - CTOs
 - Technology Directors
 - Consulting Clients
-- Internal Endava opportunities
 
 ---
 
