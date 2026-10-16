@@ -201,11 +201,12 @@ These are future roadmap items.
 # Next Recommended Activities
 
 1. Review and confirm `explore/explore-personal-brand-website/explore-bundle.md`.
-2. Begin Explore Step 2 — Discovery, Part A: Context Capture & Signal Enrichment.
-3. Continue Discovery activities (A1 Context Documentation, A6 Personas, A3 Domain Analysis, A5/A9 Technical Feasibility & Architecture Analysis, A10 Wireframing).
-4. Build PRD (`explore/prds/personal-brand-website-prd.md`).
-5. Build Architecture and ADRs.
-6. Continue Govern.
+2. Use documentation created in the different stages completed,  as artefacts (.md files) to build the webpage 
+	1. Discovery activities (A1 Context Documentation, A6 Personas, A3 Domain Analysis, A5/A9 Technical Feasibility & Architecture Analysis, A10 Wireframing).
+	2. PRD (`explore/prds/personal-brand-website-prd.md`).
+	3. Architecture and ADRs.
+	4. HLDs
+3. Continue webpage implementation.
 
 ---
 
