@@ -8,7 +8,7 @@ Owner: Jairo Enrique Diaz
 
 # Purpose
 
-Define the professional identity of Jairo Enrique Diaz, establishing the strategic foundation for every professional channel including the website, CV, LinkedIn profile, Endava profile, interviews, conference biography, and future portfolio.
+Define the professional identity of Jairo Enrique Diaz, establishing the strategic foundation for every professional channel including the website, CV, LinkedIn profile, interviews, conference biography, and future portfolio.
 
 This document is the single source of truth for the personal brand.
 
