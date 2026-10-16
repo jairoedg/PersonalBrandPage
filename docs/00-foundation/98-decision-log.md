@@ -132,35 +132,93 @@ Status
 
 Approved
 
+
 ---
+
 ## D-011
- 
- Stack and hosting: plain HTML, CSS, and JavaScript, no build step, on GitHub Pages (Q-13).
- Status: Approved
 
----
-## **D-012**
+Stack and hosting: plain HTML, CSS, and JavaScript with no build step, hosted on GitHub Pages. Revisit after the first draft is deployed; Astro or Next.js are options then.
 
-Accessibility target: WCAG 2.1 AA (Q-15).
-Status: Approved
+Source: Q-13
 
----
+Status
 
-## **D-013**
-
-Breakpoints: mobile-first, tablet at 768px, desktop at 1024px. Projects is one column on mobile and two from 768px (Q-15).
-Status: Approved
-
----
-## **D-014:** 
-
-Home previews: 
-Entel Chile, GSK, and DFA Capital Markets, approved for publication. Order and summary fields remain open (Q-08).
-Status: Approved
+Approved
 
 ---
 
-## **D-015**
+## D-012
 
-Contact is a separate screen, as the approved docs say.
-Status: Approved
+Accessibility target: WCAG 2.1 Level AA.
+
+Source: Q-15
+
+Status
+
+Approved
+
+---
+
+## D-013
+
+Breakpoints: mobile-first. Tablet at 768px and desktop at 1024px. Projects shows one column on mobile and two from 768px. Test at 320px wide with no horizontal scrolling.
+
+Source: Q-15
+
+Status
+
+Approved
+
+---
+
+## D-014
+
+Home Project Story previews: Entel Chile, GSK, and DFA Capital Markets, all confirmed as approved for publication. Their order and summary fields remain open.
+
+Source: Q-08 (partial)
+
+Status
+
+Approved
+
+---
+
+## D-015
+
+Contact is a separate screen. Other screens route to it.
+
+Status
+
+Approved
+
+---
+
+## D-016
+
+A minimal 404 page is included for GitHub Pages. It is a system page, not one of the eight visitor screens.
+
+Status
+
+Approved
+
+---
+
+## D-017
+
+Publication eligibility is checked by a small validation script before deployment. The script checks that each Project Story has publication status "approved", that required sections are present, and that no placeholder markers (such as [UNKNOWN] or TBD) remain. It generates no pages, so the no-build-step rule still holds. Each story file needs a publication-status field.
+
+Source: ADR-003
+
+Status
+
+Approved
+
+---
+
+## D-018
+
+Repository layout: the public website lives in site/. docs/ stays in the repository but is not published. A GitHub Actions workflow deploys only site/ to GitHub Pages.
+
+Status
+
+Approved
