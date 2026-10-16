@@ -30,15 +30,15 @@ Jairo Diaz lacks a dedicated professional portfolio website, and the traditional
 
 ## Actors
 
-| Actor | Role | Impact |
-|-------|------|--------|
-| Jairo Enrique Diaz | Owner, subject, sponsor | Provides content, approves direction, receives career opportunities |
-| Recruiters | Primary audience | Evaluate fit for senior Project Manager / Delivery Leader roles |
-| Hiring Managers | Primary audience | Make interview and hiring decisions |
-| Delivery Managers / Program Managers | Secondary audience | Peer evaluation, networking, collaboration |
-| CTOs / Technology Directors | Secondary audience | Assess delivery leadership capability for complex initiatives |
-| Consulting Clients | Secondary audience | Evaluate Jairo for consulting or project leadership engagements |
-| Internal Endava Managers | Secondary audience | Identify internal opportunities for senior delivery roles |
+| Actor                                | Role                    | Impact                                                              |
+| ------------------------------------ | ----------------------- | ------------------------------------------------------------------- |
+| Jairo Enrique Diaz                   | Owner, subject, sponsor | Provides content, approves direction, receives career opportunities |
+| Recruiters                           | Primary audience        | Evaluate fit for senior Project Manager / Delivery Leader roles     |
+| Hiring Managers                      | Primary audience        | Make interview and hiring decisions                                 |
+| Delivery Managers / Program Managers | Secondary audience      | Peer evaluation, networking, collaboration                          |
+| CTOs / Technology Directors          | Secondary audience      | Assess delivery leadership capability for complex initiatives       |
+| Consulting Clients                   | Secondary audience      | Evaluate Jairo for consulting or project leadership engagements     |
+
 
 ## Constraints
 
