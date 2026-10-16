@@ -23,17 +23,17 @@ No A3, A10, PRD, or derived-domain content is changed here. All deferred PRD/A10
 
 `[FACT]` indicates that A3 defines the entity. The nine first-class OOUX candidates and their classification were approved by the Product Owner for this analysis. The evidence tag does not assert that all attributes are public or visitor-visible.
 
-| # | Object | Definition | Type | Evidence |
-|---:|---|---|---|---|
-| 1 | **Professional Profile** | The overall professional identity and positioning of Jairo Enrique Diaz. | Concept | [FACT] Canonical A3 entity; approved first-class candidate. |
-| 2 | **Career Experience** | A period of employment or engagement in Jairo’s career. | Thing | [FACT] Canonical A3 entity; approved first-class candidate. |
-| 3 | **Project** | The factual record of a professional engagement—what was delivered, for whom, and with what outcomes. | Thing | [FACT] Canonical A3 entity; approved first-class candidate. It remains distinct from Project Story and is an internal source record. |
-| 4 | **Project Story** | The curated public narrative representation of a Project, derived only from a validated Project. | Thing | [FACT] Canonical A3 entity; approved first-class candidate. |
-| 5 | **Business Problem** | The organizational problem a Project addressed, framed in business rather than technology terms. | Concept | [FACT] Canonical A3 entity; approved first-class semantic candidate. |
-| 6 | **Business Outcome** | What changed for a client organization or its users. | Concept | [FACT] Canonical A3 entity; approved first-class semantic candidate. |
-| 7 | **Evidence** | Supporting material for publishable claims. | Thing | [FACT] Canonical A3 entity; approved first-class content-governance candidate, primarily internal. |
-| 8 | **Capability** | A business-problem-focused capability demonstrated across Projects. | Concept | [FACT] Canonical A3 entity and taxonomy; approved first-class candidate. |
-| 9 | **Leadership Principle** | A core leadership belief demonstrated through Projects. | Concept | [FACT] Canonical A3 entity; approved first-class candidate. |
+|   # | Object                   | Definition                                                                                            | Type    | Evidence                                                                                                                             |
+| --: | ------------------------ | ----------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+|   1 | **Professional Profile** | The overall professional identity and positioning of Jairo Enrique Diaz.                              | Concept | [FACT] Canonical A3 entity; approved first-class candidate.                                                                          |
+|   2 | **Career Experience**    | A period of employment or engagement in Jairo’s career.                                               | Thing   | [FACT] Canonical A3 entity; approved first-class candidate.                                                                          |
+|   3 | **Project**              | The factual record of a professional engagement—what was delivered, for whom, and with what outcomes. | Thing   | [FACT] Canonical A3 entity; approved first-class candidate. It remains distinct from Project Story and is an internal source record. |
+|   4 | **Project Story**        | The curated public narrative representation of a Project, derived only from a validated Project.      | Thing   | [FACT] Canonical A3 entity; approved first-class candidate.                                                                          |
+|   5 | **Business Problem**     | The organizational problem a Project addressed, framed in business rather than technology terms.      | Concept | [FACT] Canonical A3 entity; approved first-class semantic candidate.                                                                 |
+|   6 | **Business Outcome**     | What changed for a client organization or its users.                                                  | Concept | [FACT] Canonical A3 entity; approved first-class semantic candidate.                                                                 |
+|   7 | **Evidence**             | Supporting material for publishable claims.                                                           | Thing   | [FACT] Canonical A3 entity; approved first-class content-governance candidate, primarily internal.                                   |
+|   8 | **Capability**           | A business-problem-focused capability demonstrated across Projects.                                   | Concept | [FACT] Canonical A3 entity and taxonomy; approved first-class candidate.                                                             |
+|   9 | **Leadership Principle** | A core leadership belief demonstrated through Projects.                                               | Concept | [FACT] Canonical A3 entity; approved first-class candidate.                                                                          |
 
 **Total objects**: 9 (target: 5–12). The count is within the OOUX guidance; no additional objects were added to reach a target.
 
