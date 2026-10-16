@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "6364a12d26cb297d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6dc2aae3c8aa705f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe493c2af059f463",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "57fbbd97d7f12e62",
+    "type": "split",
+    "children": [
+      {
+        "id": "08ac51036b4a2360",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d42f1a9ae6267ed8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4be35caec5bc6775",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ff54aff84c855e3d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 210.95703125
+  },
+  "right": {
+    "id": "713e9e5524d4ea8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "036a69229a3fcda8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a35fc801ebe8b2c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b8ec7d370537b582",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "617f1bcacc99250f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "31d59a06dfeb7192",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4adbce5e841f4b1e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "04be0de9212814bd",
+            "type": "leaf",
+            "state": {
+              "type": "broken-links-view",
+              "state": {},
+              "icon": "unlink",
+              "title": "Broken links"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 253.1015625,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "broken-links:View broken links": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "d42f1a9ae6267ed8",
+  "lastOpenFiles": [
+    "docs",
+    "README.md",
+    "docs",
+    "AGENTS.md",
+    "Welcome.md",
+    "personal-brand-website-ideas-raw 1.md",
+    "personal-brand-website-framing 1.md",
+    "`architecture-context.md`.md",
+    "docs/explore/epics/personal-brand-website-epics.md",
+    "docs/explore/prds/personal-brand-website-prd.md",
+    "docs/explore/explore-personal-brand-website/architecture-context.md",
+    "docs/explore/explore-personal-brand-website/technical-feasibility.md",
+    "docs/explore/explore-personal-brand-website/explore-bundle.md",
+    "docs/explore/explore-personal-brand-website/devops-strategy.md",
+    "docs/00-foundation/00-project-handover.md",
+    "docs/explore/decisions/personal-brand-website-adr-001-logical-responsibility-boundaries.md",
+    "docs/explore/architecture/README.md",
+    "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-refined-concepts.md",
+    "docs/explore/explore-personal-brand-website/domain-analysis.md",
+    "docs/explore/design/wireframes-personal-brand-website.md",
+    "docs/explore/explore-personal-brand-website/personal-brand-discovery-to-ideation-handoff.md",
+    "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-framing.md",
+    "docs/explore/domain/personas-personal-brand-website.md",
+    "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-ideas-raw.md",
+    "docs/explore/explore-personal-brand-website/context.md",
+    "docs/explore/domain/personal-brand-website-domain.md",
+    "explore/explore-personal-brand-website/Ideation/personal-brand-website-ideas-raw 1.md",
+    "docs/explore/explore-personal-brand-website/Figma-Screens.png",
+    "docs/explore/explore-personal-brand-website/Figma-OOUX.png",
+    "docs/explore/explore-personal-brand-website/Figma-DesignLanguage.png",
+    "docs/explore/explore-personal-brand-website/Figma-Components.png",
+    "docs/signal/signals",
+    "docs/signal",
+    "docs/persistent-knowledge",
+    "docs/explore/sources/Project Knowledge Database/TCS",
+    "docs/explore/sources/Project Knowledge Database/Endava",
+    "docs/explore/sources/Project Knowledge Database/Comverse",
+    "docs/explore/sources",
+    "docs/explore/architecture",
+    "docs/explore/prds"
+  ]
+}
