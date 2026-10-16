@@ -1,0 +1,1 @@
+obsidian is syncing automatically ?

@@ -7,7 +7,13 @@
     "explore/epics",
     "explore/prds",
     "explore/prds/personal-brand-website-prd.md",
-    "explore/epics/personal-brand-website-epics.md"
+    "explore/epics/personal-brand-website-epics.md",
+    "docs",
+    "docs/explore",
+    "docs/explore/epics",
+    "docs/explore/prds",
+    "docs/explore/epics/personal-brand-website-epics.md",
+    "docs/explore/prds/personal-brand-website-prd.md"
   ],
   "expandedFileItems": [],
   "expandedLinkItems": [],
