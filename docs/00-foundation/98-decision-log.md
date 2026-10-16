@@ -145,6 +145,12 @@ Accessibility target: WCAG 2.1 AA (Q-15).
  Status: Approved
 
 ---
-**D-013:** Breakpoints: mobile-first, tablet at 768px, desktop at 1024px. Projects is one column on mobile and two from 768px (Q-15).
-- **D-014:** Home previews: Entel Chile, GSK, and DFA Capital Markets, approved for publication. Order and summary fields remain open (Q-08).
+
+**D-013:**
+Breakpoints: mobile-first, tablet at 768px, desktop at 1024px. Projects is one column on mobile and two from 768px (Q-15).
+ Status: Approved
+
+---
+## **D-014:** Home previews: 
+Entel Chile, GSK, and DFA Capital Markets, approved for publication. Order and summary fields remain open (Q-08).
 - **D-015:** Contact is a separate screen, as the approved docs say.
