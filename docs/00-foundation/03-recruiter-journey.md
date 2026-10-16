@@ -35,7 +35,6 @@ Every page should reduce uncertainty and increase confidence.
 - CTOs
 - Technology Directors
 - Consulting Clients
-- Internal Endava opportunities
 
 ---
 
