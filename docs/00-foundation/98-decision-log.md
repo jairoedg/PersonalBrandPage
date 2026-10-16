@@ -173,7 +173,9 @@ Approved
 
 ## D-014
 
-Home Project Story previews: Entel Chile, GSK, and DFA Capital Markets, all confirmed as approved for publication. Their order and summary fields remain open.
+Home Project Story previews: Entel Chile, GSK, and DFA Capital Markets, all confirmed as approved for publication.
+
+Order, newest first: DFA Capital Markets (Endava, 2021–2025), GSK (TCS, 2017–2018), Entel Chile (Comverse, 2015). Summary fields remain open.
 
 Source: Q-08 (partial)
 
