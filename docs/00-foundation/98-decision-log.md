@@ -222,3 +222,13 @@ Repository layout: the public website lives in site/. docs/ stays in the reposit
 Status
 
 Approved
+
+---
+
+## D-019
+
+Website fonts: self-host Inter as woff2 files in site/assets/fonts/, with weights 400, 500, and 600. Keep the SIL Open Font License file next to the fonts. Load them with @font-face in site/assets/css/fonts.css using font-display: swap. Make no third-party font requests. Code text uses the system monospace stack and needs no font file.
+
+Status
+
+Approved
