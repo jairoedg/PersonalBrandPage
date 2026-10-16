@@ -61,7 +61,6 @@ As a consequence:
 - CTOs
 - Technology Directors
 - Consulting Clients
-- Internal Endava Managers
 
 ---
 
