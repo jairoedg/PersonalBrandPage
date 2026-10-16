@@ -19,12 +19,12 @@ This document should always be read before continuing the engagement.
 
 # Current Lifecycle Status
 
-| Phase | Status |
-|--------|--------|
-| Signal | ✅ Completed |
-| Explore | ✅ Step 1 complete — EB-4 approved; Step 2 Discovery ready to start |
-| Govern | ⬜ Pending |
-| Evolve | ⬜ Pending |
+| Phase   | Status      |
+| ------- | ----------- |
+| Signal  | ✅ Completed |
+| Explore | ✅ Completed |
+| Govern  | ⬜ Pending   |
+| Evolve  | ⬜ Pending   |
 
 ---
 
@@ -34,20 +34,6 @@ Build a professional digital portfolio that becomes the authoritative reference 
 
 The website is intended to complement — not replace — the traditional Curriculum Vitae.
 
----
-
-# Learning Goal
-
-This engagement is also used as a hands-on learning project for Dava.Flow.
-
-The objective is to understand the framework by executing every phase instead of generating the final website directly.
-
-Whenever possible:
-
-- Follow Dava.Flow as designed.
-- Review every artifact.
-- Learn the purpose of every phase.
-- Avoid skipping framework steps.
 
 ---
 
