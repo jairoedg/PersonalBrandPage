@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6dc2aae3c8aa705f",
+        "id": "80065c5ce68508d7",
         "type": "tabs",
         "children": [
           {
-            "id": "fe493c2af059f463",
+            "id": "1a4b70918616f668",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -191,7 +191,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.1015625
+    "width": 334.82421875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,45 +208,45 @@
   },
   "active": "d42f1a9ae6267ed8",
   "lastOpenFiles": [
-    "docs",
-    "README.md",
-    "docs",
-    "AGENTS.md",
-    "Welcome.md",
-    "personal-brand-website-ideas-raw 1.md",
-    "personal-brand-website-framing 1.md",
-    "`architecture-context.md`.md",
-    "docs/explore/epics/personal-brand-website-epics.md",
-    "docs/explore/prds/personal-brand-website-prd.md",
-    "docs/explore/explore-personal-brand-website/architecture-context.md",
-    "docs/explore/explore-personal-brand-website/technical-feasibility.md",
-    "docs/explore/explore-personal-brand-website/explore-bundle.md",
-    "docs/explore/explore-personal-brand-website/devops-strategy.md",
-    "docs/00-foundation/00-project-handover.md",
-    "docs/explore/decisions/personal-brand-website-adr-001-logical-responsibility-boundaries.md",
-    "docs/explore/architecture/README.md",
+    "docs/explore/sources/Project Knowledge Database/TCS/Tigo-sox-big-data-program.md",
+    "docs/explore/sources/Project Knowledge Database/TCS/GSK-O2CStreamLead.md",
+    "docs/explore/sources/Project Knowledge Database/TCS/Avianca-DWH-migration-to-Azure.md",
+    "docs/explore/sources/Project Knowledge Database/Endava/DFA-CapitalMarket.md",
+    "docs/explore/sources/Project Knowledge Database/Comverse/GTT-Guyana.md",
+    "docs/explore/sources/Project Knowledge Database/Comverse/Entel-Peru.md",
+    "docs/explore/sources/Project Knowledge Database/Comverse/Entel-Chile.md",
+    "docs/explore/sources/Project Knowledge Database/Comverse/Digicel-Jamaica.md",
+    "docs/explore/sources/Project Knowledge Database/Comverse/Claro-Peru.md",
+    "docs/explore/sources/Project Knowledge Database/TCS",
+    "docs/explore/sources/Project Knowledge Database/README.md",
+    "docs/explore/sources/Project Knowledge Database/Endava",
+    "docs/explore/sources/Project Knowledge Database/Comverse",
     "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-refined-concepts.md",
-    "docs/explore/explore-personal-brand-website/domain-analysis.md",
-    "docs/explore/design/wireframes-personal-brand-website.md",
-    "docs/explore/explore-personal-brand-website/personal-brand-discovery-to-ideation-handoff.md",
-    "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-framing.md",
-    "docs/explore/domain/personas-personal-brand-website.md",
     "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-ideas-raw.md",
-    "docs/explore/explore-personal-brand-website/context.md",
-    "docs/explore/domain/personal-brand-website-domain.md",
-    "explore/explore-personal-brand-website/Ideation/personal-brand-website-ideas-raw 1.md",
+    "docs/explore/explore-personal-brand-website/Ideation/personal-brand-website-framing.md",
+    "docs/signal/signals/20260908-personal-brand-website.md",
+    "docs/explore/sources/tooling.md",
+    "docs/explore/sources/Project Knowledge Database",
+    "docs/explore/sources/CV JairoDiaz - Project Manager.md",
+    "docs/explore/explore-personal-brand-website/test-strategy.md",
+    "docs/explore/explore-personal-brand-website/technical-feasibility.md",
+    "docs/explore/explore-personal-brand-website/step-5-new-session-prompt.md",
+    "docs/explore/explore-personal-brand-website/step-4-to-step-5-architecture-handoff.md",
+    "docs/explore/explore-personal-brand-website/risks.md",
+    "docs/explore/explore-personal-brand-website/personal-brand-website-govern-handoff.md",
+    "docs/explore/explore-personal-brand-website/personal-brand-discovery-to-ideation-handoff.md",
+    "docs/explore/explore-personal-brand-website/ooux-analysis.md",
+    "docs/explore/explore-personal-brand-website/explore-bundle.md",
+    "docs/explore/explore-personal-brand-website/domain-analysis.md",
+    "docs/explore/explore-personal-brand-website/Ideation",
     "docs/explore/explore-personal-brand-website/Figma-Screens.png",
     "docs/explore/explore-personal-brand-website/Figma-OOUX.png",
     "docs/explore/explore-personal-brand-website/Figma-DesignLanguage.png",
     "docs/explore/explore-personal-brand-website/Figma-Components.png",
     "docs/signal/signals",
-    "docs/signal",
-    "docs/persistent-knowledge",
-    "docs/explore/sources/Project Knowledge Database/TCS",
-    "docs/explore/sources/Project Knowledge Database/Endava",
-    "docs/explore/sources/Project Knowledge Database/Comverse",
     "docs/explore/sources",
-    "docs/explore/architecture",
-    "docs/explore/prds"
+    "docs/explore/explore-personal-brand-website",
+    "docs/explore/prds",
+    "docs/explore/hlds"
   ]
 }
