@@ -175,14 +175,23 @@
               "icon": "unlink",
               "title": "Broken links"
             }
+          },
+          {
+            "id": "7b0f39758e167f33",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 253.1015625,
-    "collapsed": true
+    "width": 253.1015625
   },
   "left-ribbon": {
     "hiddenItems": {
