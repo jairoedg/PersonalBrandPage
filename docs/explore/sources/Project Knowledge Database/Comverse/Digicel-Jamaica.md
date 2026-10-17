@@ -1,7 +1,7 @@
 # Digicel Jamaica – VAS Platform Relocation
 
 **Company:** Comverse (later Mavenir)  
-**Period:** 2011–2012  
+**Period:** June 2011– February 2012  
 **Role:** Senior Project Lead — Implementation Lead / Customer Delivery Lead  
 **Industry:** Telecommunications  
 **Country:** Jamaica / Haiti  

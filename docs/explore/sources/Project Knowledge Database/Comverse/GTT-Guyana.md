@@ -2,7 +2,7 @@
 
 **Company:** Comverse (later Mavenir)  
 **Client:** GT&T Guyana  
-**Period:** 2010–2011  
+**Period:** March 2012 – November 2011  
 **Role:** Senior Project Lead — On-site Implementation Lead  
 **Industry:** Telecommunications  
 **Country:** Guyana  

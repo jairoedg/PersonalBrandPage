@@ -2,6 +2,7 @@
 
 **Company:** Tata Consultancy Services (TCS)  
 **Client:** Avianca Holdings  
+**Period:** January 2021 – June 2021 
 **Role:** Technical Project Manager / Client Partner  
 **Industry:** Aviation  
 **Domain:** Data & Analytics / Cloud Transformation  

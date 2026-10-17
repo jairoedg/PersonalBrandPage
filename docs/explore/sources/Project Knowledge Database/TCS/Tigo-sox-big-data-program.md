@@ -2,6 +2,7 @@
 
 **Company:** Tata Consultancy Services (TCS)  
 **Client:** Tigo / Millicom  
+**Period:** December 2018 – August 2019  
 **Industry:** Telecommunications  
 **Role:** Project / Program Delivery Lead  
 **Domain:** SOX Compliance / Data & Analytics  
