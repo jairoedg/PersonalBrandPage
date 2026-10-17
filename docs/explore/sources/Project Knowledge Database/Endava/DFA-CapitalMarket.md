@@ -2,6 +2,7 @@
 
 **Company:** Endava  
 **Client:** DFA  
+**Period:** August 2021 – September 2025
 **Industry:** Capital Markets / Investment Management  
 **Role:** Agile Project Manager  
 **Domain:** Trading / Portfolio Management / Fixed Income  
