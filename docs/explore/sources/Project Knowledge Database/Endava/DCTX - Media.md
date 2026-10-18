@@ -14,15 +14,7 @@
 
 # Executive Summary
 
-DFA relied on Charles River Development's Investment Management System (IMS) to support several core investment-management processes, including equity trading, portfolio management, and fixed income.
-
-When Charles River migrated the relevant platform capabilities to Azure, DFA needed to modernize the way its locally hosted business processes connected to IMS.
-
-Endava was engaged to provide a multidisciplinary engineering team to build an API Gateway, refactor approximately 60 business processes, and support the transition to the new cloud-based integration model.
-
-My role included participating in team setup, project governance, delivery documentation, and ongoing Agile delivery leadership.
-
-The engagement became one of the most important projects in my professional development because it strengthened my ability to lead a technically complex Agile delivery while maintaining close alignment with the client, technical leadership, business stakeholders, and Endava delivery management.
+DCTX hired Endava to improve 
 
 ---
 
