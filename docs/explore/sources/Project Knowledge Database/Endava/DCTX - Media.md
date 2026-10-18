@@ -16,7 +16,7 @@
 
 Dave Campbell’s Texas Sports (DCTX) is a well-known sports media brand that has been covering Texas football at all levels since 1960 (mainly high school and some college). It operates multiple platforms:
 
-DCTX legacy web and mobile applications were too old and stalled to support the business strategic vision. The main objective of this project was to deliver a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a  headless CMS offering several tools and services enhanced by AI to manage the content related for the company (such as, articles, scoring updates, videos, interviews, podcast, ad & sponsor, store, etc )
+DCTX legacy web and mobile applications were too old and stalled to support the business strategic vision. The main objective of this project was to deliver a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a  headless CMS offering several tools and services enhanced by AI to manage the content related for the company (such as, articles, scoring updates, Livestream videos and Video on Demand, interviews, podcast, ad & sponsor, store, etc )
 
 ---
 
