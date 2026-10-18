@@ -14,14 +14,14 @@
 
 # Executive Summary
 
-DCTX hired Endava , as the strategic goal implies monetization through adding more services for premium plans, such as, more participation in the football games via chat during live streaming, advertising, more interaction with the subscriber, such as pick'em contest, scoring updates,  incentivate the use of the platorm through , such as, video livestreaming, more
+Endava worked in a project with the main objectivgoal to improve their legacy web and mobile applications that enhance and support  .  The decision was to develop a greenfield solution
 
 ---
 
 # Business Context
 
-to improve their legacy web and mobile app
 
+as the strategic goal implies monetization through adding more services for premium plans, such as, more participation in the football games via chat during live streaming, advertising, more interaction with the subscriber, such as pick'em contest, scoring updates,  incentivate the use of the platorm through , such as, video livestreaming, more
 
 DFA used Charles River Development's Investment Management System as part of several business-critical investment-management processes.
 
