@@ -20,26 +20,24 @@ DCTX legacy web and mobile applications were too old and stalled to support the 
 
 # Business Context
 
+DCTX has a dedicated fan base across Texas and the exclusive rights to Texas high school sports content (games, scores), which uniquely positions them to be the "ESPN+ for high school sports in the state of Texas."
 
-DCTX defined a new strategic goal that implies new ways of monetization through the addition of more services to their premium subscribers, guaranteeing  a better interaction with the platform, such as, active participation in the football matches via chat during live streaming video, advertising, pick'em contest, scoring updates,  incentivate the use of the platorm through a new mobile application that include, supporting video livestreaming of more than 40 matches during Friday night.
+However, their current platform cannot support their vision so DCTX is undergoing a major digital transformation to unify and modernize its platform. The goal is to integrate its editorial content, video streaming, scores, and community engagement into a single, seamless digital ecosystem, enhancing both user experience and revenue potential.
+
 
 
 ---
 
 # Business Problem
 
-DFA did not have sufficient internal engineering capacity and technical expertise to complete the required integration and refactoring work at the required pace.
+Near-Term Goals
 
-Endava was engaged to provide:
+1. Launch a streamlined and stable platform​: Create a single brand experience across live streaming, content and mobile app. Enable reliable live streaming for weekly games to the state championship. Modernize the user experience and payments flow. ​
+2. Make data-informed decisions​: Unified data strategy to enable reporting and visibility into business drivers and customer behavior. Segment and target customers based on geography and demographics.
+3. Unlock new monetization opportunities​: Enable programmatic advertising to scale media sales. Automate customer service and renewals. Identify new data and content revenue opportunities.​
+4. Increase customer awareness and acquisition​: Enable digital marketing tools and product growth strategies. Capture customers who are new to the brand.​
+5. Scale content creation​: Utilize AI and other tools to create content and drive equal representation of teams, districts and sports.
 
-- C# developers.
-- Data Engineers.
-- Automation Testers.
-- Performance Testers.
-
-The technical objective was to create an API Gateway that would operate as an intermediary between local DFA processes and the cloud-hosted IMS platform. It also included refactoring and migrating data stored in databases that were no longer connected to the new IMS solution. 
-
-After establishing that integration layer, approximately 60 existing business processes needed to be refactored so they could communicate with the new IMS version while minimizing changes to the underlying business logic.
 
 ---
 
