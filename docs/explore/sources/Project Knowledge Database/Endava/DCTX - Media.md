@@ -14,6 +14,8 @@
 
 # Executive Summary
 
+Dave Campbell’s Texas Sports (DCTX) is a well-known sports media brand that has been covering Texas football at all levels since 1960 (mainly high school and some college). It operates multiple platforms:
+
 DCTX legacy web and mobile applications were too old and stalled to support the business strategic vision. The main objective of this project was to deliver a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a  headless CMS offering several tools and services enhanced by AI to manage the content related for the company (such as, articles, scoring updates, videos, interviews, podcast, ad & sponsor, store, etc )
 
 ---
@@ -22,7 +24,7 @@ DCTX legacy web and mobile applications were too old and stalled to support the 
 
 DCTX has a dedicated fan base across Texas and the exclusive rights to Texas high school sports content (games, scores), which uniquely positions them to be the "ESPN+ for high school sports in the state of Texas."
 
-However, their current platform cannot support their vision so DCTX is undergoing a major digital transformation to unify and modernize its platform. The goal is to integrate its editorial content, video streaming, scores, and community engagement into a single, seamless digital ecosystem, enhancing both user experience and revenue potential.
+Because its existing platform can no longer support this vision, DCTX is driving a digital transformation to modernize and unify its core experience. By bringing editorial content, video streaming, live scores, and community features into one seamless ecosystem, DCTX aims to maximize user engagement and unlock new revenue streams."
 
 
 
@@ -30,7 +32,7 @@ However, their current platform cannot support their vision so DCTX is undergoi
 
 # Business Problem
 
-Near-Term Goals
+This new platform is intended to commit the following goals:
 
 1. Launch a streamlined and stable platform​: Create a single brand experience across live streaming, content and mobile app. Enable reliable live streaming for weekly games to the state championship. Modernize the user experience and payments flow. ​
 2. Make data-informed decisions​: Unified data strategy to enable reporting and visibility into business drivers and customer behavior. Segment and target customers based on geography and demographics.
