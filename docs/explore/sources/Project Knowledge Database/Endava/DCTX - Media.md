@@ -1,8 +1,8 @@
 # DCTX / Greenfield Web & Mobile development 
 
 **Company:** Endava  
-**Client:** DFA  
-**Period:** August 2021 – September 2025
+**Client:** DCTX  
+**Period:** September 2025 – September 2026
 **Industry:** Capital Markets / Investment Management  
 **Role:** Agile Project Manager  
 **Domain:** Trading / Portfolio Management / Fixed Income  
