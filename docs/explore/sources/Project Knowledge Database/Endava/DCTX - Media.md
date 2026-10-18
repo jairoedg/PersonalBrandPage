@@ -21,22 +21,8 @@ DCTX legacy web and mobile applications were too old and stalled to support the 
 # Business Context
 
 
-as the strategic goal implies monetization through adding more services for premium plans, such as, more participation in the football games via chat during live streaming, advertising, more interaction with the subscriber, such as pick'em contest, scoring updates,  incentivate the use of the platorm through , such as, video livestreaming, more
+DCTX defined a new strategic goal that implies new ways of monetization through the addition of more services to their premium subscribers, guaranteeing  a better interaction with the platform, such as, active participation in the football matches via chat during live streaming video, advertising, pick'em contest, scoring updates,  incentivate the use of the platorm through , such as, video livestreaming, more
 
-DFA used Charles River Development's Investment Management System as part of several business-critical investment-management processes.
-
-Relevant areas included:
-
-- Equity trading.
-- Equity portfolio management.
-- Fixed income.
-- Other investment-management workflows supported by IMS.
-
-Charles River migrated its platform to Azure.
-
-As a result, DFA needed to transition from locally connected processes toward a cloud-based integration model.
-
-The transformation required the existing DFA processes to continue operating with minimal business-logic disruption while adopting the new IMS connectivity model.
 
 ---
 
