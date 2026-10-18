@@ -5,10 +5,10 @@
 **Period:** September 2025 – September 2026
 **Industry:** Media
 **Role:** Scrum Master
-**Domain:** Web  & Mobile App  Development / Video Streaming / Data Migration / Cloud
-**Technology:** Java, Typescript, React Native, GCP, Postgres
+**Domain:** Web  & Mobile App  Development / Video Streaming / Data Migration / 
+**Technology:** Java, Typescript, React Native, GCP Cloud, Postgres
 **Delivery Model:** Scrum / Kanban / Agile Delivery  
-**Outcome:** Greenfield Web and Mobile app
+**Outcome:** Greenfield Web and Mobile app.  Video Streaming and Video on Demand.
 
 ---
 
