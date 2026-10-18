@@ -21,7 +21,7 @@ DCTX legacy web and mobile applications were too old and stalled to support the 
 # Business Context
 
 
-DCTX defined a new strategic goal that implies new ways of monetization through the addition of more services to their premium subscribers, guaranteeing  a better interaction with the platform, such as, active participation in the football matches via chat during live streaming video, advertising, pick'em contest, scoring updates,  incentivate the use of the platorm through , such as, video livestreaming, more
+DCTX defined a new strategic goal that implies new ways of monetization through the addition of more services to their premium subscribers, guaranteeing  a better interaction with the platform, such as, active participation in the football matches via chat during live streaming video, advertising, pick'em contest, scoring updates,  incentivate the use of the platorm through a new mobile application that include, supporting video livestreaming of more than 40 matches during Friday night.
 
 
 ---
