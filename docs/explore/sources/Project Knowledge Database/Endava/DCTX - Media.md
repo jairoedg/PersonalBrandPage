@@ -8,7 +8,7 @@
 **Domain:** Web  & Mobile App  Development / Video Streaming / Data Migration / 
 **Technology:** Java, Typescript, React Native, GCP Cloud, Postgres
 **Delivery Model:** Scrum / Kanban / Agile Delivery  
-**Outcome:** Greenfield Web and Mobile app.  Video Streaming and Video on Demand.
+**Outcome:** Greenfield Web / Mobile app. / Video Streaming / Video on Demand.
 
 ---
 
