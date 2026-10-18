@@ -3,9 +3,9 @@
 **Company:** Endava  
 **Client:** DCTX  
 **Period:** September 2025 – September 2026
-**Industry:** Capital Markets / Investment Management  
-**Role:** Agile Project Manager  
-**Domain:** Trading / Portfolio Management / Fixed Income  
+**Industry:** Media
+**Role:** Scrum Master
+**Domain:** Sports / 
 **Technology:** C#, Azure, gRPC, REST, SSRS, SQL Server  
 **Delivery Model:** Scrum / Kanban / Agile Delivery  
 **Outcome:** API Gateway delivered, business processes refactored, production go-live supported
