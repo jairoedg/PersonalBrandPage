@@ -14,7 +14,7 @@
 
 # Executive Summary
 
-The main objective of the project  to improve their legacy web and mobile applications that could enhance and support the strategic vision for the business.  The decision was to develop a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a new headless CMS offering several tools and services usin AI to manage in a better way the content related for media (such as, articles, scoring updates, )
+DCTX legacy web and mobile applications were too old and stalled to support the business strategic vision. The main objective of this project was to deliver a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a  headless CMS offering several tools and services enhanced by AI to manage the content related for the company (such as, articles, scoring updates, videos, interviews, podcast, etc )
 
 ---
 
