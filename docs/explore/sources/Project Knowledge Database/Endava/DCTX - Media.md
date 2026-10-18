@@ -5,10 +5,10 @@
 **Period:** September 2025 – September 2026
 **Industry:** Media
 **Role:** Scrum Master
-**Domain:** Sports / 
-**Technology:** C#, Azure, gRPC, REST, SSRS, SQL Server  
+**Domain:** Web  & Mobile App  Development / Video Streaming / Data Migration / Cloud
+**Technology:** Java, Typescript, React Native, GCP, Postgres
 **Delivery Model:** Scrum / Kanban / Agile Delivery  
-**Outcome:** API Gateway delivered, business processes refactored, production go-live supported
+**Outcome:** Greenfield Web and Mobile app
 
 ---
 
