@@ -14,7 +14,7 @@
 
 # Executive Summary
 
-Endava worked in a project with the main objectivgoal to improve their legacy web and mobile applications that enhance and support  .  The decision was to develop a greenfield solution
+The main objective of the project  to improve their legacy web and mobile applications that could enhance and support the strategic vision for the business.  The decision was to develop a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a new headless CMS offering several tools and services usin AI to manage in a better way the content related for media (such as, articles, scoring updates, )
 
 ---
 
