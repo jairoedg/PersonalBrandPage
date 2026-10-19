@@ -117,13 +117,7 @@ The engagement also involved solution architect and GCP architect support when n
 
 ## 1. Product Requirements
 
-DFA's architecture team selected gRPC as part of the API Gateway implementation.
-
-This created a significant learning curve for the delivery team because the approach was more complex than the REST API patterns with which the team was more familiar.
-
-The complexity affected early delivery expectations and contributed to schedule pressure.
-
-The issue was resolved by bringing in an experienced developer who could understand the architectural intent and translate it into practical guidance for the wider team.
+Development team complained that user stories were created with AI, and so often not informing correctly the work required for the 
 
 ---
 
