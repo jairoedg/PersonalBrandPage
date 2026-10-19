@@ -45,19 +45,18 @@ This new platform is intended to commit the following goals:
 
 # Scope of Responsibility
 
-I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring CI/CD pi 
+I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring CI/CD pipeline in GCP, alongside with other part of the solution, such as, Monitoring and alerts.
+ 
 ## Project Setup
 
 I participated in:
 
-- Team construction based on the initial scope.
-- Definition and maintenance of project-management documentation.
-- RACI matrix definition.
-- Product roadmap definition.
+- Definition (along with the Technical leads and Solution architect) of the solutions per every feature defined in project scope.
+- Maintain  project-status report documentation.
+- Product roadmap definition alongside with the product owner.
 - Definition of Definition of Ready and Definition of Done.
-- Cost baseline creation.
-- Support for Master Service Agreement activities together with the Delivery Manager.
-- Initial project governance setup.
+- Team tracking
+- 
 
 ## Delivery Leadership
 
