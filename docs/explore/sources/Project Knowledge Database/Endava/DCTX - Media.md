@@ -117,7 +117,7 @@ The engagement also involved solution architect and GCP architect support when n
 
 ## 1. Product Requirements
 
-Development team complained that user stories were created with AI, and so often not informing correctly the work required for the 
+Development team complained that user stories  created with AI, not aligned with  solution developed, applicable for Backend/FrontEnd solution. Stories so often not informing correctly the work required for the 
 
 ---
 
