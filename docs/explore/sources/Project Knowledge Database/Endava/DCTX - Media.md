@@ -135,23 +135,13 @@ New Mobile app development kicked off on January 2026, as a bad decision coming 
 
 Created a Product roadmap plan to visualize easily to project management and project sponsor that the time to complete the application with no scope reduction or removing certain features was completely unrealistic.  Nonetheless, deadline was defined even when project started and no options for a negotiation. 
 
-Decision with technical lead was to reuse most of the backend solution applied to Web development, assign more frontend developers and QA testers, supported by IA develo
+Decision with technical lead was to reuse most of the backend solution applied to Web development, assigned more frontend developers and QA testers, supported by IA development, approved overtime for 3 months with burnout as an issue (with approved extra payment for the effort)  and reduce the time for User Acceptance testing as a critical risk.  Finally, Mobile app was released 2  months later but successfully delivery with few bugs identified in PRD.
 
 ---
 
 ## 4. Changes in the product scope
 
-The project was not delivering a single final release.
-
-The team needed to progressively refactor and release business processes while maintaining alignment with the broader program roadmap.
-
-This increased the importance of:
-
-- Prioritization.
-- Release planning.
-- Dependency management.
-- Stakeholder coordination.
-- Team knowledge retention.
+Eventough the product scope was defined at the beginning of the project, it was not completed and properly informed to development Team.
 
 ---
 
