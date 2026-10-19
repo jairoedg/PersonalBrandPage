@@ -54,9 +54,9 @@ I participated in:
 - Definition (along with the Technical leads and Solution architect) of the solutions per every feature defined in project scope.
 - Maintain  project-status report documentation.
 - Product roadmap definition alongside with the product owner.
-- Definition of Definition of Ready and Definition of Done.
+- Scrum facilitation
 - Team tracking
-- 
+- Agile Delivery leadership
 
 ## Delivery Leadership
 
