@@ -119,19 +119,13 @@ The engagement also involved solution architect and GCP architect support when n
 
 Development team complained that user stories  created with AI misaligned, vague and lack of context with  solution developed for Backend/FrontEnd solution. Stories so often not informing correctly the work required, too much noisy and  information with lack of clarity in the acceptance criteria.   Figma design not ready for FrontEnd development for example.
 
-This was a permanent escalation to Product team.  One workaround was to expand the product team with a bilingual business analyst to connect 
+This was a permanent escalation to Product team.  One workaround was to expand the product team with a bilingual business analyst and connect people in USA (English native speakers) with Development team in LATAM, but this situation was never overcame, improved but never fully fixed.
 
 ---
 
-## 2. Business-Process Knowledge
+## 2. Solution built as a whole, not feature-delivery driven
 
-The project required refactoring approximately 60 business processes.
-
-The engineering team depended heavily on business stakeholders to understand the existing behavior and identify process-specific requirements.
-
-Limited stakeholder availability created repeated delivery blockers.
-
-These issues had to be escalated several times so that business participation could be improved.
+One of the big issue was the project was created like a puzzle, where several features were built at same time, but no chances to close delivery by epics or features.  This was a permanent discussion with Technical leads and Product team, but this delivery way of working was hard to turn around, and Technical leaders inheritive accepted this approach.
 
 ---
 
