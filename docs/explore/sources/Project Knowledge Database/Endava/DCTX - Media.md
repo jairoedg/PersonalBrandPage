@@ -102,7 +102,7 @@ The engagement also involved solution architect and GCP architect support when n
 
 # Technology Landscape
 
-- C#.
+- JAVA.
 - Azure Cloud.
 - gRPC.
 - REST APIs.
