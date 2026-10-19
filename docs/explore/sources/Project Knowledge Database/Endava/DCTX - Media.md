@@ -57,36 +57,18 @@ I participated in:
 - Scrum facilitation
 - Team tracking
 - Agile Delivery leadership
-
-## Delivery Leadership
-
-Once the engagement was established, my responsibilities focused on:
-
-- Agile delivery leadership.
-- Scrum and Kanban facilitation.
-- Delivery planning and tracking.
+- Testing strategy definition (Along with QA team)
 - Risk and issue management.
-- Stakeholder communication.
-- Team-health monitoring.
-- Client escalation.
 - Release coordination.
 - Alignment between product, technical, and delivery stakeholders.
-- Supporting continuous delivery across the broader program roadmap.
 
 ---
 
 # Stakeholders
 
-## Client
-
-- DFA Project Management team.
-- DFA business-process stakeholders.
-- DFA technical and architectural stakeholders.
-- Program leadership.
-
 ## Endava
 
-- Delivery Manager.
+- Project Manager & Delivery Manager.
 - Client Partner.
 - Engineering teams.
 - Test teams.
@@ -98,15 +80,23 @@ Once the engagement was established, my responsibilities focused on:
 
 ## Team 1
 
-- 2 Data Engineers.
-- 1 Tester.
+- 2 Frontend developers
+- 4 Moblie developers.
+- 3 Testers.
 
 ## Team 2
 
-- 8 C# Developers.
+- 5 Backend Developers.
 - 2 Testers.
 
-The engagement also involved technical leadership and specialist support when needed.
+## Team 3
+- 2 Data Engineers
+
+## Team 4
+- 2 DevOps enginerr+
+
+
+The engagement also involved solution architect and GCP architect support when needed.
 
 ---
 
