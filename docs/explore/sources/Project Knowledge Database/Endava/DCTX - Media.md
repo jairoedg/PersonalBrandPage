@@ -133,7 +133,9 @@ One of the big issue was the project was created like a puzzle, where several fe
 
 New Mobile app development kicked off on January 2026, as a bad decision coming from management team, and impacting drastically the whole project, as delivery timelines initially defined end of July 2026 including this application but hard (not to say impossible) to complete.
 
-Created a Product roadmap plan to visualize easily to project management and sponsor the time to complete the application with the whole feature was a death 
+Created a Product roadmap plan to visualize easily to project management and project sponsor that the time to complete the application with no scope reduction or removing certain features was completely unrealistic.  Nonetheless, deadline was defined even when project started and no options for a negotiation. 
+
+Decision with technical lead was to reuse most of the backend solution applied to Web development, assign more frontend developers and QA testers, supported by IA develo
 
 ---
 
