@@ -102,21 +102,20 @@ The engagement also involved solution architect and GCP architect support when n
 
 # Technology Landscape
 
-- JAVA.
-- Azure Cloud.
-- gRPC.
+- Java.
+- React / React Native.
+- GCP.
 - REST APIs.
-- SSRS.
-- SQL Server.
-- API Gateway patterns.
-- Performance testing.
-- Automated testing.
+- SQL Server / Cloud SQL.
+- GitHub actions.
+- Kontent.AI
+- Braintree / Stripe
 
 ---
 
 # Delivery Challenges
 
-## 1. gRPC Architecture Complexity
+## 1. Product Requirements
 
 DFA's architecture team selected gRPC as part of the API Gateway implementation.
 
