@@ -117,7 +117,9 @@ The engagement also involved solution architect and GCP architect support when n
 
 ## 1. Product Requirements
 
-Development team complained that user stories  created with AI, not aligned with  solution developed, applicable for Backend/FrontEnd solution. Stories so often not informing correctly the work required for the 
+Development team complained that user stories  created with AI misaligned, vague and lack of context with  solution developed for Backend/FrontEnd solution. Stories so often not informing correctly the work required, too much noisy and  information with lack of clarity in the acceptance criteria.   Figma design not ready for FrontEnd development for example.
+
+This was a permanent escalation to Product team.  One workaround was to expand the product team with a bilingual business analyst to connect 
 
 ---
 
