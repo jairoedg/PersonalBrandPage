@@ -45,8 +45,7 @@ This new platform is intended to commit the following goals:
 
 # Scope of Responsibility
 
-My role covered both project setup and delivery leadership.
-
+I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring CI/CD pi 
 ## Project Setup
 
 I participated in:
