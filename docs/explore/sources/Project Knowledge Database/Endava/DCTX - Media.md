@@ -125,13 +125,13 @@ This was a permanent escalation to Product team.  One workaround was to expand t
 
 ## 2. Solution built as a whole, not feature-delivery driven
 
-One of the big issue was the project was created like a puzzle, where several features were built at same time, but no chances to close delivery by epics or features.  This was a permanent discussion with Technical leads and Product team, but this delivery way of working was hard to turn around, and Technical leaders inheritive accepted this approach.
+One of the big issue was the project was created like a puzzle, where several features were built at same time, but no chances to close delivery by epics or features.  This was a permanent discussion with Technical leads and Product team, but this delivery way of working was hard to turn around, and Technical Leaders grudgingly accepted this approach.  At the end, when all features completed and integrated, the team had few time to complete User Acceptance Criteria, too many bugs /new request identified leading to a QA/DEV overload to fix the issues before launch date.
 
 ---
 
-## 3. Team Stability
+## 3. Mobile a
 
-Team health and continuity were critical.
+Team increased from 
 
 Changes in team composition had a significant delivery impact because new team members typically required approximately four weeks to acquire sufficient business and technical knowledge.
 
