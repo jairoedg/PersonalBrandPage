@@ -129,7 +129,7 @@ One of the big issue was the project was created like a puzzle, where several fe
 
 ---
 
-## 3. Mobile a
+## 3. Mobile app development started too late
 
 Team increased from 
 
