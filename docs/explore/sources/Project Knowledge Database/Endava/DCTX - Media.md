@@ -131,15 +131,13 @@ One of the big issue was the project was created like a puzzle, where several fe
 
 ## 3. Mobile app development started too late
 
-Team increased from 
+New Mobile app development kicked off on January 2026, as a bad decision coming from management team, and impacting drastically the whole project, as delivery timelines initially defined end of July 2026 including this application but hard (not to say impossible) to complete.
 
-Changes in team composition had a significant delivery impact because new team members typically required approximately four weeks to acquire sufficient business and technical knowledge.
-
-This was particularly challenging because the engagement operated under a continuous release cadence aligned with the wider program.
+Created a Product roadmap plan to visualize easily to project management and sponsor the time to complete the application with the whole feature was a 
 
 ---
 
-## 4. Continuous Delivery Pressure
+## 4. Changes in the product scope
 
 The project was not delivering a single final release.
 
