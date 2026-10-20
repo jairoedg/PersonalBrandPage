@@ -153,9 +153,9 @@ Ultimately, the mobile app launched two months past the initial target date, but
 
 ## 1. Use the retrospective and risk management to negotiate the delivery of better user stories
 
-At6.
+Although issue was partially improved and fixed, used the communications channel and meeting planned following the scrum framework to negotiate and come up with a solution affordable to both teams (Product and Development team)
 
-Rather than only tracking issues, the objective was to adapt the way the team worked whenever the original assumptions were no longer effective.
+Risk tracking highlighting this problem escalated by Dev team was escalated to leadership team, and Product team inclusion of the bilingual business analyst created a bridge to improve th
 
 ---
 
