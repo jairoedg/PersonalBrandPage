@@ -22,9 +22,7 @@ However, DCTX’s legacy web and mobile applications had become outdated, creati
 
 # Business Context
 
-DCTX has a dedicated fan base across Texas and the exclusive rights to Texas high school sports content (games, scores), which uniquely positions them to be the "ESPN+ for high school sports in the state of Texas."
-
-Because its existing platform can no longer support this vision, DCTX is driving a digital transformation to modernize and unify its core experience. By bringing editorial content, video streaming, live scores, and community features into one seamless ecosystem, DCTX aims to maximize user engagement and unlock new revenue streams."
+DCTX has a dedicated fan base across Texas and the exclusive rights to Texas high school sports content (games, scores), which uniquely positions them to be the "ESPN+ for high school sports in the state of Texas.
 
 
 
@@ -32,10 +30,10 @@ Because its existing platform can no longer support this vision, DCTX is driving
 
 # Business Problem
 
-Because its existing platform can no longer support this vision, DCTX is driving a digital transformation to modernize and unify its core experience. By bringing editorial content, video streaming, live scores, and community features into one seamless ecosystem, DCTX aims to maximize user engagement and unlock new revenue streams."
-This new platform is intended to commit the following goals:
+Because its existing platform can no longer support this vision, DCTX is driving a digital transformation to modernize and unify its core experience. By bringing editorial content, video streaming, live scores, and community features into one seamless ecosystem, DCTX aims to maximize user engagement and unlock new revenue streams.
+This new platform is intended to achieve the following goals:
 
-1. Launch a streamlined and stable platform​: Create a single brand experience across live streaming, content and mobile app. Enable reliable live streaming for weekly games to the state championship. Modernize the user experience and payments flow. ​
+1. Launch a streamlined and stable platform​: Create a single brand experience across live streaming, content and mobile app. Enable reliable live streaming for weekly games to the state championship. Modernize the user experience and payments flow. ​
 2. Make data-informed decisions​: Unified data strategy to enable reporting and visibility into business drivers and customer behavior. Segment and target customers based on geography and demographics.
 3. Unlock new monetization opportunities​: Enable programmatic advertising to scale media sales. Automate customer service and renewals. Identify new data and content revenue opportunities.​
 4. Increase customer awareness and acquisition​: Enable digital marketing tools and product growth strategies. Capture customers who are new to the brand.​
@@ -46,14 +44,14 @@ This new platform is intended to commit the following goals:
 
 # Scope of Responsibility
 
-I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring GCP infrastructure, CI/CD pipeline.
+I was responsible for leading development teams as Scrum Master for the FrontEnd (Web + Mobile app) & Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring GCP infrastructure, CI/CD pipeline.
  
 ## Project Setup
 
 I participated in:
 
 - Definition (along with the Technical leads and Solution architect) of the solutions per every feature defined in project scope.
-- Maintain  project-status report documentation.
+- Maintain project-status report documentation.
 - Product roadmap definition alongside with the product owner.
 - Scrum facilitation
 - Team tracking
@@ -120,7 +118,7 @@ The engagement also involved solution architect and GCP architect support when n
 
 The development team frequently reported that AI-generated user stories were misaligned, vague, and lacked necessary technical context for both backend and frontend execution. Stories often failed to accurately communicate the required work, containing excessive noise while lacking clear acceptance criteria. Additionally, Figma designs were frequently not ready in time for frontend development, leading to ongoing escalations to our Product team.
 
-As a workaround, our team onboarded a bilingual Business Analyst to bridge the communication gap between US-based native English stakeholders and the LATAM development team. While this mitigated the impact, the underlying issue was never fully resolved. Figma design ready as a mandatory rule in the DoR.
+As a workaround, our team onboarded a bilingual Business Analyst to bridge the communication gap between US-based native English stakeholders and the LATAM development team. While this mitigated the impact, the underlying issue was never fully resolved. In addition, agreed on Figma design ready as a mandatory rule in the DoR.
 
 ---
 
