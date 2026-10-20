@@ -151,11 +151,9 @@ Ultimately, the mobile app launched two months past the initial target date, but
 
 # Leadership Decisions
 
-## 1. Use the retrospective and risk management to negotiate the delivery of better user stories
+## 1. Process-Driven Conflict Resolution & Risk Mitigation:
 
-Although issue was partially improved and fixed, used the communications channel and meeting planned following the scrum framework to negotiate and come up with a solution affordable to both teams (Product and Development team)
-
-Risk tracking highlighting this problem escalated by Dev team was escalated to leadership team, and Product team inclusion of the bilingual business analyst created a bridge to improve th
+Although issue was partially improved and fixed, the use of Sprint Retrospectives to systematically document story quality risks raised by the dev team, using this data to advocate for Product team adjustments and establish a dedicated bilingual Business Analyst role to streamline cross-border requirement delivery.
 
 ---
 
@@ -169,11 +167,11 @@ This accelerated the team's understanding and helped stabilize delivery.
 
 ---
 
-## 3. Escalate Missing Business Support
+## 3. Non-Negotiable Deadlines & Recovery Plan:
 
-The engineering team could not successfully refactor business processes without sufficient knowledge from DFA stakeholders.
+Presented a detailed product roadmap to project sponsors demonstrating that delivering the full mobile application without scope reduction within the fixed July 2026 deadline was unachievable.
 
-When business participation became a blocker, I escalated the issue and worked with the client to improve availability and coordination.
+Authorized paid overtime across a three-month crunch period and compressed the User Acceptance Testing (UAT) window—deliberately managing team fatigue as an explicit risk to protect delivery.
 
 ---
 
