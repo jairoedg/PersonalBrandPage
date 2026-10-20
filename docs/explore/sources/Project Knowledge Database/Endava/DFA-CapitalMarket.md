@@ -332,11 +332,11 @@ Without hesitation I will challenge hardly several decisions taken in the manage
 
 # Professional Evolution
 
-This engagement marked a significant step in my development as an Agile Project Manager.
+This project covered the introduction to web and Mobile app development, which was a new endeavor in my career in the Software industry and open the opportunity to learn more about the FrontEnd area
 
-Earlier in my career, I had learned delivery primarily through Waterfall projects and later through a difficult first experience with Agile.
+Working as a pure Scrum master drives me in uncomfortable position where I have the position to make decisions, and wait for someone else the follow to proceed.  I acting as advisor to my PM, which make feel that I had to support the leader decision even if I do not feel this is the right one.
 
-This project gave me the opportunity to apply Agile delivery successfully in a complex real-world environment.
+Finally, it gave the opportunity to work in a GCP project, which I never have the option to participate in a full project in a cloud environment.  this was really profitable for my career, as i had to work directly with the GCP infr
 
 I learned how to combine:
 
