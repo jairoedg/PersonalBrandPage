@@ -124,7 +124,7 @@ As a workaround, our team onboarded a bilingual Business Analyst to bridge the c
 
 ## 2. Solution built as a whole, not feature-delivery driven
 
-A major challenge was that the project was structured like a puzzle, non-incremental delivery model. Multiple features were built concurrently,  no clear milestones to complete in the sprints and sign off on individual epics or feature sets. This approach led to continuous discussions between our Technical Leads and  Product team. Although Technical Leads reluctantly accepted the setup, it proved extremely difficult to pivot away from this way of working.
+A major challenge was that the project was structured like a puzzle, all pieces built before to integrate (non-incremental delivery model). Multiple features were built concurrently,  no clear milestones to complete in the sprints and sign off on individual epics or feature sets. This approach led to continuous discussions between our Technical Leads and  Product team. Although Technical Leads reluctantly accepted the setup, it proved extremely difficult to pivot away from this way of working.
 
 At the end, integration occurred late in the cycle, leaving insufficient time for User Acceptance Testing (UAT). The sudden discovery of numerous defects and scope changes right before release placed an unsustainable workload on Dev and QA teams to meet the deadline.
 
@@ -221,13 +221,12 @@ Ultimately, this project proved that **Agile leadership is about creating a brid
 
 # What I Would Do Differently Today
 
-Without hesitation I will challenge hardly several decisions taken in the management level, and inside my purview as Scrum master
+Without hesitation I will strongly challenge several decisions taken in the management level, and inside my purview as Scrum master
 
-- Set a non-negotiable **Definition of Ready (DoR)** gate immediately developers raised the hand several times.  No story enters a Sprint backlog without an approved Figma link and a mandatory technical breakdown review. Perhaps, training BAs to feed technical architecture constraints into their AI prompts before handing stories to developers.
+- Set a non-negotiable **Definition of Ready (DoR)** as soon as developers raised concerns about story gaps.  No story enters a Sprint backlog without an approved Figma link and a mandatory technical breakdown review. Perhaps, training BAs to feed technical architecture constraints into their AI prompts before handing stories to developers.
 
 - Push Back on the "Puzzle Approach" with Vertical Slice Deliveries. My main oversight was not pushing back harder on the fragmented product planning approach (the 'puzzle approach') and failing to drive delivery toward completing actionable features to close out epics incrementally. Accepting this structure ultimately led to significant extra rework, as a wave of bugs and change requests surfaced during User Acceptance Testing (UAT). While this approach was agreed upon by all stakeholders—including the technical leads—it created unnecessary late-stage risk, and I will not permit or repeat this delivery model on future projects."
 
-- I would also establish stronger mechanisms for retaining business knowledge by product team, that ended up with additional features when tight schedule was an issue indeed
 
 ---
 
