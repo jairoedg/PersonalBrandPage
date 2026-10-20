@@ -151,9 +151,9 @@ Ultimately, the mobile app launched two months past the initial target date, but
 
 # Leadership Decisions
 
-## 1. Process-Driven Conflict Resolution & Risk Mitigation:
+## 1. Conflict Resolution:
 
-Although issue was partially improved and fixed, the use of Sprint Retrospectives to systematically document story quality risks raised by the dev team, using this data to advocate for Product team adjustments and establish a dedicated bilingual Business Analyst role to streamline cross-border requirement delivery.
+Identify and create bridges between 2 teams managing different perspective, helped to mitigate and reduce the gaps in the product stories elaboration, making business analyst continues creating stories using AI, and more useful for Development team to understand the requirement and acceptance criteria.  Even when this was not fully resolved, the issue identified between both teams standpoint was mitigated
 
 ---
 
