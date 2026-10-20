@@ -2,7 +2,7 @@
 
 **Company:** Comverse (later Mavenir)  
 **Client:** Entel Chile  
-**Period:** Jan 2015 till June 2015  
+**Period:** Jan 2015 till June 2015
 **Role:** Senior Project Lead — Project Recovery / On-site Delivery Lead  
 **Industry:** Telecommunications  
 **Country:** Chile  

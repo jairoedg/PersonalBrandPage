@@ -38,7 +38,7 @@ Tigo initiated a strategic program to strengthen SOX compliance controls.
 
 The initiative was aligned with Millicom's increased regulatory obligations following its Nasdaq listing.
 
-TCS was contracted to build a Big Data solution intended to automate important  SOX control monitoring through Tableau dashboard fed by Data sourced in a Data Warehouse plus external non-sql files, such as, logs, networking measurements, scripts and excel spreadsheets files with business data.
+TCS was contracted to build a Big Data solution intended to automate important  SOX control monitoring through Tableau dashboard fed by data sourced in a Data Warehouse plus external non-SQL files, such as, logs, networking measurements, scripts and excel spreadsheets files with business data.
 
 The target concept was to:
 

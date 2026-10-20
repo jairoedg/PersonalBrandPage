@@ -1,8 +1,8 @@
 # GSK – Order-to-Cash Stream for Andean SAP ERP Migration
 
-**Company:** GSK  (On behalf of Tata Consultancy Services (TCS) )
+**Company:** TCS - Tata Consultancy Services (On behalf of GSK)
 **Period:** July 2017 – October 2018
-**Role:** Order-to-Cash Stream Lead  
+**Role:** e-Invoicing - Order to Cash (O2C) Stream Lead
 **Industry:** Pharmaceutical  
 **Markets:** Colombia, Peru, Ecuador, Chile  
 **Program:** JDE to SAP ERP Migration  
