@@ -336,15 +336,6 @@ This project covered the introduction to web and Mobile app development, which w
 
 Working as a pure Scrum master drives me in uncomfortable position where I have the position to make decisions, and wait for someone else the follow to proceed.  I acting as advisor to my PM, which make feel that I had to support the leader decision even if I do not feel this is the right one.
 
-Finally, it gave the opportunity to work in a GCP project, which I never have the option to participate in a full project in a cloud environment.  this was really profitable for my career, as i had to work directly with the GCP infr
+Finally, it gave the opportunity to work in a GCP project, which I never have the option to participate in a full project in a cloud environment.  this was really profitable for my career, as i had to work directly with the GCP /DevOps team and support them in the technical decisions in terms of costs, development requirements, etc.
 
-I learned how to combine:
-
-- Agile practices.
-- Project-management discipline.
-- Technical understanding.
-- Stakeholder management.
-- Client partnership.
-- Delivery adaptation.
-
-It also strengthened my confidence in leading projects where technology, business processes, and delivery governance are tightly interconnected.
+I'm not fully proud of this project, but I appreciate a lot the opportunity to join a project with tons of technical challenges, multi-team development support and top-notch technology
