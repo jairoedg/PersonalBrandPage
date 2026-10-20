@@ -239,7 +239,13 @@ Without hesitation I will challenge hardly several decisions taken in the manage
 
 # How This Project Changed the Way I Lead
 
+My experience on this project fundamentally changed how I view my role as a leader. Moving forward, I will no longer just advise on best practices—I will **actively advocate for and enforce core engineering standards** that protect the product's health and the team's capacity.
 
+- **Standing Firm on Critical Decisions:** I learned that when I strongly believe a decision is beneficial—or necessary—for project health, I must step up, push back firmly against anti-patterns, and hold stakeholders accountable. Passive agreement creates late-stage risk; active leadership prevents it.
+    
+- **Non-Negotiable Automated Testing from Day One:** Test automation can no longer be treated as an afterthought or a late-stage triage effort. I will ensure that automated regression testing is embedded into the Definition of Done (DoD) and the CI/CD pipeline from the very beginning of development to avoid late-stage integration bottlenecks.
+    
+- **Context-Aware AI Integration:** AI tools offer tremendous speed, but speed without alignment creates noise. I will mandate that AI-generated artifacts—such as user stories and requirements—are strictly governed and contextualized to match our specific system architecture and business context before entering sprint planning.
 
 ---
 
