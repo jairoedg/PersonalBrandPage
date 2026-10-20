@@ -180,7 +180,9 @@ Maintaining real-time visibility into the various challenges identified througho
 
 # Results
 
-Although the initial deadline on July 30th 
+Although the initial deadline on July 30th was not committed, final rollout date was defined September 18th for the overall scope defined during the inception of the project.
+
+
 
 ---
 
