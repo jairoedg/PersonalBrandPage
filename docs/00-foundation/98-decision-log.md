@@ -234,3 +234,13 @@ Website fonts: self-host Inter as woff2 files in site/assets/fonts/, with weight
 Status
 
 Approved
+
+---
+
+## D-020
+
+Story page navigation (Q-09): every section of a Project Story page stays visible. An "On this page" list of jump links at the top moves between sections. Previous and Next links follow the Projects page order, and related stories come from each source file. Collapsible sections are not used for now and can be revisited later.
+
+Status
+
+Approved (2026-10-20)
