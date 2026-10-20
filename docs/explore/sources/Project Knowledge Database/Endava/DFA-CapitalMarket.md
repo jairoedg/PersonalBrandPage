@@ -293,27 +293,34 @@ This project demonstrates:
 
 # Leadership Reflection
 
-It reinforced a fundamental truth: **the true value of Agile frameworks lies not in dogmatically following ceremonies, but in utilizing transparency, empirical data, and proactive risk management to enable swift decision-making and continuous delivery flow.**
+This project gave me the opportunity to apply Agile delivery practices in a much more mature and practical way than in my previous experiences.
 
-Throughout this engagement, I learned critical lessons in cross-functional governance and adaptive leadership:
+I learned that the value of Scrum or Kanban does not come from following ceremonies mechanically.
 
-- **Making Bottlenecks Visible to Drive Real Alignment:** When faced with vague AI-generated user stories, incomplete designs, or non-incremental development models, enforcing rigid processes wasn't enough. The breakthrough came from exposing the downstream risks early, using data-backed roadmaps to facilitate tough conversations between US Product stakeholders and LATAM engineering teams.
-    
-- **Pragmatic Flexibility Over Dogmatic Planning:** When management introduced a non-negotiable mobile app deadline into an already tight schedule, the right response was not to defend the original baseline blindly, but to adapt pragmatically. By working closely with Solution Architects and Technical Leads, we engineered high-risk recovery plans—reusing backend infrastructure, leveraging AI development tools, scaling QA/Dev capacity, and making deliberate, transparent trade-offs regarding overtime and testing windows.
-    
+The value comes from using the principles behind them to improve transparency, decision-making, team alignment, and delivery flow.
 
-Ultimately, this project proved that **Agile leadership is about creating a bridge between business strategy and technical execution.** By maintaining real-time visibility, protecting the delivery flow, and fostering transparent stakeholder relationships, we successfully modernized a legacy brand into a unified digital ecosystem.
+The project also reinforced the importance of adapting the delivery approach when initial assumptions no longer apply.
+
+When technical complexity, stakeholder availability, or team changes affected delivery, the right response was not to protect the original plan at all costs.
+
+It was to make the problem visible, involve the right decision-makers, agree on the required change, and keep the team aligned with the product vision and program milestones.
+
+The strong working relationship with the client made this possible.
 
 ---
 
 # What I Would Do Differently Today
 
-Without hesitation I will challenge hardly several decisions taken in the management level, and inside my purview as Scrum master
+Today I would formalize several areas earlier in the engagement:
 
-- Set a non-negotiable **Definition of Ready (DoR)** gate immediately developers raised the hand several times.  No story enters a Sprint backlog without an approved Figma link and a mandatory technical breakdown review. Perhaps, training BAs to feed technical architecture constraints into their AI prompts before handing stories to developers.
-- Push Back on the "Puzzle Approach" with Vertical Slice Deliveries. My main oversight was not pushing back harder on the fragmented product planning approach (the 'puzzle approach') and failing to drive delivery toward completing actionable features to close out epics incrementally. Accepting this structure ultimately led to significant extra rework, as a wave of bugs and change requests surfaced during User Acceptance Testing (UAT). While this approach was agreed upon by all stakeholders—including the technical leads—it created unnecessary late-stage risk, and I will not permit or repeat this delivery model on future projects."
+- Business-process ownership for each refactored workflow.
+- Knowledge-transfer expectations when team members change.
+- Technical onboarding for complex frameworks such as gRPC.
+- Explicit dependency mapping between business, technical, and release activities.
+- Capacity buffers for team transitions.
+- Clear escalation thresholds for missing business support.
 
-- I would also establish stronger mechanisms for retaining business knowledge by product team, that ended up with additional features when tight schedule was an issue indeed
+I would also establish stronger mechanisms for retaining business and technical knowledge so that team changes had less impact on delivery continuity.
 
 ---
 
@@ -332,10 +339,20 @@ Without hesitation I will challenge hardly several decisions taken in the manage
 
 # Professional Evolution
 
-This project covered the introduction to web and Mobile app development, which was a new endeavor in my career in the Software industry and open the opportunity to learn more about the FrontEnd area
+This engagement marked a significant step in my development as an Agile Project Manager.
 
-Working as a pure Scrum master drives me in uncomfortable position where I have the position to make decisions, and wait for someone else the follow to proceed.  I acting as advisor to my PM, which make feel that I had to support the leader decision even if I do not feel this is the right one.
+Earlier in my career, I had learned delivery primarily through Waterfall projects and later through a difficult first experience with Agile.
 
-Finally, it gave the opportunity to work in a GCP project, which I never have the option to participate in a full project in a cloud environment.  this was really profitable for my career, as i had to work directly with the GCP /DevOps team and support them in the technical decisions in terms of costs, development requirements, etc.
+This project gave me the opportunity to apply Agile delivery successfully in a complex real-world environment.
 
-I'm not fully proud of this project, but I appreciate a lot the opportunity to join a project with tons of technical challenges, multi-team development support and top-notch technology
+I learned how to combine:
+
+- Agile practices.
+- Project-management discipline.
+- Technical understanding.
+- Stakeholder management.
+- Client partnership.
+- Delivery adaptation.
+
+It also strengthened my confidence in leading projects where technology, business processes, and delivery governance are tightly interconnected.
+
