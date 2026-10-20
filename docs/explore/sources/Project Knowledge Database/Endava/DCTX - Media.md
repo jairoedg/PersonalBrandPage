@@ -139,19 +139,21 @@ Development for the new mobile app kicked off in January 2026. This was an ill-t
 A detailed product roadmap was presented to executive sponsors and project leadership to demonstrate that delivering the full mobile scope within the existing timeframe without scope reduction was unrealistic. However, the deadline remained fixed with no room for negotiation.
 
 To meet this constraint, project leadership and the Technical Lead executed a high-risk recovery plan:
+- **Architecture Reuse:** Leveraged backend services previously built for the web platform.
+- **Resource Augmentation & AI Tools:** Onboarded additional frontend developers and QA testers, leveraging AI development tools to accelerate output.
+- **Capacity & Overtime:** Approved paid overtime for three consecutive months, which introduced team burnout risks.
+- **Schedule Compression:** Severely compressed the User Acceptance Testing (UAT) window as an accepted project risk.
 
-
----
-
+Ultimately, the mobile app launched two months past the initial target date, but was successfully delivered with minimal bugs reported in production.
 
 
 ---
 
 # Leadership Decisions
 
-## 1. Treat Risks as Triggers for Delivery Improvement
+## 1. Use the retrospective and risk management to negotiate the delivery of better user stories
 
-I used identified risks as signals that the delivery model might need to change.
+At6.
 
 Rather than only tracking issues, the objective was to adapt the way the team worked whenever the original assumptions were no longer effective.
 
