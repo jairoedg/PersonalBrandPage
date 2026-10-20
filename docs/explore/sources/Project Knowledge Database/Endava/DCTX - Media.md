@@ -120,13 +120,15 @@ The engagement also involved solution architect and GCP architect support when n
 
 The development team frequently reported that AI-generated user stories were misaligned, vague, and lacked necessary technical context for both backend and frontend execution. Stories often failed to accurately communicate the required work, containing excessive noise while lacking clear acceptance criteria. Additionally, Figma designs were frequently not ready in time for frontend development, leading to ongoing escalations to the Product team.
 
-As a workaround, the team onboarded a bilingual Business Analyst to bridge the communication gap between US-based native English stakeholders and the LATAM development team. While this mitigated the impact, the underlying issue was never fully resolved.
+As a workaround, the team onboarded a bilingual Business Analyst to bridge the communication gap between US-based native English stakeholders and the LATAM development team. While this mitigated the impact, the underlying issue was never fully resolved. Figma design ready as a mandatory rule in the DoR.
 
 ---
 
 ## 2. Solution built as a whole, not feature-delivery driven
 
-One of the big issue was the project was created like a puzzle, where several features were built at same time, but no chances to close delivery by epics or features.  This was a permanent discussion with Technical leads and Product team, but this delivery way of working was hard to turn around, and Technical Leaders grudgingly accepted this approach.  At the end, when all features completed and integrated, the team had few time to complete User Acceptance Criteria, too many bugs /new request identified leading to a QA/DEV overload to fix the issues before launch date.
+A major challenge was that the project was structured like a puzzle, non-incremental delivery model. Multiple features were built concurrently, but there were no clear milestones to complete and sign off on individual epics or feature sets. This approach led to continuous discussions between Technical Leads and the Product team. Although Technical Leads reluctantly accepted the setup, it proved extremely difficult to pivot away from this way of working.
+
+Consequently, once all features were finally completed and integrated near the end of the timeline, very little time remained for thorough User Acceptance Testing (UAT). This resulted in a high volume of late-stage bugs and change requests, creating a severe workload bottleneck for both QA and Development teams prior to the launch date.
 
 ---
 
