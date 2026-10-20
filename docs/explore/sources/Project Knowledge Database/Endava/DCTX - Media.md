@@ -14,9 +14,9 @@
 
 # Executive Summary
 
-Dave Campbell’s Texas Sports (DCTX) is a well-known sports media brand that has been covering Texas football at all levels since 1960 (mainly high school and some college). It operates multiple platforms:
+Dave Campbell’s Texas Sports (DCTX) is a premier sports media brand that has covered Texas football at all levels—primarily high school, along with college sports—since 1960. DCTX operates across multiple platforms to deliver its content.
 
-DCTX legacy web and mobile applications were too old and stalled to support the business strategic vision. The main objective of this project was to deliver a greenfield solution for a new web application hosted in GCP, enhanced by Kontent.AI ( a  headless CMS offering several tools and services enhanced by AI to manage the content related for the company (such as, articles, scoring updates, Livestream videos and Video on Demand, interviews, podcast, ad & sponsor, store, etc )
+However, DCTX’s legacy web and mobile applications had become outdated, creating a bottleneck that hindered the business's strategic vision. The main objective of this project was to deliver a modern, greenfield web application hosted on Google Cloud Platform (GCP). The new solution is powered by Kontent.ai—an AI-enhanced headless CMS used to manage all core company content, including news articles, live score updates, video on demand (VOD), video livestreams, podcasts, ad/sponsor integrations, and the online store.
 
 ---
 
@@ -32,6 +32,7 @@ Because its existing platform can no longer support this vision, DCTX is driving
 
 # Business Problem
 
+Because its existing platform can no longer support this vision, DCTX is driving a digital transformation to modernize and unify its core experience. By bringing editorial content, video streaming, live scores, and community features into one seamless ecosystem, DCTX aims to maximize user engagement and unlock new revenue streams."
 This new platform is intended to commit the following goals:
 
 1. Launch a streamlined and stable platform​: Create a single brand experience across live streaming, content and mobile app. Enable reliable live streaming for weekly games to the state championship. Modernize the user experience and payments flow. ​
@@ -117,9 +118,9 @@ The engagement also involved solution architect and GCP architect support when n
 
 ## 1. Product Requirements
 
-Development team complained that user stories  created with AI misaligned, vague and lack of context with  solution developed for Backend/FrontEnd solution. Stories so often not informing correctly the work required, too much noisy and  information with lack of clarity in the acceptance criteria.   Figma design not ready for FrontEnd development for example.
+The development team frequently reported that AI-generated user stories were misaligned, vague, and lacked necessary technical context for both backend and frontend execution. Stories often failed to accurately communicate the required work, containing excessive noise while lacking clear acceptance criteria. Additionally, Figma designs were frequently not ready in time for frontend development, leading to ongoing escalations to the Product team.
 
-This was a permanent escalation to Product team.  One workaround was to expand the product team with a bilingual business analyst and connect people in USA (English native speakers) with Development team in LATAM, but this situation was never overcame, improved but never fully fixed.
+As a workaround, the team onboarded a bilingual Business Analyst to bridge the communication gap between US-based native English stakeholders and the LATAM development team. While this mitigated the impact, the underlying issue was never fully resolved.
 
 ---
 
