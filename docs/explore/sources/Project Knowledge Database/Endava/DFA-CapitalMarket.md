@@ -311,10 +311,9 @@ Ultimately, this project proved that **Agile leadership is about creating a brid
 Without hesitation I will challenge hardly several decisions taken in the management level, and inside my purview as Scrum master
 
 - Set a non-negotiable **Definition of Ready (DoR)** gate immediately developers raised the hand several times.  No story enters a Sprint backlog without an approved Figma link and a mandatory technical breakdown review. Perhaps, training BAs to feed technical architecture constraints into their AI prompts before handing stories to developers.
+- Push Back on the "Puzzle Approach" with Vertical Slice Deliveries. My main oversight was not pushing back harder on the fragmented product planning approach (the 'puzzle approach') and failing to drive delivery toward completing actionable features to close out epics incrementally. Accepting this structure ultimately led to significant extra rework, as a wave of bugs and change requests surfaced during User Acceptance Testing (UAT). While this approach was agreed upon by all stakeholders—including the technical leads—it created unnecessary late-stage risk, and I will not permit or repeat this delivery model on future projects."
 
-- My main mistake was not elevate hardly the product planning approach (the puzzle approach) and drive the delivery into actionable features to close out epics.  This decision turned out into additional effort as per of multiple bugs and change request once the client started the User acceptance testing phase.  I understand this was accepted by everybody, including technical leads, but I'll not repeat this approach again.
-
-I would also establish stronger mechanisms for retaining business knowledge by product team, that ended up with additional features when tight schedule was an issue indeed
+- I would also establish stronger mechanisms for retaining business knowledge by product team, that ended up with additional features when tight schedule was an issue indeed
 
 ---
 
