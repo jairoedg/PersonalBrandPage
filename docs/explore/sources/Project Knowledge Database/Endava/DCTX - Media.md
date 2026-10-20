@@ -153,7 +153,7 @@ Ultimately, the mobile app launched two months past the initial target date, but
 
 ## 1. Conflict Resolution:
 
-Identify and create bridges between 2 teams managing different perspective, helped to mitigate and reduce the gaps in the product stories elaboration, making business analyst continues creating stories using AI, and more useful for Development team to understand the requirement and acceptance criteria.  Even when this was not fully resolved, the issue identified between both teams standpoint was mitigated
+This intervention enabled Business Analysts to refine their AI-assisted story workflows to better serve development needs with clearer scope and acceptance criteria. While the issue was not completely resolved, this alignment mitigated operational friction and improved cross-team collaboration.
 
 ---
 
@@ -180,20 +180,7 @@ Maintaining real-time visibility into the various challenges identified througho
 
 # Results
 
-The API Gateway solution was successfully implemented using gRPC and REST-based integration patterns.
-
-The solution supported the required production traffic and peak loads during go-live.
-
-The refactored business processes required only limited adjustments for edge cases identified after release.
-
-The project maintained a continuous delivery model across the approximately 60 business processes included in the broader program.
-
-Customer satisfaction improved significantly during the engagement:
-
-- First-year satisfaction score: approximately 5.6.
-- Later satisfaction score: approximately 8.5.
-
-The engagement continued with improved client confidence and delivery stability.
+Although the initial deadline on July 30th 
 
 ---
 
