@@ -180,15 +180,16 @@ Maintaining real-time visibility into the various challenges identified througho
 
 # Results
 
-Although the initial deadline on July 30th was not committed, final rollout date was defined September 18th for the overall scope defined during the inception of the project.
-
-- Solution was formally handed over to Support team on Oct 2nd, after a big issue identified during peak traffic on Friday (unfortunately Performance testing not fully covered, and unexpected overload in the backend service may a full disruption).  After some tweaks in the service and adjustment in the GCP  infrastructure definition, the system has behaved as expected and no big downgrade in the service identified so far.
-- All Data migrated completed, including Content, team information (school,players, trainers, venues, etc)
-- Subscribers migrated successfully, including payment information for premium access  from stripe to Braintree
-- Client is considering to continue the Mobile App adding new features / improvements as a new business opportunity for the company
-
-
-
+> Although the initial July 30th launch target was shifted, the full scope defined during project inception was successfully deployed on September 18th.
+> 
+> - **Post-Launch Handover & Infrastructure Stabilization:** The solution was formally handed over to the Support team on October 2nd, following a critical performance bottleneck during peak Friday traffic. Because load testing had not fully covered this scenario, an unexpected backend overload caused a brief service disruption. After optimizing backend services and tuning the GCP infrastructure configuration, the platform has stabilized with no major service degradations to date.
+>     
+> - **Comprehensive Data Migration:** Successfully executed end-to-end data migration, including all digital content and core entity records (schools, players, coaches, venues, etc.).
+>     
+> - **Subscriber & Payment Gateway Migration:** Completed a seamless subscriber migration, securely transferring premium membership payment profiles from Stripe to Braintree.
+>     
+> - **Client Retention & Expansion:** Based on the successful rollout, the client is currently evaluating phase-two mobile app enhancements, opening new strategic business opportunities for our team.
+>
 
 
 ---
@@ -197,21 +198,15 @@ Although the initial deadline on July 30th was not committed, final rollout date
 
 This project demonstrates:
 
+- Negotiation skills.
 - Agile project leadership.
 - Scrum and Kanban delivery.
-- Capital Markets experience.
-- Cloud-integration delivery.
-- API-platform delivery.
+- Web / Mobile development understanding.
+- GCP Cloud-integration delivery.
 - Team setup and governance.
-- Client relationship management.
-- Risk and issue management.
-- Business-process refactoring.
+- Risk and issue management escalation.
 - Continuous-release coordination.
-- Distributed technical-team leadership.
 - Technical dependency management.
-- Stakeholder escalation.
-- Delivery adaptation.
-- Client satisfaction improvement.
 
 ---
 
