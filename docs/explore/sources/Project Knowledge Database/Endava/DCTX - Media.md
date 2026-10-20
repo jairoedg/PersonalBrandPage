@@ -183,7 +183,7 @@ Maintaining real-time visibility into the various challenges identified througho
 Although the initial deadline on July 30th was not committed, final rollout date was defined September 18th for the overall scope defined during the inception of the project.
 
 - Solution was formally handed over to Support team on Oct 2nd, after a big issue identified during peak traffic on Friday (unfortunately Performance testing not fully covered, and unexpected overload in the backend service may a full disruption).  After some tweaks in the service and adjustment in the GCP  infrastructure definition, the system has behaved as expected and no big downgrade in the service identified so far.
-- 
+- All Data migrated
 
 
 
