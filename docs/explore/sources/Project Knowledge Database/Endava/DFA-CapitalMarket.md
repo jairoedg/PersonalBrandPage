@@ -308,12 +308,13 @@ Ultimately, this project proved that **Agile leadership is about creating a brid
 
 # What I Would Do Differently Today
 
-Without hesitation I will challenge hardly several decisions taken in the management level
+Without hesitation I will challenge hardly several decisions taken in the management level, and inside my purview as Scrum master
 
-- My main mistake was not elevate hardly the product planning approach (the puzzle approach) and drive the delivery into actionable features to close out epics.  This decision turned out into additional effort as per of multiple bugs and change request once the client started the User acceptance testing phase.  I understand this was accepted by everybody, including technical leads, but I'll not repeat this approach agai
-- Clear escalation thresholds for missing business support.
+- Set a non-negotiable **Definition of Ready (DoR)** gate immediately developers raised the hand several times.  No story enters a Sprint backlog without an approved Figma link and a mandatory technical breakdown review. Perhaps, training BAs to feed technical architecture constraints into their AI prompts before handing stories to developers.
 
-I would also establish stronger mechanisms for retaining business and technical knowledge so that team changes had less impact on delivery continuity.
+- My main mistake was not elevate hardly the product planning approach (the puzzle approach) and drive the delivery into actionable features to close out epics.  This decision turned out into additional effort as per of multiple bugs and change request once the client started the User acceptance testing phase.  I understand this was accepted by everybody, including technical leads, but I'll not repeat this approach again.
+
+I would also establish stronger mechanisms for retaining business knowledge by product team, that ended up with additional features when tight schedule was an issue indeed
 
 ---
 
