@@ -301,8 +301,6 @@ Throughout this engagement, I learned critical lessons in cross-functional gover
     
 - **Pragmatic Flexibility Over Dogmatic Planning:** When management introduced a non-negotiable mobile app deadline into an already tight schedule, the right response was not to defend the original baseline blindly, but to adapt pragmatically. By working closely with Solution Architects and Technical Leads, we engineered high-risk recovery plans—reusing backend infrastructure, leveraging AI development tools, scaling QA/Dev capacity, and making deliberate, transparent trade-offs regarding overtime and testing windows.
     
-- **Post-Launch Ownership & Continuous Improvement:** The peak-traffic incident right before handover highlighted the necessity of non-functional performance testing in high-stakes media environments. Taking ownership to stabilize GCP configurations alongside the DevOps team ensured long-term system reliability and built deep trust with the client, opening new avenues for strategic expansion.
-    
 
 Ultimately, this project proved that **Agile leadership is about creating a bridge between business strategy and technical execution.** By maintaining real-time visibility, protecting the delivery flow, and fostering transparent stakeholder relationships, we successfully modernized a legacy brand into a unified digital ecosystem.
 
@@ -310,13 +308,9 @@ Ultimately, this project proved that **Agile leadership is about creating a brid
 
 # What I Would Do Differently Today
 
-Today I would formalize several areas earlier in the engagement:
+Without hesitation I will challenge hardly several decisions taken in the management level
 
-- Business-process ownership for each refactored workflow.
-- Knowledge-transfer expectations when team members change.
-- Technical onboarding for complex frameworks such as gRPC.
-- Explicit dependency mapping between business, technical, and release activities.
-- Capacity buffers for team transitions.
+- My main mistake was not elevate hardly the product planning approach (the puzzle approach) and drive the delivery into actionable features to close out epics.  This decision turned out into additional effort as per of multiple bugs and change request once the client started the User acceptance testing phase.  I understand this was accepted by everybody, including technical leads, but I'll not repeat this approach agai
 - Clear escalation thresholds for missing business support.
 
 I would also establish stronger mechanisms for retaining business and technical knowledge so that team changes had less impact on delivery continuity.
