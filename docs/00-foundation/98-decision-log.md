@@ -244,3 +244,15 @@ Story page navigation (Q-09): every section of a Project Story page stays visibl
 Status
 
 Approved (2026-10-20)
+
+---
+
+## D-021
+
+Contact values (Q-10) approved: the email address, LinkedIn profile, and phone number shown on the Contact page. The phone number is not repeated here because the repository is public. The CV download is the current version, kept under its existing file name, and will be replaced when a final version is approved.
+
+Source: Q-10
+
+Status
+
+Approved (2026-10-20)
