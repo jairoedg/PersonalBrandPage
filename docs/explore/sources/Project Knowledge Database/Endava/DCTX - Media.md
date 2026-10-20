@@ -157,13 +157,9 @@ Although issue was partially improved and fixed, the use of Sprint Retrospective
 
 ---
 
-## 2. Bring in the Right Expertise
+## 2. Pragmatic Adaptation & Late-Stage Crisis Triage
 
-When the team struggled with gRPC, the response was not to continue pushing the same approach.
-
-An experienced developer was brought in to bridge the gap between the architectural definition and practical implementation.
-
-This accelerated the team's understanding and helped stabilize delivery.
+Adapted technical delivery workflows to accommodate the Product team’s parallel feature model, while dynamically reallocating engineering and QA capacity to execute rapid defect triage and protect the target launch date, addign automated testing in most of the testing scene
 
 ---
 
