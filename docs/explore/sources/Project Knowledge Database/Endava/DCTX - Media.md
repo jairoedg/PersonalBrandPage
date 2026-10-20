@@ -159,7 +159,7 @@ Although issue was partially improved and fixed, the use of Sprint Retrospective
 
 ## 2. Pragmatic Adaptation & Late-Stage Crisis Triage
 
-Adapted technical delivery workflows to accommodate the Product team’s parallel feature model, while dynamically reallocating engineering and QA capacity to execute rapid defect triage and protect the target launch date, addign automated testing in most of the testing scene
+Adapted technical delivery workflows to accommodate the Product team’s parallel feature model, while dynamically reallocating engineering and QA capacity to execute rapid defect triage and protect the target launch date, expanding automated testing across critical scenarios
 
 ---
 
@@ -173,7 +173,7 @@ Authorized paid overtime across a three-month crunch period and compressed the U
 
 ## 4. Keep Decision-Makers Closely Aligned
 
-Project reviews were scheduled every two weeks and included key technical and delivery decision-makers.
+
 
 These reviews helped maintain alignment across:
 
@@ -184,15 +184,6 @@ These reviews helped maintain alignment across:
 
 The objective was to reduce delays in decisions and keep roadmap changes visible.
 
----
-
-## 5. Work Collaboratively With the Client
-
-A major strength of the engagement was the close working relationship with DFA.
-
-The client was generally supportive of changes required to improve delivery.
-
-This made it possible to address issues with less bureaucracy and focus on solving problems collaboratively.
 
 ---
 
