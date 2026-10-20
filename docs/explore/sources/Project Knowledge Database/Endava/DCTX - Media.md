@@ -45,7 +45,7 @@ This new platform is intended to commit the following goals:
 
 # Scope of Responsibility
 
-I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring CI/CD pipeline in GCP, alongside with other part of the solution, such as, Monitoring and alerts.
+I was responsible for leading development team as Scrum Master for the FrontEnd (Web + Mobile app) &  Backend teams.  Also, I've led the Data Migration work plus DevOps team configuring GCP infrastructure, CI/CD pipeline.
  
 ## Project Setup
 
@@ -139,9 +139,7 @@ Decision with technical lead was to reuse most of the backend solution applied t
 
 ---
 
-## 4. Changes in the product scope
 
-Eventough the product scope was defined at the beginning of the project, it was not completed and properly informed to development Team.
 
 ---
 
