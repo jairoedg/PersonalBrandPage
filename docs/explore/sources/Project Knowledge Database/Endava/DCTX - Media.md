@@ -126,19 +126,20 @@ As a workaround, the team onboarded a bilingual Business Analyst to bridge the c
 
 ## 2. Solution built as a whole, not feature-delivery driven
 
-A major challenge was that the project was structured like a puzzle, non-incremental delivery model. Multiple features were built concurrently, but there were no clear milestones to complete and sign off on individual epics or feature sets. This approach led to continuous discussions between Technical Leads and the Product team. Although Technical Leads reluctantly accepted the setup, it proved extremely difficult to pivot away from this way of working.
+A major challenge was that the project was structured like a puzzle, non-incremental delivery model. Multiple features were built concurrently,  no clear milestones to complete in the sprints and sign off on individual epics or feature sets. This approach led to continuous discussions between Technical Leads and the Product team. Although Technical Leads reluctantly accepted the setup, it proved extremely difficult to pivot away from this way of working.
 
-Consequently, once all features were finally completed and integrated near the end of the timeline, very little time remained for thorough User Acceptance Testing (UAT). This resulted in a high volume of late-stage bugs and change requests, creating a severe workload bottleneck for both QA and Development teams prior to the launch date.
+At the end, integration occurred late in the cycle, leaving insufficient time for User Acceptance Testing (UAT). The sudden discovery of numerous defects and scope changes right before release placed an unsustainable workload on Dev and QA teams to meet the deadline.
 
 ---
 
-## 3. Mobile app development started too late
+## 3. Unrealistic Mobile App Timeline
 
-New Mobile app development kicked off on January 2026, as a bad decision coming from management team, and impacting drastically the whole project, as delivery timelines initially defined end of July 2026 including this application but hard (not to say impossible) to complete.
+Development for the new mobile app kicked off in January 2026. This was an ill-timed management decision that severely impacted the broader project, as the overall release target of late July 2026 was kept intact despite adding the application to the scope—making on-time completion nearly impossible.
 
-Created a Product roadmap plan to visualize easily to project management and project sponsor that the time to complete the application with no scope reduction or removing certain features was completely unrealistic.  Nonetheless, deadline was defined even when project started and no options for a negotiation. 
+A detailed product roadmap was presented to executive sponsors and project leadership to demonstrate that delivering the full mobile scope within the existing timeframe without scope reduction was unrealistic. However, the deadline remained fixed with no room for negotiation.
 
-Decision with technical lead was to reuse most of the backend solution applied to Web development, assigned more frontend developers and QA testers, supported by IA development, approved overtime for 3 months with burnout as an issue (with approved extra payment for the effort)  and reduce the time for User Acceptance testing as a critical risk.  Finally, Mobile app was released 2  months later but successfully delivery with few bugs identified in PRD.
+To meet this constraint, project leadership and the Technical Lead executed a high-risk recovery plan:
+
 
 ---
 
