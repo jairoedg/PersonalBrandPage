@@ -173,16 +173,7 @@ Authorized paid overtime across a three-month crunch period and compressed the U
 
 ## 4. Keep Decision-Makers Closely Aligned
 
-
-
-These reviews helped maintain alignment across:
-
-- Technical leads.
-- Client Project Management.
-- Sponsors.
-- Endava delivery leadership.
-
-The objective was to reduce delays in decisions and keep roadmap changes visible.
+Maintaining real-time visibility into the various challenges identified throughout development enabled the leadership team to make swift, decisive choices. By closely monitoring risks, leadership took immediate action to protect project targets—including expanding team capacity and approving critical operational decisions, even when doing so created trade-offs with gross profit margins.
 
 
 ---
