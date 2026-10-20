@@ -262,8 +262,8 @@ The project maintained a continuous delivery model across the approximately 60 b
 
 Customer satisfaction improved significantly during the engagement:
 
-- First-year satisfaction score: approximately 5.6.
-- Later satisfaction score: approximately 8.5.
+- First-year satisfaction score:  5.0.
+- Later satisfaction score: 8.7.
 
 The engagement continued with improved client confidence and delivery stability.
 
