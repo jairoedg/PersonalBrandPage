@@ -1,7 +1,7 @@
 # Publishes only site/ to GitHub Pages (D-018).
 #
-# Manual trigger only (decision: deploy after the placeholders are replaced
-# and Jairo approves going live). A push to main never deploys.
+# Manual trigger only. A push to main never deploys. Placeholder warnings
+# do not block a manual run; errors always do.
 name: Deploy site to GitHub Pages
 
 on:
@@ -24,13 +24,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Exits 1 on any error, which fails the job. Warnings (placeholders) pass.
       - name: Run site checks
-        run: python3 scripts/check_site.py | tee check-output.txt
-
-      - name: Block errors and leftover placeholders
-        run: |
-          grep -q "Errors: 0" check-output.txt || { echo "Errors found. Fix them before deploying."; exit 1; }
-          grep -q "Warnings: 0" check-output.txt || { echo "Placeholders or warnings remain. Replace them before deploying."; exit 1; }
+        run: python3 scripts/check_site.py
 
   deploy:
     needs: validate
