@@ -1,0 +1,54 @@
+# Publishes only site/ to GitHub Pages (D-018).
+#
+# Manual trigger only (decision: deploy after the placeholders are replaced
+# and Jairo approves going live). A push to main never deploys.
+name: Deploy site to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run site checks
+        run: python3 scripts/check_site.py | tee check-output.txt
+
+      - name: Block errors and leftover placeholders
+        run: |
+          grep -q "Errors: 0" check-output.txt || { echo "Errors found. Fix them before deploying."; exit 1; }
+          grep -q "Warnings: 0" check-output.txt || { echo "Placeholders or warnings remain. Replace them before deploying."; exit 1; }
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
