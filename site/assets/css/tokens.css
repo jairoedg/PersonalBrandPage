@@ -1,0 +1,255 @@
+/*
+ * Design tokens — extracted from the approved Figma file
+ * "Personal Brand Website", page "🎨 Design Language" (node 23:2).
+ * Do not edit values here without updating Figma and docs/explore/design/.
+ */
+
+:root {
+  /* ---------- Primitive colors ---------- */
+
+  /* Slate */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* Stone */
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+
+  /* Blue */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* Teal */
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+
+  /* Emerald */
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+
+  /* Amber */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+
+  /* Rose */
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-300: #fda4af;
+  --rose-400: #fb7185;
+  --rose-500: #f43f5e;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+  --rose-800: #9f1239;
+  --rose-900: #881337;
+
+  /* Sky */
+  --sky-50: #f0f9ff;
+  --sky-100: #e0f2fe;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-800: #075985;
+  --sky-900: #0c4a6e;
+
+  /* ---------- Semantic colors (use these in components) ---------- */
+  /* Tokens marked RESERVED are not approved for MVP use. Do not use them without approval. */
+  --color-action-primary: var(--blue-700);
+  --color-action-hover: var(--blue-800);      /* RESERVED */
+  --color-action-pressed: var(--blue-900);    /* RESERVED */
+  --color-action-on-primary: var(--stone-50);
+  --color-action-secondary: var(--blue-800);  /* RESERVED */
+
+  --color-neutral-default: var(--slate-700);
+  --color-neutral-subtle: var(--slate-300);
+
+  --color-success-default: var(--emerald-700); /* RESERVED */
+  --color-success-surface: var(--emerald-50);  /* RESERVED */
+  --color-warning-default: var(--amber-800);
+  --color-warning-surface: var(--amber-50);
+  --color-error-default: var(--rose-700);
+  --color-error-surface: var(--rose-50);
+  --color-info-default: var(--sky-700);        /* RESERVED */
+  --color-info-surface: var(--sky-50);         /* RESERVED */
+
+  --color-surface-background: var(--stone-100);
+  --color-surface-card: var(--stone-50);
+  --color-surface-overlay: var(--stone-50);      /* RESERVED */
+  --color-surface-scrim: rgba(15, 23, 42, 0.64); /* RESERVED; slate-900 at 64% */
+
+  --color-text-default: var(--slate-900);
+  --color-text-secondary: var(--slate-700);
+  --color-text-disabled: var(--slate-600);  /* RESERVED */
+  --color-text-on-dark: var(--stone-50);    /* RESERVED */
+  --color-text-link: var(--blue-700);
+
+  /* 1.36:1 against the page background. Decorative dividers only; never the
+     only cue for an interactive control (WCAG 1.4.11). */
+  --color-border-default: var(--slate-300);
+  --color-focus-visible: var(--blue-700);
+  --color-accent-quiet: var(--teal-700);    /* RESERVED */
+
+  /* ---------- Typography (Inter, from the Figma typography ramp) ---------- */
+  --font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Code: no substitute font is approved, so use the platform monospace stack. */
+  --font-family-code: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --font-size-display: 3rem;        /* 48px */
+  --line-height-display: 3.5rem;    /* 56px */
+  --letter-spacing-display: -0.025em;
+  --font-weight-display: 600;
+
+  --font-size-h1: 2.5rem;           /* 40px */
+  --line-height-h1: 3rem;           /* 48px */
+  --letter-spacing-h1: -0.02em;
+  --font-weight-h1: 600;
+
+  --font-size-h2: 2rem;             /* 32px */
+  --line-height-h2: 2.5rem;         /* 40px */
+  --letter-spacing-h2: -0.015em;
+  --font-weight-h2: 600;
+
+  --font-size-h3: 1.75rem;          /* 28px */
+  --line-height-h3: 2.25rem;        /* 36px */
+  --letter-spacing-h3: -0.01em;
+  --font-weight-h3: 600;
+
+  --font-size-h4: 1.5rem;           /* 24px */
+  --line-height-h4: 2rem;           /* 32px */
+  --letter-spacing-h4: -0.005em;
+  --font-weight-h4: 600;
+
+  --font-size-body-l: 1.125rem;     /* 18px */
+  --line-height-body-l: 1.75rem;    /* 28px */
+  --letter-spacing-body-l: 0;
+  --font-weight-body: 400;
+
+  --font-size-body-m: 1rem;         /* 16px */
+  --line-height-body-m: 1.5rem;     /* 24px */
+  --letter-spacing-body-m: 0;
+
+  --font-size-body-s: 0.875rem;     /* 14px */
+  --line-height-body-s: 1.25rem;    /* 20px */
+  --letter-spacing-body-s: 0;
+
+  --font-size-caption: 0.75rem;     /* 12px */
+  --line-height-caption: 1rem;      /* 16px */
+  --letter-spacing-caption: 0.005em;
+  --font-weight-caption: 400;
+
+  --font-size-label: 0.875rem;      /* 14px */
+  --line-height-label: 1.25rem;     /* 20px */
+  --letter-spacing-label: 0.005em;
+  --font-weight-label: 500;
+
+  /* Per design-language.md (decided by Jairo). Figma's ramp still shows 12px. */
+  --font-size-code: 0.8125rem;      /* 13px */
+  --line-height-code: 1.25rem;      /* 20px */
+  --letter-spacing-code: 0;
+  --font-weight-code: 400;
+
+  /* ---------- Spacing (4px grid) ---------- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 1.75rem;   /* 28px */
+  --space-8: 2rem;      /* 32px */
+  --space-9: 2.25rem;   /* 36px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-11: 2.75rem;  /* 44px */
+  --space-12: 3rem;     /* 48px */
+  --space-13: 3.25rem;  /* 52px */
+  --space-14: 3.5rem;   /* 56px */
+  --space-15: 3.75rem;  /* 60px */
+  --space-16: 4rem;     /* 64px */
+
+  /* ---------- Elevation ---------- */
+  --elevation-flat: none;
+  --elevation-raised: 0 2px 6px rgba(15, 23, 42, 0.08);
+  --elevation-floating: 0 8px 24px rgba(15, 23, 42, 0.12);
+  --elevation-overlay: 0 20px 48px rgba(15, 23, 42, 0.18);
+
+  /* ---------- Component-token candidates ---------- */
+  /* Candidates only; they do not authorize components. */
+  --padding-button-sm: 0.5rem 0.75rem; /* 8px 12px */
+  --padding-button-md: 0.75rem 1rem;   /* 12px 16px */
+  --padding-card: 1.5rem;              /* 24px */
+  --gap-list: 1rem;                    /* 16px */
+
+  /* ---------- Motion (RESERVED) ---------- */
+  /* No animation is approved. Any future use needs approval and must respect
+     prefers-reduced-motion (durations collapse to 0ms below). */
+  --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 400ms;
+  --duration-deliberate: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-deliberate: 0ms;
+  }
+}
