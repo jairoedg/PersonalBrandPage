@@ -18,6 +18,7 @@ A personal portfolio website for Jairo Enrique Diaz, a Project Manager. It prese
 - Next, in order:
   1. Visual design pass (Impeccable skill), using the tokens in `site/assets/css/tokens.css`. Change the look only; keep the layout already checked.
   2. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.
+     - To review: `site/projects/digicel-jamaica.html` line 45 uses "mission-critical", which the Impeccable detector flags as a marketing buzzword. The wording comes from the source file (`docs/explore/sources/Project Knowledge Database/Comverse/Digicel-Jamaica.md`). Jairo decides whether to keep it or use more specific wording.
   3. Leadership and How I Can Help content, when Jairo is ready.
   4. Deploy only after design, text, and final review are approved.
 
