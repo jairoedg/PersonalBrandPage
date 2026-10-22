@@ -17,7 +17,8 @@ A personal portfolio website for Jairo Enrique Diaz, a Project Manager. It prese
 - Commits: `db3a576` (baseline) is pushed. `1f90fa0` (deploy workflow and site-cicd skill) is committed locally, not pushed.
 - Next, in order:
   1. Visual design pass (Impeccable skill), using the tokens in `site/assets/css/tokens.css`. Change the look only; keep the layout already checked.
-  2. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.  3. Leadership and How I Can Help content, when Jairo is ready.
+  2. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.
+  3. Leadership and How I Can Help content, when Jairo is ready.
   4. Deploy only after design, text, and final review are approved.
 
 ## Authoritative documents (source of truth)
@@ -76,7 +77,6 @@ The decision log (`docs/00-foundation/98-decision-log.md`) is the record. If a d
 - **D-019:** self-host Inter (400/500/600, woff2) in `site/assets/fonts/` with the SIL OFL license file, loaded from `site/assets/css/fonts.css` with `font-display: swap`. No third-party font requests. Code uses the system monospace stack.
 - **D-020 (Q-09 closed):** story pages keep every section visible, with an "On this page" list of jump links. Previous and Next follow the Projects page order; related stories come from each source file. No collapsible sections for now.
 - **D-022 (Q-07 closed):** Home profile wording approved: the third-person positioning statement, the vision line, and the profile summary paragraphs on the Home page. Wording can be revisited later.
-- **D-023:** decorative icons on section and project titles, not in the top navigation. Hand-drawn inline SVG (outlined, 24px grid, 1.75px stroke, rounded caps and joins), `aria-hidden`, never carrying meaning alone. No icon library.
 - **D-021 (Q-10 closed):** the contact values (email, LinkedIn, phone) on `site/contact/index.html` are approved. The CV download is `site/assets/cv/CV_JairoDiaz - Project Manager.pdf`, kept under its existing name (spaces encoded as `%20` in links) and replaced when a final version is approved. Don't copy the phone number into docs or this file; the repository is public.
 
 ## Open decisions (do not decide these alone)
