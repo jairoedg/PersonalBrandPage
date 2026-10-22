@@ -376,6 +376,17 @@ main:focus {
   letter-spacing: var(--letter-spacing-h4);
 }
 
+/* Decorative heading icons: outlined, inherit the heading color, never carry meaning alone (design-language.md). */
+.heading-icon {
+  display: inline-block;
+  flex: none;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.4em;
+  vertical-align: -0.08em;
+  color: var(--color-text-default);
+}
+
 /* Lighter title underline; the link is still underlined, not identified by color alone. */
 .story-card__title a {
   text-decoration-thickness: 1px;
