@@ -38,6 +38,8 @@ Features:
 - Related projects
 - Similar capabilities
 - Better recruiter experience
+- Left-side navigation panel with icons (idea parked 2026-10-22; reference: `docs/explore/design/references/left-navigation-reference.png`). Not approved; it changes the top-navigation layout we have checked.
+%%Updated 2026-10-22: left-side navigation idea parked here. Icons for the top navigation are a separate decision and are not in this roadmap item.%%
 
 ---
 
