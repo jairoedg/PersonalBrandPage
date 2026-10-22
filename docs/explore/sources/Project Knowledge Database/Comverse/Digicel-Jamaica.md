@@ -12,7 +12,7 @@
 
 # Executive Summary
 
-Following the devastating earthquake in Haiti, Digicel initiated the relocation of a mission-critical Value Added Services (VAS) platform to Jamaica to ensure business continuity while continuing to support customers across both Jamaica and Haiti.
+Following the devastating earthquake in Haiti, Digicel initiated the relocation of the Value Added Services (VAS) platform to Jamaica to ensure business continuity while continuing to support customers across both Jamaica and Haiti.
 
 As the on-site implementation lead, I coordinated infrastructure installation, software upgrades, implementation activities, testing, customer communication, and production deployment while acting as the primary operational interface between Digicel and Comverse.
 
