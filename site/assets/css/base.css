@@ -277,6 +277,34 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
+/* ---------- Home intro rhythm ---------- */
+/* Name and positioning read as one unit; the profile starts a new group. */
+.intro > .lead {
+  margin-top: var(--space-4);
+}
+
+.intro > .profile {
+  margin-top: var(--space-8);
+}
+
+/* One body line between profile paragraphs. */
+.intro .profile > * + * {
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .intro > .vision {
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+/* More room after the intro before the first content section. */
+@media (min-width: 1024px) {
+  .intro + .section {
+    margin-top: var(--space-16);
+  }
+}
+
 /* Visible text marks draft or placeholder copy; the color is a supporting cue only. */
 .draft-flag {
   font-size: var(--font-size-label);
