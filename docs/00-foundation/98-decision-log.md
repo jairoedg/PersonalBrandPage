@@ -286,3 +286,17 @@ Status
 Approved (2026-10-22)
 
 %%Updated 2026-10-22: icon decision recorded. Left-side navigation remains a parked roadmap idea (99-product-roadmap.md) and is not approved.%%
+
+---
+
+## D-024
+
+Career Journey shows a connected timeline, which is the visual form of D-004 (timeline as secondary navigation; Projects stay primary). Each role has a marker on one continuous line, with the years in bold. The entries run newest first. Projects appear as dated links inside the role they belong to. One accent color (blue) marks the markers and years; the color does not encode anything else. Detailed learning stays in Project Stories.
+
+Source: D-004; 04-website-strategy.md (Timeline Strategy); approved by Jairo in chat on 2026-10-22
+
+Status
+
+Approved (2026-10-22)
+
+%%Updated 2026-10-22: timeline visual approved. The side-stripe rule on Career Journey is replaced by the connected timeline (site commit fd88153).%%
