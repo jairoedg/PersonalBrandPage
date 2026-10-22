@@ -272,3 +272,17 @@ Status
 Approved (2026-10-20)
 
 %%Updated 2026-10-20: closes Q-07. Also updated in the PRD, HLD, boundary map, design sketch, and wireframes (open items closed, with comments in each file). CLAUDE.md in the project repo updated to match.%%
+
+---
+
+## D-023
+
+Decorative icons support section titles and project titles. They are not used in the top navigation. Icons are outlined, on a 24px grid, with a 1.75px stroke and rounded caps and joins, as the design language defines. They are hand-drawn inline SVG, marked decorative (hidden from screen readers), and never carry meaning alone. No icon library is adopted.
+
+Source: design language (Iconography), approved by Jairo in chat on 2026-10-22
+
+Status
+
+Approved (2026-10-22)
+
+%%Updated 2026-10-22: icon decision recorded. Left-side navigation remains a parked roadmap idea (99-product-roadmap.md) and is not approved.%%
