@@ -241,7 +241,7 @@ Approved
 
 ## D-020
 
-Story page navigation (Q-09): every section of a Project Story page stays visible. An "On this page" list of jump links at the top moves between sections. Previous and Next links follow the Projects page order, and related stories come from each source file. Collapsible sections are not used for now and can be revisited later.
+Story page navigation (Q-09): every section of a Project Story page stays visible. An "On this page" list of jump links at the top moves between sections. Previous and Next links follow the Projects page order, and related stories come from each source file. Collapsible sections are not used for now and can be revisited later. (Superseded in part by D-025, 2026-10-22: sections are now expandable; the jump links and Previous / Next order still apply.)
 
 Status
 
@@ -300,3 +300,31 @@ Status
 Approved (2026-10-22)
 
 %%Updated 2026-10-22: timeline visual approved. The side-stripe rule on Career Journey is replaced by the connected timeline (site commit fd88153).%%
+
+---
+
+## D-025
+
+Project Story pages use expandable sections. Each section is a heading that expands to show its text, so readers can scan the page and open only the sections they want. This revokes the part of D-020 that kept every section visible and ruled out collapsible sections. D-020's "On this page" jump links and Previous / Next order stay in place. A jump link opens the section it points to.
+
+Source: Jairo in chat on 2026-10-22; reason: the page's text is long and dense, and sections are easier to read when they can be opened one at a time. Supersedes part of D-020. The PRD's progressive-disclosure principle (R-004) supports this.
+
+Status
+
+Approved (2026-10-22)
+
+%%Updated 2026-10-22: expandable sections approved, revoking the visible-sections rule in D-020. Implementation details (default state, expand-all control, print behavior) are for the code session to propose.%%
+
+---
+
+## D-026
+
+Visual direction: option C, "soft professional." Pale blue page background (blue-50), white floating cards with a soft shadow, and teal (teal-700) for actions, links, icons, and the timeline markers. This amends the timeline accent in D-024 from blue to teal. The palette and type tokens do not change.
+
+Source: Jairo in chat on 2026-10-22, choosing option C from the three previews.
+
+Status
+
+Approved (2026-10-22)
+
+%%Updated 2026-10-22: look approved as option C. Icon and timeline accents change from blue to teal (teal-700), amending D-024.%%
