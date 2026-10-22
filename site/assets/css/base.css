@@ -262,10 +262,12 @@ main:focus {
   max-width: 48rem;
 }
 
+/* Callout: a tinted panel, not a side stripe. */
 .vision {
   max-width: 48rem;
-  padding-left: var(--space-4);
-  border-left: 4px solid var(--color-action-primary); /* decorative */
+  padding: var(--space-4);
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-default); /* decorative */
   font-weight: var(--font-weight-label);
   color: var(--color-text-secondary);
 }
@@ -318,6 +320,11 @@ main:focus {
   font-size: var(--font-size-h4);
   line-height: var(--line-height-h4);
   letter-spacing: var(--letter-spacing-h4);
+}
+
+/* Lighter title underline; the link is still underlined, not identified by color alone. */
+.story-card__title a {
+  text-decoration-thickness: 1px;
 }
 
 .story-card__meta,
@@ -402,7 +409,7 @@ main:focus {
 .story-outcome {
   padding: var(--space-4);
   background-color: var(--color-surface-card);
-  border-left: 4px solid var(--color-action-primary); /* decorative; the bold label carries meaning */
+  border: 1px solid var(--color-border-default); /* decorative; the bold label carries meaning */
 }
 
 /* "On this page": navigation-based disclosure (Q-09 proposal). */
