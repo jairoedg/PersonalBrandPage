@@ -241,7 +241,7 @@ Approved
 
 ## D-020
 
-Story page navigation (Q-09): every section of a Project Story page stays visible. An "On this page" list of jump links at the top moves between sections. Previous and Next links follow the Projects page order, and related stories come from each source file. Collapsible sections are not used for now and can be revisited later. (Superseded in part by D-025, 2026-10-22: sections are now expandable; the jump links and Previous / Next order still apply.)
+Story page navigation (Q-09): an "On this page" list of jump links at the top moves between sections. Previous and Next links follow the Projects page order, and related stories come from each source file. Revoked in part by D-025 (2026-10-22): the rule that every section stays visible, and that collapsible sections are not used, no longer applies. The jump links and the Previous / Next order still apply.
 
 Status
 
@@ -305,15 +305,17 @@ Approved (2026-10-22)
 
 ## D-025
 
-Project Story pages use expandable sections. Each section is a heading that expands to show its text, so readers can scan the page and open only the sections they want. This revokes the part of D-020 that kept every section visible and ruled out collapsible sections. D-020's "On this page" jump links and Previous / Next order stay in place. A jump link opens the section it points to.
+Project Story pages use expandable sections, with one section open at a time. Each section heading opens its text. When a reader opens a section, any section that was open closes, so the reader moves through the story one section at a time. No content is removed; every section is one click away. The "On this page" jump links and the Previous / Next order from D-020 stay in place. A jump link opens the section it points to and closes the others.
 
-Source: Jairo in chat on 2026-10-22; reason: the page's text is long and dense, and sections are easier to read when they can be opened one at a time. Supersedes part of D-020. The PRD's progressive-disclosure principle (R-004) supports this.
+Not decided yet: which section, if any, is open when the page loads; whether a short summary stays visible above the sections; whether an "expand all" control exists (it conflicts with one open section at a time, so it is not part of this decision).
+
+Source: Jairo in chat on 2026-10-22. The reason: the page's text is long and dense, and sections are easier to read when they can be opened one at a time. Revokes the visible-sections rule in D-020. The PRD's progressive-disclosure principle (R-004) supports this.
 
 Status
 
 Approved (2026-10-22)
 
-%%Updated 2026-10-22: expandable sections approved, revoking the visible-sections rule in D-020. Implementation details (default state, expand-all control, print behavior) are for the code session to propose.%%
+%%Updated 2026-10-22: one-open-at-a-time expandable sections approved, revoking the visible-sections rule in D-020. Open questions above are for Jairo to decide before the code session builds them.%%
 
 ---
 

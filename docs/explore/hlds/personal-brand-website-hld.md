@@ -501,7 +501,7 @@ This journey preserves entry, skip, revisit, direct Contact, progressive disclos
 | 9 | What formal accessibility conformance level should be adopted? | Product Owner / Content Owner; Architect / Lead Engineer advises | Later formal validation planning; DEC-008B remains Deferred/Open. |
 | 10 | Can contextual navigation be generated from approved relationships without backend functionality? | Architect / Lead Engineer analysis; Product Owner approval if boundary changes | Before implementation if required; do not create navigation-domain relationships. |
 | 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | Closed by D-021 (2026-10-20). %%Updated 2026-10-20: contact values and CV path approved.%% |
-| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | Closed by D-014 (previews, order, summary fields) and D-020 (disclosure, Related/Next links), 2026-10-20. %%Updated 2026-10-20.%% |
+| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | Closed by D-014 (previews, order, summary fields) D-020 (Related/Next links), 2026-10-20, and D-025 (disclosure: one section open at a time), 2026-10-22. %%Updated 2026-10-20.%% |
 | 13 | How should the qualified Tigo → Avianca → DFA arc appear in final copy? | Product Owner / Content Owner | Later governed content/copy. |
 | 14 | How should B5/B6 tokens and the `type/code` exception map to implementation? | Architect / Lead Engineer analysis; Product Owner approval if scope changes | Later design-system/implementation. |
 

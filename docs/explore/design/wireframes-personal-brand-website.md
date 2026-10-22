@@ -606,7 +606,7 @@ Approved examples include `PageShell`, `Header`, `PrimaryNav`, `SectionIntro`, `
 
 **Open questions**:
 
-- ~~Exact progressive-disclosure mechanism.~~ Closed by D-020 (2026-10-20). %%Updated 2026-10-20.%%
+- ~~Exact progressive-disclosure mechanism.~~ Closed by D-025 (2026-10-22): expandable sections, one open at a time. %%Updated 2026-10-22.%%
 - ~~Exact Related / Next Exploration links.~~ Closed by D-020 (2026-10-20).
 - Which optional public references materially improve understanding or confidence.
 
@@ -856,7 +856,7 @@ No questions currently block A10 wireframe document completion. The following ma
 1. Should Projects use a list, grid, or another collection pattern?
 2. ~~Which Project Stories appear first on Home and Projects, using canonical A3 decisions and the Recruiter Journey?~~ Closed by D-014 (2026-10-20).
 3. ~~Which summary fields are sufficient for Projects selection?~~ Closed by D-014 (2026-10-20).
-4. ~~What exact interaction mechanism supports progressive disclosure?~~ Closed by D-020 (2026-10-20).
+4. ~~What exact interaction mechanism supports progressive disclosure?~~ Closed by D-025 (2026-10-22): expandable sections, one open at a time.
 5. ~~What exact Related / Next Exploration links are supported by approved content relationships?~~ Closed by D-020 (2026-10-20).
 6. ~~What responsive breakpoints are selected during implementation?~~ Closed by D-013 (768px and 1024px). %%Updated 2026-10-20.%%
 7. ~~What final contact destination values and CV artifact path are used?~~ Closed by D-021 (2026-10-20).

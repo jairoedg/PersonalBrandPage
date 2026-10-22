@@ -290,7 +290,7 @@ No recommendation is silently converted into a selection.
 | 9 | What formal accessibility conformance level should be adopted? | Product Owner / Content Owner; Architect / Lead Engineer advises | DEC-008B; PRD NFR-002 | Formal conformance testing. | Later implementation/strategy; qualitative accessibility remains mandatory. |
 | 10 | Can contextual navigation be generated from approved relationships without backend functionality? | Architect / Lead Engineer (analysis); Product Owner approval if boundary changes | Architecture Context; PRD/A10 | Content/build capability and non-linear exploration. | May remain unresolved for B.2; validate before implementation if required. |
 | 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | PRD; A10 | Publication readiness. | Closed by D-021 (2026-10-20). %%Updated 2026-10-20: contact values and CV path approved.%% |
-| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | PRD; A10 | Content and presentation readiness. | Closed by D-014 and D-020 (2026-10-20). %%Updated 2026-10-20.%% |
+| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | PRD; A10 | Content and presentation readiness. | Closed by D-014, D-020, and D-025 (2026-10-20 and 2026-10-22). %%Updated 2026-10-22.%% |
 | 13 | How should the qualified Tigo → Avianca → DFA arc appear in final copy? | Product Owner / Content Owner | A3; PRD; A10 | Narrative truthfulness and qualification. | Later governed content/copy. |
 | 14 | How should B5/B6 tokens and the `type/code` exception map to implementation? | Architect / Lead Engineer (analysis); Product Owner approval if scope changes | B5; B6 | Design-system implementation fidelity. | Later design-system/implementation unless an architecture dependency is demonstrated. |
 
@@ -323,7 +323,7 @@ The full open-question register remains in the approved boundary map and Step 7 
 9. ~~**Responsive implementation breakpoints**~~, closed by D-013 (768px and 1024px); B6 widths remain design references only. %%Updated 2026-10-20.%%
 10. **Formal accessibility conformance level**; qualitative accessibility requirements remain mandatory.
 11. ~~**Final Contact values and CV path.**~~ Closed by D-021 (2026-10-20). %%Updated 2026-10-20.%%
-12. ~~**Project Story preview ordering, summary fields, Related/Next links, and disclosure mechanism**~~, closed by D-014 and D-020 (2026-10-20).
+12. ~~**Project Story preview ordering, summary fields, Related/Next links, and disclosure mechanism**~~, closed by D-014, D-020, and D-025 (2026-10-20 and 2026-10-22).
 13. **Final Tigo → Avianca → DFA copy**, preserving A3 qualifications and the non-mandatory visitor route.
 14. **B5/B6 token-to-implementation mapping**, including the approved `type/code` exception.
 

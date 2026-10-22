@@ -171,7 +171,7 @@ These requirements preserve approved A3/A10 scope. The three concepts are distin
 
 ### Intentionally Deferred Decisions — Not Selected or Ruled Out
 
-- **PRD / Experience Design:** none open. Final wording, the Home profile summary, Project Story previews, progressive disclosure, Related / Next Exploration links, and contact values are closed by D-014, D-020, D-021, and D-022. Wording can be revisited later.
+- **PRD / Experience Design:** none open. Final wording, the Home profile summary, Project Story previews, progressive disclosure, Related / Next Exploration links, and contact values are closed by D-014, D-020, D-021, D-022, and D-025 (expandable sections, one open at a time). Wording can be revisited later.
 - **Architecture / Solutioning:** frontend stack; content storage/maintenance representation, including whether a CMS is needed; hosting provider; deployment pipeline and rollback; build-boundary ownership; publication-control implementation stage.
 - **Analytics / Measurement:** measures/events, mechanism, privacy/retention/consent, baseline, and implementation.
 - **Implementation detail:** list/grid treatment, detailed P1 states/interactions, and formal accessibility conformance target. Responsive breakpoints are closed by D-013 (768px and 1024px).
@@ -192,7 +192,7 @@ These requirements preserve approved A3/A10 scope. The three concepts are distin
 | **Q-06 / AS-07** | Does the approved Recruiter Journey translate effectively into the experience? | Jairo | Not assigned in source | A10 flows are approved; effectiveness remains an assumption for any later validation. |
 | **Q-07** | What final wording and minimum Home profile summary content will be approved? | Jairo | Not assigned in source | Closed by D-022 (2026-10-20). |
 | **Q-08** | Which Project Story previews should appear, in what order, and which summary fields are sufficient? | Jairo | Not assigned in source | Closed by D-014 (2026-10-20). |
-| **Q-09** | What progressive-disclosure interaction and Related / Next Exploration links will be used? | Jairo; UX role not separately assigned | Not assigned in source | Closed by D-020 (2026-10-20); disclosure mechanism updated by D-025 (2026-10-22): expandable sections. |
+| **Q-09** | What progressive-disclosure interaction and Related / Next Exploration links will be used? | Jairo; UX role not separately assigned | Not assigned in source | Closed by D-020 (2026-10-20). Disclosure mechanism set by D-025 (2026-10-22): expandable sections, one open at a time. |
 | **Q-10** | What final contact values and CV artifact path will be approved? | Jairo | Not assigned in source | Closed by D-021 (2026-10-20). |
 | **Q-11** | Can the preferred file-based direction represent and govern A3 content; is a CMS needed for a concrete approved requirement? | Architect / Lead Engineer recommends; Jairo approves | High in A9 | Step 5 architecture/strategy work; neither a CMS nor another content representation is selected or ruled out here. |
 | **Q-12** | Who owns the curated-content/build boundary, and at which stage is publication eligibility enforced? | Architect / Lead Engineer recommends; Jairo approves | High in A9 | Step 5 architecture/strategy work; implementation stage remains deferred. |
