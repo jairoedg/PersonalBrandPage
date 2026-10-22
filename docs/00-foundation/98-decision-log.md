@@ -163,6 +163,8 @@ Approved
 
 Breakpoints: mobile-first. Tablet at 768px and desktop at 1024px. Projects shows one column on mobile and two from 768px. Test at 320px wide with no horizontal scrolling.
 
+DEC-008A (breakpoints): closed by D-013.
+
 Source: Q-15
 
 Status
@@ -175,9 +177,9 @@ Approved
 
 Home Project Story previews: Entel Chile, GSK, and DFA Capital Markets, all confirmed as approved for publication.
 
-Order, newest first: DFA Capital Markets (Endava, 2021–2025), GSK (TCS, 2017–2018), Entel Chile (Comverse, 2015). Summary fields remain open.
+Order, newest first: DFA Capital Markets (Endava, 2021–2025), GSK (TCS, 2017–2018), Entel Chile (Comverse, 2015). Summary text and fields on the Home and Projects cards are approved. The wording can be revisited later.
 
-Source: Q-08 (partial)
+Source: Q-08 (closed)
 
 Status
 
@@ -256,3 +258,17 @@ Source: Q-10
 Status
 
 Approved (2026-10-20)
+
+---
+
+## D-022
+
+Home profile wording (Q-07) approved: the third-person positioning statement, the vision line, and the three profile summary paragraphs as shown on the Home page. Wording can be revisited later.
+
+Source: Q-07
+
+Status
+
+Approved (2026-10-20)
+
+%%Updated 2026-10-20: closes Q-07. Also updated in the PRD, HLD, boundary map, design sketch, and wireframes (open items closed, with comments in each file). CLAUDE.md in the project repo updated to match.%%

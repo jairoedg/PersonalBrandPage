@@ -21,7 +21,7 @@ This decision log is active for B.1–B.4. It records approved directional decis
 | DEC-005 | 2026-10-01 | B.1.3.6 | Hosting and delivery operating model | Product Owner decision | Deferred / Open |
 | DEC-006 | 2026-10-01 | B.1.3.6 | Build/publication trigger and release policy | Product Owner decision | Deferred / Open |
 | DEC-007 | 2026-10-01 | B.1.3.6 | MVP measurement requirement and mechanism | Product Owner decision | Deferred / Open |
-| DEC-008A | 2026-10-01 | B.1.3.6 | Responsive implementation breakpoints | Product Owner decision | Deferred / Open |
+| DEC-008A | 2026-10-01 | B.1.3.6 | Responsive implementation breakpoints | Product Owner decision | Closed by D-013 (2026-10-20) |
 | DEC-008B | 2026-10-01 | B.1.3.6 | Formal accessibility conformance level | Product Owner decision | Deferred / Open |
 
 ---
@@ -156,12 +156,12 @@ This decision log is active for B.1–B.4. It records approved directional decis
 - **Date**: 2026-10-01
 - **Step**: B.1.3.6 — Architectural Decision Points
 - **Driver**: Product Owner decision
-- **Decision**: Deferred / open. B6 widths of 375/768/1440 remain Figma reference frames only; implementation breakpoints are not selected.
+- **Decision**: Closed 2026-10-20 by D-013: 768px and 1024px, mobile-first, with a 320px test width. B6 widths of 375/768/1440 remain Figma reference frames only. %%Updated 2026-10-20.%%
 - **Options considered**:
   - Define implementation breakpoints after representative responsive validation.
   - Use B6 reference widths as implementation breakpoints — not approved.
 - **Rationale for deferral**: Device priority and implementation breakpoints remain unresolved; selecting them would exceed approved design infrastructure scope.
-- **Disposition**: Deferred / Open — Product Owner confirmed
+- **Disposition**: Closed by D-013 (2026-10-20) — Product Owner approved
 - **Evidence level**: [ASM] — underlying architecture question/options remain unresolved.
 - **Impact**: Affects implementation and validation only; does not select a frontend technology.
 - **Status**: Deferred / Open

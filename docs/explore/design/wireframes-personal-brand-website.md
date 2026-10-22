@@ -532,8 +532,8 @@ Approved examples include `PageShell`, `Header`, `PrimaryNav`, `SectionIntro`, `
 **Open questions**:
 
 - List, grid, or another collection pattern.
-- Minimum summary fields for selection.
-- Ordering based on A3 prominence/narrative decisions without exposing raw governance labels.
+- ~~Minimum summary fields for selection.~~ Closed by D-014 (2026-10-20). %%Updated 2026-10-20.%%
+- ~~Ordering based on A3 prominence/narrative decisions without exposing raw governance labels.~~ Closed by D-014 (2026-10-20).
 
 ### Screen: Project Story Detail
 
@@ -606,8 +606,8 @@ Approved examples include `PageShell`, `Header`, `PrimaryNav`, `SectionIntro`, `
 
 **Open questions**:
 
-- Exact progressive-disclosure mechanism.
-- Exact Related / Next Exploration links.
+- ~~Exact progressive-disclosure mechanism.~~ Closed by D-020 (2026-10-20). %%Updated 2026-10-20.%%
+- ~~Exact Related / Next Exploration links.~~ Closed by D-020 (2026-10-20).
 - Which optional public references materially improve understanding or confidence.
 
 ### Screen: Contact
@@ -809,7 +809,7 @@ Approved examples include `PageShell`, `Header`, `PrimaryNav`, `SectionIntro`, `
 ### Responsive and accessibility behavior
 
 - Support responsive desktop/mobile layouts.
-- Do not assume device priority or numeric breakpoints.
+- Do not assume device priority. Numeric breakpoints are 768px and 1024px (D-013).
 - Preserve meaningful headings, focus order, accessible names, keyboard behavior, and non-visual relationship cues.
 
 ---
@@ -854,13 +854,13 @@ Approved examples include `PageShell`, `Header`, `PrimaryNav`, `SectionIntro`, `
 No questions currently block A10 wireframe document completion. The following may remain open for later Experience Design, PRD, or implementation:
 
 1. Should Projects use a list, grid, or another collection pattern?
-2. Which Project Stories appear first on Home and Projects, using canonical A3 decisions and the Recruiter Journey?
-3. Which summary fields are sufficient for Projects selection?
-4. What exact interaction mechanism supports progressive disclosure?
-5. What exact Related / Next Exploration links are supported by approved content relationships?
-6. What responsive breakpoints are selected during implementation?
-7. What final contact destination values and CV artifact path are used?
-8. What final wording is supplied for approved content concepts?
+2. ~~Which Project Stories appear first on Home and Projects, using canonical A3 decisions and the Recruiter Journey?~~ Closed by D-014 (2026-10-20).
+3. ~~Which summary fields are sufficient for Projects selection?~~ Closed by D-014 (2026-10-20).
+4. ~~What exact interaction mechanism supports progressive disclosure?~~ Closed by D-020 (2026-10-20).
+5. ~~What exact Related / Next Exploration links are supported by approved content relationships?~~ Closed by D-020 (2026-10-20).
+6. ~~What responsive breakpoints are selected during implementation?~~ Closed by D-013 (768px and 1024px). %%Updated 2026-10-20.%%
+7. ~~What final contact destination values and CV artifact path are used?~~ Closed by D-021 (2026-10-20).
+8. ~~What final wording is supplied for approved content concepts?~~ Closed by D-022 (2026-10-20). %%Updated 2026-10-20: Q-07 to Q-10 closed in this list. Item 6 (breakpoints) closed by D-013.%%
 
 ### Resolved and not to reopen
 
@@ -878,7 +878,7 @@ No questions currently block A10 wireframe document completion. The following ma
 - Content readiness risk if approved public Project Story material is incomplete.
 - Publication-safety risk if restricted Evidence is represented as public content.
 - P1 interaction/state detail remains intentionally deferred, while approved information hierarchies are now documented.
-- Responsive-detail risk because device priority and breakpoints are not selected.
+- Responsive-detail risk because device priority is not selected. Breakpoints are 768px and 1024px (D-013).
 - Ordering risk if Project Stories are selected outside canonical A3 and Recruiter Journey decisions.
 
 ---

@@ -240,7 +240,7 @@ Measurement readiness remains a conditional cross-cutting concern outside the to
 | DEC-005 — Hosting/delivery operating model | Deferred / Open | Provider, operating model, preview, rollback, and release implementation unresolved. |
 | DEC-006 — Trigger/release policy | Deferred / Open | Stages remain composable; no combination selected. |
 | DEC-007 — Measurement | Deferred / Open | First determine whether MVP events are required. |
-| DEC-008A — Responsive breakpoints | Deferred / Open | B6 widths remain reference frames only. |
+| DEC-008A — Responsive breakpoints | Closed by D-013 (768px and 1024px) | B6 widths remain reference frames only. |
 | DEC-008B — Accessibility conformance | Deferred / Open | Qualitative accessibility mandatory; formal level unresolved. |
 
 ### Pattern guidance reference
@@ -266,7 +266,7 @@ These patterns do not create new architecture selections, services, contracts, o
 | Hosting/delivery | Managed static hosting/CDN; managed web platform; self-managed infrastructure. | Operational simplicity and cost versus control and capability. | Deferred / Open. |
 | Trigger/release policy | Approved change → preparation/preview; separate production release authorization; automation/scheduling. | Stages may be combined; review control, speed, and operational complexity trade off. | Deferred / Open; no stage combination selected. |
 | Measurement | No MVP events if not required; minimum approved event set if required; broader instrumentation only if justified. | Learning capability versus privacy, runtime, and operational complexity. | Deferred / Open; first determine whether events are required. |
-| Responsive breakpoints | Define after validation; use B6 widths as implementation breakpoints. | B6 widths simplify alignment but are not approved implementation breakpoints. | Deferred / Open; B6 values remain references only. |
+| Responsive breakpoints | Closed by D-013: 768px and 1024px, mobile-first. | B6 widths are references only, not implementation breakpoints. | Closed; B6 values remain references only. |
 | Accessibility conformance | Define a formal level later; continue with mandatory qualitative requirements until then. | Formal target improves testability but cannot be invented at this gate. | Deferred / Open; qualitative requirements remain mandatory. |
 
 No recommendation is silently converted into a selection.
@@ -286,11 +286,11 @@ No recommendation is silently converted into a selection.
 | 5 | Which hosting/delivery operating model and deployment/preview/rollback/release implementation are appropriate? | Product Owner / Architect | DEC-005/DEC-006; PRD; Architecture Context | Secure/reliable delivery and operational ownership. | May remain unresolved for B.2 formalization; required before release planning. |
 | 6 | Are MVP measurement events required, and if so what event set, mechanism, privacy, consent, retention, and ownership apply? | Product Owner / Architect | DEC-007; PRD NFR-007; Part C | Measurement boundary and future validation. | May remain unresolved for B.2 formalization; required before analytics implementation. |
 | 7 | Which frontend implementation stack/language should be used? | Architect / Lead Engineer (analysis); Product Owner approval | PRD; Architecture Context | Implementation structure, tooling, accessibility validation, maintainability, build integration. | Later implementation/strategy; must satisfy frontend-only, PRD/A10, DEC-002/003, and proportionality constraints. |
-| 8 | What responsive implementation breakpoints should be used? | Architect / Lead Engineer (analysis); Product Owner approval if scope changes | DEC-008A; B6 | Responsive implementation and validation. | Later implementation; B6 widths remain references only. |
+| 8 | What responsive implementation breakpoints should be used? | Architect / Lead Engineer (analysis); Product Owner approval if scope changes | DEC-008A; B6 | Responsive implementation and validation. | Closed by D-013 (768px and 1024px, mobile-first). B6 widths remain references only. %%Updated 2026-10-20.%% |
 | 9 | What formal accessibility conformance level should be adopted? | Product Owner / Content Owner; Architect / Lead Engineer advises | DEC-008B; PRD NFR-002 | Formal conformance testing. | Later implementation/strategy; qualitative accessibility remains mandatory. |
 | 10 | Can contextual navigation be generated from approved relationships without backend functionality? | Architect / Lead Engineer (analysis); Product Owner approval if boundary changes | Architecture Context; PRD/A10 | Content/build capability and non-linear exploration. | May remain unresolved for B.2; validate before implementation if required. |
-| 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | PRD; A10 | Publication readiness. | Later governed content/implementation. |
-| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | PRD; A10 | Content and presentation readiness. | Later content/implementation unless an architecture dependency is demonstrated. |
+| 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | PRD; A10 | Publication readiness. | Closed by D-021 (2026-10-20). %%Updated 2026-10-20: contact values and CV path approved.%% |
+| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | PRD; A10 | Content and presentation readiness. | Closed by D-014 and D-020 (2026-10-20). %%Updated 2026-10-20.%% |
 | 13 | How should the qualified Tigo → Avianca → DFA arc appear in final copy? | Product Owner / Content Owner | A3; PRD; A10 | Narrative truthfulness and qualification. | Later governed content/copy. |
 | 14 | How should B5/B6 tokens and the `type/code` exception map to implementation? | Architect / Lead Engineer (analysis); Product Owner approval if scope changes | B5; B6 | Design-system implementation fidelity. | Later design-system/implementation unless an architecture dependency is demonstrated. |
 
@@ -320,10 +320,10 @@ The full open-question register remains in the approved boundary map and Step 7 
 #### Later implementation / strategy decisions
 
 8. **Frontend implementation stack/language**, after the frontend-only direction remains compatible with the approved requirements.
-9. **Responsive implementation breakpoints**; B6 widths remain design references only.
+9. ~~**Responsive implementation breakpoints**~~, closed by D-013 (768px and 1024px); B6 widths remain design references only. %%Updated 2026-10-20.%%
 10. **Formal accessibility conformance level**; qualitative accessibility requirements remain mandatory.
-11. **Final Contact values and CV path.**
-12. **Project Story preview ordering, summary fields, Related/Next links, and disclosure mechanism**, unless a concrete architecture dependency is demonstrated.
+11. ~~**Final Contact values and CV path.**~~ Closed by D-021 (2026-10-20). %%Updated 2026-10-20.%%
+12. ~~**Project Story preview ordering, summary fields, Related/Next links, and disclosure mechanism**~~, closed by D-014 and D-020 (2026-10-20).
 13. **Final Tigo → Avianca → DFA copy**, preserving A3 qualifications and the non-mandatory visitor route.
 14. **B5/B6 token-to-implementation mapping**, including the approved `type/code` exception.
 

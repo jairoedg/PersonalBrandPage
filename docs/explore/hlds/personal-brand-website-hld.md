@@ -112,7 +112,7 @@ This Section 1 intentionally does not select or resolve:
 - hosting/delivery operating model — DEC-005 remains Deferred/Open;
 - build/publication trigger and release policy — DEC-006 remains Deferred/Open;
 - measurement requirement/mechanism — DEC-007 remains Deferred/Open;
-- responsive implementation breakpoints — DEC-008A remains Deferred/Open;
+- responsive implementation breakpoints — DEC-008A closed by D-013 (768px and 1024px); %%Updated 2026-10-20.%%
 - formal accessibility conformance level — DEC-008B remains Deferred/Open;
 - frontend stack/language;
 - production schema, content contract, repository structure, or file format;
@@ -131,7 +131,7 @@ DEC-004 ownership is approved as a combined delivery responsibility. B.2 must no
 - **R-005:** Contact owns Email, LinkedIn, Phone, and secondary CV download; no on-site form backend is introduced.
 - **R-006:** Approved supporting screens and canonical Capabilities/Leadership Principles are preserved.
 - **NFR-001:** Performance remains proportional; no numeric target is invented.
-- **NFR-002:** Accessibility and responsiveness remain mandatory with qualitative requirements; formal conformance and breakpoints remain open.
+- **NFR-002:** Accessibility and responsiveness remain mandatory with qualitative requirements; formal conformance remains open; breakpoints are 768px and 1024px (D-013). %%Updated 2026-10-20.%%
 - **NFR-003:** Publication and Evidence integrity remain mandatory.
 - **NFR-004:** HTTPS remains mandatory for selected production hosting.
 - **NFR-005:** Reliability remains proportional; no SLA or rollback target is invented.
@@ -202,7 +202,7 @@ The following remain open and are not converted into architecture selections by 
 - DEC-005 hosting/delivery operating model;
 - DEC-006 build/publication trigger and release policy;
 - DEC-007 measurement requirement and architecture;
-- DEC-008A responsive implementation breakpoints;
+- ~~DEC-008A responsive implementation breakpoints~~ closed by D-013;
 - DEC-008B formal accessibility conformance level;
 - Markdown/structured metadata versus JSON/YAML;
 - production schema, repository/content structure, and content contract;
@@ -374,7 +374,7 @@ No production technology is committed by this section.
 - Framework/language: **TBD** — any later selection must satisfy frontend-only MVP compatibility, PRD functional/NFR constraints, A10 accessibility/experience requirements, DEC-002 governed-content direction, DEC-003 publication-safety boundaries, and proportional-complexity constraints.
 - State management: **Implementation-level; no dedicated state-management capability is currently established as necessary.** Revisit only if later implementation evidence requires one.
 - UI library: **TBD / optional implementation choice**; not an architecture requirement.
-- Responsive breakpoints: **TBD** under DEC-008A; B6 widths remain design references only.
+- Responsive breakpoints: **768px and 1024px**, mobile-first, under DEC-008A (closed by D-013); B6 widths remain design references only.
 - Formal accessibility conformance level: **TBD** under DEC-008B; qualitative accessibility remains mandatory.
 
 **Backend:**
@@ -497,11 +497,11 @@ This journey preserves entry, skip, revisit, direct Contact, progressive disclos
 | 5 | Which hosting/delivery operating model and deployment/preview/rollback/release implementation are appropriate? | Product Owner / Architect | Before release planning; DEC-005/006 remain Deferred/Open. |
 | 6 | Are MVP measurement events required, and if so what event set, mechanism, privacy, consent, retention, and ownership apply? | Product Owner / Architect | Before measurement implementation; DEC-007 remains Deferred/Open. |
 | 7 | Which frontend implementation stack/language should be used? | Architect / Lead Engineer analysis; Product Owner approval | Later implementation planning, subject to frontend-only, PRD/NFR, A10, DEC-002/003, and proportionality constraints. |
-| 8 | What responsive implementation breakpoints should be used? | Architect / Lead Engineer analysis; Product Owner approval if scope changes | Later implementation; DEC-008A remains Deferred/Open. |
+| 8 | What responsive implementation breakpoints should be used? | Architect / Lead Engineer analysis; Product Owner approval if scope changes | Closed by D-013 (768px and 1024px, mobile-first; test at 320px). DEC-008A closed. %%Updated 2026-10-20.%% |
 | 9 | What formal accessibility conformance level should be adopted? | Product Owner / Content Owner; Architect / Lead Engineer advises | Later formal validation planning; DEC-008B remains Deferred/Open. |
 | 10 | Can contextual navigation be generated from approved relationships without backend functionality? | Architect / Lead Engineer analysis; Product Owner approval if boundary changes | Before implementation if required; do not create navigation-domain relationships. |
-| 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | Later governed content/implementation. |
-| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | Later content/implementation unless an architecture dependency is demonstrated. |
+| 11 | What final Contact values and CV asset path are publication-ready? | Product Owner / Content Owner | Closed by D-021 (2026-10-20). %%Updated 2026-10-20: contact values and CV path approved.%% |
+| 12 | Which Project Story previews, ordering, summary fields, Related/Next links, and disclosure mechanism are final? | Product Owner / Content Owner | Closed by D-014 (previews, order, summary fields) and D-020 (disclosure, Related/Next links), 2026-10-20. %%Updated 2026-10-20.%% |
 | 13 | How should the qualified Tigo → Avianca → DFA arc appear in final copy? | Product Owner / Content Owner | Later governed content/copy. |
 | 14 | How should B5/B6 tokens and the `type/code` exception map to implementation? | Architect / Lead Engineer analysis; Product Owner approval if scope changes | Later design-system/implementation. |
 
@@ -518,7 +518,7 @@ This journey preserves entry, skip, revisit, direct Contact, progressive disclos
 | Measurement | **Applicable later strategy/measurement activity** | First determine whether MVP events are required; no analytics architecture selected. |
 | Contextual-navigation feasibility | **May carry into B.3 Review & Hardening or applicable implementation activity** | Validate against approved relationships without creating navigation-domain relationships. |
 | Frontend stack/language | **Downstream implementation/strategy decision** | Must satisfy frontend-only, PRD/NFR, A10, DEC-002/003, and proportionality constraints. |
-| Responsive breakpoints | **Downstream implementation decision** | DEC-008A remains Deferred/Open; B6 widths are references only. |
+| Responsive breakpoints | **Closed** | DEC-008A closed by D-013 (768px and 1024px); B6 widths are references only. |
 | Formal accessibility conformance | **Downstream implementation/validation decision** | DEC-008B remains Deferred/Open; qualitative accessibility remains mandatory. |
 | Contact/CV values | **Downstream content/implementation** | Not an HLD decision unless a concrete architecture dependency emerges. |
 | Project Story presentation details | **Downstream content/implementation** | Not an HLD decision unless a concrete architecture dependency emerges. |

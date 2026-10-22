@@ -171,14 +171,16 @@ These requirements preserve approved A3/A10 scope. The three concepts are distin
 
 ### Intentionally Deferred Decisions — Not Selected or Ruled Out
 
-- **PRD / Experience Design:** final wording/copy; minimum Home profile summary; exact Project Story preview selection/ordering and summary fields; progressive-disclosure mechanism; Related / Next Exploration links; final contact values and CV path.
+- **PRD / Experience Design:** none open. Final wording, the Home profile summary, Project Story previews, progressive disclosure, Related / Next Exploration links, and contact values are closed by D-014, D-020, D-021, and D-022. Wording can be revisited later.
 - **Architecture / Solutioning:** frontend stack; content storage/maintenance representation, including whether a CMS is needed; hosting provider; deployment pipeline and rollback; build-boundary ownership; publication-control implementation stage.
 - **Analytics / Measurement:** measures/events, mechanism, privacy/retention/consent, baseline, and implementation.
-- **Implementation detail:** responsive breakpoints, list/grid treatment, detailed P1 states/interactions, and formal accessibility conformance target.
+- **Implementation detail:** list/grid treatment, detailed P1 states/interactions, and formal accessibility conformance target. Responsive breakpoints are closed by D-013 (768px and 1024px).
 
 ---
 
 ## Open Questions
+
+%%Updated 2026-10-20: Q-07 to Q-10 closed by D-014, D-020, D-021, and D-022 (see the decision log). The same items are closed in the HLD, boundary map, design sketch, and wireframes.%%
 
 | ID | Question | Owner | Priority | Target resolution |
 |---|---|---|---|---|
@@ -188,15 +190,15 @@ These requirements preserve approved A3/A10 scope. The three concepts are distin
 | **Q-04 / AS-04** | Is the intended frontend-only MVP boundary sufficient for the approved PRD requirements, and what architecture/strategy decisions follow? | Devin recommends; Jairo approves | High in A9 | A5/A9 are completed Discovery inputs and provide the feasibility/context baseline. Remaining requirement-fit and architecture/strategy decisions belong to Step 5; no future A5/A9 work is implied. |
 | **Q-05 / AS-05** | Has a concrete contradiction with the approved foundations emerged that requires explicit Product Owner review? Absent such a contradiction, the approved foundations continue to govern. | Jairo | Not assigned in source | Review only if a concrete contradiction arises or the Product Owner explicitly approves a strategic change; this is not a routine strategy-reopening exercise. |
 | **Q-06 / AS-07** | Does the approved Recruiter Journey translate effectively into the experience? | Jairo | Not assigned in source | A10 flows are approved; effectiveness remains an assumption for any later validation. |
-| **Q-07** | What final wording and minimum Home profile summary content will be approved? | Jairo | Not assigned in source | PRD / Experience Design. |
-| **Q-08** | Which Project Story previews should appear, in what order, and which summary fields are sufficient? | Jairo | Not assigned in source | PRD / Experience Design; preserve A3 mappings and A10 hierarchy. |
-| **Q-09** | What progressive-disclosure interaction and Related / Next Exploration links will be used? | Jairo; UX role not separately assigned | Not assigned in source | PRD / Experience Design; preserve A10 principles. |
-| **Q-10** | What final contact values and CV artifact path will be approved? | Jairo | Not assigned in source | Before final contact content and publication. |
+| **Q-07** | What final wording and minimum Home profile summary content will be approved? | Jairo | Not assigned in source | Closed by D-022 (2026-10-20). |
+| **Q-08** | Which Project Story previews should appear, in what order, and which summary fields are sufficient? | Jairo | Not assigned in source | Closed by D-014 (2026-10-20). |
+| **Q-09** | What progressive-disclosure interaction and Related / Next Exploration links will be used? | Jairo; UX role not separately assigned | Not assigned in source | Closed by D-020 (2026-10-20). |
+| **Q-10** | What final contact values and CV artifact path will be approved? | Jairo | Not assigned in source | Closed by D-021 (2026-10-20). |
 | **Q-11** | Can the preferred file-based direction represent and govern A3 content; is a CMS needed for a concrete approved requirement? | Architect / Lead Engineer recommends; Jairo approves | High in A9 | Step 5 architecture/strategy work; neither a CMS nor another content representation is selected or ruled out here. |
 | **Q-12** | Who owns the curated-content/build boundary, and at which stage is publication eligibility enforced? | Architect / Lead Engineer recommends; Jairo approves | High in A9 | Step 5 architecture/strategy work; implementation stage remains deferred. |
 | **Q-13** | Which frontend stack, hosting, deployment, rollback, and release approach—if any—will be approved? | Architect / Lead Engineer recommends; Jairo approves | High for the approach in A9; public release date is separately Medium | Step 5 architecture/strategy work. A5/A9 remain completed inputs; the mid-October target is for local validation, not a committed public production date. |
 | **Q-14** | What measurement events, mechanism, privacy/retention/consent treatment, and post-launch baseline are appropriate? Could later decisions create a data-residency requirement? | Jairo | Medium; data-residency question is conditional/Low in A9 | Measurement/privacy questions remain unresolved inputs to appropriate downstream architecture/measurement work; behavioral validation is post-launch in Evolve. |
-| **Q-15** | What accessibility conformance level, responsive breakpoints, list/grid treatment, and detailed P1 states will be adopted? | Jairo | Accessibility conformance is Medium in A9; other details unprioritized in source | Later PRD / implementation decisions; do not infer an unapproved standard or numeric breakpoint. |
+| **Q-15** | What accessibility conformance level, responsive breakpoints, list/grid treatment, and detailed P1 states will be adopted? | Jairo | Accessibility conformance is Medium in A9; other details unprioritized in source | Breakpoints closed by D-013 (768px and 1024px). Conformance level, list/grid treatment, and P1 states remain open; do not infer an unapproved standard. |
 
 ---
 
