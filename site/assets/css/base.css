@@ -256,23 +256,54 @@ main:focus {
   margin-top: var(--space-12);
 }
 
+/* Reading measure: 38rem keeps body lines near 65–75 characters (Impeccable craft floor). */
 .lead {
   font-size: var(--font-size-body-l);
   line-height: var(--line-height-body-l);
-  max-width: 48rem;
+  max-width: 38rem;
 }
 
+/* Callout: a tinted panel, not a side stripe. */
 .vision {
-  max-width: 48rem;
-  padding-left: var(--space-4);
-  border-left: 4px solid var(--color-action-primary); /* decorative */
+  max-width: 38rem;
+  padding: var(--space-4);
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-default); /* decorative */
   font-weight: var(--font-weight-label);
   color: var(--color-text-secondary);
 }
 
 .profile {
-  max-width: 48rem;
+  max-width: 38rem;
   color: var(--color-text-secondary);
+}
+
+/* ---------- Home intro rhythm ---------- */
+/* Name and positioning read as one unit; the profile starts a new group. */
+.intro > .lead {
+  margin-top: var(--space-4);
+}
+
+.intro > .profile {
+  margin-top: var(--space-8);
+}
+
+/* One body line between profile paragraphs. */
+.intro .profile > * + * {
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .intro > .vision {
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+/* More room after the intro before the first content section. */
+@media (min-width: 1024px) {
+  .intro + .section {
+    margin-top: var(--space-16);
+  }
 }
 
 /* Visible text marks draft or placeholder copy; the color is a supporting cue only. */
@@ -307,17 +338,58 @@ main:focus {
 .story-card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
   height: 100%;
   padding: var(--padding-card);
   background-color: var(--color-surface-card);
   border: 1px solid var(--color-border-default); /* decorative; the title link is the control */
 }
 
+/* Rhythm: meta and role form one group under the title; the summary starts a new one. */
+.story-card > .story-card__meta {
+  margin-top: var(--space-3);
+}
+
+.story-card > .story-card__role {
+  margin-top: var(--space-1);
+}
+
+.story-card > .story-card__role + p {
+  margin-top: var(--space-3);
+}
+
+/* The title link is the card's only control: ring the whole card instead of each wrapped title line. */
+/* Browsers without :has() keep the default link outline. */
+@supports selector(:has(*)) {
+  .story-card:has(:focus-visible) {
+    outline: 3px solid var(--color-focus-visible);
+    outline-offset: 2px;
+  }
+
+  .story-card__title a:focus-visible {
+    outline: none;
+  }
+}
+
 .story-card__title {
   font-size: var(--font-size-h4);
   line-height: var(--line-height-h4);
   letter-spacing: var(--letter-spacing-h4);
+}
+
+/* Decorative heading icons: outlined, inherit the heading color, never carry meaning alone (design-language.md). */
+.heading-icon {
+  display: inline-block;
+  flex: none;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.4em;
+  vertical-align: -0.08em;
+  color: var(--color-text-default);
+}
+
+/* Lighter title underline; the link is still underlined, not identified by color alone. */
+.story-card__title a {
+  text-decoration-thickness: 1px;
 }
 
 .story-card__meta,
@@ -334,7 +406,7 @@ main:focus {
 /* The bold "Outcome:" label marks the line; no color cue. */
 .story-card__outcome {
   margin-top: auto;
-  padding-top: var(--space-2);
+  padding-top: var(--space-3);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
 }
@@ -356,7 +428,7 @@ main:focus {
 /* ---------- Project Story Detail ---------- */
 /* Reading width for long-form story content. */
 .story {
-  max-width: 48rem;
+  max-width: 38rem;
 }
 
 .back-link {
@@ -402,7 +474,7 @@ main:focus {
 .story-outcome {
   padding: var(--space-4);
   background-color: var(--color-surface-card);
-  border-left: 4px solid var(--color-action-primary); /* decorative; the bold label carries meaning */
+  border: 1px solid var(--color-border-default); /* decorative; the bold label carries meaning */
 }
 
 /* "On this page": navigation-based disclosure (Q-09 proposal). */
@@ -516,7 +588,7 @@ main:focus {
 
 /* ---------- Long-form text and principle list ---------- */
 .prose {
-  max-width: 48rem;
+  max-width: 38rem;
 }
 
 .principle-list {
@@ -544,18 +616,88 @@ main:focus {
 }
 
 /* ---------- Career Journey timeline ---------- */
+/* One continuous line with a marker per role and per project. The line and markers are
+   decorative; headings and written dates carry the structure (no meaning by color alone). */
 .timeline {
+  position: relative;
   display: grid;
   gap: var(--space-12);
-  max-width: 48rem;
+  max-width: 38rem;
   padding: 0;
   list-style: none;
 }
 
-/* The left rule is decorative; headings and dates carry the structure. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: var(--space-2);
+  bottom: 0;
+  left: calc(0.5rem - 1px);
+  width: 2px;
+  background-color: var(--color-border-default);
+}
+
 .timeline__item {
-  padding-left: var(--space-6);
-  border-left: 4px solid var(--color-border-default);
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+/* Role marker: hollow circle centered on the line, level with the years. */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: calc((var(--line-height-h3) - 1rem) / 2);
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--color-action-primary);
+  border-radius: 50%;
+  background-color: var(--color-surface-background);
+}
+
+.timeline__years {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  font-weight: var(--font-weight-h2);
+  color: var(--color-action-primary); /* the one accent, shared with the markers; years are not links */
+}
+
+.timeline__item > .timeline__years + h2 {
+  margin-top: var(--space-1);
+}
+
+/* Project markers: small dots on the same line. */
+.timeline-projects {
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item .timeline-projects > li {
+  position: relative;
+}
+
+.timeline__item .timeline-projects > li + li {
+  margin-top: var(--space-4);
+}
+
+.timeline-projects > li::before {
+  content: "";
+  position: absolute;
+  top: calc((var(--line-height-body-s) - 0.5rem) / 2);
+  left: calc(-1 * var(--space-8) + 0.25rem);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-action-primary);
+}
+
+.timeline-projects__period {
+  display: block;
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
 }
 
 .timeline__item h3 {
