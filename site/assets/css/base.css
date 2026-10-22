@@ -616,7 +616,10 @@ main:focus {
 }
 
 /* ---------- Career Journey timeline ---------- */
+/* One continuous line with a marker per role and per project. The line and markers are
+   decorative; headings and written dates carry the structure (no meaning by color alone). */
 .timeline {
+  position: relative;
   display: grid;
   gap: var(--space-12);
   max-width: 38rem;
@@ -624,10 +627,77 @@ main:focus {
   list-style: none;
 }
 
-/* The left rule is decorative; headings and dates carry the structure. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: var(--space-2);
+  bottom: 0;
+  left: calc(0.5rem - 1px);
+  width: 2px;
+  background-color: var(--color-border-default);
+}
+
 .timeline__item {
-  padding-left: var(--space-6);
-  border-left: 4px solid var(--color-border-default);
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+/* Role marker: hollow circle centered on the line, level with the years. */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: calc((var(--line-height-h3) - 1rem) / 2);
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--color-action-primary);
+  border-radius: 50%;
+  background-color: var(--color-surface-background);
+}
+
+.timeline__years {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  font-weight: var(--font-weight-h2);
+  color: var(--color-action-primary); /* the one accent, shared with the markers; years are not links */
+}
+
+.timeline__item > .timeline__years + h2 {
+  margin-top: var(--space-1);
+}
+
+/* Project markers: small dots on the same line. */
+.timeline-projects {
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item .timeline-projects > li {
+  position: relative;
+}
+
+.timeline__item .timeline-projects > li + li {
+  margin-top: var(--space-4);
+}
+
+.timeline-projects > li::before {
+  content: "";
+  position: absolute;
+  top: calc((var(--line-height-body-s) - 0.5rem) / 2);
+  left: calc(-1 * var(--space-8) + 0.25rem);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-action-primary);
+}
+
+.timeline-projects__period {
+  display: block;
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
 }
 
 .timeline__item h3 {
