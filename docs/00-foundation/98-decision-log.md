@@ -307,7 +307,9 @@ Approved (2026-10-22)
 
 Project Story pages use expandable sections, with one section open at a time. Each section heading opens its text. When a reader opens a section, any section that was open closes, so the reader moves through the story one section at a time. No content is removed; every section is one click away. The "On this page" jump links and the Previous / Next order from D-020 stay in place. A jump link opens the section it points to and closes the others.
 
-Not decided yet: which section, if any, is open when the page loads; whether a short summary stays visible above the sections; whether an "expand all" control exists (it conflicts with one open section at a time, so it is not part of this decision).
+A short summary sits above the sections and is always visible. It says what the project is about and what it shows, for example how the leader handled third-party issues, or how the project dealt with difficult clients. The summary is written in first person, like the story narratives, and each summary is approved by Jairo before publication.
+
+Not decided yet: which section, if any, is open when the page loads; whether the printed page expands all sections; whether an "expand all" control exists (it conflicts with one open section at a time, so it is not part of this decision).
 
 Source: Jairo in chat on 2026-10-22. The reason: the page's text is long and dense, and sections are easier to read when they can be opened one at a time. Revokes the visible-sections rule in D-020. The PRD's progressive-disclosure principle (R-004) supports this.
 
@@ -315,7 +317,7 @@ Status
 
 Approved (2026-10-22)
 
-%%Updated 2026-10-22: one-open-at-a-time expandable sections approved, revoking the visible-sections rule in D-020. Open questions above are for Jairo to decide before the code session builds them.%%
+%%Updated 2026-10-22: one-open-at-a-time expandable sections approved, revoking the visible-sections rule in D-020. Short always-visible summary added above the sections. Open questions above are for Jairo to decide before the code session builds them.%%
 
 ---
 

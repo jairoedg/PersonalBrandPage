@@ -29,12 +29,12 @@ Apply these overrides in `site/assets/css/base.css`, after the token file is loa
 
 - On Project Story pages, each main section (the `h2` headings from Business Context to Professional Evolution) becomes an expandable section.
 - **One open at a time.** Opening a section closes the one that was open. Use one shared group name (for example native `<details name="…">`, or equivalent script). Do not allow two open at once.
+- A short summary sits above the sections and is always visible. It is written in first person and approved by Jairo; use the drafts in `docs/explore/drafts/story-summaries-draft.md` once approved. Until then, show no summary text that is not approved.
 - Keep the "On this page" jump links. A jump link must open its section, close the others, and move focus to the section heading. A browser does not open a closed section by itself.
 - Keep Previous and Next exactly as they are (Projects order).
 - Keyboard: Enter and Space toggle a section; the heading shows its state; visible focus stays (D-012).
 - **Not decided yet, ask Jairo before building:**
   - Which section, if any, is open on load.
-  - Whether a short summary stays visible above the sections.
   - Print behavior (whether all sections print expanded).
   - "Expand all" is not part of D-025 and conflicts with one-open-at-a-time. Do not add it.
 
