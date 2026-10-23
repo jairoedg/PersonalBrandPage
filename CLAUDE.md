@@ -14,12 +14,15 @@ A personal portfolio website for Jairo Enrique Diaz, a Project Manager. It prese
 - First draft: complete. Home, Projects, ten Project Story pages, About, Career Journey, How I Can Help (placeholders), Leadership (placeholders), Contact, and the 404 page are built in `site/`.
 - Checks: `scripts/check_site.py` passes with 0 errors. The 7 warnings are the expected placeholders.
 - Repository: public. GitHub Pages source is GitHub Actions. Nothing is deployed yet.
-- Commits: `db3a576` (baseline) is pushed. `1f90fa0` (deploy workflow and site-cicd skill) is committed locally, not pushed.
+- Git: PR #1 (the Impeccable skill and the deploy workflow) and PR #3 (option C look, expandable sections, and the placeholder deploy gate) are merged into `main`. Nothing is deployed.
+- Decided on 2026-10-22: the look is option C (D-026); icons on section and project titles (D-023); the Career Journey timeline (D-024); expandable story sections, one open at a time (D-025).
 - Next, in order:
-  1. Visual design pass (Impeccable skill), using the tokens in `site/assets/css/tokens.css`. Change the look only; keep the layout already checked.
-  2. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.
-  3. Leadership and How I Can Help content, when Jairo is ready.
-  4. Deploy only after design, text, and final review are approved.
+  1. Done (PR #3): option C look (D-026), icon and timeline accents in teal (D-023, D-024), and expandable story sections (D-025).
+  2. Done (PR #3): placeholder deploy gate (D-017). Deploy fails while placeholders remain.
+  3. Jairo completes the missing story text: Tigo (leadership sections), GT&T (decisions section), and Digicel (decisions section). Digicel's Results line still says March 2012 on the site; the source says February 2012 and needs the site to match.
+  4. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.
+  5. Leadership and How I Can Help content, when Jairo approves it. The leadership draft is in Obsidian at `docs/explore/drafts/leadership-principles-draft.md` and is not approved.
+  6. Deploy only after design, text, and final review are approved, and with no placeholders left on the site (D-017).
 
 ## Authoritative documents (source of truth)
 
@@ -75,16 +78,21 @@ The decision log (`docs/00-foundation/98-decision-log.md`) is the record. If a d
 - **D-017:** a small validation script checks publication eligibility before deployment. It generates no pages.
 - **D-018:** the site lives in `site/`. A GitHub Actions workflow deploys only that folder.
 - **D-019:** self-host Inter (400/500/600, woff2) in `site/assets/fonts/` with the SIL OFL license file, loaded from `site/assets/css/fonts.css` with `font-display: swap`. No third-party font requests. Code uses the system monospace stack.
-- **D-020 (Q-09 closed):** story pages keep every section visible, with an "On this page" list of jump links. Previous and Next follow the Projects page order; related stories come from each source file. No collapsible sections for now.
+- **D-020 (Q-09 closed; partly revoked by D-025):** an "On this page" list of jump links moves between sections. Previous and Next follow the Projects page order; related stories come from each source file. The rule that every section stays visible is revoked.
 - **D-022 (Q-07 closed):** Home profile wording approved: the third-person positioning statement, the vision line, and the profile summary paragraphs on the Home page. Wording can be revisited later.
 - **D-021 (Q-10 closed):** the contact values (email, LinkedIn, phone) on `site/contact/index.html` are approved. The CV download is `site/assets/cv/CV_JairoDiaz - Project Manager.pdf`, kept under its existing name (spaces encoded as `%20` in links) and replaced when a final version is approved. Don't copy the phone number into docs or this file; the repository is public.
+- **D-023:** decorative icons on section and project titles, not in the top navigation. Hand-drawn inline SVG: outlined, 24px grid, 1.75px stroke, `aria-hidden`, never the only label. No icon library.
+- **D-024:** the Career Journey timeline (the visual form of D-004): one continuous line, a marker per role, bold years, newest first, and projects as dated links inside their role. The accent color is amended to teal by D-026.
+- **D-025:** story pages use expandable sections, one open at a time. Opening a section closes the one that was open. A short summary above the sections is always visible; it is first person, and Jairo approves each one. Each section heading has a disclosure triangle (right when closed, down when open). The first section of each story is open on load, and printed pages expand all sections. "Expand all" on screen is not part of this decision.
+- **D-026:** visual direction is option C, "soft professional": pale blue page (blue-50), white floating cards with a soft shadow, and teal (teal-700) for actions, links, icons, and timeline markers. Tokens do not change.
 
 ## Open decisions (do not decide these alone)
 
 Use clearly marked placeholders for any open content. Ask the Product Owner (Jairo) before finalizing:
 
 - Capabilities: start from the five examples in `docs/00-foundation/04-website-strategy.md` (Capability Strategy). Revisit them later for alignment with the site's goal.
-- Leadership principles: match the seven principles from the blueprint to each project story's decisions and reflections. This is a content task to do per project.
+- Leadership principles: match the seven principles from the blueprint to each project story's decisions and reflections. A draft is in Obsidian (`docs/explore/drafts/leadership-principles-draft.md`); it is not approved.
+- Story summaries (D-025): drafts are in Obsidian at `docs/explore/drafts/story-summaries-draft.md`; each needs Jairo's approval. The Tigo summary is still to be drafted.
 
 ## Figma
 
