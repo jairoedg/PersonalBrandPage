@@ -203,6 +203,23 @@ main:focus {
   text-decoration-thickness: 2px;
 }
 
+/* "Let's talk": the Contact link as a coal-black pill, last in the Primary nav (D-027). */
+.nav-list a.nav-cta {
+  padding: 0 var(--space-5);
+  border-radius: 999px;
+  background-color: var(--color-action-primary);
+  color: var(--color-action-on-primary);
+}
+
+.nav-list a.nav-cta:hover {
+  background-color: var(--stone-700);
+}
+
+/* On the Contact page the pill keeps its colors; the thick underline marks the current page. */
+.nav-list a.nav-cta[aria-current="page"] {
+  color: var(--color-action-on-primary);
+}
+
 /* ---------- Main ---------- */
 .site-main {
   flex: 1;
