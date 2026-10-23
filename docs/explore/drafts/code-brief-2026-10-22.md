@@ -33,10 +33,10 @@ Apply these overrides in `site/assets/css/base.css`, after the token file is loa
 - Keep the "On this page" jump links. A jump link must open its section, close the others, and move focus to the section heading. A browser does not open a closed section by itself.
 - Keep Previous and Next exactly as they are (Projects order).
 - Keyboard: Enter and Space toggle a section; the heading shows its state; visible focus stays (D-012).
-- **Not decided yet, ask Jairo before building:**
-  - Which section, if any, is open on load.
-  - Print behavior (whether all sections print expanded).
-  - "Expand all" is not part of D-025 and conflicts with one-open-at-a-time. Do not add it.
+- **Decided on open state (answered by Jairo, 2026-10-22):**
+  - The first section of each story is open on load. It is Business Problem or Business Challenge for most stories, Business Context for GT&T, and Scope of Responsibility for Tigo. Use the first `h2` section after "On this page".
+  - Printing expands all sections.
+- **Not decided:** an on-screen "expand all" control. Do not add it. It conflicts with one-open-at-a-time.
 
 ## 3. Icons and timeline
 
