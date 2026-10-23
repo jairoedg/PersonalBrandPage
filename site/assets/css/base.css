@@ -3,6 +3,17 @@
  * Load after tokens.css. Mobile-first; breakpoints at 768px and 1024px (D-013).
  */
 
+/* ---------- Look: option C, "soft professional" (D-026) ---------- */
+/* Semantic overrides only; token values in tokens.css stay as approved. Teal also colors the
+   icons and timeline (D-023, D-024 as amended by D-026), which read these semantic tokens. */
+:root {
+  --color-surface-background: var(--blue-50);
+  --color-surface-card: #ffffff;
+  --color-action-primary: var(--teal-700);
+  --color-text-link: var(--teal-700);
+  --color-border-default: var(--blue-100);
+}
+
 /* ---------- Reset ---------- */
 *,
 *::before,
@@ -341,7 +352,9 @@ main:focus {
   height: 100%;
   padding: var(--padding-card);
   background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border-default); /* decorative; the title link is the control */
+  border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge (D-026) */
+  border-radius: 12px;
+  box-shadow: var(--elevation-floating);
 }
 
 /* Rhythm: meta and role form one group under the title; the summary starts a new one. */
@@ -384,7 +397,7 @@ main:focus {
   height: 0.8em;
   margin-right: 0.4em;
   vertical-align: -0.08em;
-  color: var(--color-text-default);
+  color: var(--color-action-primary); /* teal accent (D-026) */
 }
 
 /* Lighter title underline; the link is still underlined, not identified by color alone. */
