@@ -144,7 +144,7 @@ This project taught me that maintaining confidence during difficult delivery sit
 
 - Successfully relocated and deployed the VAS platform in Jamaica.
 - Supported telecommunications services across Jamaica and Haiti.
-- Completed production deployment in March 2012.
+- Completed production deployment in February 2012.
 - Only minor issues were identified after production release.
 - The platform supported the expected operational traffic for both markets.
 
