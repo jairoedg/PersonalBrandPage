@@ -1,7 +1,7 @@
 # Publishes only site/ to GitHub Pages (D-018).
 #
-# Manual trigger only. A push to main never deploys. Placeholder warnings
-# do not block a manual run; errors always do.
+# Manual trigger only. A push to main never deploys. The check runs with
+# --strict, so any placeholder marker fails the run and blocks the deploy (D-017).
 name: Deploy site to GitHub Pages
 
 on:
@@ -24,9 +24,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Exits 1 on any error, which fails the job. Warnings (placeholders) pass.
+      # Exits 1 on any error, which fails the job. --strict makes placeholder
+      # markers errors, so the site cannot deploy until they are replaced.
       - name: Run site checks
-        run: python3 scripts/check_site.py
+        run: python3 scripts/check_site.py --strict
 
   deploy:
     needs: validate

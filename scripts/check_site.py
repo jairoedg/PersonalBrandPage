@@ -7,9 +7,11 @@ Usage:
     python3 scripts/check_site.py              static checks
     python3 scripts/check_site.py --browser    static checks, then browser checks in local Chrome
     python3 scripts/check_site.py --browser --shots DIR
+    python3 scripts/check_site.py --strict     deploy gate: placeholder markers are errors (D-017)
 
 Exit code: 0 = no errors, 1 = errors found, 2 = could not run.
-Warnings never fail the run.
+Warnings never fail the run. Local runs report placeholders as warnings; the deploy
+workflow runs with --strict so no placeholder can be published.
 """
 
 import argparse
@@ -49,6 +51,8 @@ CONTACT_EMAIL = "mailto:jairodiaz@yahoo.com"
 CONTACT_LINKEDIN = "https://www.linkedin.com/in/jairo-enrique-diaz"
 CONTACT_PHONE = "tel:+573107901197"
 CV_FILE = "CV_JairoDiaz%20-%20Project%20Manager.pdf"
+# --strict (deploy): placeholder markers fail the run instead of warning (D-017).
+STRICT = False
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 FOCUSABLE = {"a", "button", "input", "select", "textarea"}
 
@@ -257,7 +261,7 @@ def check_page(page, r, all_ids):
     # Unapproved-content markers.
     text = norm(d.find("body").text()) if d.find("body") else ""
     markers = len(re.findall(r"\bPlaceholder\b|\bDraft:", text, re.I))
-    r.check(markers == 0, w, f"{markers} placeholder/draft marker(s) on the page", warn=True)
+    r.check(markers == 0, w, f"{markers} placeholder/draft marker(s) on the page", warn=not STRICT)
     return missing
 
 
@@ -475,15 +479,19 @@ def load(cdp, url, width):
 FOCUS_INFO = """(() => {
   const el = document.activeElement;
   if (!el || el === document.body) return null;
-  const cs = getComputedStyle(el), r = el.getBoundingClientRect();
+  const own = getComputedStyle(el), r = el.getBoundingClientRect();
+  // Story cards ring the whole card instead of the title link (base.css).
+  const card = own.outlineStyle === 'none' ? el.closest('.story-card') : null;
+  const cs = card ? getComputedStyle(card) : own;
   return { text: (el.textContent || el.getAttribute('aria-label') || el.tagName).trim().replace(/\\s+/g, ' '),
            skip: el.classList.contains('skip-link'), visible: el.matches(':focus-visible'),
            style: cs.outlineStyle, width: parseFloat(cs.outlineWidth) || 0,
            x: Math.round(r.left + scrollX), y: Math.round(r.top + scrollY) };
 })()"""
 
+# checkVisibility() also excludes content in closed story sections (hidden="until-found", D-025).
 COUNT_FOCUSABLE = """[...document.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])')]
-  .filter(e => !e.disabled && e.getClientRects().length > 0).length"""
+  .filter(e => !e.disabled && e.getClientRects().length > 0 && (!e.checkVisibility || e.checkVisibility())).length"""
 
 
 def keyboard_pass(cdp, url, rel, r):
@@ -581,11 +589,14 @@ def main():
     ap.add_argument("--shots", help="directory for screenshots (default: a new temp directory)")
     ap.add_argument("--chrome", help="path to Chrome or Chromium")
     ap.add_argument("--site", help="site directory to check (default: site/ in this repo)")
+    ap.add_argument("--strict", action="store_true",
+                    help="deploy gate: fail on placeholder/draft markers instead of warning (D-017)")
     args = ap.parse_args()
 
-    global SITE
+    global SITE, STRICT
     if args.site:
         SITE = Path(args.site).resolve()
+    STRICT = args.strict
 
     if not SITE.is_dir():
         print(f"site/ not found at {SITE}")

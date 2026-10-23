@@ -33,10 +33,11 @@ This repo publishes the static site in `site/` to GitHub Pages. Decisions that d
 - Workflow: `.github/workflows/deploy-pages.yml`. It publishes only `site/` (D-018).
 - **Manual trigger only** (`workflow_dispatch`). A push to `main` never deploys. This is deliberate: a public site with "Placeholder" labels must not go out by accident.
 - Two jobs:
-  - `validate` runs `scripts/check_site.py`. Any error fails the run and blocks the deploy. Placeholder warnings do not block a manual run, because the run is manual only.
+  - `validate` runs `scripts/check_site.py --strict`. Any error fails the run and blocks the deploy. With `--strict`, every placeholder or draft marker is an error (D-017), so the deploy is blocked until each one is replaced with approved content.
   - `deploy` uploads `site/` and publishes it to Pages. It runs only after `validate` passes.
 - To run it, Jairo starts it from the GitHub Actions tab ("Run workflow"). Do not start it yourself unless Jairo asks in this chat for that specific run.
-- Going live requires the check script to report 0 errors and Jairo's explicit approval for that run. Placeholder warnings are allowed on a manual run, so a run can publish pages that still show placeholders. Check the warning list before starting one.
+- Going live requires all three: every placeholder replaced, `scripts/check_site.py --strict` reporting 0 errors, and Jairo's explicit approval for that run.
+- Local runs without `--strict` keep reporting placeholders as warnings. Run `python3 scripts/check_site.py --strict` to preview the deploy gate.
 
 ## One-time setup (Jairo does this, not Claude)
 
@@ -46,4 +47,4 @@ This repo publishes the static site in `site/` to GitHub Pages. Decisions that d
 ## Testing the pipeline
 
 - Pushing the workflow does not deploy.
-- A manual run does deploy when the check reports 0 errors, even with placeholder warnings. Start one only when Jairo asks for that specific run.
+- A manual run fails at the placeholder gate while any placeholder remains. That failure is the expected result until the content is approved, and it proves the gate works. Start a run only when Jairo asks for that specific run.
