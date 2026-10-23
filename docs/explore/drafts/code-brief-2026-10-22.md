@@ -28,6 +28,7 @@ Apply these overrides in `site/assets/css/base.css`, after the token file is loa
 ## 2. Expandable story sections (D-025)
 
 - On Project Story pages, each main section (the `h2` headings from Business Context to Professional Evolution) becomes an expandable section.
+- Each section heading has a disclosure triangle on its left: right when closed, down when open. The triangle is decorative; the heading text is the control.
 - **One open at a time.** Opening a section closes the one that was open. Use one shared group name (for example native `<details name="…">`, or equivalent script). Do not allow two open at once.
 - A short summary sits above the sections and is always visible. It is written in first person and approved by Jairo; use the drafts in `docs/explore/drafts/story-summaries-draft.md` once approved. Until then, show no summary text that is not approved.
 - Keep the "On this page" jump links. A jump link must open its section, close the others, and move focus to the section heading. A browser does not open a closed section by itself.
