@@ -533,6 +533,84 @@ main:focus {
   margin-top: var(--space-1);
 }
 
+/* ---------- Expandable story sections (D-025) ---------- */
+/* story-sections.js adds .story--expandable, the heading buttons, and the panels. Without
+   JavaScript none of this applies and every section stays visible. */
+.story--expandable .story-section {
+  margin-top: 0;
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+}
+
+.story--expandable .toc + .story-section {
+  margin-top: var(--space-8);
+}
+
+.story--expandable .story-section:last-of-type {
+  border-bottom: 1px solid var(--color-border-default); /* decorative divider */
+}
+
+.story-section__toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 2.75rem; /* 44px touch target */
+  padding: var(--space-4) 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.story-section__toggle:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+/* Disclosure triangle: right when closed, down when open. Decorative; aria-expanded carries the state. */
+.story-section__triangle {
+  flex: none;
+  width: 0;
+  height: 0;
+  border-top: 0.375rem solid transparent;
+  border-bottom: 0.375rem solid transparent;
+  border-left: 0.5rem solid var(--color-action-primary);
+}
+
+.story-section__toggle[aria-expanded="true"] .story-section__triangle {
+  transform: rotate(90deg);
+}
+
+.story--expandable .story-section > .story-section__panel {
+  margin-top: 0;
+  padding-bottom: var(--space-6);
+}
+
+/* hidden="until-found" keeps the closed panel in layout (at zero height); drop its padding too. */
+.story--expandable .story-section > .story-section__panel[hidden] {
+  padding-bottom: 0;
+}
+
+.story-section__panel > * + * {
+  margin-top: var(--space-4);
+}
+
+/* Printing expands every section (D-025). */
+@media print {
+  .story-section__panel[hidden] {
+    display: block;
+    content-visibility: visible; /* hidden="until-found" hides with content-visibility */
+  }
+
+  .story-section__triangle {
+    display: none;
+  }
+}
+
 .story-nav h3 {
   font-size: var(--font-size-body-l);
   line-height: var(--line-height-body-l);
