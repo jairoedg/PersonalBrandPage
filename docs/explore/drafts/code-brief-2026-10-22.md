@@ -1,5 +1,7 @@
 # Code brief — apply decisions D-023 to D-026 (2026-10-22)
 
+> **Superseded in part on 2026-10-23 by D-027.** Section 1 (teal look, option C) and the teal accents in sections 1 and 3 no longer apply. The monochrome palette, regular-weight headings, and the Home hero are in D-027. Sections 2 (expandable sections, D-025), 4, 5, and 6 still apply.
+
 **From:** Jairo's planning chat. **To:** the code session working on `visual-design-pass`.
 **Authority:** the decision log (`docs/00-foundation/98-decision-log.md`) is the record. Read D-017, D-020, D-023, D-024, D-025, and D-026 before you start. Do not change decisions; if something here conflicts with the log, stop and ask.
 
