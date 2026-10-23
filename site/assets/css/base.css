@@ -3,15 +3,20 @@
  * Load after tokens.css. Mobile-first; breakpoints at 768px and 1024px (D-013).
  */
 
-/* ---------- Look: option C, "soft professional" (D-026) ---------- */
-/* Semantic overrides only; token values in tokens.css stay as approved. Teal also colors the
-   icons and timeline (D-023, D-024 as amended by D-026), which read these semantic tokens. */
+/* ---------- Look: monochrome, after devin.ai (D-027, superseding D-026's teal) ---------- */
+/* Semantic overrides only; token values in tokens.css stay as approved. Icons and the timeline
+   (D-023, D-024) read --color-action-primary, so they turn coal black with everything else.
+   Warning colors are untouched: placeholders must stay distinct. */
 :root {
-  --color-surface-background: var(--blue-50);
+  --color-surface-background: var(--stone-50);
   --color-surface-card: #ffffff;
-  --color-action-primary: var(--teal-700);
-  --color-text-link: var(--teal-700);
-  --color-border-default: var(--blue-100);
+  --color-text-default: var(--stone-900);
+  --color-text-secondary: var(--stone-600);
+  --color-action-primary: var(--stone-900);
+  --color-action-on-primary: #ffffff;
+  --color-text-link: var(--stone-900);
+  --color-border-default: var(--stone-200);
+  --color-focus-visible: var(--stone-900);
 }
 
 /* ---------- Reset ---------- */
@@ -53,18 +58,19 @@ body {
   overflow-wrap: break-word;
 }
 
+/* h1 and h2 at regular weight, devin.ai style (D-027); size and tracking carry the hierarchy. */
 h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
   letter-spacing: var(--letter-spacing-h1);
-  font-weight: var(--font-weight-h1);
+  font-weight: var(--font-weight-body);
 }
 
 h2 {
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
   letter-spacing: var(--letter-spacing-h2);
-  font-weight: var(--font-weight-h2);
+  font-weight: var(--font-weight-body);
 }
 
 h3 {
@@ -232,6 +238,42 @@ main:focus {
   }
 }
 
+/* ---------- Buttons ---------- */
+/* Pill buttons, devin.ai style (D-027). Primary: coal-black fill. Secondary: outlined. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem; /* 44px touch target */
+  padding: 0 var(--space-6);
+  border: 1px solid var(--color-action-primary);
+  border-radius: 999px;
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-label);
+  text-decoration: none;
+}
+
+.button--primary {
+  background-color: var(--color-action-primary);
+  color: var(--color-action-on-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--stone-700);
+  border-color: var(--stone-700);
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-action-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--stone-100);
+}
+
 /* ---------- Placeholder for unapproved content ---------- */
 /* The visible "Placeholder" text in the markup carries the meaning; the border is a supporting cue. */
 .placeholder {
@@ -397,7 +439,7 @@ main:focus {
   height: 0.8em;
   margin-right: 0.4em;
   vertical-align: -0.08em;
-  color: var(--color-action-primary); /* teal accent (D-026) */
+  color: var(--color-action-primary); /* accent color (D-027: coal black) */
 }
 
 /* Lighter title underline; the link is still underlined, not identified by color alone. */
