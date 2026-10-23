@@ -348,25 +348,70 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-/* ---------- Home intro rhythm ---------- */
-/* Name and positioning read as one unit; the profile starts a new group. */
-.intro > .lead {
+/* ---------- Home hero (D-027) ---------- */
+/* Text and buttons, then the portrait: stacked on mobile, side by side from 1024px. */
+.hero__text > * + * {
+  margin-top: var(--space-6);
+}
+
+/* Name and positioning read as one unit. */
+.hero__text > .lead {
   margin-top: var(--space-4);
 }
 
-.intro > .profile {
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__photo {
+  max-width: 22rem;
   margin-top: var(--space-8);
+}
+
+.hero__photo img {
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--stone-100); /* shows while the photo loads */
+}
+
+@media (min-width: 768px) {
+  .hero__text > .vision {
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .hero__photo {
+    justify-self: end;
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 0;
+  }
+}
+
+/* The profile starts a new group below the hero. */
+.intro > .profile {
+  margin-top: var(--space-12);
 }
 
 /* One body line between profile paragraphs. */
 .intro .profile > * + * {
   margin-top: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .intro > .vision {
-    padding: var(--space-5) var(--space-6);
-  }
 }
 
 /* More room after the intro before the first content section. */
