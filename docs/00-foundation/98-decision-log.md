@@ -177,9 +177,11 @@ Approved
 
 Home Project Story previews: Entel Chile, GSK, and DFA Capital Markets, all confirmed as approved for publication.
 
-Order, newest first: DFA Capital Markets (Endava, 2021–2025), GSK (TCS, 2017–2018), Entel Chile (Comverse, 2015). Summary text and fields on the Home and Projects cards are approved. The wording can be revisited later.
+Order, newest first: DFA Capital Markets (Endava, 2021–2025), GSK (TCS, 2017–2018), Entel Chile (Comverse, 2015).
 
-Source: Q-08 (closed)
+Card fields, as approved on the new Projects design (Jairo, 2026-10-24): a sector pill and tags on the top row, with the year on the right; a short headline linked to the story page (the whole card is clickable); a "Client:" line; the company and role line; and one sentence on the main responsibility. The metric line and the Result block are removed from cards; the Result stays on the story pages. The card summary wording can be revisited later.
+
+Source: Q-08 (closed); amended 2026-10-24 by Jairo's approval of the new card fields
 
 Status
 
@@ -272,6 +274,7 @@ Status
 Approved (2026-10-20)
 
 %%Updated 2026-10-20: closes Q-07. Also updated in the PRD, HLD, boundary map, design sketch, and wireframes (open items closed, with comments in each file). CLAUDE.md in the project repo updated to match.%%
+%%Updated 2026-10-24: years of experience is 15+ years as a Project Manager (Jairo's correction). The profile paragraph and the CV source still say "10+ years" and must be updated to match: the Home profile text (site) by code, and the CV source by Jairo in Obsidian.%%
 
 ---
 
@@ -354,3 +357,20 @@ Status
 Approved (2026-10-23)
 
 %%Updated 2026-10-23: monochrome direction recorded; supersedes D-026's teal accent and D-024's teal timeline; heading weight changed to 400 for this site.%%
+%%Updated 2026-10-24: the Projects page colors are still open. Jairo will compare a monochrome option with the blue Option B using Artifacts. D-027 governs the rest of the site until he decides.%%
+
+---
+
+## D-028
+
+Projects page layout (Option B, approved by Jairo, 2026-10-24). The page has a dark hero band with the title "Projects", an intro line, and three figures (KPIs): "15+ years leading software and infrastructure delivery", "5 industries", and "10+ projects, from on-site rollouts to cloud migrations". The "10+ projects" figure will grow as projects are added. Below the hero: Featured projects (three larger cards: DFA, GSK, Entel Peru), then More projects (seven cards, newest first), then a closing call-to-action band. Featured cards: three columns from 1024px, two columns from 768px to 1023px, one column below 768px. Cards are not all the same size; no equal-size rule is recorded in the decisions. Card anatomy is set by D-014 (amended 2026-10-24). The small uppercase line above the title is removed.
+
+Not decided: the Projects page colors (see D-027 note). Card summary wording (revisit later). Tigo card status (revisit later). The closing call-to-action wording is a placeholder until Jairo approves it.
+
+Source: Jairo in chat on 2026-10-24 (layout approved; featured row answer accepted; Artifacts used for the design comparison).
+
+Status
+
+Approved (2026-10-24), except the items listed as not decided
+
+%%Updated 2026-10-24: Projects layout recorded as D-028. The featured row uses two columns from 768px, which is consistent with D-013 (two columns from 768px).%%
