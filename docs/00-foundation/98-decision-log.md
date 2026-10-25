@@ -367,6 +367,8 @@ Projects page layout (Option B, approved by Jairo, 2026-10-24). The page has a d
 
 Not decided: the Projects page colors (see D-027 note). Card summary wording (revisit later). Tigo card status (revisit later). The closing call-to-action wording is a placeholder until Jairo approves it.
 
+Reference: the approved Option B canvas is saved at `docs/explore/design/references/projects-option-b.dc.html`. Where its text or layout differs from this entry, this entry governs. Known differences to fix in the build: the featured row is one column from 768–1023px in the canvas (D-028 says two columns); the summaries say "about 60" and "about 25" where the sources say "approximately".
+
 Source: Jairo in chat on 2026-10-24 (layout approved; featured row answer accepted; Artifacts used for the design comparison).
 
 Status
