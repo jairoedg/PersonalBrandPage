@@ -3,15 +3,69 @@
  * Load after tokens.css. Mobile-first; breakpoints at 768px and 1024px (D-013).
  */
 
-/* ---------- Look: option C, "soft professional" (D-026) ---------- */
-/* Semantic overrides only; token values in tokens.css stay as approved. Teal also colors the
-   icons and timeline (D-023, D-024 as amended by D-026), which read these semantic tokens. */
+/* ---------- Look: two palettes ---------- */
+/* Semantic overrides only; token values in tokens.css stay as approved. Warning colors are
+   untouched everywhere: placeholders must stay distinct.
+   - Default (every page but Home): Option B, navy and blue (D-028 Projects palette, extended
+     to the other pages by Jairo on 2026-10-27).
+   - .theme-mono on Home's <body>: monochrome after devin.ai (D-027).
+   --color-accent colors the icons (D-023), timeline (D-024), and disclosure triangles (D-025). */
 :root {
-  --color-surface-background: var(--blue-50);
+  --color-surface-background: var(--stone-100);
   --color-surface-card: #ffffff;
-  --color-action-primary: var(--teal-700);
-  --color-text-link: var(--teal-700);
-  --color-border-default: var(--blue-100);
+  --color-surface-subtle: var(--slate-100); /* secondary-button hover, image backdrop */
+  --color-surface-inverse: var(--slate-900); /* dark bands */
+  --color-text-default: var(--slate-900);
+  --color-text-secondary: var(--slate-700);
+  --color-text-on-inverse: var(--slate-50);
+  --color-text-on-inverse-muted: var(--slate-300);
+  --color-text-link: var(--blue-700);
+  --color-action-primary: var(--slate-900);
+  --color-action-on-primary: #ffffff;
+  --color-action-hover: var(--slate-700);
+  --color-accent: var(--blue-700);
+  --color-border-default: var(--slate-200);
+  --color-focus-visible: var(--blue-700);
+  /* Dark bands (Projects hero, closing band) and project-card pills. */
+  --color-surface-inverse-raised: var(--slate-800);
+  --color-border-inverse: var(--slate-700);
+  --color-pill-surface: var(--slate-50);
+  --color-pill-border: var(--slate-300);
+  --color-pill-accent-surface: var(--blue-50);
+  --color-pill-accent-border: var(--blue-300);
+  --color-pill-accent-text: var(--blue-800);
+
+  /* H1 and H2 at regular weight; H3 and below stay 600 (design language, updated 2026-10-23). */
+  --font-weight-h1: var(--font-weight-body);
+  --font-weight-h2: var(--font-weight-body);
+  /* Emphasis that is not a heading: site name, current nav item, timeline years (D-024). */
+  --font-weight-strong: 600;
+
+  --radius-pill: 999px;
+  --radius-card: 12px;
+}
+
+.theme-mono {
+  --color-surface-background: var(--stone-50);
+  --color-surface-subtle: var(--stone-100);
+  --color-surface-inverse: var(--stone-900);
+  --color-text-default: var(--stone-900);
+  --color-text-secondary: var(--stone-600);
+  --color-text-on-inverse: var(--stone-50);
+  --color-text-on-inverse-muted: var(--stone-300);
+  --color-text-link: var(--stone-900);
+  --color-action-primary: var(--stone-900);
+  --color-action-hover: var(--stone-700);
+  --color-accent: var(--stone-900);
+  --color-border-default: var(--stone-200);
+  --color-focus-visible: var(--stone-900);
+  --color-surface-inverse-raised: var(--stone-800);
+  --color-border-inverse: var(--stone-700);
+  --color-pill-surface: var(--stone-50);
+  --color-pill-border: var(--stone-300);
+  --color-pill-accent-surface: var(--stone-100);
+  --color-pill-accent-border: var(--stone-400);
+  --color-pill-accent-text: var(--stone-900);
 }
 
 /* ---------- Reset ---------- */
@@ -53,6 +107,7 @@ body {
   overflow-wrap: break-word;
 }
 
+/* Heading weights come from the :root overrides (D-027: regular weight at every level). */
 h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
@@ -155,7 +210,7 @@ main:focus {
 .site-name {
   font-size: var(--font-size-body-l);
   line-height: var(--line-height-body-l);
-  font-weight: var(--font-weight-h1);
+  font-weight: var(--font-weight-strong);
   color: var(--color-text-default);
   text-decoration: none;
 }
@@ -192,9 +247,26 @@ main:focus {
 .nav-list a[aria-current="page"],
 .site-name[aria-current="page"] {
   color: var(--color-text-default);
-  font-weight: var(--font-weight-h1);
+  font-weight: var(--font-weight-strong);
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+
+/* Contact as a coal-black pill, last in the Primary nav (D-027). */
+.nav-list a.nav-cta {
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-action-primary);
+  color: var(--color-action-on-primary);
+}
+
+.nav-list a.nav-cta:hover {
+  background-color: var(--color-action-hover);
+}
+
+/* On the Contact page the pill keeps its colors; the thick underline marks the current page. */
+.nav-list a.nav-cta[aria-current="page"] {
+  color: var(--color-action-on-primary);
 }
 
 /* ---------- Main ---------- */
@@ -207,6 +279,11 @@ main:focus {
   .site-main {
     padding-block: var(--space-12);
   }
+}
+
+/* Pages that open with a full-width dark band start flush under the header. */
+.site-main--band {
+  padding-top: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -230,6 +307,42 @@ main:focus {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+/* ---------- Buttons ---------- */
+/* Pill buttons, devin.ai style (D-027). Primary: coal-black fill. Secondary: outlined. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem; /* 44px touch target */
+  padding: 0 var(--space-6);
+  border: 1px solid var(--color-action-primary);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-label);
+  text-decoration: none;
+}
+
+.button--primary {
+  background-color: var(--color-action-primary);
+  color: var(--color-action-on-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--color-action-hover);
+  border-color: var(--color-action-hover);
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-action-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-surface-subtle);
 }
 
 /* ---------- Placeholder for unapproved content ---------- */
@@ -289,25 +402,70 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-/* ---------- Home intro rhythm ---------- */
-/* Name and positioning read as one unit; the profile starts a new group. */
-.intro > .lead {
+/* ---------- Home hero (D-027) ---------- */
+/* Text and buttons, then the portrait: stacked on mobile, side by side from 1024px. */
+.hero__text > * + * {
+  margin-top: var(--space-6);
+}
+
+/* Name and positioning read as one unit. */
+.hero__text > .lead {
   margin-top: var(--space-4);
 }
 
-.intro > .profile {
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero__photo {
+  max-width: 22rem;
   margin-top: var(--space-8);
+}
+
+.hero__photo img {
+  width: 100%;
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-subtle); /* shows while the photo loads */
+}
+
+@media (min-width: 768px) {
+  .hero__text > .vision {
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .hero__photo {
+    justify-self: end;
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 0;
+  }
+}
+
+/* The profile starts a new group below the hero. */
+.intro > .profile {
+  margin-top: var(--space-12);
 }
 
 /* One body line between profile paragraphs. */
 .intro .profile > * + * {
   margin-top: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .intro > .vision {
-    padding: var(--space-5) var(--space-6);
-  }
 }
 
 /* More room after the intro before the first content section. */
@@ -353,7 +511,7 @@ main:focus {
   padding: var(--padding-card);
   background-color: var(--color-surface-card);
   border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge (D-026) */
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   box-shadow: var(--elevation-floating);
 }
 
@@ -373,12 +531,14 @@ main:focus {
 /* The title link is the card's only control: ring the whole card instead of each wrapped title line. */
 /* Browsers without :has() keep the default link outline. */
 @supports selector(:has(*)) {
-  .story-card:has(:focus-visible) {
+  .story-card:has(:focus-visible),
+  .project-card:has(:focus-visible) {
     outline: 3px solid var(--color-focus-visible);
     outline-offset: 2px;
   }
 
-  .story-card__title a:focus-visible {
+  .story-card__title a:focus-visible,
+  .project-card__title a:focus-visible {
     outline: none;
   }
 }
@@ -397,7 +557,7 @@ main:focus {
   height: 0.8em;
   margin-right: 0.4em;
   vertical-align: -0.08em;
-  color: var(--color-action-primary); /* teal accent (D-026) */
+  color: var(--color-accent);
 }
 
 /* Lighter title underline; the link is still underlined, not identified by color alone. */
@@ -422,6 +582,235 @@ main:focus {
   padding-top: var(--space-3);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
+}
+
+/* ---------- Dark page band (Projects hero, D-028) ---------- */
+.page-band {
+  padding-block: var(--space-10) var(--space-12);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.page-band__intro {
+  max-width: 38rem;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  color: var(--color-text-on-inverse-muted);
+}
+
+/* Key figures: three panels; the large value carries the emphasis. */
+.kpis {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+  padding: 0;
+  list-style: none;
+}
+
+.kpi {
+  padding: var(--space-7) var(--space-7) var(--space-6);
+  border: 1px solid var(--color-border-inverse);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-inverse-raised);
+}
+
+.kpi__value {
+  display: block;
+  font-size: var(--font-size-display);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-strong);
+}
+
+.kpi__label {
+  display: block;
+  margin-top: var(--space-3);
+  color: var(--color-text-on-inverse-muted);
+}
+
+@media (min-width: 768px) {
+  .kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-band {
+    padding-block: var(--space-16);
+  }
+
+  .page-band h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+}
+
+/* ---------- Project cards (Projects page, D-028; anatomy per D-014 as amended) ---------- */
+/* Featured: one column, two from 768px, three from 1024px. More: one column, two from 768px (D-013). */
+.project-grid {
+  display: grid;
+  gap: var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid--featured {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* The whole card is clickable through the title link's ::after; the title comes first in the
+   source so screen readers announce it first, and the tag row is moved above it visually. */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-7);
+  border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-raised);
+}
+
+/* Featured: more padding, a larger title, and a deeper shadow; the section heading names the group. */
+.project-card--featured {
+  padding: var(--space-8);
+  box-shadow: var(--elevation-floating);
+}
+
+.project-card__top {
+  order: -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.pill {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-pill-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-pill-surface);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-strong);
+  color: var(--color-text-secondary);
+}
+
+.pill--sector {
+  border-color: var(--color-pill-accent-border);
+  background-color: var(--color-pill-accent-surface);
+  color: var(--color-pill-accent-text);
+}
+
+.project-card__year {
+  padding-top: var(--space-1);
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
+}
+
+.project-card__title {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+.project-card__title a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+}
+
+.project-card__title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+}
+
+.project-card__client {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
+}
+
+.project-card__company {
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
+.project-card__summary {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 1024px) {
+  .project-card__title {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: var(--letter-spacing-h3);
+  }
+
+  .project-card--featured .project-card__title {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+}
+
+/* ---------- Closing call-to-action band (D-028) ---------- */
+.cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.cta-band__text {
+  flex: 1 1 20rem;
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  font-weight: var(--font-weight-label);
+}
+
+.button--inverse {
+  border-color: var(--color-text-on-inverse);
+  background-color: var(--color-text-on-inverse);
+  color: var(--color-surface-inverse);
+}
+
+.button--inverse:hover {
+  background-color: var(--color-surface-subtle);
 }
 
 /* ---------- Link list (entry points) ---------- */
@@ -578,7 +967,7 @@ main:focus {
   height: 0;
   border-top: 0.375rem solid transparent;
   border-bottom: 0.375rem solid transparent;
-  border-left: 0.5rem solid var(--color-action-primary);
+  border-left: 0.5rem solid var(--color-accent);
 }
 
 .story-section__toggle[aria-expanded="true"] .story-section__triangle {
@@ -741,7 +1130,7 @@ main:focus {
   left: 0;
   width: 1rem;
   height: 1rem;
-  border: 3px solid var(--color-action-primary);
+  border: 3px solid var(--color-accent);
   border-radius: 50%;
   background-color: var(--color-surface-background);
 }
@@ -750,8 +1139,8 @@ main:focus {
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
   letter-spacing: var(--letter-spacing-h3);
-  font-weight: var(--font-weight-h2);
-  color: var(--color-action-primary); /* the one accent, shared with the markers; years are not links */
+  font-weight: var(--font-weight-strong); /* D-024: years in bold */
+  color: var(--color-accent); /* the one accent, shared with the markers; years are not links */
 }
 
 .timeline__item > .timeline__years + h2 {
@@ -780,7 +1169,7 @@ main:focus {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: var(--color-action-primary);
+  background-color: var(--color-accent);
 }
 
 .timeline-projects__period {

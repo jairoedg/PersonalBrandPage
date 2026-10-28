@@ -8,6 +8,15 @@
         "value": "inter",
         "createdAt": "2026-10-22T21:38:37.566Z",
         "reason": "Jairo: D-019 approves Inter; reading surfaces suit a workhorse UI face"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/projects/index.html"
+        ],
+        "createdAt": "2026-10-28T02:43:59.143Z",
+        "reason": "Claude, measured: page-band text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
       }
     ]
   }
