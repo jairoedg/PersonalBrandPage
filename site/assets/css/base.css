@@ -796,8 +796,11 @@ main:focus {
   color: var(--color-text-on-inverse);
 }
 
-.cta-band > .placeholder {
+.cta-band__text {
   flex: 1 1 20rem;
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  font-weight: var(--font-weight-label);
 }
 
 .button--inverse {
