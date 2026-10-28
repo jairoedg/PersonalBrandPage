@@ -26,6 +26,14 @@
   --color-accent: var(--blue-700);
   --color-border-default: var(--slate-200);
   --color-focus-visible: var(--blue-700);
+  /* Dark bands (Projects hero, closing band) and project-card pills. */
+  --color-surface-inverse-raised: var(--slate-800);
+  --color-border-inverse: var(--slate-700);
+  --color-pill-surface: var(--slate-50);
+  --color-pill-border: var(--slate-300);
+  --color-pill-accent-surface: var(--blue-50);
+  --color-pill-accent-border: var(--blue-300);
+  --color-pill-accent-text: var(--blue-800);
 
   /* H1 and H2 at regular weight; H3 and below stay 600 (design language, updated 2026-10-23). */
   --font-weight-h1: var(--font-weight-body);
@@ -51,6 +59,13 @@
   --color-accent: var(--stone-900);
   --color-border-default: var(--stone-200);
   --color-focus-visible: var(--stone-900);
+  --color-surface-inverse-raised: var(--stone-800);
+  --color-border-inverse: var(--stone-700);
+  --color-pill-surface: var(--stone-50);
+  --color-pill-border: var(--stone-300);
+  --color-pill-accent-surface: var(--stone-100);
+  --color-pill-accent-border: var(--stone-400);
+  --color-pill-accent-text: var(--stone-900);
 }
 
 /* ---------- Reset ---------- */
@@ -264,6 +279,11 @@ main:focus {
   .site-main {
     padding-block: var(--space-12);
   }
+}
+
+/* Pages that open with a full-width dark band start flush under the header. */
+.site-main--band {
+  padding-top: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -511,12 +531,14 @@ main:focus {
 /* The title link is the card's only control: ring the whole card instead of each wrapped title line. */
 /* Browsers without :has() keep the default link outline. */
 @supports selector(:has(*)) {
-  .story-card:has(:focus-visible) {
+  .story-card:has(:focus-visible),
+  .project-card:has(:focus-visible) {
     outline: 3px solid var(--color-focus-visible);
     outline-offset: 2px;
   }
 
-  .story-card__title a:focus-visible {
+  .story-card__title a:focus-visible,
+  .project-card__title a:focus-visible {
     outline: none;
   }
 }
@@ -560,6 +582,232 @@ main:focus {
   padding-top: var(--space-3);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
+}
+
+/* ---------- Dark page band (Projects hero, D-028) ---------- */
+.page-band {
+  padding-block: var(--space-10) var(--space-12);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.page-band__intro {
+  max-width: 38rem;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  color: var(--color-text-on-inverse-muted);
+}
+
+/* Key figures: three panels; the large value carries the emphasis. */
+.kpis {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+  padding: 0;
+  list-style: none;
+}
+
+.kpi {
+  padding: var(--space-7) var(--space-7) var(--space-6);
+  border: 1px solid var(--color-border-inverse);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-inverse-raised);
+}
+
+.kpi__value {
+  display: block;
+  font-size: var(--font-size-display);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-strong);
+}
+
+.kpi__label {
+  display: block;
+  margin-top: var(--space-3);
+  color: var(--color-text-on-inverse-muted);
+}
+
+@media (min-width: 768px) {
+  .kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-band {
+    padding-block: var(--space-16);
+  }
+
+  .page-band h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+}
+
+/* ---------- Project cards (Projects page, D-028; anatomy per D-014 as amended) ---------- */
+/* Featured: one column, two from 768px, three from 1024px. More: one column, two from 768px (D-013). */
+.project-grid {
+  display: grid;
+  gap: var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid--featured {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* The whole card is clickable through the title link's ::after; the title comes first in the
+   source so screen readers announce it first, and the tag row is moved above it visually. */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-7);
+  border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-raised);
+}
+
+/* Featured: more padding, a larger title, and a deeper shadow; the section heading names the group. */
+.project-card--featured {
+  padding: var(--space-8);
+  box-shadow: var(--elevation-floating);
+}
+
+.project-card__top {
+  order: -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.pill {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-pill-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-pill-surface);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-strong);
+  color: var(--color-text-secondary);
+}
+
+.pill--sector {
+  border-color: var(--color-pill-accent-border);
+  background-color: var(--color-pill-accent-surface);
+  color: var(--color-pill-accent-text);
+}
+
+.project-card__year {
+  padding-top: var(--space-1);
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
+}
+
+.project-card__title {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+.project-card__title a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+}
+
+.project-card__title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+}
+
+.project-card__client {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-secondary);
+}
+
+.project-card__company {
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
+.project-card__summary {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 1024px) {
+  .project-card__title {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    letter-spacing: var(--letter-spacing-h3);
+  }
+
+  .project-card--featured .project-card__title {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+}
+
+/* ---------- Closing call-to-action band (D-028) ---------- */
+.cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.cta-band > .placeholder {
+  flex: 1 1 20rem;
+}
+
+.button--inverse {
+  border-color: var(--color-text-on-inverse);
+  background-color: var(--color-text-on-inverse);
+  color: var(--color-surface-inverse);
+}
+
+.button--inverse:hover {
+  background-color: var(--color-surface-subtle);
 }
 
 /* ---------- Link list (entry points) ---------- */
