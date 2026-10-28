@@ -13,10 +13,15 @@
         "rule": "cramped-padding",
         "value": "*",
         "files": [
-          "site/projects/index.html"
+          "site/projects/index.html",
+          "site/about/index.html",
+          "site/career-journey/index.html",
+          "site/contact/index.html",
+          "site/how-i-can-help/index.html",
+          "site/leadership/index.html"
         ],
         "createdAt": "2026-10-28T02:43:59.143Z",
-        "reason": "Claude, measured: page-band text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
+        "reason": "Claude, measured: page-band and page-header text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
       }
     ]
   }

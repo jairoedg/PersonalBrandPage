@@ -576,6 +576,39 @@ main:focus {
   line-height: var(--line-height-body-s);
 }
 
+/* ---------- Page header (content pages) ---------- */
+/* The opening block of Career Journey, About, Contact, Leadership, and How I Can Help: a light
+   tinted band, the lighter sibling of the Projects band, with the title and the intro. */
+.page-header {
+  padding-block: var(--space-10);
+  border-bottom: 1px solid var(--color-border-tint); /* decorative divider */
+  background-color: var(--color-surface-tint);
+}
+
+.page-header .container > * {
+  max-width: 38rem;
+}
+
+.page-header + .container > :first-child {
+  margin-top: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .page-header {
+    padding-block: var(--space-12);
+  }
+
+  .page-header h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .page-header + .container > :first-child {
+    margin-top: var(--space-12);
+  }
+}
+
 /* ---------- Dark page band (Projects hero, D-028) ---------- */
 .page-band {
   padding-block: var(--space-10) var(--space-12);
