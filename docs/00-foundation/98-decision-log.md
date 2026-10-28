@@ -350,6 +350,8 @@ Headings use Inter at regular weight (400). This supersedes the heading weight o
 
 Home has a two-column hero on desktop: name, positioning, vision, and two buttons on the left; Jairo's portrait on the right. On mobile the photo sits below the buttons. Hero buttons: "Let's talk" (black, to Contact) and "Download CV" (outlined, the D-021 file). The primary navigation keeps the link text "Contact" and shows it as a black pill. The footer keeps "Contact". All approved Home wording (D-022) is unchanged. The monochrome palette applies to Home.
 
+Amended 2026-10-28 (Jairo in chat): the other pages may use color. Each page keeps the monochrome base, and adds one accent from the design-language blue scale: blue-700 for text, links, and focus, and blue-50 or blue-100 for tinted surfaces. Sector labels on Project cards keep their blue colors. Other palette hues may be used only where they carry meaning, such as a category or a status, and that meaning is always also written as text, so color is never the only cue. Text contrast meets WCAG 2.1 AA on every surface. Heading weight (400), the coal-black action color for buttons, and the placeholder and warning colors are unchanged.
+
 Source: Jairo in chat, 2026-10-23 (reference images: devin.ai and two other examples; layout only, no content or photos from them).
 
 Status
@@ -358,6 +360,7 @@ Approved (2026-10-23)
 
 %%Updated 2026-10-23: monochrome direction recorded; supersedes D-026's teal accent and D-024's teal timeline; heading weight changed to 400 for this site.%%
 %%Updated 2026-10-24: the Projects page colors are still open. Jairo will compare a monochrome option with the blue Option B using Artifacts. D-027 governs the rest of the site until he decides.%%
+%%Amended 2026-10-28: Jairo decided to allow color on pages other than Home. Home stays monochrome. The Projects page may use the blue accent, pending the Artifacts comparison.%%
 
 ---
 
