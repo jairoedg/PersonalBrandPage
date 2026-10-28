@@ -379,3 +379,21 @@ Status
 Approved (2026-10-24), except the items listed as not decided
 
 %%Updated 2026-10-24: Projects layout recorded as D-028. The featured row uses two columns from 768px, which is consistent with D-013 (two columns from 768px).%%
+
+---
+
+## D-029
+
+Project card labels, icons, and logos (Projects page, Option B; Jairo in chat, 2026-10-28). Extends D-014 and D-023.
+
+Labels: each card shows a sector pill, tags, and the year on one top row, aligned together. The method label (Agile or Waterfall) sits in the same row, in a gray tone. No label sits on the card edge. Tags stay outlined, in the current style. Labels use the Inter typeface only; no handwritten or script font is used (D-019).
+
+Sector icons: each sector pill carries a small outlined icon, hand-drawn inline SVG on the 24px grid, decorative and hidden from screen readers (D-023).
+
+Company logos: each card shows the logo of the employer for that project, next to the company line. Endava (DCTX, DFA) and TCS (Avianca, Tigo) use their logos. Telecom projects delivered at Comverse are shown as "Comverse (now Mavenir)," with the Mavenir logo. GSK is a client, not an employer, so it has no logo. Logos must come from the company's official brand files, never from traced or approximated copies. Until the official files are supplied, the card shows a labeled placeholder.
+
+Source: Jairo in chat, 2026-10-28 (label placement, icons, Comverse naming, GSK as client).
+
+Status
+
+Approved (2026-10-28)
