@@ -17,6 +17,19 @@
   --color-text-link: var(--stone-900);
   --color-border-default: var(--stone-200);
   --color-focus-visible: var(--stone-900);
+  --color-action-hover: var(--stone-700);
+  --color-surface-subtle: var(--stone-100); /* secondary-button hover, image backdrop */
+
+  /* Every heading level at regular weight (D-027, superseding B5's 600). */
+  --font-weight-h1: var(--font-weight-body);
+  --font-weight-h2: var(--font-weight-body);
+  --font-weight-h3: var(--font-weight-body);
+  --font-weight-h4: var(--font-weight-body);
+  /* Emphasis that is not a heading: site name, current nav item, timeline years (D-024). */
+  --font-weight-strong: 600;
+
+  --radius-pill: 999px;
+  --radius-card: 12px;
 }
 
 /* ---------- Reset ---------- */
@@ -58,19 +71,19 @@ body {
   overflow-wrap: break-word;
 }
 
-/* h1 and h2 at regular weight, devin.ai style (D-027); size and tracking carry the hierarchy. */
+/* Heading weights come from the :root overrides (D-027: regular weight at every level). */
 h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
   letter-spacing: var(--letter-spacing-h1);
-  font-weight: var(--font-weight-body);
+  font-weight: var(--font-weight-h1);
 }
 
 h2 {
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
   letter-spacing: var(--letter-spacing-h2);
-  font-weight: var(--font-weight-body);
+  font-weight: var(--font-weight-h2);
 }
 
 h3 {
@@ -161,7 +174,7 @@ main:focus {
 .site-name {
   font-size: var(--font-size-body-l);
   line-height: var(--line-height-body-l);
-  font-weight: var(--font-weight-h1);
+  font-weight: var(--font-weight-strong);
   color: var(--color-text-default);
   text-decoration: none;
 }
@@ -198,21 +211,21 @@ main:focus {
 .nav-list a[aria-current="page"],
 .site-name[aria-current="page"] {
   color: var(--color-text-default);
-  font-weight: var(--font-weight-h1);
+  font-weight: var(--font-weight-strong);
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
-/* "Let's talk": the Contact link as a coal-black pill, last in the Primary nav (D-027). */
+/* Contact as a coal-black pill, last in the Primary nav (D-027). */
 .nav-list a.nav-cta {
   padding: 0 var(--space-5);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background-color: var(--color-action-primary);
   color: var(--color-action-on-primary);
 }
 
 .nav-list a.nav-cta:hover {
-  background-color: var(--stone-700);
+  background-color: var(--color-action-hover);
 }
 
 /* On the Contact page the pill keeps its colors; the thick underline marks the current page. */
@@ -265,7 +278,7 @@ main:focus {
   min-height: 2.75rem; /* 44px touch target */
   padding: 0 var(--space-6);
   border: 1px solid var(--color-action-primary);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-size: var(--font-size-label);
   line-height: var(--line-height-label);
   font-weight: var(--font-weight-label);
@@ -278,8 +291,8 @@ main:focus {
 }
 
 .button--primary:hover {
-  background-color: var(--stone-700);
-  border-color: var(--stone-700);
+  background-color: var(--color-action-hover);
+  border-color: var(--color-action-hover);
 }
 
 .button--secondary {
@@ -288,7 +301,7 @@ main:focus {
 }
 
 .button--secondary:hover {
-  background-color: var(--stone-100);
+  background-color: var(--color-surface-subtle);
 }
 
 /* ---------- Placeholder for unapproved content ---------- */
@@ -372,8 +385,8 @@ main:focus {
 
 .hero__photo img {
   width: 100%;
-  border-radius: 12px;
-  background-color: var(--stone-100); /* shows while the photo loads */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-subtle); /* shows while the photo loads */
 }
 
 @media (min-width: 768px) {
@@ -457,7 +470,7 @@ main:focus {
   padding: var(--padding-card);
   background-color: var(--color-surface-card);
   border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge (D-026) */
-  border-radius: 12px;
+  border-radius: var(--radius-card);
   box-shadow: var(--elevation-floating);
 }
 
@@ -854,7 +867,7 @@ main:focus {
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
   letter-spacing: var(--letter-spacing-h3);
-  font-weight: var(--font-weight-h2);
+  font-weight: var(--font-weight-strong); /* D-024: years in bold */
   color: var(--color-action-primary); /* the one accent, shared with the markers; years are not links */
 }
 

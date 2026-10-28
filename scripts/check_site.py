@@ -40,12 +40,10 @@ SITE = ROOT / "site"
 BLUEPRINT = ROOT / "docs" / "00-foundation" / "01-personal-brand-blueprint.md"
 
 TITLE_SUFFIX = " — Jairo Enrique Diaz"
-# The Primary nav shows Contact as the "Let’s talk" pill (D-027); the footer keeps "Contact".
-NAV_LINKS = {"Primary": ["Projects", "How I Can Help", "Leadership", "Career Journey", "About", "Let’s talk"],
-             "Footer": ["Projects", "How I Can Help", "Leadership", "Career Journey", "About", "Contact"]}
-# First path segment -> Primary nav link that should carry aria-current="page".
+NAV_LINKS = ["Projects", "How I Can Help", "Leadership", "Career Journey", "About", "Contact"]
+# First path segment -> nav link that should carry aria-current="page".
 SECTIONS = {"projects": "Projects", "how-i-can-help": "How I Can Help", "leadership": "Leadership",
-            "career-journey": "Career Journey", "about": "About", "contact": "Let’s talk"}
+            "career-journey": "Career Journey", "about": "About", "contact": "Contact"}
 STYLESHEETS = ["fonts.css", "tokens.css", "base.css"]
 PROJECT_CARDS = 10
 # D-021 contact values.
@@ -205,8 +203,8 @@ def check_page(page, r, all_ids):
         if not r.check(nav is not None, w, f'missing <nav aria-label="{label}">'):
             continue
         links = list(nav.find_all("a"))
-        r.check([norm(a.text()) for a in links] == NAV_LINKS[label], w,
-                f"{label} nav links should be {', '.join(NAV_LINKS[label])}")
+        r.check([norm(a.text()) for a in links] == NAV_LINKS, w,
+                f"{label} nav links should be {', '.join(NAV_LINKS)}")
         current = [norm(a.text()) for a in links if a.attrs.get("aria-current") == "page"]
         if label == "Primary":
             want = [expected_current] if expected_current else []
