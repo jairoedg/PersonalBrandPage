@@ -69,6 +69,8 @@ Spot-check ratios: neutral ink on page surface 16.36:1; action blue 6.14:1; read
 
 Typeface: Inter for display/body roles; system `ui-monospace` for Code. Website font sourcing/hosting remains deferred. `1rem = 16px` is specification arithmetic only.
 
+%%Updated 2026-10-23: for the website, H1 and H2 use weight 400 (regular), not 600, under D-027. The typeface stays Inter (D-019). H3 and below stay at 600. The palette is monochrome (D-027), not the teal accent of D-026.%%
+
 | Step | Typeface | Size | Weight | Line Height | Letter Spacing | Usage |
 |---|---|---:|---:|---|---|---|
 | Display | Inter | 48px / 3rem | 600 | 56px / 3.5rem | −0.025em | Reserved display role |
