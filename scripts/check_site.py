@@ -286,24 +286,36 @@ def check_decisions(pages, r):
 
     if not r.check(projects is not None, "projects/index.html", "Projects page is missing"):
         return
-    cards = list(projects.dom.find_all("article", cls="story-card"))
+    # D-028 layout; card anatomy per D-014 (amended 2026-10-24): sector pill and tags, year,
+    # linked headline, "Client:" line, company and role, one-sentence summary. No Result on cards.
+    body = norm(projects.dom.find("body").text())
+    for kpi in ("15+ years leading software and infrastructure delivery", "5 industries",
+                "10+ projects, from on-site rollouts to cloud migrations"):
+        r.check(kpi in body, "projects/index.html", f'missing key figure "{kpi}" (D-028)')
+    r.check("about 60" not in body and "about 25" not in body, "projects/index.html",
+            'card summaries should say "approximately", as in the sources (D-028)')
+    cards = list(projects.dom.find_all("article", cls="project-card"))
     r.check(len(cards) == PROJECT_CARDS, "projects/index.html", f"expected {PROJECT_CARDS} cards, found {len(cards)}")
+    featured = [norm(c.find("p", cls="project-card__client").text()) for c in cards
+                if "project-card--featured" in c.attrs.get("class", "") and c.find("p", cls="project-card__client")]
+    r.check(featured == ["Client: DFA", "Client: GSK", "Client: Entel Peru"], "projects/index.html",
+            f"featured projects should be DFA, GSK, Entel Peru (D-028), found {featured}")
     detail = {p for p in pages if p.startswith("projects/") and p != "projects/index.html"}
     linked = set()
     for c in cards:
-        a = c.find("a")
+        h3 = c.find("h3")
+        a = h3.find("a") if h3 else None
         name = norm(a.text()) if a else "(card without link)"
         where = f"projects/index.html card \"{name[:40]}\""
-        r.check(a is not None and c.find("h2") is not None, where, "title must be an <h2> with a link")
-        r.check(c.find("p", cls="story-card__meta") is not None, where, "missing context line")
-        r.check(c.find("p", cls="story-card__role") is not None, where, "missing role")
-        r.check(any(p.attrs.get("class") is None for p in c.find_all("p")), where, "missing summary")
-        out = c.find("p", cls="story-card__outcome")
-        r.check(out is not None and norm(out.text()).startswith("Outcome:"), where, 'missing "Outcome:" line')
+        r.check(a is not None, where, "headline must be an <h3> with a link")
+        r.check(c.find("span", cls="pill--sector") is not None, where, "missing sector pill")
+        r.check(c.find("p", cls="project-card__year") is not None, where, "missing year")
+        client = c.find("p", cls="project-card__client")
+        r.check(client is not None and norm(client.text()).startswith("Client:"), where, 'missing "Client:" line')
+        r.check(c.find("p", cls="project-card__company") is not None, where, "missing company and role line")
+        r.check(c.find("p", cls="project-card__summary") is not None, where, "missing summary")
         if a is not None:
             linked.add("projects/" + a.attrs.get("href", ""))
-        if a is not None and "Tigo" in name:
-            r.check(out is not None and "Tableau" in out.text(), where, "Tigo outcome should mention Tableau")
     r.check(linked == detail, "projects/index.html",
             f"cards and detail pages differ (no page: {sorted(linked - detail)}, no card: {sorted(detail - linked)})")
 
@@ -480,8 +492,8 @@ FOCUS_INFO = """(() => {
   const el = document.activeElement;
   if (!el || el === document.body) return null;
   const own = getComputedStyle(el), r = el.getBoundingClientRect();
-  // Story cards ring the whole card instead of the title link (base.css).
-  const card = own.outlineStyle === 'none' ? el.closest('.story-card') : null;
+  // Story and project cards ring the whole card instead of the title link (base.css).
+  const card = own.outlineStyle === 'none' ? el.closest('.story-card, .project-card') : null;
   const cs = card ? getComputedStyle(card) : own;
   return { text: (el.textContent || el.getAttribute('aria-label') || el.tagName).trim().replace(/\\s+/g, ' '),
            skip: el.classList.contains('skip-link'), visible: el.matches(':focus-visible'),

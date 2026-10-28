@@ -21,120 +21,161 @@
           <li><a href="../leadership/">Leadership</a></li>
           <li><a href="../career-journey/">Career Journey</a></li>
           <li><a href="../about/">About</a></li>
-          <li><a href="../contact/">Contact</a></li>
+          <li><a class="nav-cta" href="../contact/">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="site-main" tabindex="-1">
-    <div class="container">
-      <section class="stack" aria-labelledby="projects-title">
+  <main id="main" class="site-main site-main--band" tabindex="-1">
+    <section class="page-band" aria-labelledby="projects-title">
+      <div class="container">
         <h1 id="projects-title">Projects</h1>
-        <div class="placeholder">
-          <span class="placeholder__label">Placeholder</span>
-          <p>Section introduction pending approval.</p>
-        </div>
-      </section>
+        <p class="page-band__intro">I love making projects succeed, using both Agile and Waterfall across different markets.</p>
+        <ul class="kpis" role="list">
+          <li class="kpi"><strong class="kpi__value">15+</strong> <span class="kpi__label">years leading software and infrastructure delivery</span></li>
+          <li class="kpi"><strong class="kpi__value">5</strong> <span class="kpi__label">industries</span></li>
+          <li class="kpi"><strong class="kpi__value">10+</strong> <span class="kpi__label">projects, from on-site rollouts to cloud migrations</span></li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="section" aria-label="Project Stories">
-        <ul class="card-grid card-grid--two" role="list">
+    <div class="container">
+      <section class="section stack" aria-labelledby="featured-title">
+        <h2 id="featured-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v15h5.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg>Featured projects</h2>
+        <ul class="project-grid project-grid--featured" role="list">
           <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="dctx-media.html">DCTX: Greenfield Web and Mobile Platform for Sports Media</a></h2>
-              <p class="story-card__meta">Endava · Media · 2025–2026</p>
-              <p class="story-card__role">Scrum Master</p>
-              <p>Led the web, mobile, back-end, data migration, and DevOps teams building a new GCP-hosted platform for news, live scores, video streaming, and video on demand for a Texas sports media brand.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Full inception scope deployed on September 18, after the original July 30 target; the mobile app launched two months late with minimal production bugs.</p>
+            <article class="project-card project-card--featured">
+              <h3 class="project-card__title"><a href="dfa-capital-markets.html">Cloud integration and process refactoring</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Capital Markets</span><span class="pill">C#</span><span class="pill">Agile</span><span class="pill">Presales</span></p>
+                <p class="project-card__year">2021–2025</p>
+              </div>
+              <p class="project-card__client">Client: DFA</p>
+              <p class="project-card__company">Endava · Agile Project Manager</p>
+              <p class="project-card__summary">Led Agile delivery of an API Gateway and the refactoring of approximately 60 business processes during a move to Azure.</p>
             </article>
           </li>
           <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="dfa-capital-markets.html">DFA Capital Markets: Cloud Integration and Process Refactoring</a></h2>
-              <p class="story-card__meta">Endava · Capital Markets · 2021–2025</p>
-              <p class="story-card__role">Agile Project Manager</p>
-              <p>Led Agile delivery of an API Gateway and the refactoring of approximately 60 business processes when Charles River moved the investment-management platform DFA relied on to Azure.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> API Gateway delivered, business processes refactored, production go-live supported.</p>
+            <article class="project-card project-card--featured">
+              <h3 class="project-card__title"><a href="gsk-order-to-cash.html">Order-to-Cash for SAP migration</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Pharmaceutical</span><span class="pill">SAP</span><span class="pill">e-Invoicing</span><span class="pill">3rd Party</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2017–2018</p>
+              </div>
+              <p class="project-card__client">Client: GSK</p>
+              <p class="project-card__company">TCS · e-Invoicing - Order to Cash (O2C) Stream Lead</p>
+              <p class="project-card__summary">Led the Order-to-Cash workstream, including e-invoicing integrations, across four countries in GSK’s SAP migration.</p>
             </article>
           </li>
           <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="avianca-data-warehouse.html">Avianca: Azure Data Warehouse Migration Definition</a></h2>
-              <p class="story-card__meta">TCS · Aviation · 2021</p>
-              <p class="story-card__role">Technical Project Manager / Client Partner</p>
-              <p>Developed the business case, TCO model, and initial migration roadmap to move Avianca’s on-premises Oracle Exadata data warehouse toward Azure.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Business case and TCO completed for sponsor approval.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="tigo-sox-big-data.html">Tigo: SOX Big Data Automation Program</a></h2>
-              <p class="story-card__meta">TCS · Telecommunications · 2018–2019</p>
-              <p class="story-card__role">Project / Program Delivery Lead</p>
-              <p>Led delivery of a Big Data platform to automate approximately 25 SOX control processes, with teams in Colombia and India.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Not achieved: the planned SOX control monitoring through Tableau dashboards was not delivered, and the original approach was stopped after approximately six months and restructured.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="gsk-order-to-cash.html">GSK: Order-to-Cash for an Andean SAP Migration</a></h2>
-              <p class="story-card__meta">TCS · Pharmaceutical · 2017–2018</p>
-              <p class="story-card__role">e-Invoicing - Order to Cash (O2C) Stream Lead</p>
-              <p>Led the Order-to-Cash workstream, including each country’s electronic invoicing integrations, in GSK’s move from JD Edwards to SAP across Colombia, Peru, Ecuador, and Chile.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Delivered for go-live.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="entel-chile.html">Entel Chile: Project Recovery and Customer Confidence</a></h2>
-              <p class="story-card__meta">Comverse · Telecommunications · 2015</p>
-              <p class="story-card__role">Senior Project Lead — Project Recovery / On-site Delivery Lead</p>
-              <p>Brought in to recover a delayed project where the customer had lost confidence: rebuilt a credible delivery plan, restored customer engagement, and took the solution to production go-live.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Production go-live completed.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="entel-peru.html">Entel Peru: VAS Delivery for Market Expansion and 4G</a></h2>
-              <p class="story-card__meta">Comverse · Telecommunications · 2014</p>
-              <p class="story-card__role">Senior Project Lead — Presales Support / On-site Implementation Lead</p>
-              <p>Supported scope and delivery planning in presales, then led on-site implementation of value-added services for Entel’s entry into Peru and its new 4G network.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Production go-live completed.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="claro-peru.html">Claro Peru: VAS Platform Upgrade for 4G</a></h2>
-              <p class="story-card__meta">Comverse · Telecommunications · 2013</p>
-              <p class="story-card__role">Senior Project Lead — On-site Implementation / Project Lead</p>
-              <p>Coordinated the upgrade of the value-added services platform and its integration with Claro’s new 4G network, through testing and production readiness.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Production go-live completed.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="gtt-guyana.html">GT&amp;T Guyana: VAS Platform Implementation</a></h2>
-              <p class="story-card__meta">Comverse · Telecommunications · 2012</p>
-              <p class="story-card__role">Senior Project Lead — On-site Implementation Lead</p>
-              <p>Led on-site implementation of a new value-added services platform, integrated with existing systems including prepaid charging.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Production go-live completed.</p>
-            </article>
-          </li>
-          <li>
-            <article class="story-card">
-              <h2 class="story-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg><a href="digicel-jamaica.html">Digicel Jamaica: VAS Platform Relocation</a></h2>
-              <p class="story-card__meta">Comverse · Telecommunications · 2011–2012</p>
-              <p class="story-card__role">Senior Project Lead — Implementation Lead / Customer Delivery Lead</p>
-              <p>After the Haiti earthquake, led the on-site relocation of a critical value-added services platform to Jamaica, serving customers in both countries.</p>
-              <p class="story-card__outcome"><strong>Outcome:</strong> Production go-live completed.</p>
+            <article class="project-card project-card--featured">
+              <h3 class="project-card__title"><a href="entel-peru.html">VAS delivery for 4G market expansion</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Presales</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2014</p>
+              </div>
+              <p class="project-card__client">Client: Entel Peru</p>
+              <p class="project-card__company">Comverse · Senior Project Lead — Presales Support / On-site Implementation Lead</p>
+              <p class="project-card__summary">Led on-site implementation of value-added services for Entel’s entry into Peru and its new 4G network.</p>
             </article>
           </li>
         </ul>
       </section>
 
-      <section class="section stack" aria-labelledby="contact-title">
-        <h2 id="contact-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>Get in touch</h2>
-        <p><a href="../contact/">Contact me</a></p>
+      <section class="section stack" aria-labelledby="more-title">
+        <h2 id="more-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>More projects</h2>
+        <ul class="project-grid" role="list">
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="dctx-media.html">Greenfield Web and Mobile platform delivery</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Media</span><span class="pill">GCP</span><span class="pill">DevOps</span><span class="pill">Agile</span></p>
+                <p class="project-card__year">2025–2026</p>
+              </div>
+              <p class="project-card__client">Client: DCTX</p>
+              <p class="project-card__company">Endava · Scrum Master</p>
+              <p class="project-card__summary">Led the web, mobile, back-end, data migration, and DevOps teams for a new sports media platform on GCP.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="avianca-data-warehouse.html">Azure data warehouse migration definition</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Aviation</span><span class="pill">Azure</span><span class="pill">Oracle</span><span class="pill">Data warehouse</span><span class="pill">Agile</span></p>
+                <p class="project-card__year">2021</p>
+              </div>
+              <p class="project-card__client">Client: Avianca</p>
+              <p class="project-card__company">TCS · Technical Project Manager / Client Partner</p>
+              <p class="project-card__summary">Developed the business case, TCO model, and migration roadmap to move a data warehouse from on-premises Oracle to Azure.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="tigo-sox-big-data.html">SOX control using Big Data</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Big Data</span><span class="pill">SOX</span><span class="pill">Agile</span></p>
+                <p class="project-card__year">2018–2019</p>
+              </div>
+              <p class="project-card__client">Client: Tigo</p>
+              <p class="project-card__company">TCS · Project / Program Delivery Lead</p>
+              <p class="project-card__summary">Led delivery of a Big Data platform to automate approximately 25 SOX control processes, with teams in Colombia and India.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="entel-chile.html">Project recovery and customer confidence</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Project recovery</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2015</p>
+              </div>
+              <p class="project-card__client">Client: Entel Chile</p>
+              <p class="project-card__company">Comverse · Senior Project Lead — Project Recovery / On-site Delivery Lead</p>
+              <p class="project-card__summary">Recovered a delayed project by rebuilding a credible delivery plan, then took the solution to production go-live.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="claro-peru.html">VAS platform upgrade for 4G</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2013</p>
+              </div>
+              <p class="project-card__client">Client: Claro Peru</p>
+              <p class="project-card__company">Comverse · Senior Project Lead — On-site Implementation / Project Lead</p>
+              <p class="project-card__summary">Coordinated the value-added services platform upgrade and its integration with Claro’s new 4G network.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="gtt-guyana.html">VAS platform implementation</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Prepaid charging</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2012</p>
+              </div>
+              <p class="project-card__client">Client: GT&amp;T Guyana</p>
+              <p class="project-card__company">Comverse · Senior Project Lead — On-site Implementation</p>
+              <p class="project-card__summary">Led on-site implementation of a new value-added services platform, integrated with existing prepaid charging systems.</p>
+            </article>
+          </li>
+          <li>
+            <article class="project-card">
+              <h3 class="project-card__title"><a href="digicel-jamaica.html">VAS platform relocation</a></h3>
+              <div class="project-card__top">
+                <p class="project-card__tags"><span class="pill pill--sector">Telecommunications</span><span class="pill">Relocation</span><span class="pill">Waterfall</span></p>
+                <p class="project-card__year">2011–2012</p>
+              </div>
+              <p class="project-card__client">Client: Digicel Jamaica</p>
+              <p class="project-card__company">Comverse · Senior Project Lead — Implementation Lead / Customer Delivery Lead</p>
+              <p class="project-card__summary">Led the on-site relocation of the value-added services platform to Jamaica after the Haiti earthquake.</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="cta-band section" aria-label="Contact">
+        <p class="cta-band__text">Let’s talk about your next delivery challenge.</p>
+        <a class="button button--inverse" href="../contact/">Contact me</a>
       </section>
     </div>
   </main>
