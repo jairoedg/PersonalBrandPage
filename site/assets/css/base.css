@@ -3,33 +3,54 @@
  * Load after tokens.css. Mobile-first; breakpoints at 768px and 1024px (D-013).
  */
 
-/* ---------- Look: monochrome, after devin.ai (D-027, superseding D-026's teal) ---------- */
-/* Semantic overrides only; token values in tokens.css stay as approved. Icons and the timeline
-   (D-023, D-024) read --color-action-primary, so they turn coal black with everything else.
-   Warning colors are untouched: placeholders must stay distinct. */
+/* ---------- Look: two palettes ---------- */
+/* Semantic overrides only; token values in tokens.css stay as approved. Warning colors are
+   untouched everywhere: placeholders must stay distinct.
+   - Default (every page but Home): Option B, navy and blue (D-028 Projects palette, extended
+     to the other pages by Jairo on 2026-10-27).
+   - .theme-mono on Home's <body>: monochrome after devin.ai (D-027).
+   --color-accent colors the icons (D-023), timeline (D-024), and disclosure triangles (D-025). */
 :root {
-  --color-surface-background: var(--stone-50);
+  --color-surface-background: var(--stone-100);
   --color-surface-card: #ffffff;
-  --color-text-default: var(--stone-900);
-  --color-text-secondary: var(--stone-600);
-  --color-action-primary: var(--stone-900);
+  --color-surface-subtle: var(--slate-100); /* secondary-button hover, image backdrop */
+  --color-surface-inverse: var(--slate-900); /* dark bands */
+  --color-text-default: var(--slate-900);
+  --color-text-secondary: var(--slate-700);
+  --color-text-on-inverse: var(--slate-50);
+  --color-text-on-inverse-muted: var(--slate-300);
+  --color-text-link: var(--blue-700);
+  --color-action-primary: var(--slate-900);
   --color-action-on-primary: #ffffff;
-  --color-text-link: var(--stone-900);
-  --color-border-default: var(--stone-200);
-  --color-focus-visible: var(--stone-900);
-  --color-action-hover: var(--stone-700);
-  --color-surface-subtle: var(--stone-100); /* secondary-button hover, image backdrop */
+  --color-action-hover: var(--slate-700);
+  --color-accent: var(--blue-700);
+  --color-border-default: var(--slate-200);
+  --color-focus-visible: var(--blue-700);
 
-  /* Every heading level at regular weight (D-027, superseding B5's 600). */
+  /* H1 and H2 at regular weight; H3 and below stay 600 (design language, updated 2026-10-23). */
   --font-weight-h1: var(--font-weight-body);
   --font-weight-h2: var(--font-weight-body);
-  --font-weight-h3: var(--font-weight-body);
-  --font-weight-h4: var(--font-weight-body);
   /* Emphasis that is not a heading: site name, current nav item, timeline years (D-024). */
   --font-weight-strong: 600;
 
   --radius-pill: 999px;
   --radius-card: 12px;
+}
+
+.theme-mono {
+  --color-surface-background: var(--stone-50);
+  --color-surface-subtle: var(--stone-100);
+  --color-surface-inverse: var(--stone-900);
+  --color-text-default: var(--stone-900);
+  --color-text-secondary: var(--stone-600);
+  --color-text-on-inverse: var(--stone-50);
+  --color-text-on-inverse-muted: var(--stone-300);
+  --color-text-link: var(--stone-900);
+  --color-action-primary: var(--stone-900);
+  --color-action-hover: var(--stone-700);
+  --color-accent: var(--stone-900);
+  --color-border-default: var(--stone-200);
+  --color-focus-visible: var(--stone-900);
 }
 
 /* ---------- Reset ---------- */
@@ -514,7 +535,7 @@ main:focus {
   height: 0.8em;
   margin-right: 0.4em;
   vertical-align: -0.08em;
-  color: var(--color-action-primary); /* accent color (D-027: coal black) */
+  color: var(--color-accent);
 }
 
 /* Lighter title underline; the link is still underlined, not identified by color alone. */
@@ -695,7 +716,7 @@ main:focus {
   height: 0;
   border-top: 0.375rem solid transparent;
   border-bottom: 0.375rem solid transparent;
-  border-left: 0.5rem solid var(--color-action-primary);
+  border-left: 0.5rem solid var(--color-accent);
 }
 
 .story-section__toggle[aria-expanded="true"] .story-section__triangle {
@@ -858,7 +879,7 @@ main:focus {
   left: 0;
   width: 1rem;
   height: 1rem;
-  border: 3px solid var(--color-action-primary);
+  border: 3px solid var(--color-accent);
   border-radius: 50%;
   background-color: var(--color-surface-background);
 }
@@ -868,7 +889,7 @@ main:focus {
   line-height: var(--line-height-h3);
   letter-spacing: var(--letter-spacing-h3);
   font-weight: var(--font-weight-strong); /* D-024: years in bold */
-  color: var(--color-action-primary); /* the one accent, shared with the markers; years are not links */
+  color: var(--color-accent); /* the one accent, shared with the markers; years are not links */
 }
 
 .timeline__item > .timeline__years + h2 {
@@ -897,7 +918,7 @@ main:focus {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: var(--color-action-primary);
+  background-color: var(--color-accent);
 }
 
 .timeline-projects__period {
