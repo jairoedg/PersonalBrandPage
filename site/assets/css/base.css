@@ -798,34 +798,22 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-/* Employer logo next to the company line (D-029). Until the official file is supplied, a
-   labeled placeholder holds the slot; a real logo goes in as an <img> with empty alt, since the
-   company name is already in the text. */
+/* Employer logo with the company line, stacked so the role text keeps the card width (D-029), from the official brand files. Empty alt:
+   the company name is already in the text. */
 .project-card__company {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
   color: var(--color-text-secondary);
 }
 
-.logo-placeholder {
+.project-card__logo {
   flex: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5.5rem;
-  min-height: 2.25rem;
-  padding: var(--space-1);
-  border: 1px dashed var(--color-warning-default);
-  border-radius: var(--space-1);
-  background-color: var(--color-warning-surface);
-  font-size: var(--font-size-caption);
-  line-height: var(--line-height-caption);
-  font-weight: var(--font-weight-label);
-  text-align: center;
-  color: var(--color-warning-default);
+  width: auto;
+  height: 1.5rem;
 }
 
 .project-card__summary {
