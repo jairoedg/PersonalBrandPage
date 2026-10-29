@@ -346,7 +346,7 @@ Approved (2026-10-22)
 
 Visual direction: monochrome, after the devin.ai reference. The page is off-white (stone-50), cards are white, text and buttons are coal black (stone-900), secondary text is stone-600, and borders are stone-200. Supersedes the teal accent of D-026, and its amendment of D-024: icons, timeline markers and years follow the black action color. Placeholder and warning colors are unchanged.
 
-Headings use Inter at regular weight (400). This supersedes the heading weight of 600 in the design language specification (B5); the typeface stays Inter under D-019.
+Headings use Inter. H1 and H2 use regular weight (400); H3 and smaller headings stay at 600, so they still stand apart from body text. This supersedes the heading weight of 600 in the design language specification (B5) for H1 and H2 only; the typeface stays Inter under D-019.
 
 Home has a two-column hero on desktop: name, positioning, vision, and two buttons on the left; Jairo's portrait on the right. On mobile the photo sits below the buttons. Hero buttons: "Let's talk" (black, to Contact) and "Download CV" (outlined, the D-021 file). The primary navigation keeps the link text "Contact" and shows it as a black pill. The footer keeps "Contact". All approved Home wording (D-022) is unchanged. The monochrome palette applies to Home.
 
@@ -361,14 +361,15 @@ Approved (2026-10-23)
 %%Updated 2026-10-23: monochrome direction recorded; supersedes D-026's teal accent and D-024's teal timeline; heading weight changed to 400 for this site.%%
 %%Updated 2026-10-24: the Projects page colors are still open. Jairo will compare a monochrome option with the blue Option B using Artifacts. D-027 governs the rest of the site until he decides.%%
 %%Amended 2026-10-28: Jairo decided to allow color on pages other than Home. Home stays monochrome. The Projects page may use the blue accent, pending the Artifacts comparison.%%
+%%Updated 2026-10-28: the Projects page colors are decided. Projects follows the amended rule: monochrome base with the blue accent, like every page except Home. This closes the 2026-10-24 note. Heading weight clarified: H1 and H2 at 400, H3 and smaller at 600, as built.%%
 
 ---
 
 ## D-028
 
-Projects page layout (Option B, approved by Jairo, 2026-10-24). The page has a dark hero band with the title "Projects", an intro line, and three figures (KPIs): "15+ years leading software and infrastructure delivery", "5 industries", and "10+ projects, from on-site rollouts to cloud migrations". The "10+ projects" figure will grow as projects are added. Below the hero: Featured projects (three larger cards: DFA, GSK, Entel Peru), then More projects (seven cards, newest first), then a closing call-to-action band. Featured cards: three columns from 1024px, two columns from 768px to 1023px, one column below 768px. Cards are not all the same size; no equal-size rule is recorded in the decisions. Card anatomy is set by D-014 (amended 2026-10-24). The small uppercase line above the title is removed.
+Projects page layout (Option B, approved by Jairo, 2026-10-24). The page has a dark hero band with the title "Projects", an intro line, and three figures (KPIs): "15+ years leading software and infrastructure delivery", "5 industries", and "10+ projects, from on-site rollouts to cloud migrations". The "10+ projects" figure will grow as projects are added. Below the hero: Featured projects (three larger cards: DFA, GSK, Entel Peru), then More projects (seven cards, newest first), then a closing call-to-action band. Featured cards: three columns from 1024px, two columns from 768px to 1023px, one column below 768px. Cards are not all the same size; no equal-size rule is recorded in the decisions. Card anatomy is set by D-014 (amended 2026-10-24). The small uppercase line above the title is removed. The intro line reads "I love making projects succeed, using both Agile and Waterfall across different markets." The closing band reads "Let’s talk about your next delivery challenge." with a "Contact me" button to Contact.
 
-Not decided: the Projects page colors (see D-027 note). Card summary wording (revisit later). Tigo card status (revisit later). The closing call-to-action wording is a placeholder until Jairo approves it.
+Not decided: card summary wording (revisit later). Tigo card status (revisit later).
 
 Reference: the approved Option B canvas is saved at `docs/explore/design/references/projects-option-b.dc.html`. Where its text or layout differs from this entry, this entry governs. Known differences to fix in the build: the featured row is one column from 768–1023px in the canvas (D-028 says two columns); the summaries say "about 60" and "about 25" where the sources say "approximately".
 
@@ -379,6 +380,7 @@ Status
 Approved (2026-10-24), except the items listed as not decided
 
 %%Updated 2026-10-24: Projects layout recorded as D-028. The featured row uses two columns from 768px, which is consistent with D-013 (two columns from 768px).%%
+%%Updated 2026-10-28: Projects colors decided (D-027 amendment). Closing band wording approved ("Let’s talk about your next delivery challenge." with "Contact me"), and intro line recorded. Remaining open items: card summary wording and Tigo card status.%%
 
 ---
 
