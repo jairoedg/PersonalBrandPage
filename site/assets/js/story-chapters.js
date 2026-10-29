@@ -10,6 +10,9 @@
  * - Tabs: each tab's name is the chapter title and its summary is the description.
  *   Arrow keys, Home and End move between tabs and select them.
  * - "Next: …" selects the next chapter and moves focus to its tab.
+ * - Below 1024px the buttons stack above the chapter, so after a tap (or Enter/Space) the
+ *   selected chapter scrolls into view; "Next" does the same. The scroll is instant when the
+ *   visitor prefers reduced motion. Arrow keys only switch tabs and never scroll.
  * - In-page links (such as footnotes) select the chapter holding their target.
  * - Hidden chapters use hidden="until-found" where supported, so find-in-page still
  *   reaches their text and selects the chapter.
@@ -23,6 +26,8 @@
   if (!list) return;
 
   var untilFound = "onbeforematch" in document.body;
+  var stacked = window.matchMedia("(max-width: 1023px)");
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var tabs = Array.prototype.slice.call(list.querySelectorAll(".chapter-tab"));
   var panels = tabs.map(function (tab) {
     return document.getElementById(tab.getAttribute("href").slice(1));
@@ -44,6 +49,7 @@
     tab.addEventListener("click", function (event) {
       event.preventDefault();
       select(i);
+      showChapter(i);
     });
     panel.addEventListener("beforematch", function () { select(i); });
   });
@@ -65,7 +71,7 @@
                  ArrowUp: current - 1, Home: 0, End: tabs.length - 1 }[event.key];
     if (next === undefined) {
       // A link role="tab" would not answer Space on its own.
-      if (event.key === " ") { event.preventDefault(); select(current); }
+      if (event.key === " ") { event.preventDefault(); select(current); showChapter(current); }
       return;
     }
     event.preventDefault();
@@ -73,6 +79,12 @@
     select(next);
     tabs[next].focus();
   });
+
+  // On stacked layouts the chosen chapter starts below the buttons, out of sight: bring it up.
+  function showChapter(index) {
+    if (!stacked.matches) return;
+    panels[index].scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" });
+  }
 
   function indexFor(node) {
     for (var i = 0; i < panels.length; i++) {
@@ -110,8 +122,9 @@
     if (index < 0 || index + 1 >= tabs.length) return;
     event.preventDefault();
     select(index + 1);
-    tabs[index + 1].focus();
-    list.scrollIntoView();
+    tabs[index + 1].focus({ preventScroll: true });
+    if (stacked.matches) showChapter(index + 1);
+    else list.scrollIntoView();
   });
 
   // Other in-page links (footnotes, shared section links) open the chapter they point into.

@@ -1119,6 +1119,7 @@ main:focus {
 /* Chapters and their numbered cards: one column, two from 1024px. */
 .chapter {
   margin-top: var(--space-10);
+  scroll-margin-top: var(--space-4); /* breathing room when a tap scrolls it into view */
 }
 
 .story--tabs .chapter {
