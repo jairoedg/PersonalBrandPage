@@ -27,46 +27,38 @@
     </div>
   </header>
 
-  <main id="main" class="site-main site-main--band" tabindex="-1">
-    <section class="page-header" aria-labelledby="contact-title">
-      <div class="container stack">
-        <h1 id="contact-title">Contact</h1>
-        <div class="placeholder">
-          <span class="placeholder__label">Placeholder</span>
-          <p>Contact-purpose introduction pending approval.</p>
+  <main id="main" class="site-main site-main--band site-main--end-band" tabindex="-1">
+    <section class="page-band contact-band" aria-labelledby="contact-title">
+      <div class="container contact-band__inner">
+        <div class="contact-band__text">
+          <h1 id="contact-title" class="visually-hidden">Contact</h1>
+          <p class="contact-band__headline">Let’s talk about your next delivery challenge.</p>
+          <div class="placeholder page-band__placeholder">
+            <span class="placeholder__label">Placeholder</span>
+            <p>Contact-purpose introduction pending approval.</p>
+          </div>
         </div>
+
+        <section class="contact-panel" aria-labelledby="methods-title">
+          <h2 id="methods-title" class="contact-panel__title">Ways to reach me</h2>
+          <ul class="contact-panel__rows" role="list">
+            <li>
+              <a class="contact-row" href="mailto:jairodiaz@yahoo.com"><svg class="contact-row__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="contact-row__label">Email</span><span class="contact-row__value">jairodiaz@yahoo.com</span><svg class="contact-row__go" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </li>
+            <li>
+              <a class="contact-row" href="https://www.linkedin.com/in/jairo-enrique-diaz"><svg class="contact-row__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17a3.5 3.5 0 0 1 7 0"/><path d="M15 10h3"/><path d="M15 14h3"/></svg><span class="contact-row__label">LinkedIn</span><span class="contact-row__value">linkedin.com/in/jairo-enrique-diaz</span><svg class="contact-row__go" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="visually-hidden"> (opens the LinkedIn website)</span></a>
+            </li>
+            <li>
+              <a class="contact-row" href="tel:+573107901197"><svg class="contact-row__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span class="contact-row__label">Phone</span><span class="contact-row__value">+57 310 790 1197</span><svg class="contact-row__go" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+            </li>
+          </ul>
+          <div class="contact-panel__cv">
+            <p><strong class="contact-row__label">CV</strong><span class="contact-panel__cv-note">Full CV as a PDF</span></p>
+            <a class="button button--primary" href="../assets/cv/CV_JairoDiaz%20-%20Project%20Manager.pdf"><svg class="contact-panel__cv-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download CV (PDF)</a>
+          </div>
+        </section>
       </div>
     </section>
-
-    <div class="container">
-      <section class="section stack-sm" aria-labelledby="methods-title">
-        <h2 id="methods-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-9l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>Ways to reach me</h2>
-        <dl class="contact-list">
-          <div>
-            <dt>Email</dt>
-            <dd><a href="mailto:jairodiaz@yahoo.com">jairodiaz@yahoo.com</a></dd>
-          </div>
-          <div>
-            <dt>LinkedIn</dt>
-            <dd><a href="https://www.linkedin.com/in/jairo-enrique-diaz">linkedin.com/in/jairo-enrique-diaz</a> <span class="contact-list__note">(opens the LinkedIn website)</span></dd>
-          </div>
-          <div>
-            <dt>Phone</dt>
-            <dd><a href="tel:+573107901197">+57 310 790 1197</a></dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="section stack-sm" aria-labelledby="cv-title">
-        <h2 id="cv-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5"/></svg>CV</h2>
-        <p><a href="../assets/cv/CV_JairoDiaz%20-%20Project%20Manager.pdf">Download CV (PDF)</a></p>
-      </section>
-
-      <section class="section stack-sm" aria-labelledby="explore-title">
-        <h2 id="explore-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>Continue exploring</h2>
-        <p><a href="../projects/">See all Project Stories</a></p>
-      </section>
-    </div>
   </main>
 
   <footer class="site-footer">

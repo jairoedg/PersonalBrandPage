@@ -340,6 +340,11 @@ def check_decisions(pages, r):
         cv = [a for a in contact.dom.find_all("a") if a.attrs.get("href", "").endswith(CV_FILE)]
         r.check(len(cv) == 1 and norm(cv[0].text()) == "Download CV (PDF)", contact.rel,
                 f'expected one "Download CV (PDF)" link to …/{CV_FILE}')
+        # D-034: Contact opens with the dark band and ends there, with no "Continue exploring".
+        r.check(contact.dom.find("section", cls="contact-band") is not None, contact.rel,
+                "Contact should open with the dark contact band (D-034)")
+        r.check(all(norm(h.text()) != "Continue exploring" for h in contact.dom.find_all("h2")), contact.rel,
+                'Contact has no "Continue exploring" section (D-034)')
 
     # D-030: seven principles in the ledger.
     leadership = pages.get("leadership/index.html")

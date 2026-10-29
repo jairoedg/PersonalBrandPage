@@ -15,7 +15,7 @@
   --color-surface-background: var(--stone-50);
   --color-surface-card: #ffffff;
   --color-surface-subtle: var(--stone-100); /* secondary-button hover, image backdrop */
-  --color-surface-tint: var(--blue-50); /* page header band on content pages */
+  --color-surface-tint: var(--blue-50); /* tinted cards and tiles */
   --color-surface-inverse: var(--stone-900); /* dark bands */
   --color-text-default: var(--stone-900);
   --color-text-secondary: var(--stone-600);
@@ -27,7 +27,6 @@
   --color-action-hover: var(--stone-700);
   --color-accent: var(--blue-700);
   --color-border-default: var(--stone-200);
-  --color-border-tint: var(--blue-100);
   --color-focus-visible: var(--blue-700);
   --color-text-numeral: var(--stone-500); /* large decorative numerals only, never body text */
   --color-surface-header-gray: var(--stone-200); /* About header band (D-033) */
@@ -55,7 +54,6 @@
   --color-surface-tint: var(--stone-100);
   --color-text-link: var(--stone-900);
   --color-accent: var(--stone-900);
-  --color-border-tint: var(--stone-200);
   --color-focus-visible: var(--stone-900);
   --color-pill-accent-surface: var(--stone-100);
   --color-pill-accent-border: var(--stone-400);
@@ -278,6 +276,18 @@ main:focus {
 /* Pages that open with a full-width dark band start flush under the header. */
 .site-main--band {
   padding-top: 0;
+}
+
+/* Pages that end with the band (Contact, D-034) meet the footer directly: the band grows to
+   fill a tall window instead of leaving an empty strip above the footer. */
+.site-main--end-band {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.site-main--end-band > :last-child {
+  flex: 1;
 }
 
 /* ---------- Footer ---------- */
@@ -580,39 +590,6 @@ main:focus {
   padding-top: var(--space-3);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
-}
-
-/* ---------- Page header (content pages) ---------- */
-/* The opening block of Career Journey, About, Contact, Leadership, and How I Can Help: a light
-   tinted band, the lighter sibling of the Projects band, with the title and the intro. */
-.page-header {
-  padding-block: var(--space-10);
-  border-bottom: 1px solid var(--color-border-tint); /* decorative divider */
-  background-color: var(--color-surface-tint);
-}
-
-.page-header .container > * {
-  max-width: 38rem;
-}
-
-.page-header + .container > :first-child {
-  margin-top: var(--space-10);
-}
-
-@media (min-width: 1024px) {
-  .page-header {
-    padding-block: var(--space-12);
-  }
-
-  .page-header h1 {
-    font-size: var(--font-size-display);
-    line-height: var(--line-height-display);
-    letter-spacing: var(--letter-spacing-display);
-  }
-
-  .page-header + .container > :first-child {
-    margin-top: var(--space-12);
-  }
 }
 
 /* ---------- Dark page band (Projects hero, D-028) ---------- */
@@ -1148,38 +1125,6 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-/* ---------- Contact ---------- */
-.contact-list {
-  display: grid;
-  gap: var(--space-4);
-  font-size: var(--font-size-body-l);
-  line-height: var(--line-height-body-l);
-}
-
-.contact-list > div {
-  display: grid;
-  gap: 0 var(--space-4);
-}
-
-@media (min-width: 768px) {
-  .contact-list > div {
-    grid-template-columns: 9rem 1fr;
-  }
-}
-
-.contact-list dt {
-  font-weight: var(--font-weight-label);
-}
-
-.contact-list dd {
-  margin: 0;
-}
-
-.contact-list__note {
-  font-size: var(--font-size-body-s);
-  color: var(--color-text-secondary);
-}
-
 /* ---------- Capability rows with story proof panels (How I Can Help, D-031) ---------- */
 /* Number, capability, and proof panel stack on mobile; three columns from 1024px. The story
    count is in the panel heading text, so it never relies on color. */
@@ -1709,7 +1654,7 @@ details[open] > summary > .disclosure-triangle {
 }
 
 /* ---------- About: AboutGray (D-033) ---------- */
-/* A light gray header on About only; Contact keeps the shared .page-header. On stone-200,
+/* A light gray header on About. On stone-200,
    text-default is 13.9:1, text-secondary 6.1:1 and the blue-700 pin 5.3:1. */
 .about-header {
   padding-block: var(--space-10);
@@ -1783,6 +1728,7 @@ details[open] > summary > .disclosure-triangle {
 
 .about-list li {
   display: grid;
+  align-content: start; /* the provider stays under its course when the row beside it is taller */
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-1) var(--space-4);
   padding-block: var(--space-3);
@@ -1923,6 +1869,151 @@ details[open] > summary > .disclosure-triangle {
 
 @media print {
   .about-card {
+    box-shadow: none;
+  }
+}
+
+/* ---------- Contact: ContactSplit (D-034) ---------- */
+/* The dark band holds the whole page: the closing line from Projects (D-028) on the left and
+   the white contact panel on the right, stacked below 1024px. */
+.contact-band {
+  padding-block: var(--space-10) var(--space-16);
+}
+
+.contact-band__inner {
+  display: grid;
+  gap: var(--space-10);
+}
+
+/* The <h1> "Contact" is visually hidden (Jairo, 2026-10-29): the headline opens the band, and
+   screen readers still get the page title first. */
+.contact-band__headline {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+}
+
+.contact-band__text .placeholder {
+  margin-top: var(--space-6);
+}
+
+/* White panel: the focus ring turns blue-700 again, as on the rest of the light page. */
+.contact-panel {
+  --color-focus-visible: var(--blue-700);
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-floating);
+  color: var(--color-text-default);
+}
+
+.contact-panel__title {
+  padding: var(--space-5) var(--space-6) var(--space-3);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  letter-spacing: var(--letter-spacing-label);
+  color: var(--color-text-secondary);
+}
+
+.contact-panel__rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The whole row is the link: icon, label and value, then a decorative arrow or external icon. */
+.contact-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+  color: var(--color-text-default);
+  text-decoration: none;
+}
+
+.contact-row:hover {
+  background-color: var(--color-surface-subtle);
+}
+
+.contact-row:focus-visible {
+  outline-offset: -3px;
+}
+
+.contact-row__icon {
+  grid-row: 1 / span 2;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-accent);
+}
+
+.contact-row__label {
+  display: block;
+  font-weight: var(--font-weight-strong);
+}
+
+.contact-row__value {
+  grid-column: 2;
+  color: var(--color-accent);
+  overflow-wrap: anywhere; /* the long email and LinkedIn values wrap at 320px */
+}
+
+.contact-row__go {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.contact-row:hover .contact-row__value {
+  text-decoration: underline;
+}
+
+.contact-panel__cv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+  background-color: var(--color-surface-subtle);
+}
+
+.contact-panel__cv-note {
+  display: block;
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
+.contact-panel__cv-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-band {
+    padding-block: var(--space-14) var(--space-16);
+  }
+
+  .contact-band__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--space-16);
+  }
+
+  .contact-band__headline {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+}
+
+@media print {
+  .contact-panel {
     box-shadow: none;
   }
 }
