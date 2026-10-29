@@ -798,7 +798,7 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-/* Employer logo with the company line, stacked so the role text keeps the card width (D-029), from the official brand files. Empty alt:
+/* Company logo (symbol only where one exists) with the company line, stacked so the role text keeps the card width (D-029), from the official brand files. Empty alt:
    the company name is already in the text. */
 .project-card__company {
   display: flex;
@@ -813,6 +813,11 @@ main:focus {
 .project-card__logo {
   flex: none;
   width: auto;
+  height: 1.75rem;
+}
+
+/* Mavenir has no separate symbol, so its wordmark is used, a little shorter. */
+.project-card__logo--wordmark {
   height: 1.5rem;
 }
 
