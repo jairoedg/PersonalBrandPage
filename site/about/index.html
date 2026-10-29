@@ -28,64 +28,67 @@
   </header>
 
   <main id="main" class="site-main site-main--band" tabindex="-1">
-    <section class="page-header" aria-labelledby="about-title">
-      <div class="container stack">
-        <h1 id="about-title">About</h1>
-        <p class="lead">Based in Cali, Colombia.</p>
-        <div class="placeholder">
-          <span class="placeholder__label">Placeholder</span>
-          <p>Concise professional biography pending approval.</p>
+    <section class="about-header" aria-labelledby="about-title">
+      <div class="container about-header__inner">
+        <div>
+          <h1 id="about-title">About</h1>
+          <p class="about-header__location"><svg class="about-header__pin" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Based in Cali, Colombia.</p>
         </div>
+        <p class="about-header__summary">I’m a Technical Project Manager with 15+ years leading software, cloud and data initiatives across telecommunications, capital markets, aeronautics, pharmaceuticals and media. I help organizations turn business ideas into technology that works, by connecting strategy, people and execution. My goal isn’t only to deliver on time, but to deliver solutions that solve real business problems and create measurable value.</p>
       </div>
     </section>
 
     <div class="container">
-      <section class="section stack-sm prose" aria-labelledby="education-title">
-        <h2 id="education-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4"/></svg>Education</h2>
-        <ul class="credential-list">
-          <li><strong>MBA: Project Management</strong><span>Universidad Arturo Prat, Chile · 2017</span></li>
-          <li><strong>Master in Electronic Engineering: Telecommunications</strong><span>Universidad de los Andes, Bogotá, DC · 2008</span></li>
-          <li><strong>Electronic Engineer</strong><span>Pontificia Universidad Javeriana, Colombia · 1998</span></li>
-        </ul>
-      </section>
+      <div class="about-grid">
+        <section class="about-card about-card--education" aria-labelledby="education-title">
+          <h2 id="education-title" class="about-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg>Education</h2>
+          <ul class="about-list" role="list">
+            <li><strong class="about-list__name">MBA: Project Management</strong><span class="about-list__sub">Universidad Arturo Prat, Chile</span><span class="about-list__year">2017</span></li>
+            <li><strong class="about-list__name">Master in Electronic Engineering: Telecommunications</strong><span class="about-list__sub">Universidad de los Andes, Bogotá, DC</span><span class="about-list__year">2008</span></li>
+            <li><strong class="about-list__name">Electronic Engineer</strong><span class="about-list__sub">Pontificia Universidad Javeriana, Colombia</span><span class="about-list__year">1998</span></li>
+          </ul>
+        </section>
 
-      <section class="section stack-sm prose" aria-labelledby="certifications-title">
-        <h2 id="certifications-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-2.5 5 2.5-1.5-7"/></svg>Certifications</h2>
-        <ul class="credential-list">
-          <li><strong>PMI Agile Certified Practitioner (PMI-ACP)</strong><span>No. 3450231</span></li>
-          <li><strong>Project Management Professional (PMP)</strong><span>No. 1537295</span></li>
-          <li><strong>SAFe Agilist Foundation</strong><span>No. 94745562-8285</span></li>
-          <li><strong>ITIL Foundation v3</strong><span>No. GR750287127JD</span></li>
-          <li><strong>Scrum Foundation Certificate</strong><span>No. 43312762</span></li>
-        </ul>
-      </section>
+        <section class="about-card about-card--tint about-card--certifications" aria-labelledby="certifications-title">
+          <h2 id="certifications-title" class="about-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14.5-1.5 7 4.5-2.5 4.5 2.5-1.5-7"/></svg>Certifications</h2>
+          <ul class="about-list" role="list">
+            <li><strong class="about-list__name">PMI Agile Certified Practitioner <span class="about-list__acronym">(PMI-ACP)</span></strong><span class="about-list__number">No. 3450231</span></li>
+            <li><strong class="about-list__name">Project Management Professional <span class="about-list__acronym">(PMP)</span></strong><span class="about-list__number">No. 1537295</span></li>
+            <li><strong class="about-list__name">SAFe Agilist Foundation <span class="about-list__acronym">(SAFe)</span></strong><span class="about-list__number">No. 94745562-8285</span></li>
+            <li><strong class="about-list__name">ITIL Foundation v3 <span class="about-list__acronym">(ITIL)</span></strong><span class="about-list__number">No. GR750287127JD</span></li>
+            <li><strong class="about-list__name">Scrum Foundation Certificate <span class="about-list__acronym">(Scrum)</span></strong><span class="about-list__number">No. 43312762</span></li>
+          </ul>
+        </section>
 
-      <section class="section stack-sm prose" aria-labelledby="courses-title">
-        <h2 id="courses-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v15h5.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg>Courses and professional development</h2>
-        <ul class="credential-list">
-          <li><strong>DevOps &amp; Cloud</strong><span>MIT – Massachusetts Institute of Technology · 2020</span></li>
-          <li><strong>AWS Machine Learning Foundations</strong><span>Udacity · 2021</span></li>
-          <li><strong>AWS Certified Cloud Practitioner</strong><span>Udemy · 2020</span></li>
-          <li><strong>Azure Spark Databricks &amp; Azure Synapse essential training</strong><span>LinkedIn · 2021</span></li>
-          <li><strong>Docker and Kubernetes: The complete Guide</strong><span>Udemy · 2020</span></li>
-          <li><strong>TOGAF Fundamentals: Enterprise Architectural Basics</strong><span>Skillsoft · 2017</span></li>
-        </ul>
-      </section>
+        <section class="about-card about-card--languages" aria-labelledby="languages-title">
+          <h2 id="languages-title" class="about-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>Languages</h2>
+          <ul class="lang-list" role="list">
+            <li><strong>Spanish</strong><span class="lang-list__level">Native</span><span class="lang-meter" aria-hidden="true"><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span></span></li>
+            <li><strong>English</strong><span class="lang-list__level">Advanced</span><span class="lang-meter" aria-hidden="true"><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot"></span></span></li>
+            <li><strong>Portuguese</strong><span class="lang-list__level">Elementary</span><span class="lang-meter" aria-hidden="true"><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot lang-meter__dot--on"></span><span class="lang-meter__dot"></span><span class="lang-meter__dot"></span><span class="lang-meter__dot"></span></span></li>
+          </ul>
+        </section>
 
-      <section class="section stack-sm prose" aria-labelledby="languages-title">
-        <h2 id="languages-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.5 5.7 3.5 9s-1 6.3-3.5 9c-2.5-2.7-3.5-5.7-3.5-9S9.5 5.7 12 3z"/></svg>Languages</h2>
-        <ul class="credential-list">
-          <li><strong>English</strong><span>Advanced</span></li>
-          <li><strong>Spanish</strong><span>Native</span></li>
-          <li><strong>Portuguese</strong><span>Elementary</span></li>
-        </ul>
-      </section>
+        <section class="about-card about-card--courses" aria-labelledby="courses-title">
+          <h2 id="courses-title" class="about-card__title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h14"/></svg>Courses and professional development</h2>
+          <ul class="about-list about-list--cols" role="list">
+            <li><strong class="about-list__name">DevOps &amp; Cloud</strong><span class="about-list__sub">MIT – Massachusetts Institute of Technology</span><span class="about-list__year">2020</span></li>
+            <li><strong class="about-list__name">AWS Machine Learning Foundations</strong><span class="about-list__sub">Udacity</span><span class="about-list__year">2021</span></li>
+            <li><strong class="about-list__name">AWS Certified Cloud Practitioner</strong><span class="about-list__sub">Udemy</span><span class="about-list__year">2020</span></li>
+            <li><strong class="about-list__name">Azure Spark Databricks &amp; Azure Synapse essential training</strong><span class="about-list__sub">LinkedIn</span><span class="about-list__year">2021</span></li>
+            <li><strong class="about-list__name">Docker and Kubernetes: The complete Guide</strong><span class="about-list__sub">Udemy</span><span class="about-list__year">2020</span></li>
+            <li><strong class="about-list__name">TOGAF Fundamentals: Enterprise Architectural Basics</strong><span class="about-list__sub">Skillsoft</span><span class="about-list__year">2017</span></li>
+          </ul>
+        </section>
+      </div>
 
-      <section class="section stack-sm" aria-labelledby="explore-title">
-        <h2 id="explore-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>Continue exploring</h2>
-        <p><a href="../career-journey/">Career Journey</a></p>
-        <p><a href="../projects/">See all Project Stories</a></p>
-        <p><a href="../contact/">Contact me</a></p>
+      <section class="cta-band section" aria-labelledby="explore-title">
+        <h2 id="explore-title" class="cta-band__title">Continue exploring</h2>
+        <p class="cta-band__actions">
+          <a class="button button--inverse" href="../career-journey/">Career Journey</a>
+          <a class="button button--outline-inverse" href="../projects/">See all Project Stories</a>
+          <a class="button button--outline-inverse" href="../contact/">Contact me</a>
+        </p>
       </section>
     </div>
   </main>

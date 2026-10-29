@@ -30,6 +30,7 @@
   --color-border-tint: var(--blue-100);
   --color-focus-visible: var(--blue-700);
   --color-text-numeral: var(--stone-500); /* large decorative numerals only, never body text */
+  --color-surface-header-gray: var(--stone-200); /* About header band (D-033) */
   /* Dark bands (Projects hero, closing band) and project-card pills. */
   --color-surface-inverse-raised: var(--stone-800);
   --color-border-inverse: var(--stone-700);
@@ -1705,4 +1706,223 @@ details[open] > summary > .disclosure-triangle {
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
   color: var(--color-text-secondary);
+}
+
+/* ---------- About: AboutGray (D-033) ---------- */
+/* A light gray header on About only; Contact keeps the shared .page-header. On stone-200,
+   text-default is 13.9:1, text-secondary 6.1:1 and the blue-700 pin 5.3:1. */
+.about-header {
+  padding-block: var(--space-10);
+  background-color: var(--color-surface-header-gray);
+}
+
+.about-header__inner {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.about-header__location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  color: var(--color-text-secondary);
+}
+
+.about-header__pin {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-accent);
+}
+
+.about-header__summary {
+  max-width: 38rem;
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+}
+
+/* Credential cards: one column, then two from 768px, then a 12-column grid from 1024px. */
+.about-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.about-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-default); /* decorative */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-raised);
+}
+
+.about-card--tint {
+  border-color: var(--color-pill-accent-border); /* decorative */
+  background-color: var(--color-surface-tint);
+}
+
+.about-card__title {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+/* One row per item: name and school or provider on the left, the year on the right. */
+.about-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-4);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+}
+
+.about-list li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.about-list li > * {
+  grid-column: 1;
+}
+
+.about-list__name {
+  font-weight: var(--font-weight-strong);
+}
+
+.about-list__sub,
+.about-list__acronym,
+.about-list__number,
+.lang-list__level {
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
+.about-list__acronym {
+  font-weight: var(--font-weight-label);
+  white-space: nowrap;
+}
+
+.about-list__number {
+  font-family: var(--font-family-code);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.about-list .about-list__year {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  font-weight: var(--font-weight-strong);
+  color: var(--color-accent);
+}
+
+.lang-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-list li {
+  display: grid;
+  gap: var(--space-1);
+}
+
+/* Decorative: the level is written out beside it. */
+.lang-meter {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.lang-meter__dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.lang-meter__dot--on {
+  background-color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Certifications sit beside Education and Languages, as on desktop. */
+  .about-card--certifications {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .about-card--courses {
+    grid-column: 1 / -1;
+  }
+
+  .lang-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-list--cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+
+  .about-list--cols li:nth-child(2) {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-header {
+    padding-block: var(--space-14);
+  }
+
+  .about-header__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--space-16);
+  }
+
+  .about-header h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin-top: var(--space-12);
+  }
+
+  .about-card--education,
+  .about-card--languages {
+    grid-column: span 7;
+  }
+
+  .about-card--certifications {
+    grid-column: 8 / span 5;
+  }
+}
+
+@media print {
+  .about-card {
+    box-shadow: none;
+  }
 }
