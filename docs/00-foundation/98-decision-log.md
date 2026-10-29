@@ -392,10 +392,65 @@ Labels: each card shows a sector pill, tags, and the year on one top row, aligne
 
 Sector icons: each sector pill carries a small outlined icon, hand-drawn inline SVG on the 24px grid, decorative and hidden from screen readers (D-023).
 
-Company logos: each card shows the logo of the employer for that project, next to the company line. Endava (DCTX, DFA) and TCS (Avianca, Tigo) use their logos. Telecom projects delivered at Comverse are shown as "Comverse (now Mavenir)," with the Mavenir logo. GSK is a client, not an employer, so it has no logo. Logos must come from the company's official brand files, never from traced or approximated copies. Until the official files are supplied, the card shows a labeled placeholder.
+Company logos: each card shows the logo of the employer for that project, next to the company line. Endava (DCTX, DFA) and TCS (Avianca, Tigo) use their logos. Telecom projects delivered at Comverse are shown as "Comverse (now Mavenir)," with the Mavenir logo. GSK was a client, not an employer; its logo is shown too, from GSK’s official brand files. Logos must come from the company's official brand files, never from traced or approximated copies. Until the official files are supplied, the card shows a labeled placeholder.
 
 Source: Jairo in chat, 2026-10-28 (label placement, icons, Comverse naming, GSK as client).
 
 Status
 
 Approved (2026-10-28)
+
+---
+
+## D-030
+
+Leadership page layout (Jairo, 2026-10-29, option "LeadershipLedger", no changes). A dark band, in the same style as the Projects hero (D-028), holds the title "Leadership", the lead line "Projects succeed because people succeed.", and the leadership philosophy paragraphs. Below the band, the seven leadership principles form a numbered list: a large decorative numeral (01 to 07), the principle as a heading, and an evidence slot. The evidence slot sits to the right of the principle from 768px and below it on smaller screens. Then come "How I lead" and "Continue exploring".
+
+The principle wording and the philosophy text are unchanged. The evidence slots and "How I lead" stay labeled placeholders until Jairo matches each principle to Project Stories (open decision: Leadership principles). Numerals are decorative; the list itself carries the order. Heading weights follow D-027 (H1 and H2 at 400; H3 and smaller at 600). The page uses the blue accent allowed by the D-027 amendment.
+
+Reference: Design System artifact "Jairo Diaz — Subpage Designs", component LeadershipLedger ([Jairo Diaz — Subpage Designs](https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke)). Where the reference differs from this entry, this entry governs.
+
+Source: Jairo, comment on the Design System artifact, 2026-10-29 ("I select this design for leadership (leadershipLedger). No changes needed.").
+
+Status
+
+Approved (2026-10-29)
+
+---
+
+## D-031
+
+How I Can Help page layout (Jairo, 2026-10-29, option "HelpIndexRows"). A dark band holds the title "How I Can Help" and the page introduction. Below the band, the five capabilities are numbered rows. On the left: a large decorative numeral, the capability title, and its short explanation underneath. On the right: a proof panel with a tinted header "Proof in Project Stories" and the number of stories, followed by the related Project Stories in a two-column grid. Each story shows the company name, the story subtitle, and a decorative arrow, and links to its story page. With an odd number of stories, the last one spans both columns. Below 768px, the panel sits under the text and its stories run in one column.
+
+The capability names and their related Project Stories are unchanged. The page introduction and the five explanations stay labeled placeholders until Jairo approves them (open decision: Capabilities). The story count is part of the panel heading text, so it is not conveyed by color. Heading weights follow D-027.
+
+Reference: Design System artifact, component HelpIndexRows. Where the reference differs from this entry, this entry governs.
+
+Source: Jairo, comment on the Design System artifact, 2026-10-29 (option selected; right side reworked to remove the empty space and balance the row).
+
+Status
+
+Approved (2026-10-29)
+
+---
+
+## D-032
+
+Career Journey page layout (Jairo, 2026-10-29, option "JourneyOverview"). Amends D-024. A dark band holds the title "Career Journey" and the introduction. Below the band:
+
+1. A span chart, "Roles at a glance, 2011–2026", with one bar per role, newest first. Every bar uses the one accent color; color encodes nothing. The company, role, and years are written beside each bar, so the chart does not rely on the bars. On mobile the text sits above each bar. The chart remains the timeline view that D-004 calls for.
+2. "Roles by company": one expandable panel per employer (Endava, TCS, Comverse / Mavenir), newest first. Each panel heading shows the employer, the years, and the number of roles and Project Stories. When a panel opens, its roles are visible at once (there is no third level). Each role keeps its title, company line, dates, highlights, and achievements; Endava's achievements also appear as three figures (stakeholder satisfaction 5.0 to 8.7, gross margin above 30% in FY22 and FY23, recognized as a top performer). Inside each role, every Project Story is an expandable item with its dates, its approved card summary (D-014), and a "Read the Project Story" link.
+
+Several panels can be open at the same time (confirmed by Jairo, 2026-10-29). When the page loads, Endava and its newest Project Story are open. The disclosure triangle follows D-025: it points right when closed and down when open; the heading text is the control. When the page is printed, all panels print expanded.
+
+From D-024, the following still apply: entries run newest first, projects appear inside the role they belong to, and detailed learning stays in Project Stories. The connected timeline line and markers are replaced. The introduction stays a labeled placeholder until Jairo approves it. Heading weights follow D-027.
+
+Reference: Design System artifact, component JourneyOverview. Where the reference differs from this entry, this entry governs.
+
+Source: Jairo, comments on the Design System artifact, 2026-10-29 (one color for all bars; group by company with expandable projects; option selected; several panels open confirmed in chat).
+
+Status
+
+Approved (2026-10-29)
+
+%%Updated 2026-10-29: Career Journey layout recorded. Supersedes the timeline form in D-024.%%
