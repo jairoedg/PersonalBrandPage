@@ -455,3 +455,9 @@ Status
 Approved (2026-10-29)
 
 %%Updated 2026-10-29: Career Journey layout recorded. Supersedes the timeline form in D-024.%%
+
+---
+
+## D-033
+
+About page layout** (Jairo, 2026-10-29, option "AboutGray"). A light gray header band (stone-200) replaces the shared blue-tinted page header on About only; Contact keeps the shared header. On the left: the title "About" and the location line "Based in Cali, Colombia." with a decorative pin icon. On the right (below on mobile): the professional summary, a short first-person paragraph like the opening of a CV. It stays a labeled placeholder until Jairo approves its wording. Below the header, the credentials sit in a card grid: Education (degree, school, year) and Languages (level written as text, plus a decorative five-dot meter) on the left; Certifications on the right in a blue-tinted card (blue-50) with each full name, acronym and certificate number; Courses and professional development across the full width, in two columns from 768px. Then "Continue exploring". No photo on this page; Jairo's portrait stays on Home only. All education, certification, course and language content is unchanged. Heading weights follow D-027 (H1 and H2 at 400; H3 and smaller at 600). Reference: Design System artifact, component AboutGray. Where it differs from this entry, this entry governs. Source: Jairo, 2026-10-29 (layout from the "AboutProfile" exploration; header color chosen from graphite, light gray and none). Status: Approved (2026-10-29).
