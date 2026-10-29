@@ -50,6 +50,13 @@ PROJECT_CARDS = 10
 CONTACT_EMAIL = "mailto:jairodiaz@yahoo.com"
 CONTACT_LINKEDIN = "https://www.linkedin.com/in/jairo-enrique-diaz"
 CONTACT_PHONE = "tel:+573107901197"
+
+# D-035: Project Story chapters, and each story's word count (text inside the four chapters,
+# without the generated chapter headings, card numbers and the "Overview" title).
+CHAPTER_KEYS = ["situation", "action", "outcome", "lessons"]
+STORY_WORDS = {"dctx-media": 2118, "dfa-capital-markets": 1516, "avianca-data-warehouse": 1445,
+               "tigo-sox-big-data": 1826, "gsk-order-to-cash": 1452, "entel-chile": 1316, "entel-peru": 1187,
+               "claro-peru": 850, "gtt-guyana": 144, "digicel-jamaica": 845}
 CV_FILE = "CV_JairoDiaz%20-%20Project%20Manager.pdf"
 # --strict (deploy): placeholder markers fail the run instead of warning (D-017).
 STRICT = False
@@ -120,6 +127,20 @@ class TreeBuilder(HTMLParser):
 
 def norm(s):
     return re.sub(r"\s+", " ", s).strip()
+
+
+STORY_SKIP = {"chapter__head", "chapter__end", "story-block__num"}
+
+
+def story_words(node):
+    """Text of a story chapter without its generated parts (D-035)."""
+    parts = []
+    for c in node.children:
+        if isinstance(c, str):
+            parts.append(c)
+        elif not (STORY_SKIP & set(c.attrs.get("class", "").split())) and c.attrs.get("id") != "overview":
+            parts.append(story_words(c))
+    return norm(" ".join(parts))
 
 
 class Page:
@@ -328,7 +349,13 @@ def check_decisions(pages, r):
         note = avianca.dom.find("aside", id="note")
         r.check(note is not None and norm(note.text()) == "Jairo left before the migration began.",
                 avianca.rel, 'footnote should read "Jairo left before the migration began."')
-        r.check(avianca.dom.find("a", href="#note") is not None, avianca.rel, 'missing "See note" link to #note')
+        # D-035: the outcome line lives in chapter button 03, which cannot hold a link; the button
+        # says "See note" and the note closes chapter 03, which that button opens.
+        tab = avianca.dom.find("a", id="tab-outcome")
+        chapter = avianca.dom.find("section", id="chapter-outcome")
+        r.check(tab is not None and "See note" in tab.text() and chapter is not None
+                and chapter.find("aside", id="note") is not None, avianca.rel,
+                'button 03 should say "See note" and chapter 03 should hold the note')
 
     # D-021: approved contact values, in the A10 order Email → LinkedIn → Phone, then the CV.
     contact = pages.get("contact/index.html")
@@ -384,6 +411,41 @@ def check_decisions(pages, r):
             first = body.find("p") if body else None
             r.check(first is not None and norm(first.text()) == summaries.get(key), journey.rel,
                     f'story item for "{key}" must show the approved card summary from the Projects page')
+
+    # D-035: every Project Story in four chapters, in order, with its chapter buttons; no
+    # "On this page" list. Each button summary is a verbatim excerpt of the story, and the
+    # story text keeps its word count (update STORY_WORDS only when Jairo changes story text).
+    for slug, expected_words in STORY_WORDS.items():
+        rel = f"projects/{slug}.html"
+        page = pages.get(rel)
+        if not r.check(page is not None, rel, "Project Story page is missing"):
+            continue
+        chapters = list(page.dom.find_all("section", cls="chapter"))
+        r.check([c.attrs.get("id") for c in chapters] == [f"chapter-{k}" for k in CHAPTER_KEYS], rel,
+                "expected four chapters: situation, action, outcome, lessons (D-035)")
+        r.check(page.dom.find("nav", cls="toc") is None, rel, '"On this page" is replaced by the chapters (D-035)')
+        blocks = list(page.dom.find_all("div", cls="story-block"))
+        inside = sum(len(list(c.find_all("div", cls="story-block"))) for c in chapters)
+        r.check(bool(blocks) and inside == len(blocks), rel, "every story section must sit in exactly one chapter (D-035)")
+        r.check(all(any(True for _ in c.find_all("div", cls="story-block")) for c in chapters), rel,
+                "every chapter needs at least one card (D-035)")
+        story_text = " ".join(story_words(c) for c in chapters)
+        count = len(story_text.split())
+        r.check(count == expected_words, rel, f"story text has {count} words, expected {expected_words}: "
+                "story text must not change in a layout change (D-035)")
+        tabs = list(page.dom.find_all("a", cls="chapter-tab"))
+        r.check([t.attrs.get("href") for t in tabs] == [f"#chapter-{k}" for k in CHAPTER_KEYS], rel,
+                "expected four chapter buttons linking to their chapters (D-035)")
+        outcome = page.dom.find("a", id="tab-outcome")
+        for tab in tabs:
+            summary = tab.find("span", cls="chapter-tab__summary")
+            pieces = [norm(n.text()) for n in (summary.children if summary else []) if isinstance(n, Node)
+                      and not ({"chapter-tab__kpi", "chapter-tab__item--more"} & set(n.attrs.get("class", "").split()))]
+            r.check(bool(pieces), rel, f'chapter button "{tab.attrs.get("id")}" needs a summary (D-035)')
+            for piece in pieces:
+                # The outcome line moved from the header into button 03, so it is its own source.
+                r.check(piece in story_text or tab is outcome, rel,
+                        f'button summary is not a verbatim excerpt of the story: "{piece[:50]}" (D-035)')
 
     # D-033: four credential cards with their item counts, and every language level written out
     # (the five-dot meter is decorative).
@@ -558,10 +620,11 @@ FOCUS_INFO = """(() => {
            x: Math.round(r.left + scrollX), y: Math.round(r.top + scrollY) };
 })()"""
 
-# checkVisibility() also excludes content in closed story sections (hidden="until-found", D-025).
+# checkVisibility() also excludes hidden story chapters (hidden="until-found", D-035); inactive
+# chapter tabs (tabindex="-1") are not Tab stops.
 # A <details> panel's first <summary> is a native focus stop (Career Journey, D-032).
 COUNT_FOCUSABLE = """[...document.querySelectorAll('a[href], button, input, select, textarea, details > summary:first-of-type, [tabindex]:not([tabindex="-1"])')]
-  .filter(e => !e.disabled && e.getClientRects().length > 0 && (!e.checkVisibility || e.checkVisibility())).length"""
+  .filter(e => !e.disabled && e.getAttribute('tabindex') !== '-1' && e.getClientRects().length > 0 && (!e.checkVisibility || e.checkVisibility())).length"""
 
 
 def keyboard_pass(cdp, url, rel, r):

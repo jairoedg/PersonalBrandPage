@@ -937,12 +937,10 @@ main:focus {
   font-weight: var(--font-weight-label);
 }
 
-/* ---------- Project Story Detail ---------- */
-/* Reading width for long-form story content. */
-.story {
-  max-width: 38rem;
-}
-
+/* ---------- Project Story Detail (D-035) ---------- */
+/* Header (title, company line, summary, facts), the four chapter buttons ("The story in 60
+   seconds"), then the chapters as numbered cards. Without JavaScript every chapter shows, one
+   after another; story-chapters.js adds .story--tabs and shows one chapter at a time. */
 .back-link {
   margin-bottom: var(--space-6);
   font-size: var(--font-size-label);
@@ -950,9 +948,19 @@ main:focus {
   font-weight: var(--font-weight-label);
 }
 
+.story-header {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.story-header__main > * {
+  max-width: 38rem;
+}
+
 .story-facts {
   display: grid;
   gap: var(--space-2);
+  align-content: start;
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
 }
@@ -978,134 +986,265 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
-.story-summary {
-  font-size: var(--font-size-body-l);
-  line-height: var(--line-height-body-l);
+/* "The story in 60 seconds": four chapter buttons, stacked on mobile, two per row from 768px,
+   four from 1024px. The selected one is coal black; aria-selected carries the state. */
+.chapters {
+  margin-top: var(--space-10);
 }
 
-.story-outcome {
-  padding: var(--space-4);
-  background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border-default); /* decorative; the bold label carries meaning */
+.chapters__head,
+.chapter__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
 }
 
-/* "On this page": navigation-based disclosure (Q-09 proposal). */
-.toc {
-  margin-top: var(--space-8);
-  padding: var(--padding-card);
-  background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border-default); /* decorative */
-}
-
-.toc__title {
-  font-size: var(--font-size-body-l);
-  line-height: var(--line-height-body-l);
-  letter-spacing: 0;
-}
-
-.toc__list {
-  margin-top: var(--space-2);
-  padding-left: var(--space-6);
-}
-
-.toc__list li + li {
-  margin-top: var(--space-1);
-}
-
-.story-section {
-  margin-top: var(--space-12);
-}
-
-.story-section h3 {
-  margin-top: var(--space-6);
+.chapters__title,
+.chapter__title {
   font-size: var(--font-size-h4);
   line-height: var(--line-height-h4);
   letter-spacing: var(--letter-spacing-h4);
 }
 
-.story-section ul,
-.story-section ol {
-  padding-left: var(--space-6);
+.chapters__time,
+.chapter__count,
+.chapter__step,
+.chapter-tab__time {
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
 }
 
-.story-section li + li {
-  margin-top: var(--space-1);
-}
-
-/* ---------- Expandable story sections (D-025) ---------- */
-/* story-sections.js adds .story--expandable, the heading buttons, and the panels. Without
-   JavaScript none of this applies and every section stays visible. */
-.story--expandable .story-section {
-  margin-top: 0;
-  border-top: 1px solid var(--color-border-default); /* decorative divider */
-}
-
-.story--expandable .toc + .story-section {
-  margin-top: var(--space-8);
-}
-
-.story--expandable .story-section:last-of-type {
-  border-bottom: 1px solid var(--color-border-default); /* decorative divider */
-}
-
-.story-section__toggle {
-  display: flex;
-  align-items: center;
+.chapter-tabs {
+  display: grid;
   gap: var(--space-3);
-  width: 100%;
-  min-height: 2.75rem; /* 44px touch target */
-  padding: var(--space-4) 0;
-  border: 0;
-  background: none;
-  font: inherit;
-  letter-spacing: inherit;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.story-section__toggle:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-
-/* Disclosure triangle: right when closed, down when open. Decorative; aria-expanded carries the state. */
-.story-section__triangle {
-  flex: none;
-  width: 0;
-  height: 0;
-  border-top: 0.375rem solid transparent;
-  border-bottom: 0.375rem solid transparent;
-  border-left: 0.5rem solid var(--color-accent);
-}
-
-.story-section__toggle[aria-expanded="true"] .story-section__triangle {
-  transform: rotate(90deg);
-}
-
-.story--expandable .story-section > .story-section__panel {
-  margin-top: 0;
-  padding-bottom: var(--space-6);
-}
-
-/* hidden="until-found" keeps the closed panel in layout (at zero height); drop its padding too. */
-.story--expandable .story-section > .story-section__panel[hidden] {
-  padding-bottom: 0;
-}
-
-.story-section__panel > * + * {
   margin-top: var(--space-4);
 }
 
-/* Printing expands every section (D-025). */
+.chapter-tab {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-default); /* decorative */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-raised);
+  color: var(--color-text-default);
+  text-decoration: none;
+}
+
+.chapter-tab:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.chapter-tab:focus-visible {
+  outline-offset: 3px;
+}
+
+.chapter-tab__top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.chapter-tab__num {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-strong);
+  color: var(--color-accent);
+}
+
+.chapter-tab__title {
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  font-weight: var(--font-weight-strong);
+}
+
+.chapter-tab__summary {
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
+.chapter-tab__item::before {
+  content: "· ";
+}
+
+.chapter-tab__item--more::before {
+  content: none;
+}
+
+.chapter-tab__kpi {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  font-weight: var(--font-weight-strong);
+  color: var(--color-pill-accent-text);
+}
+
+.chapter-tab__more {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-label);
+  color: var(--color-accent);
+}
+
+/* Selected chapter: stone-50 on stone-900 (17:1), summary stone-300 (11:1), blue-300 accents. */
+.chapter-tab[aria-selected="true"] {
+  border-color: var(--color-surface-inverse);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.chapter-tab[aria-selected="true"] .chapter-tab__summary,
+.chapter-tab[aria-selected="true"] .chapter-tab__time {
+  color: var(--color-text-on-inverse-muted);
+}
+
+.chapter-tab[aria-selected="true"] .chapter-tab__num,
+.chapter-tab[aria-selected="true"] .chapter-tab__kpi {
+  color: var(--blue-300);
+}
+
+.chapter-tab[aria-selected="true"] .chapter-tab__more {
+  color: var(--color-text-on-inverse);
+}
+
+/* Chapters and their numbered cards: one column, two from 1024px. */
+.chapter {
+  margin-top: var(--space-10);
+  scroll-margin-top: var(--space-4); /* breathing room when a tap scrolls it into view */
+}
+
+.story--tabs .chapter {
+  margin-top: var(--space-8);
+}
+
+.story-cards {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.story-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-default); /* decorative */
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-raised);
+}
+
+.story-block__num {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  color: var(--color-text-numeral);
+}
+
+.story-block__title {
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  letter-spacing: 0;
+}
+
+/* Sub-headings inside a card read as small gray labels. */
+.story-block h4:not(.story-block__title),
+.story-block h5 {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-label);
+  font-weight: var(--font-weight-strong);
+  letter-spacing: var(--letter-spacing-label);
+  color: var(--color-text-secondary);
+}
+
+.story-block ul,
+.story-block ol {
+  padding-left: var(--space-6);
+}
+
+.story-block li + li {
+  margin-top: var(--space-1);
+}
+
+/* A section whose items are numbered (challenges, decisions) becomes one card per item. */
+.story-group {
+  margin-top: var(--space-8);
+}
+
+.story-group:first-of-type {
+  margin-top: var(--space-4);
+}
+
+.story-group__title {
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  letter-spacing: 0;
+}
+
+.story-group > p {
+  max-width: 38rem;
+  margin-top: var(--space-2);
+}
+
+.story-group + .story-cards,
+.story-cards + .story-group {
+  margin-top: var(--space-8);
+}
+
+.chapter__end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+}
+
+@media (min-width: 768px) {
+  .chapter-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .story-header {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--space-12);
+  }
+
+  .chapter-tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .story-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Printing shows every chapter, one after another (D-035). */
 @media print {
-  .story-section__panel[hidden] {
+  .chapter[hidden] {
     display: block;
     content-visibility: visible; /* hidden="until-found" hides with content-visibility */
   }
 
-  .story-section__triangle {
+  .chapter-tab,
+  .story-block {
+    box-shadow: none;
+  }
+
+  .chapter__end {
     display: none;
   }
 }
