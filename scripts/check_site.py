@@ -341,6 +341,45 @@ def check_decisions(pages, r):
         r.check(len(cv) == 1 and norm(cv[0].text()) == "Download CV (PDF)", contact.rel,
                 f'expected one "Download CV (PDF)" link to …/{CV_FILE}')
 
+    # D-030: seven principles in the ledger.
+    leadership = pages.get("leadership/index.html")
+    if r.check(leadership is not None, "leadership/index.html", "Leadership page is missing"):
+        rows = list(leadership.dom.find_all("li", cls="ledger__row"))
+        r.check(len(rows) == 7, leadership.rel, f"expected 7 leadership principles (D-030), found {len(rows)}")
+
+    # D-031: five capability rows, each with a proof panel whose heading states its story count.
+    helppage = pages.get("how-i-can-help/index.html")
+    if r.check(helppage is not None, "how-i-can-help/index.html", "How I Can Help page is missing"):
+        rows = list(helppage.dom.find_all("li", cls="capability"))
+        r.check(len(rows) == 5, helppage.rel, f"expected 5 capabilities (D-031), found {len(rows)}")
+        for row in rows:
+            title = row.find("h3", cls="proof__title")
+            count = row.find("span", cls="proof__count")
+            links = list(row.find_all("a", cls="proof__link"))
+            r.check(title is not None and count is not None and norm(count.text()) == str(len(links)),
+                    helppage.rel, "proof panel heading must state its story count (D-031)")
+
+    # D-032: five roles in the chart, three company panels, and every Project Story item
+    # showing the approved card summary from the Projects page (D-014).
+    journey = pages.get("career-journey/index.html")
+    if r.check(journey is not None, "career-journey/index.html", "Career Journey page is missing"):
+        rows = list(journey.dom.find_all("li", cls="span-chart__row"))
+        r.check(len(rows) == 5, journey.rel, f"expected 5 roles in the span chart (D-032), found {len(rows)}")
+        panels = [norm(n.text()) for n in journey.dom.find_all("span", cls="company__name")]
+        r.check(panels == ["Endava", "TCS", "Comverse / Mavenir"], journey.rel,
+                f"company panels should be Endava, TCS, Comverse / Mavenir (D-032), found {panels}")
+        summaries = {"projects/" + c.find("h3").find("a").attrs.get("href", ""): norm(c.find("p", cls="project-card__summary").text())
+                     for c in cards if c.find("h3") and c.find("h3").find("a") and c.find("p", cls="project-card__summary")}
+        items = list(journey.dom.find_all("details", cls="story-item"))
+        r.check(len(items) == PROJECT_CARDS, journey.rel, f"expected {PROJECT_CARDS} Project Story items, found {len(items)}")
+        for item in items:
+            link = next((a for a in item.find_all("a") if a.attrs.get("href", "").startswith("../projects/")), None)
+            key = link.attrs.get("href", "")[3:] if link else ""
+            body = item.find("div", cls="story-item__body")
+            first = body.find("p") if body else None
+            r.check(first is not None and norm(first.text()) == summaries.get(key), journey.rel,
+                    f'story item for "{key}" must show the approved card summary from the Projects page')
+
 
 def run_static(r):
     pages = {p.rel: p for p in (Page(f) for f in sorted(SITE.rglob("*.html")))}
@@ -502,7 +541,8 @@ FOCUS_INFO = """(() => {
 })()"""
 
 # checkVisibility() also excludes content in closed story sections (hidden="until-found", D-025).
-COUNT_FOCUSABLE = """[...document.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])')]
+# A <details> panel's first <summary> is a native focus stop (Career Journey, D-032).
+COUNT_FOCUSABLE = """[...document.querySelectorAll('a[href], button, input, select, textarea, details > summary:first-of-type, [tabindex]:not([tabindex="-1"])')]
   .filter(e => !e.disabled && e.getClientRects().length > 0 && (!e.checkVisibility || e.checkVisibility())).length"""
 
 
