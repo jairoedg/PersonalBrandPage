@@ -460,7 +460,7 @@ Approved (2026-10-29)
 
 ## D-033
 
-**About page layout** (Jairo, 2026-10-29, option "AboutGray")**
+**About page layout (Jairo, 2026-10-29, option "AboutGray")**
  A light gray header band (stone-200) replaces the shared blue-tinted page header on About only; Contact keeps the shared header. On the left: the title "About" and the location line "Based in Cali, Colombia." with a decorative pin icon. On the right (below on mobile): the professional summary, a short first-person paragraph like the opening of a CV. It stays a labeled placeholder until Jairo approves its wording. Below the header, the credentials sit in a card grid: Education (degree, school, year) and Languages (level written as text, plus a decorative five-dot meter) on the left; Certifications on the right in a blue-tinted card (blue-50) with each full name, acronym and certificate number; Courses and professional development across the full width, in two columns from 768px. Then "Continue exploring". No photo on this page; Jairo's portrait stays on Home only. All education, certification, course and language content is unchanged. Heading weights follow D-027 (H1 and H2 at 400; H3 and smaller at 600). 
 
 Reference: Design System artifact, component AboutGray. Where it differs from this entry, this entry governs. 
@@ -481,9 +481,25 @@ A dark band (the `page-band` style from Projects, D-028) replaces the shared b
 
 The page has no "Continue exploring" section: Contact is the end of the visitor journey, so nothing invites the visitor away before acting; the site footer keeps the navigation. With this, the shared light page header is no longer used by any page. Heading weights follow D-027. 
 
+ "Contact" title is hidden from view.
+
 Reference: Design System artifact, component ContactSplit. Where it differs from this entry, this entry governs.
 
 Source: Jairo, 2026-10-29 (chosen from ContactCards, ContactSplit and ContactMinimal).
+
+Status
+
+Approved (2026-10-29)
+
+%%Updated 2026-10-29: removed the contact of top left of the page%%
+
+---
+
+## D-035
+
+Project Story page layout (Jairo, 2026-10-29, option "StoryChaptersBrief"). Amends D-025 (the one-open-at-a-time accordion) and D-020 ("On this page" jump links). Every story's sections are grouped into four chapters, in this order: **01 The situation**, **02 What I did**, **03 The outcome**, **04 What I learned**. Below the story header, "The story in 60 seconds" shows the four chapters as large buttons. Each button shows the chapter number, its reading time, the chapter title, a short summary, and "Read this part ↓". Selecting a button turns it black and shows that chapter below it; the other chapters are hidden. The page opens on 01 The situation. Inside a chapter, every section is a numbered card (two per row from 1024px). Sections whose sub-headings are numbered (for example the challenges and the leadership decisions) become one card per item. Each chapter ends with "Chapter N of 4" and a "Next: … →" button; the last one ends with "Contact me". The story header keeps the title, the company line, the D-025 summary (a placeholder until Jairo approves it) and the facts. The result box and the "Outcome:" line move into button 03. The existing introduction paragraphs become the first card of 01 The situation, titled "Overview". Without JavaScript and when printed, all four chapters show in full, one after another. No story text changes. The button summaries are verbatim excerpts from each story, approved by Jairo per story. Reading times are estimated at 200 words per minute, rounded up. Reference: Design System artifact, component StoryChaptersBrief. Where it differs from this entry, this entry governs.
+
+Source: Jairo, 2026-10-29 (StoryChapters combined with the "story in 60 seconds" brief; cards in every chapter; header result removed).
 
 Status
 
