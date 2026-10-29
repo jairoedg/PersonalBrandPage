@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/fonts.css">
   <link rel="stylesheet" href="../assets/css/tokens.css">
   <link rel="stylesheet" href="../assets/css/base.css">
+  <script src="../assets/js/print-details.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -28,10 +29,10 @@
   </header>
 
   <main id="main" class="site-main site-main--band" tabindex="-1">
-    <section class="page-header" aria-labelledby="journey-title">
+    <section class="page-band" aria-labelledby="journey-title">
       <div class="container stack">
         <h1 id="journey-title">Career Journey</h1>
-        <div class="placeholder">
+        <div class="placeholder page-band__placeholder">
           <span class="placeholder__label">Placeholder</span>
           <p>Introduction on professional evolution pending approval.</p>
         </div>
@@ -39,124 +40,244 @@
     </section>
 
     <div class="container">
-      <ol class="timeline section" role="list">
-        <li>
-          <article class="timeline__item stack-sm" aria-labelledby="role-endava">
-            <p class="timeline__years" aria-hidden="true">2021 – 2026</p>
-            <h2 id="role-endava">Agile Project Manager</h2>
-            <p class="story-card__meta">Endava · June 2021 – September 2026</p>
-            <h3>Highlights</h3>
-            <ul>
-              <li>Coordinating delivery activities for greenfield web and mobile platforms within cloud-native modernization initiatives (GCP), aligning cross-functional teams and managing dependencies, risks, and execution readiness across multiple technical workstreams.</li>
-              <li>Led Data and Backend delivery streams for a US-based financial services client, supporting the migration and modernization of investment management applications to Azure cloud environments.</li>
-              <li>Facilitated Agile delivery across distributed engineering teams, driving stakeholder alignment, delivery governance, financial oversight, and risk mitigation in fast-paced environments with evolving requirements.</li>
-              <li>Collaborated with DevOps and engineering teams on CI/CD alignment, environment readiness, and cloud delivery practices to improve coordination across technical teams.</li>
-              <li>Translated technical risks, dependencies, and implementation trade-offs into business-oriented discussions to support faster and more informed stakeholder decisions.</li>
-            </ul>
-            <h3>Achievements</h3>
-            <ul>
-              <li>Recognized by the client as one of the top-performing Agile Project Managers/Scrum Masters for leadership, stakeholder engagement, and delivery execution.</li>
-              <li>Increased stakeholder satisfaction scores from 5.0 to 8.7 through improved delivery transparency and execution predictability.</li>
-              <li>Maintained project gross margins above 30% during FY22 and FY23.</li>
-            </ul>
-            <h3>Project Stories from this role</h3>
-            <ol class="timeline-projects" role="list">
-              <li><span class="timeline-projects__period">September 2025 – September 2026</span> <a href="../projects/dctx-media.html">DCTX: Greenfield Web and Mobile Platform for Sports Media</a></li>
-              <li><span class="timeline-projects__period">August 2021 – September 2025</span> <a href="../projects/dfa-capital-markets.html">DFA Capital Markets: Cloud Integration and Process Refactoring</a></li>
-            </ol>
-          </article>
-        </li>
-        <li>
-          <article class="timeline__item stack-sm" aria-labelledby="role-avianca">
-            <p class="timeline__years" aria-hidden="true">2021</p>
-            <h2 id="role-avianca">Technical Project Manager</h2>
-            <p class="story-card__meta">TCS, on behalf of Avianca Holdings · January 2021 – June 2021</p>
-            <h3>Highlights</h3>
-            <ul>
-              <li>Contributed to creating the business case and Total Cost of Ownership (TCO) model in collaboration with Microsoft consultants to secure project funding.</li>
-              <li>Developed strategic project roadmaps and delivery plans during the due diligence phase, utilizing using Agile delivery practices to ensure an agile and adaptive development lifecycle.</li>
-              <li>Led small ML/AI PoC initiatives for aeronautics process improvements built with Databricks/Synapse solution.</li>
-            </ul>
-            <h3>Project Stories from this role</h3>
-            <ol class="timeline-projects" role="list">
-              <li><span class="timeline-projects__period">January 2021 – June 2021</span> <a href="../projects/avianca-data-warehouse.html">Avianca: Azure Data Warehouse Migration Definition</a></li>
-            </ol>
-          </article>
-        </li>
-        <li>
-          <article class="timeline__item stack-sm" aria-labelledby="role-tcs-lead">
-            <p class="timeline__years" aria-hidden="true">2018 – 2021</p>
-            <h2 id="role-tcs-lead">Project Lead</h2>
-            <p class="story-card__meta">TCS · December 2018 – January 2021</p>
-            <h3>Highlights</h3>
-            <ul>
-              <li>Led Agile delivery teams implementing data and analytics solutions using Big Data technologies and Tableau, supporting business intelligence and operational reporting initiatives.</li>
-              <li>Coordinated distributed engineering teams across Colombia and India, overseeing delivery progress and cross-team collaboration.</li>
-              <li>Supported telecom process optimization initiatives through the delivery of Robotic Process Automation (RPA) solutions.</li>
-              <li>Collaborated with Product Owners, engineering teams, and stakeholders to align delivery priorities and support customer-focused outcomes.</li>
-              <li>Monitored project KPIs, delivery risks, financials, and operational metrics, implementing mitigation actions to improve execution predictability and delivery performance.</li>
-            </ul>
-            <h3>Achievements</h3>
-            <ul>
-              <li>Improved alignment and reduced rework through structured roadmap and release planning within a SAFe delivery environment.</li>
-            </ul>
-            <h3>Project Stories from this role</h3>
-            <ol class="timeline-projects" role="list">
-              <li><span class="timeline-projects__period">December 2018 – October 2019</span> <a href="../projects/tigo-sox-big-data.html">Tigo: SOX Big Data Automation Program</a></li>
-            </ol>
-          </article>
-        </li>
-        <li>
-          <article class="timeline__item stack-sm" aria-labelledby="role-gsk">
-            <p class="timeline__years" aria-hidden="true">2017 – 2018</p>
-            <h2 id="role-gsk">e-Invoicing - Order to Cash (O2C) Stream Lead</h2>
-            <p class="story-card__meta">TCS, on behalf of GlaxoSmithKline (GSK) · July 2017 – October 2018</p>
-            <h3>Highlights</h3>
-            <ul>
-              <li>Led full-cycle e-Invoicing project, integrating SAP O2C (SD module) with various stakeholders</li>
-              <li>Gathered business requirements for e-Invoicing in Chile, Peru, Ecuador and Colombia</li>
-              <li>Collaborated with project architects to design tailored solutions for each country's tax laws</li>
-              <li>Defined Project plan, resources management, risks, issues and Mitigation plan, ensuring the overall commitments and timelines of the project</li>
-              <li>Responsible for the procurement process for the project and Cost tracking &amp; Control.</li>
-            </ul>
-            <h3>Achievements</h3>
-            <ul>
-              <li>Delivered go-live on schedule, overcoming multiple regulatory changes in Colombia and Peru</li>
-            </ul>
-            <h3>Project Stories from this role</h3>
-            <ol class="timeline-projects" role="list">
-              <li><span class="timeline-projects__period">July 2017 – October 2018</span> <a href="../projects/gsk-order-to-cash.html">GSK: Order-to-Cash for an Andean SAP Migration</a></li>
-            </ol>
-          </article>
-        </li>
-        <li>
-          <article class="timeline__item stack-sm" aria-labelledby="role-comverse">
-            <p class="timeline__years" aria-hidden="true">2011 – 2016</p>
-            <h2 id="role-comverse">Senior Project Lead</h2>
-            <p class="story-card__meta">Comverse / Mavenir · June 2011 – December 2016</p>
-            <h3>Highlights</h3>
-            <ul>
-              <li>Led implementation and deployment of new VAS projects in Latin America and Caribbean. Coordinated activities for service platform implementation, ensuring on-time delivery and quality</li>
-              <li>Implemented project management practices, addressing risk mitigation and issue resolution</li>
-              <li>Collaborated with Sales, R&amp;D, clients and stakeholders to scope products correctly</li>
-            </ul>
-            <h3>Project Stories from this role</h3>
-            <ol class="timeline-projects" role="list">
-              <li><span class="timeline-projects__period">January 2015 – June 2015</span> <a href="../projects/entel-chile.html">Entel Chile: Project Recovery and Customer Confidence</a></li>
-              <li><span class="timeline-projects__period">January 2014 – December 2014</span> <a href="../projects/entel-peru.html">Entel Peru: VAS Delivery for Market Expansion and 4G</a></li>
-              <li><span class="timeline-projects__period">February 2013 – November 2013</span> <a href="../projects/claro-peru.html">Claro Peru: VAS Platform Upgrade for 4G</a></li>
-              <li><span class="timeline-projects__period">March 2012 – November 2012</span> <a href="../projects/gtt-guyana.html">GT&amp;T Guyana: VAS Platform Implementation</a></li>
-              <li><span class="timeline-projects__period">June 2011 – February 2012</span> <a href="../projects/digicel-jamaica.html">Digicel Jamaica: VAS Platform Relocation</a></li>
-            </ol>
-          </article>
-        </li>
-      </ol>
+      <figure class="span-chart section" aria-labelledby="chart-title">
+        <figcaption id="chart-title" class="span-chart__title">Roles at a glance, 2011–2026</figcaption>
+        <ol class="span-chart__rows" role="list">
+          <li class="span-chart__row">
+            <p class="span-chart__label"><span class="span-chart__company">Endava</span> <span class="span-chart__meta">Agile Project Manager · 2021 – 2026</span></p>
+            <span class="span-chart__track" aria-hidden="true"><span class="span-chart__bar" style="--start: 65.1%; --span: 33.3%"></span></span>
+          </li>
+          <li class="span-chart__row">
+            <p class="span-chart__label"><span class="span-chart__company">TCS · Avianca Holdings</span> <span class="span-chart__meta">Technical Project Manager · 2021</span></p>
+            <span class="span-chart__track" aria-hidden="true"><span class="span-chart__bar" style="--start: 62.5%; --span: 3.1%"></span></span>
+          </li>
+          <li class="span-chart__row">
+            <p class="span-chart__label"><span class="span-chart__company">TCS</span> <span class="span-chart__meta">Project Lead · 2018 – 2021</span></p>
+            <span class="span-chart__track" aria-hidden="true"><span class="span-chart__bar" style="--start: 49.5%; --span: 13.5%"></span></span>
+          </li>
+          <li class="span-chart__row">
+            <p class="span-chart__label"><span class="span-chart__company">TCS · GlaxoSmithKline (GSK)</span> <span class="span-chart__meta">e-Invoicing - Order to Cash (O2C) Stream Lead · 2017 – 2018</span></p>
+            <span class="span-chart__track" aria-hidden="true"><span class="span-chart__bar" style="--start: 40.6%; --span: 8.3%"></span></span>
+          </li>
+          <li class="span-chart__row">
+            <p class="span-chart__label"><span class="span-chart__company">Comverse / Mavenir</span> <span class="span-chart__meta">Senior Project Lead · 2011 – 2016</span></p>
+            <span class="span-chart__track" aria-hidden="true"><span class="span-chart__bar" style="--start: 2.6%; --span: 34.9%"></span></span>
+          </li>
+        </ol>
+        <div class="span-chart__axis" aria-hidden="true"><span class="span-chart__ticks"><span style="--at: 0.00%">2011</span><span style="--at: 18.75%">2014</span><span style="--at: 37.50%">2017</span><span style="--at: 56.25%">2020</span><span style="--at: 75.00%">2023</span><span style="--at: 93.75%">2026</span></span></div>
+      </figure>
 
-      <section class="section stack-sm" aria-labelledby="explore-title">
-        <h2 id="explore-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>Continue exploring</h2>
-        <p><a href="../projects/">See all Project Stories</a></p>
-        <p><a href="../about/">About: education, certifications, and courses</a></p>
-        <p><a href="../contact/">Contact me</a></p>
+      <section class="section stack" aria-labelledby="companies-title">
+        <div class="stack-sm">
+          <h2 id="companies-title">Roles by company</h2>
+          <p class="section-note">Open a company to see its roles, then open a project for its summary.</p>
+        </div>
+        <div class="companies">
+        <details class="company" open>
+          <summary class="company__summary"><span class="disclosure-triangle" aria-hidden="true"></span><span class="company__name">Endava</span><span class="company__years">2021 – 2026</span><span class="company__meta">1 role · 2 Project Stories</span></summary>
+          <div class="company__body">
+              <section class="role stack-sm" aria-labelledby="role-endava">
+                <h3 id="role-endava">Agile Project Manager</h3>
+                <p class="role__meta">Endava · June 2021 – September 2026</p>
+                <ul class="role-figures" role="list">
+                  <li class="role-figure"><strong class="role-figure__value">5.0 → 8.7</strong> Stakeholder satisfaction, through delivery transparency and predictability</li>
+                  <li class="role-figure"><strong class="role-figure__value">Above 30%</strong> Project gross margin, FY22 and FY23</li>
+                  <li class="role-figure"><strong class="role-figure__value">Top performer</strong> Recognized by the client among Agile Project Managers/Scrum Masters</li>
+                </ul>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Coordinating delivery activities for greenfield web and mobile platforms within cloud-native modernization initiatives (GCP), aligning cross-functional teams and managing dependencies, risks, and execution readiness across multiple technical workstreams.</li>
+                  <li>Led Data and Backend delivery streams for a US-based financial services client, supporting the migration and modernization of investment management applications to Azure cloud environments.</li>
+                  <li>Facilitated Agile delivery across distributed engineering teams, driving stakeholder alignment, delivery governance, financial oversight, and risk mitigation in fast-paced environments with evolving requirements.</li>
+                  <li>Collaborated with DevOps and engineering teams on CI/CD alignment, environment readiness, and cloud delivery practices to improve coordination across technical teams.</li>
+                  <li>Translated technical risks, dependencies, and implementation trade-offs into business-oriented discussions to support faster and more informed stakeholder decisions.</li>
+                </ul>
+                <h4>Achievements</h4>
+                <ul>
+                  <li>Recognized by the client as one of the top-performing Agile Project Managers/Scrum Masters for leadership, stakeholder engagement, and delivery execution.</li>
+                  <li>Increased stakeholder satisfaction scores from 5.0 to 8.7 through improved delivery transparency and execution predictability.</li>
+                  <li>Maintained project gross margins above 30% during FY22 and FY23.</li>
+                </ul>
+                <h4>Project Stories from this role</h4>
+                <ul class="story-items" role="list">
+                  <li>
+                    <details class="story-item" open>
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">DCTX: Greenfield Web and Mobile Platform for Sports Media</span><span class="story-item__when">September 2025 – September 2026</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led the web, mobile, back-end, data migration, and DevOps teams for a new sports media platform on GCP.</p>
+                        <p><a href="../projects/dctx-media.html">Read the Project Story<span class="visually-hidden">: DCTX</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">DFA Capital Markets: Cloud Integration and Process Refactoring</span><span class="story-item__when">August 2021 – September 2025</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led Agile delivery of an API Gateway and the refactoring of approximately 60 business processes during a move to Azure.</p>
+                        <p><a href="../projects/dfa-capital-markets.html">Read the Project Story<span class="visually-hidden">: DFA Capital Markets</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                </ul>
+              </section>
+          </div>
+        </details>
+        <details class="company">
+          <summary class="company__summary"><span class="disclosure-triangle" aria-hidden="true"></span><span class="company__name">TCS</span><span class="company__years">2017 – 2021</span><span class="company__meta">3 roles · 3 Project Stories</span></summary>
+          <div class="company__body">
+              <section class="role stack-sm" aria-labelledby="role-avianca">
+                <h3 id="role-avianca">Technical Project Manager</h3>
+                <p class="role__meta">TCS, on behalf of Avianca Holdings · January 2021 – June 2021</p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Contributed to creating the business case and Total Cost of Ownership (TCO) model in collaboration with Microsoft consultants to secure project funding.</li>
+                  <li>Developed strategic project roadmaps and delivery plans during the due diligence phase, utilizing using Agile delivery practices to ensure an agile and adaptive development lifecycle.</li>
+                  <li>Led small ML/AI PoC initiatives for aeronautics process improvements built with Databricks/Synapse solution.</li>
+                </ul>
+                <h4>Project Stories from this role</h4>
+                <ul class="story-items" role="list">
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Avianca: Azure Data Warehouse Migration Definition</span><span class="story-item__when">January 2021 – June 2021</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Developed the business case, TCO model, and migration roadmap to move a data warehouse from on-premises Oracle to Azure.</p>
+                        <p><a href="../projects/avianca-data-warehouse.html">Read the Project Story<span class="visually-hidden">: Avianca</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                </ul>
+              </section>
+              <section class="role stack-sm" aria-labelledby="role-tcs-lead">
+                <h3 id="role-tcs-lead">Project Lead</h3>
+                <p class="role__meta">TCS · December 2018 – January 2021</p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Led Agile delivery teams implementing data and analytics solutions using Big Data technologies and Tableau, supporting business intelligence and operational reporting initiatives.</li>
+                  <li>Coordinated distributed engineering teams across Colombia and India, overseeing delivery progress and cross-team collaboration.</li>
+                  <li>Supported telecom process optimization initiatives through the delivery of Robotic Process Automation (RPA) solutions.</li>
+                  <li>Collaborated with Product Owners, engineering teams, and stakeholders to align delivery priorities and support customer-focused outcomes.</li>
+                  <li>Monitored project KPIs, delivery risks, financials, and operational metrics, implementing mitigation actions to improve execution predictability and delivery performance.</li>
+                </ul>
+                <h4>Achievements</h4>
+                <ul>
+                  <li>Improved alignment and reduced rework through structured roadmap and release planning within a SAFe delivery environment.</li>
+                </ul>
+                <h4>Project Stories from this role</h4>
+                <ul class="story-items" role="list">
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Tigo: SOX Big Data Automation Program</span><span class="story-item__when">December 2018 – October 2019</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led delivery of a Big Data platform to automate approximately 25 SOX control processes, with teams in Colombia and India.</p>
+                        <p><a href="../projects/tigo-sox-big-data.html">Read the Project Story<span class="visually-hidden">: Tigo</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                </ul>
+              </section>
+              <section class="role stack-sm" aria-labelledby="role-gsk">
+                <h3 id="role-gsk">e-Invoicing - Order to Cash (O2C) Stream Lead</h3>
+                <p class="role__meta">TCS, on behalf of GlaxoSmithKline (GSK) · July 2017 – October 2018</p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Led full-cycle e-Invoicing project, integrating SAP O2C (SD module) with various stakeholders</li>
+                  <li>Gathered business requirements for e-Invoicing in Chile, Peru, Ecuador and Colombia</li>
+                  <li>Collaborated with project architects to design tailored solutions for each country's tax laws</li>
+                  <li>Defined Project plan, resources management, risks, issues and Mitigation plan, ensuring the overall commitments and timelines of the project</li>
+                  <li>Responsible for the procurement process for the project and Cost tracking &amp; Control.</li>
+                </ul>
+                <h4>Achievements</h4>
+                <ul>
+                  <li>Delivered go-live on schedule, overcoming multiple regulatory changes in Colombia and Peru</li>
+                </ul>
+                <h4>Project Stories from this role</h4>
+                <ul class="story-items" role="list">
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">GSK: Order-to-Cash for an Andean SAP Migration</span><span class="story-item__when">July 2017 – October 2018</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led the Order-to-Cash workstream, including e-invoicing integrations, across four countries in GSK’s SAP migration.</p>
+                        <p><a href="../projects/gsk-order-to-cash.html">Read the Project Story<span class="visually-hidden">: GSK</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                </ul>
+              </section>
+          </div>
+        </details>
+        <details class="company">
+          <summary class="company__summary"><span class="disclosure-triangle" aria-hidden="true"></span><span class="company__name">Comverse / Mavenir</span><span class="company__years">2011 – 2016</span><span class="company__meta">1 role · 5 Project Stories</span></summary>
+          <div class="company__body">
+              <section class="role stack-sm" aria-labelledby="role-comverse">
+                <h3 id="role-comverse">Senior Project Lead</h3>
+                <p class="role__meta">Comverse / Mavenir · June 2011 – December 2016</p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Led implementation and deployment of new VAS projects in Latin America and Caribbean. Coordinated activities for service platform implementation, ensuring on-time delivery and quality</li>
+                  <li>Implemented project management practices, addressing risk mitigation and issue resolution</li>
+                  <li>Collaborated with Sales, R&amp;D, clients and stakeholders to scope products correctly</li>
+                </ul>
+                <h4>Project Stories from this role</h4>
+                <ul class="story-items" role="list">
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Entel Chile: Project Recovery and Customer Confidence</span><span class="story-item__when">January 2015 – June 2015</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Recovered a delayed project by rebuilding a credible delivery plan, then took the solution to production go-live.</p>
+                        <p><a href="../projects/entel-chile.html">Read the Project Story<span class="visually-hidden">: Entel Chile</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Entel Peru: VAS Delivery for Market Expansion and 4G</span><span class="story-item__when">January 2014 – December 2014</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led on-site implementation of value-added services for Entel’s entry into Peru and its new 4G network.</p>
+                        <p><a href="../projects/entel-peru.html">Read the Project Story<span class="visually-hidden">: Entel Peru</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Claro Peru: VAS Platform Upgrade for 4G</span><span class="story-item__when">February 2013 – November 2013</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Coordinated the value-added services platform upgrade and its integration with Claro’s new 4G network.</p>
+                        <p><a href="../projects/claro-peru.html">Read the Project Story<span class="visually-hidden">: Claro Peru</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">GT&amp;T Guyana: VAS Platform Implementation</span><span class="story-item__when">March 2012 – November 2012</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led on-site implementation of a new value-added services platform, integrated with existing prepaid charging systems.</p>
+                        <p><a href="../projects/gtt-guyana.html">Read the Project Story<span class="visually-hidden">: GT&amp;T Guyana</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                  <li>
+                    <details class="story-item">
+                      <summary><span class="disclosure-triangle" aria-hidden="true"></span><span class="story-item__name">Digicel Jamaica: VAS Platform Relocation</span><span class="story-item__when">June 2011 – February 2012</span></summary>
+                      <div class="story-item__body stack-sm">
+                        <p>Led the on-site relocation of the value-added services platform to Jamaica after the Haiti earthquake.</p>
+                        <p><a href="../projects/digicel-jamaica.html">Read the Project Story<span class="visually-hidden">: Digicel Jamaica</span></a></p>
+                      </div>
+                    </details>
+                  </li>
+                </ul>
+              </section>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="cta-band section" aria-labelledby="explore-title">
+        <h2 id="explore-title" class="cta-band__title">Continue exploring</h2>
+        <p class="cta-band__actions">
+          <a class="button button--inverse" href="../projects/">See all Project Stories</a>
+          <a class="button button--outline-inverse" href="../about/">About: education, certifications, and courses</a>
+          <a class="button button--outline-inverse" href="../contact/">Contact me</a>
+        </p>
       </section>
     </div>
   </main>
