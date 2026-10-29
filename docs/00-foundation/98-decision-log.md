@@ -392,7 +392,7 @@ Labels: each card shows a sector pill, tags, and the year on one top row, aligne
 
 Sector icons: each sector pill carries a small outlined icon, hand-drawn inline SVG on the 24px grid, decorative and hidden from screen readers (D-023).
 
-Company logos: each card shows the logo of the employer for that project, next to the company line. Endava (DCTX, DFA) and TCS (Avianca, Tigo) use their logos. Telecom projects delivered at Comverse are shown as "Comverse (now Mavenir)," with the Mavenir logo. GSK is a client, so logo is also important to be added. Logos must come from the company's official brand files, never from traced or approximated copies. Until the official files are supplied, the card shows a labeled placeholder.
+Company logos: each card shows the logo of the employer for that project, next to the company line. Endava (DCTX, DFA) and TCS (Avianca, Tigo) use their logos. Telecom projects delivered at Comverse are shown as "Comverse (now Mavenir)," with the Mavenir logo. GSK was a client, not an employer; its logo is shown too, from GSK’s official brand files. Logos must come from the company's official brand files, never from traced or approximated copies. Until the official files are supplied, the card shows a labeled placeholder.
 
 Source: Jairo in chat, 2026-10-28 (label placement, icons, Comverse naming, GSK as client).
 
