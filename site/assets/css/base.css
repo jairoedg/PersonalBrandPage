@@ -3,39 +3,43 @@
  * Load after tokens.css. Mobile-first; breakpoints at 768px and 1024px (D-013).
  */
 
-/* ---------- Look: two palettes ---------- */
+/* ---------- Look: monochrome base, blue accent (D-027, amended 2026-10-28) ---------- */
 /* Semantic overrides only; token values in tokens.css stay as approved. Warning colors are
    untouched everywhere: placeholders must stay distinct.
-   - Default (every page but Home): Option B, navy and blue (D-028 Projects palette, extended
-     to the other pages by Jairo on 2026-10-27).
-   - .theme-mono on Home's <body>: monochrome after devin.ai (D-027).
+   - Default (every page but Home): the monochrome base (stone-50 page, white cards, coal-black
+     text and buttons, stone borders) plus one accent from the blue scale: blue-700 for links,
+     icons and focus, blue-50/100 for tinted surfaces, blue sector labels on Project cards.
+   - .theme-mono on Home's <body>: the accent turns black too, so Home stays fully monochrome.
    --color-accent colors the icons (D-023), timeline (D-024), and disclosure triangles (D-025). */
 :root {
-  --color-surface-background: var(--stone-100);
+  --color-surface-background: var(--stone-50);
   --color-surface-card: #ffffff;
-  --color-surface-subtle: var(--slate-100); /* secondary-button hover, image backdrop */
-  --color-surface-inverse: var(--slate-900); /* dark bands */
-  --color-text-default: var(--slate-900);
-  --color-text-secondary: var(--slate-700);
-  --color-text-on-inverse: var(--slate-50);
-  --color-text-on-inverse-muted: var(--slate-300);
+  --color-surface-subtle: var(--stone-100); /* secondary-button hover, image backdrop */
+  --color-surface-tint: var(--blue-50); /* page header band on content pages */
+  --color-surface-inverse: var(--stone-900); /* dark bands */
+  --color-text-default: var(--stone-900);
+  --color-text-secondary: var(--stone-600);
+  --color-text-on-inverse: var(--stone-50);
+  --color-text-on-inverse-muted: var(--stone-300);
   --color-text-link: var(--blue-700);
-  --color-action-primary: var(--slate-900);
+  --color-action-primary: var(--stone-900);
   --color-action-on-primary: #ffffff;
-  --color-action-hover: var(--slate-700);
+  --color-action-hover: var(--stone-700);
   --color-accent: var(--blue-700);
-  --color-border-default: var(--slate-200);
+  --color-border-default: var(--stone-200);
+  --color-border-tint: var(--blue-100);
   --color-focus-visible: var(--blue-700);
   /* Dark bands (Projects hero, closing band) and project-card pills. */
-  --color-surface-inverse-raised: var(--slate-800);
-  --color-border-inverse: var(--slate-700);
-  --color-pill-surface: var(--slate-50);
-  --color-pill-border: var(--slate-300);
+  --color-surface-inverse-raised: var(--stone-800);
+  --color-border-inverse: var(--stone-700);
+  --color-pill-surface: var(--stone-50);
+  --color-pill-border: var(--stone-300);
   --color-pill-accent-surface: var(--blue-50);
   --color-pill-accent-border: var(--blue-300);
   --color-pill-accent-text: var(--blue-800);
 
-  /* H1 and H2 at regular weight; H3 and below stay 600 (design language, updated 2026-10-23). */
+  /* H1 and H2 at regular weight; H3 and below stay 600 so small headings still stand apart
+     from body text (design language, updated 2026-10-23). */
   --font-weight-h1: var(--font-weight-body);
   --font-weight-h2: var(--font-weight-body);
   /* Emphasis that is not a heading: site name, current nav item, timeline years (D-024). */
@@ -46,23 +50,11 @@
 }
 
 .theme-mono {
-  --color-surface-background: var(--stone-50);
-  --color-surface-subtle: var(--stone-100);
-  --color-surface-inverse: var(--stone-900);
-  --color-text-default: var(--stone-900);
-  --color-text-secondary: var(--stone-600);
-  --color-text-on-inverse: var(--stone-50);
-  --color-text-on-inverse-muted: var(--stone-300);
+  --color-surface-tint: var(--stone-100);
   --color-text-link: var(--stone-900);
-  --color-action-primary: var(--stone-900);
-  --color-action-hover: var(--stone-700);
   --color-accent: var(--stone-900);
-  --color-border-default: var(--stone-200);
+  --color-border-tint: var(--stone-200);
   --color-focus-visible: var(--stone-900);
-  --color-surface-inverse-raised: var(--stone-800);
-  --color-border-inverse: var(--stone-700);
-  --color-pill-surface: var(--stone-50);
-  --color-pill-border: var(--stone-300);
   --color-pill-accent-surface: var(--stone-100);
   --color-pill-accent-border: var(--stone-400);
   --color-pill-accent-text: var(--stone-900);
@@ -584,6 +576,39 @@ main:focus {
   line-height: var(--line-height-body-s);
 }
 
+/* ---------- Page header (content pages) ---------- */
+/* The opening block of Career Journey, About, Contact, Leadership, and How I Can Help: a light
+   tinted band, the lighter sibling of the Projects band, with the title and the intro. */
+.page-header {
+  padding-block: var(--space-10);
+  border-bottom: 1px solid var(--color-border-tint); /* decorative divider */
+  background-color: var(--color-surface-tint);
+}
+
+.page-header .container > * {
+  max-width: 38rem;
+}
+
+.page-header + .container > :first-child {
+  margin-top: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .page-header {
+    padding-block: var(--space-12);
+  }
+
+  .page-header h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .page-header + .container > :first-child {
+    margin-top: var(--space-12);
+  }
+}
+
 /* ---------- Dark page band (Projects hero, D-028) ---------- */
 .page-band {
   padding-block: var(--space-10) var(--space-12);
@@ -717,9 +742,26 @@ main:focus {
 }
 
 .pill--sector {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
   border-color: var(--color-pill-accent-border);
   background-color: var(--color-pill-accent-surface);
   color: var(--color-pill-accent-text);
+}
+
+/* Sector icon (D-029): decorative, the sector name carries the meaning. */
+.pill__icon {
+  flex: none;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Method label (Agile or Waterfall, D-029): same row as the tags, in a gray tone. */
+.pill--method {
+  border-color: var(--color-surface-subtle);
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
 }
 
 .project-card__year {
@@ -756,10 +798,27 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
+/* Company logo (symbol only where one exists) with the company line, stacked so the role text keeps the card width (D-029), from the official brand files. Empty alt:
+   the company name is already in the text. */
 .project-card__company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
   color: var(--color-text-secondary);
+}
+
+.project-card__logo {
+  flex: none;
+  width: auto;
+  height: 1.75rem;
+}
+
+/* Mavenir has no separate symbol, so its wordmark is used, a little shorter. */
+.project-card__logo--wordmark {
+  height: 1.5rem;
 }
 
 .project-card__summary {

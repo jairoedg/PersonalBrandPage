@@ -12,14 +12,17 @@ A personal portfolio website for Jairo Enrique Diaz, a Project Manager. It prese
 - Explore: complete (PRD, HLD, ADRs, epics, design, and architecture approved).
 - Govern (implementation): started by this repo. Implementation work happens here.
 - First draft: complete. Home, Projects, ten Project Story pages, About, Career Journey, How I Can Help (placeholders), Leadership (placeholders), Contact, and the 404 page are built in `site/`.
-- Checks: `scripts/check_site.py` passes with 0 errors. The 7 warnings are the expected placeholders.
+- Checks: `scripts/check_site.py` passes with 0 errors. The 16 warnings are the expected placeholders: the ten story summaries (D-025), the page introductions, Home's "Explore more" lines, and Leadership and How I Can Help content. `--strict` (the deploy gate) fails until every one is replaced.
+- Impeccable detector (`.claude/skills/impeccable/scripts/impeccable detect --json site`): 0 findings. Measured false positives are recorded as scoped exceptions in `.impeccable/config.json`.
 - Repository: public. GitHub Pages source is GitHub Actions. Nothing is deployed yet.
-- Commits: `db3a576` (baseline) is pushed. `1f90fa0` (deploy workflow and site-cicd skill) is committed locally, not pushed.
+- Git: PRs #1, #2, #3, and #5 are merged into `main`. They hold the Impeccable skill, the deploy workflow and placeholder gate, expandable story sections, the monochrome Home with the photo hero, and the Projects page (D-028).
+- Look (2026-10-28): Home is fully monochrome (`.theme-mono` on its `<body>`). Every other page uses the monochrome base with one blue accent (D-027 as amended). Content pages share one page header, a light blue-tinted band with the title and intro; the Projects page keeps its dark band. Jairo is drafting new designs for Career Journey, Contact, Leadership, and How I Can Help in Claude Artifacts, so those pages will likely change.
 - Next, in order:
-  1. Visual design pass (Impeccable skill), using the tokens in `site/assets/css/tokens.css`. Change the look only; keep the layout already checked.
-  2. Text pass: shorter card summaries and easier-to-scan story pages, without losing details.
-  3. Leadership and How I Can Help content, when Jairo is ready.
-  4. Deploy only after design, text, and final review are approved.
+  1. Jairo completes the missing story text: Tigo (leadership sections), GT&T (decisions section), and Digicel (decisions section).
+  2. Text pass: story summaries (D-025), shorter card summaries, and page introductions, each approved by Jairo.
+  3. Leadership and How I Can Help content, when Jairo approves it. The leadership draft is in Obsidian at `docs/explore/drafts/leadership-principles-draft.md` and is not approved.
+  4. Build the approved page redesigns: Leadership (D-030), How I Can Help (D-031), and Career Journey (D-032). These replace the shared page header on those pages.
+  5. Deploy only after design, text, and final review are approved, and with no placeholders left on the site (D-017).
 
 ## Authoritative documents (source of truth)
 
@@ -75,16 +78,29 @@ The decision log (`docs/00-foundation/98-decision-log.md`) is the record. If a d
 - **D-017:** a small validation script checks publication eligibility before deployment. It generates no pages.
 - **D-018:** the site lives in `site/`. A GitHub Actions workflow deploys only that folder.
 - **D-019:** self-host Inter (400/500/600, woff2) in `site/assets/fonts/` with the SIL OFL license file, loaded from `site/assets/css/fonts.css` with `font-display: swap`. No third-party font requests. Code uses the system monospace stack.
-- **D-020 (Q-09 closed):** story pages keep every section visible, with an "On this page" list of jump links. Previous and Next follow the Projects page order; related stories come from each source file. No collapsible sections for now.
+- **D-020 (Q-09 closed; partly revoked by D-025):** an "On this page" list of jump links moves between sections. Previous and Next follow the Projects page order; related stories come from each source file. The rule that every section stays visible is revoked.
 - **D-022 (Q-07 closed):** Home profile wording approved: the third-person positioning statement, the vision line, and the profile summary paragraphs on the Home page. Wording can be revisited later.
 - **D-021 (Q-10 closed):** the contact values (email, LinkedIn, phone) on `site/contact/index.html` are approved. The CV download is `site/assets/cv/CV_JairoDiaz - Project Manager.pdf`, kept under its existing name (spaces encoded as `%20` in links) and replaced when a final version is approved. Don't copy the phone number into docs or this file; the repository is public.
+- **D-023:** decorative icons on section and project titles, not in the top navigation. Hand-drawn inline SVG: outlined, 24px grid, 1.75px stroke, `aria-hidden`, never the only label. No icon library.
+- **D-024:** the Career Journey timeline (the visual form of D-004): one continuous line, a marker per role, bold years, newest first, and projects as dated links inside their role. Its accent follows D-027 (blue; black on Home).
+- **D-025:** story pages use expandable sections, one open at a time. Opening a section closes the one that was open. A short summary above the sections is always visible; it is first person, and Jairo approves each one. Each section heading has a disclosure triangle (right when closed, down when open). The first section of each story is open on load, and printed pages expand all sections. "Expand all" on screen is not part of this decision.
+- **D-026:** option C teal look. Superseded by D-027.
+- **D-027 (amended 2026-10-28):** monochrome base after devin.ai: stone-50 page, white cards, coal-black (stone-900) text and buttons, stone-600 secondary text, stone-200 borders. Home stays fully monochrome, with a two-column hero (name, positioning, vision, "Let's talk" and "Download CV" buttons; the portrait on the right, below the buttons on mobile). The Primary nav shows "Contact" as a black pill. Other pages add one blue accent: blue-700 for links, icons, and focus; blue-50 or blue-100 for tinted surfaces; blue sector labels on Project cards. Other hues only where they carry a meaning that is also written as text. Placeholder and warning colors are unchanged. Inter stays (D-019). H1 and H2 use weight 400; H3 and smaller headings use 600.
+- **D-028:** Projects page (Option B), colors per D-027: dark band with "Projects", the intro line ("I love making projects succeed, using both Agile and Waterfall across different markets."), and three key figures; Featured projects (DFA, GSK, Entel Peru; three columns from 1024px, two from 768px); More projects (seven cards, newest first); a closing call-to-action band ("Let's talk about your next delivery challenge." with "Contact me"). Card anatomy per D-014 as amended; no uppercase line above the title. Still open: card summary wording and the Tigo card status.
+- **D-029:** Project card labels, icons, and logos. Sector pill, tags, the method label (Agile or Waterfall, in gray, last in the row), and the year sit on one top row. Each sector pill has a small decorative outlined icon. Each card shows a logo with the company line: Endava (DCTX, DFA), TCS (Avianca, Tigo), "Comverse (now Mavenir)" with the Mavenir logo for the telecom projects, and GSK's own logo on the GSK card (D-029 as fixed 2026-10-28). Logos come only from official brand files, never traced copies. In the build (`site/assets/img/logos/`) they are symbol only, at Jairo's request: the Endava symbol from its brand pack, the TCS "tcs" mark taken from the official black logo file, and the GSK mark from its official PNG. Mavenir has no separate symbol, so its wordmark is used. Logos sit above the company line with empty alt text.
+- **D-030 (not built yet):** Leadership layout "LeadershipLedger": a dark band with the title, the lead line, and the philosophy; seven numbered principles with an evidence slot (right of the principle from 768px); then "How I lead" and "Continue exploring". Evidence and "How I lead" stay placeholders.
+- **D-031 (not built yet):** How I Can Help layout "HelpIndexRows": a dark band with title and intro; five numbered capability rows, each with a proof panel ("Proof in Project Stories" and the story count) listing related stories in two columns. Intro and explanations stay placeholders.
+- **D-032 (not built yet):** Career Journey layout "JourneyOverview", amending D-024: a dark band; a "Roles at a glance, 2011–2026" span chart (one accent color, text beside each bar); "Roles by company" expandable panels (Endava, TCS, Comverse / Mavenir), several open at once, Endava and its newest story open on load, all expanded in print.
+- Reference for D-030 to D-032: the Design System artifact "Jairo Diaz — Subpage Designs" (https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke). Where it differs from the log, the log governs.
 
 ## Open decisions (do not decide these alone)
 
 Use clearly marked placeholders for any open content. Ask the Product Owner (Jairo) before finalizing:
 
 - Capabilities: start from the five examples in `docs/00-foundation/04-website-strategy.md` (Capability Strategy). Revisit them later for alignment with the site's goal.
-- Leadership principles: match the seven principles from the blueprint to each project story's decisions and reflections. This is a content task to do per project.
+- Leadership principles: match the seven principles from the blueprint to each project story's decisions and reflections. A draft is in Obsidian (`docs/explore/drafts/leadership-principles-draft.md`); it is not approved.
+- Story summaries (D-025): drafts are in Obsidian at `docs/explore/drafts/story-summaries-draft.md`; each needs Jairo's approval.
+- Page redesigns: Career Journey, Contact, Leadership, and How I Can Help may change after Jairo's Artifacts designs. Build them only after the decision log records them.
 
 ## Figma
 
@@ -99,4 +115,5 @@ Use clearly marked placeholders for any open content. Ask the Product Owner (Jai
 - Accessibility is mandatory: semantic HTML, meaningful headings and link text, keyboard navigation, visible focus, and no information conveyed by color or icons alone.
 - Keep changes small. Show a plan before building a new page.
 - If a document conflicts with the PRD, stop and ask. Do not resolve it silently.
-- Do not commit or push without asking.
+- Do not commit or push without asking. Claude may keep this file up to date with the latest approved decisions and commit it (Jairo, 2026-10-28).
+- The decision log and the rest of `docs/` belong to the Obsidian vault. Do not edit them from this repo.
