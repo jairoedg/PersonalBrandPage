@@ -470,3 +470,19 @@ Source: Jairo, 2026-10-29 (layout from the "AboutProfile" exploration; header co
 Status: Approved (2026-10-29).
 
 %%Updated 2026-10-29: summary wording approved.%%
+
+---
+
+## D-034
+
+**Contact page layout (Jairo, 2026-10-29, option "ContactSplit").** 
+
+A dark band (the `page-band` style from Projects, D-028) replaces the shared blue-tinted page header on Contact. The band is split in two from 1024px (stacked below that). On the left: the page title "Contact" as a small label (it stays the page's `<h1>`), the line "Let's talk about your next delivery challenge." as the display-size headline (the closing-band wording approved in D-028, reused here), and the contact introduction below it, which stays a labeled placeholder until Jairo approves it. On the right: a white panel titled "Ways to reach me" with one clickable row each for Email, LinkedIn and Phone (icon, label, value, and a decorative arrow; LinkedIn shows an "external" icon and says it opens the LinkedIn website), and the CV at the bottom of the panel with a "Download CV (PDF)" button. Contact values and the CV file are unchanged (D-021). The page has no "Continue exploring" section: Contact is the end of the visitor journey, so nothing invites the visitor away before acting; the site footer keeps the navigation. With this, the shared light page header is no longer used by any page. Heading weights follow D-027. 
+
+Reference: Design System artifact, component ContactSplit. Where it differs from this entry, this entry governs.
+
+Source: Jairo, 2026-10-29 (chosen from ContactCards, ContactSplit and ContactMinimal).
+
+Status
+
+Approved (2026-10-29)
