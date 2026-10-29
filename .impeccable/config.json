@@ -21,7 +21,7 @@
           "site/leadership/index.html"
         ],
         "createdAt": "2026-10-28T02:43:59.143Z",
-        "reason": "Claude, measured: page-band and page-header text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
+        "reason": "Claude, measured: page-band text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
       }
     ]
   }
