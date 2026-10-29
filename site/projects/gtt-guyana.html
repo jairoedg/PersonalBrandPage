@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../assets/css/fonts.css">
   <link rel="stylesheet" href="../assets/css/tokens.css">
   <link rel="stylesheet" href="../assets/css/base.css">
-  <script src="../assets/js/story-sections.js" defer></script>
+  <script src="../assets/js/story-chapters.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -32,13 +32,15 @@
     <div class="container">
       <p class="back-link"><a href="./">Back to Projects</a></p>
 
-      <article class="story" data-open-on-load="business-context">
-        <header class="story-header stack-sm">
-          <h1 id="story-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>GT&amp;T Guyana: VAS Platform Implementation</h1>
-          <p class="story-card__meta">Comverse · Telecommunications · March 2012 – November 2012</p>
-          <div class="placeholder story-summary-slot">
-            <span class="placeholder__label">Placeholder</span>
-            <p>[Summary pending approval]</p>
+      <article class="story story--chapters">
+        <header class="story-header">
+          <div class="story-header__main stack-sm">
+            <h1 id="story-title"><svg class="heading-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H10l2 2.5h6.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>GT&amp;T Guyana: VAS Platform Implementation</h1>
+            <p class="story-card__meta">Comverse · Telecommunications · March 2012 – November 2012</p>
+            <div class="placeholder story-summary-slot">
+              <span class="placeholder__label">Placeholder</span>
+              <p>[Summary pending approval]</p>
+            </div>
           </div>
           <dl class="story-facts">
             <div><dt>Client</dt><dd>GT&amp;T Guyana</dd></div>
@@ -46,61 +48,138 @@
             <div><dt>Country</dt><dd>Guyana</dd></div>
             <div><dt>Delivery model</dt><dd>Waterfall</dd></div>
           </dl>
-          <p class="story-outcome"><strong>Outcome:</strong> Production go-live completed.</p>
         </header>
 
-        <nav class="toc" aria-labelledby="toc-title">
-          <h2 id="toc-title" class="toc__title">On this page</h2>
-          <ul class="toc__list">
-            <li><a href="#leadership-theme">Leadership Theme</a></li>
-            <li><a href="#business-context">Business Context</a></li>
-            <li><a href="#my-mission">My Mission</a></li>
-            <li><a href="#leadership-focus">Leadership Focus</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#leadership-reflection">Leadership Reflection</a></li>
-            <li><a href="#leadership-principles">Leadership Principles</a></li>
-          </ul>
-        </nav>
+        <section class="chapters" aria-labelledby="chapters-title">
+          <div class="chapters__head">
+            <h2 class="chapters__title" id="chapters-title">The story in 60 seconds</h2>
+            <p class="chapters__time">Full story: 1 min · choose a chapter</p>
+          </div>
+          <div class="chapter-tabs">
+            <a class="chapter-tab" id="tab-situation" href="#chapter-situation">
+              <span class="chapter-tab__top"><span class="chapter-tab__num">01</span><span class="chapter-tab__time">1 min</span></span>
+              <span class="chapter-tab__title" id="tab-situation-title">The situation</span>
+              <span class="chapter-tab__summary" id="tab-situation-summary"><span>Greenfield implementation of a new Value Added Services (VAS) platform for the Guyanese telecommunications operator.</span></span>
+              <span class="chapter-tab__more" aria-hidden="true">Read this part ↓</span>
+            </a>
+            <a class="chapter-tab" id="tab-action" href="#chapter-action">
+              <span class="chapter-tab__top"><span class="chapter-tab__num">02</span><span class="chapter-tab__time">1 min</span></span>
+              <span class="chapter-tab__title" id="tab-action-title">What I did</span>
+              <span class="chapter-tab__summary" id="tab-action-summary"><span class="chapter-tab__item">Coordinated implementation teams.</span><span class="chapter-tab__item">Managed technical dependencies.</span><span class="chapter-tab__item">Produced weekly status reports.</span><span class="chapter-tab__item">Managed risks and blockers.</span><span class="chapter-tab__item">Maintained customer communication throughout the project.</span></span>
+              <span class="chapter-tab__more" aria-hidden="true">Read this part ↓</span>
+            </a>
+            <a class="chapter-tab" id="tab-outcome" href="#chapter-outcome">
+              <span class="chapter-tab__top"><span class="chapter-tab__num">03</span><span class="chapter-tab__time">1 min</span></span>
+              <span class="chapter-tab__title" id="tab-outcome-title">The outcome</span>
+              <span class="chapter-tab__summary" id="tab-outcome-summary"><span>Production go-live completed.</span></span>
+              <span class="chapter-tab__more" aria-hidden="true">Read this part ↓</span>
+            </a>
+            <a class="chapter-tab" id="tab-lessons" href="#chapter-lessons">
+              <span class="chapter-tab__top"><span class="chapter-tab__num">04</span><span class="chapter-tab__time">1 min</span></span>
+              <span class="chapter-tab__title" id="tab-lessons-title">What I learned</span>
+              <span class="chapter-tab__summary" id="tab-lessons-summary"><span>This project reinforced that disciplined execution, consistent communication, and proactive dependency management are often enough to deliver successful outcomes when the project environment is stable.</span></span>
+              <span class="chapter-tab__more" aria-hidden="true">Read this part ↓</span>
+            </a>
+          </div>
+        </section>
 
-        <section class="story-section stack-sm" aria-labelledby="leadership-theme">
-          <h2 id="leadership-theme">Leadership Theme</h2>
-          <p>Learning Delivery Discipline</p>
+        <section class="chapter" id="chapter-situation" aria-labelledby="chapter-situation-title">
+          <div class="chapter__head">
+            <h2 class="chapter__title" id="chapter-situation-title">The situation</h2>
+            <p class="chapter__count">3 sections</p>
+          </div>
+          <div class="story-cards">
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">01</span>
+              <h3 class="story-block__title" id="leadership-theme">Leadership Theme</h3>
+              <p>Learning Delivery Discipline</p>
+            </div>
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">02</span>
+              <h3 class="story-block__title" id="business-context">Business Context</h3>
+              <p>Greenfield implementation of a new Value Added Services (VAS) platform for the Guyanese telecommunications operator.</p>
+              <p>The implementation required integration with multiple existing telecommunications platforms, including prepaid charging systems.</p>
+            </div>
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">03</span>
+              <h3 class="story-block__title" id="my-mission">My Mission</h3>
+              <p>Lead on-site implementation activities while coordinating multiple technical workstreams and maintaining continuous communication with customer stakeholders.</p>
+            </div>
+          </div>
+          <div class="chapter__end">
+            <p class="chapter__step">Chapter 1 of 4</p>
+            <a class="button button--primary chapter__next" href="#chapter-action">Next: What I did <span aria-hidden="true">→</span></a>
+          </div>
         </section>
-        <section class="story-section stack-sm" aria-labelledby="business-context">
-          <h2 id="business-context">Business Context</h2>
-          <p>Greenfield implementation of a new Value Added Services (VAS) platform for the Guyanese telecommunications operator.</p>
-          <p>The implementation required integration with multiple existing telecommunications platforms, including prepaid charging systems.</p>
+
+        <section class="chapter" id="chapter-action" aria-labelledby="chapter-action-title">
+          <div class="chapter__head">
+            <h2 class="chapter__title" id="chapter-action-title">What I did</h2>
+            <p class="chapter__count">1 section</p>
+          </div>
+          <div class="story-cards">
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">01</span>
+              <h3 class="story-block__title" id="leadership-focus">Leadership Focus</h3>
+              <ul>
+                <li>Coordinated implementation teams.</li>
+                <li>Managed technical dependencies.</li>
+                <li>Produced weekly status reports.</li>
+                <li>Managed risks and blockers.</li>
+                <li>Maintained customer communication throughout the project.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chapter__end">
+            <p class="chapter__step">Chapter 2 of 4</p>
+            <a class="button button--primary chapter__next" href="#chapter-outcome">Next: The outcome <span aria-hidden="true">→</span></a>
+          </div>
         </section>
-        <section class="story-section stack-sm" aria-labelledby="my-mission">
-          <h2 id="my-mission">My Mission</h2>
-          <p>Lead on-site implementation activities while coordinating multiple technical workstreams and maintaining continuous communication with customer stakeholders.</p>
+
+        <section class="chapter" id="chapter-outcome" aria-labelledby="chapter-outcome-title">
+          <div class="chapter__head">
+            <h2 class="chapter__title" id="chapter-outcome-title">The outcome</h2>
+            <p class="chapter__count">1 section</p>
+          </div>
+          <div class="story-cards">
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">01</span>
+              <h3 class="story-block__title" id="results">Results</h3>
+              <p>Successful implementation and production deployment.</p>
+              <p>Although the project experienced a moderate schedule extension, implementation quality remained stable and customer communication remained transparent throughout execution.</p>
+            </div>
+          </div>
+          <div class="chapter__end">
+            <p class="chapter__step">Chapter 3 of 4</p>
+            <a class="button button--primary chapter__next" href="#chapter-lessons">Next: What I learned <span aria-hidden="true">→</span></a>
+          </div>
         </section>
-        <section class="story-section stack-sm" aria-labelledby="leadership-focus">
-          <h2 id="leadership-focus">Leadership Focus</h2>
-          <ul>
-            <li>Coordinated implementation teams.</li>
-            <li>Managed technical dependencies.</li>
-            <li>Produced weekly status reports.</li>
-            <li>Managed risks and blockers.</li>
-            <li>Maintained customer communication throughout the project.</li>
-          </ul>
-        </section>
-        <section class="story-section stack-sm" aria-labelledby="results">
-          <h2 id="results">Results</h2>
-          <p>Successful implementation and production deployment.</p>
-          <p>Although the project experienced a moderate schedule extension, implementation quality remained stable and customer communication remained transparent throughout execution.</p>
-        </section>
-        <section class="story-section stack-sm" aria-labelledby="leadership-reflection">
-          <h2 id="leadership-reflection">Leadership Reflection</h2>
-          <p>This project reinforced that disciplined execution, consistent communication, and proactive dependency management are often enough to deliver successful outcomes when the project environment is stable.</p>
-        </section>
-        <section class="story-section stack-sm" aria-labelledby="leadership-principles">
-          <h2 id="leadership-principles">Leadership Principles</h2>
-          <ul>
-            <li>Predictable delivery comes from disciplined communication.</li>
-            <li>Consistency builds customer confidence.</li>
-            <li>Good planning reduces implementation uncertainty.</li>
-          </ul>
+
+        <section class="chapter" id="chapter-lessons" aria-labelledby="chapter-lessons-title">
+          <div class="chapter__head">
+            <h2 class="chapter__title" id="chapter-lessons-title">What I learned</h2>
+            <p class="chapter__count">2 sections</p>
+          </div>
+          <div class="story-cards">
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">01</span>
+              <h3 class="story-block__title" id="leadership-reflection">Leadership Reflection</h3>
+              <p>This project reinforced that disciplined execution, consistent communication, and proactive dependency management are often enough to deliver successful outcomes when the project environment is stable.</p>
+            </div>
+            <div class="story-block">
+              <span class="story-block__num" aria-hidden="true">02</span>
+              <h3 class="story-block__title" id="leadership-principles">Leadership Principles</h3>
+              <ul>
+                <li>Predictable delivery comes from disciplined communication.</li>
+                <li>Consistency builds customer confidence.</li>
+                <li>Good planning reduces implementation uncertainty.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chapter__end">
+            <p class="chapter__step">Chapter 4 of 4</p>
+            <a class="button button--primary" href="../contact/">Contact me</a>
+          </div>
         </section>
       </article>
 
