@@ -12,18 +12,17 @@ A personal portfolio website for Jairo Enrique Diaz, a Project Manager. It prese
 - Explore: complete (PRD, HLD, ADRs, epics, design, and architecture approved).
 - Govern (implementation): started by this repo. Implementation work happens here.
 - First draft: complete. Home, Projects, ten Project Story pages, About, Career Journey, How I Can Help (placeholders), Leadership (placeholders), Contact, and the 404 page are built in `site/`.
-- Checks: `scripts/check_site.py` passes with 0 errors. The 17 warnings are the expected placeholders: the ten story summaries (D-025), the page introductions, Home's "Explore more" lines, Leadership and How I Can Help content, and the nine employer-logo slots on Projects (D-029). `--strict` (the deploy gate) fails until every one is replaced.
+- Checks: `scripts/check_site.py` passes with 0 errors. The 16 warnings are the expected placeholders: the ten story summaries (D-025), the page introductions, Home's "Explore more" lines, and Leadership and How I Can Help content. `--strict` (the deploy gate) fails until every one is replaced.
 - Impeccable detector (`.claude/skills/impeccable/scripts/impeccable detect --json site`): 0 findings. Measured false positives are recorded as scoped exceptions in `.impeccable/config.json`.
 - Repository: public. GitHub Pages source is GitHub Actions. Nothing is deployed yet.
 - Git: PRs #1, #2, #3, and #5 are merged into `main`. They hold the Impeccable skill, the deploy workflow and placeholder gate, expandable story sections, the monochrome Home with the photo hero, and the Projects page (D-028).
 - Look (2026-10-28): Home is fully monochrome (`.theme-mono` on its `<body>`). Every other page uses the monochrome base with one blue accent (D-027 as amended). Content pages share one page header, a light blue-tinted band with the title and intro; the Projects page keeps its dark band. Jairo is drafting new designs for Career Journey, Contact, Leadership, and How I Can Help in Claude Artifacts, so those pages will likely change.
 - Next, in order:
-  1. Employer logos (D-029): Jairo supplies the official Endava, TCS, and Mavenir logo files; they replace the labeled placeholders on the Projects cards. Never trace or approximate a logo. The SVGs in `docs/explore/design/references/` (2026-10-28) are VTracer traces, so they are not used.
-  2. Jairo completes the missing story text: Tigo (leadership sections), GT&T (decisions section), and Digicel (decisions section).
-  3. Text pass: story summaries (D-025), shorter card summaries, and page introductions, each approved by Jairo.
-  4. Leadership and How I Can Help content, when Jairo approves it. The leadership draft is in Obsidian at `docs/explore/drafts/leadership-principles-draft.md` and is not approved.
-  5. Page redesigns from Jairo's Artifacts, once recorded in the decision log.
-  6. Deploy only after design, text, and final review are approved, and with no placeholders left on the site (D-017).
+  1. Jairo completes the missing story text: Tigo (leadership sections), GT&T (decisions section), and Digicel (decisions section).
+  2. Text pass: story summaries (D-025), shorter card summaries, and page introductions, each approved by Jairo.
+  3. Leadership and How I Can Help content, when Jairo approves it. The leadership draft is in Obsidian at `docs/explore/drafts/leadership-principles-draft.md` and is not approved.
+  4. Page redesigns from Jairo's Artifacts, once recorded in the decision log.
+  5. Deploy only after design, text, and final review are approved, and with no placeholders left on the site (D-017).
 
 ## Authoritative documents (source of truth)
 
@@ -88,7 +87,7 @@ The decision log (`docs/00-foundation/98-decision-log.md`) is the record. If a d
 - **D-026:** option C teal look. Superseded by D-027.
 - **D-027 (amended 2026-10-28):** monochrome base after devin.ai: stone-50 page, white cards, coal-black (stone-900) text and buttons, stone-600 secondary text, stone-200 borders. Home stays fully monochrome, with a two-column hero (name, positioning, vision, "Let's talk" and "Download CV" buttons; the portrait on the right, below the buttons on mobile). The Primary nav shows "Contact" as a black pill. Other pages add one blue accent: blue-700 for links, icons, and focus; blue-50 or blue-100 for tinted surfaces; blue sector labels on Project cards. Other hues only where they carry a meaning that is also written as text. Placeholder and warning colors are unchanged. Inter stays (D-019). H1 and H2 use weight 400; H3 and smaller headings use 600.
 - **D-028:** Projects page (Option B), colors per D-027: dark band with "Projects", the intro line ("I love making projects succeed, using both Agile and Waterfall across different markets."), and three key figures; Featured projects (DFA, GSK, Entel Peru; three columns from 1024px, two from 768px); More projects (seven cards, newest first); a closing call-to-action band ("Let's talk about your next delivery challenge." with "Contact me"). Card anatomy per D-014 as amended; no uppercase line above the title. Still open: card summary wording and the Tigo card status.
-- **D-029:** Project card labels, icons, and logos. Sector pill, tags, the method label (Agile or Waterfall, in gray, last in the row), and the year sit on one top row. Each sector pill has a small decorative outlined icon. Each card shows the employer's logo next to the company line: Endava (DCTX, DFA), TCS (Avianca, Tigo), and "Comverse (now Mavenir)" with the Mavenir logo for the telecom projects. GSK is a client, so its card has no logo. Logos come only from official brand files; until then a labeled placeholder holds the slot.
+- **D-029:** Project card labels, icons, and logos. Sector pill, tags, the method label (Agile or Waterfall, in gray, last in the row), and the year sit on one top row. Each sector pill has a small decorative outlined icon. Each card shows the employer's logo next to the company line: Endava (DCTX, DFA), TCS (Avianca, Tigo), and "Comverse (now Mavenir)" with the Mavenir logo for the telecom projects. GSK is a client, so its card has no logo. Logos come only from official brand files, never traced copies. In the build they are in `site/assets/img/logos/` (Endava and Mavenir in color, TCS in black, all from the companies' brand packs, with only the empty margins trimmed), shown above the company line with empty alt text.
 
 ## Open decisions (do not decide these alone)
 
