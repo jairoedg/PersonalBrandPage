@@ -1451,14 +1451,12 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
+/* Each year label is centred in its own year column (between two gridlines), positioned like the
+   bars, so a bar for 2011–2016 sits over the labels 2011 to 2016. */
 .span-chart__ticks span {
   position: absolute;
   left: var(--at);
   transform: translateX(-50%);
-}
-
-.span-chart__ticks span:first-child {
-  transform: none;
 }
 
 @media (min-width: 768px) {
@@ -1592,7 +1590,7 @@ details[open] > summary > .disclosure-triangle {
   color: var(--color-text-secondary);
 }
 
-/* Endava's three figures (D-032); the same facts are also in its Achievements list. */
+/* Achievement tiles under a role's dates (D-032). Each achievement appears only here, not repeated as a bullet. */
 .role-figures {
   display: grid;
   gap: var(--space-3);
