@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leadership — LeadershipLedger (D-030)</title>
+<!-- Design reference, not site code. Saved 2026-10-29 from the Design System artifact
+     "Jairo Diaz — Subpage Designs" (https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke),
+     component LeadershipLedger. Where it differs from the decision log, the log governs. -->
+<style>
+:root{--surface-page:#fafaf9;--surface-card:#ffffff;--surface-subtle:#f5f5f4;--surface-inverse:#1c1917;--surface-inverse-raised:#292524;--text-default:#1c1917;--text-secondary:#57534e;--text-numeral:#78716c;--text-on-inverse:#fafaf9;--text-on-inverse-muted:#d6d3d1;--action-primary:#1c1917;--action-hover:#44403c;--action-on-primary:#ffffff;--accent:#1d4ed8;--accent-strong:#1e40af;--accent-tint:#eff6ff;--accent-tint-strong:#dbeafe;--accent-border:#93c5fd;--accent-on-inverse:#93c5fd;--border-default:#e7e5e4;--border-strong:#78716c;--border-inverse:#44403c;--focus-ring:#1d4ed8;--warning-text:#92400e;--warning-surface:#fffbeb;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--radius-card:12px;--radius-pill:999px;--elevation-raised:0 2px 6px rgba(15, 23, 42, 0.08);--elevation-floating:0 8px 24px rgba(15, 23, 42, 0.12);--font-sans:Inter,system-ui,sans-serif}
+body{margin:0}
+/* Shared page chrome for the subpage directions. Mirrors site/assets/css/base.css (monochrome, D-027). */
+
+.pb-page {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-default);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+}
+.pb-page *, .pb-page *::before, .pb-page *::after { box-sizing: border-box; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4, .pb-page p, .pb-page ul, .pb-page ol, .pb-page figure { margin: 0; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4 { font-weight: 400; }
+.pb-page ul[role="list"], .pb-page ol[role="list"] { list-style: none; padding: 0; }
+
+.pb-page a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.pb-page a:hover { text-decoration-thickness: 2px; }
+.pb-page a:focus-visible, .pb-page button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pb-container { max-width: 1120px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 768px) { .pb-container { padding-inline: 24px; } }
+
+.pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+.pb-header { background: var(--surface-card); border-bottom: 1px solid var(--border-default); }
+.pb-header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 16px; }
+.pb-header__name { font-weight: 600; color: var(--text-default) !important; text-decoration: none; }
+.pb-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; font-size: 14px; line-height: 20px; font-weight: 500; }
+.pb-nav a { color: var(--text-default); text-decoration: none; }
+.pb-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.pb-nav .pb-nav__cta { background: var(--action-primary); color: var(--action-on-primary); padding: 8px 16px; border-radius: var(--radius-pill); }
+
+/* Dark hero band (same family as the Projects band, D-028) */
+.pb-band { background: var(--surface-inverse); color: var(--text-on-inverse); padding-block: 40px 48px; }
+.pb-band a { color: var(--accent-on-inverse); }
+.pb-band a:focus-visible { outline-color: var(--accent-on-inverse); }
+.pb-band__muted { color: var(--text-on-inverse-muted); }
+@media (min-width: 1024px) { .pb-band { padding-block: 64px; } }
+
+.pb-title { font-size: 40px; line-height: 48px; letter-spacing: -0.02em; }
+@media (min-width: 1024px) { .pb-title { font-size: 48px; line-height: 56px; letter-spacing: -0.025em; } }
+.pb-h2 { font-size: 32px; line-height: 40px; letter-spacing: -0.015em; }
+.pb-h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.005em; }
+.pb-lead { font-size: 18px; line-height: 28px; }
+.pb-meta { font-size: 14px; line-height: 20px; color: var(--text-secondary); }
+.pb-label { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.005em; }
+
+.pb-section { padding-block: 48px; }
+@media (min-width: 1024px) { .pb-section { padding-block: 64px; } }
+
+/* Decorative heading icon (D-023): 24px grid, 1.75 stroke, aria-hidden */
+.pb-icon { width: 24px; height: 24px; flex: none; color: var(--accent); }
+
+/* Cards */
+.pb-card { background: var(--surface-card); border: 1px solid var(--border-default); border-radius: var(--radius-card); box-shadow: var(--elevation-raised); padding: 24px; }
+
+/* Pills and tags */
+.pb-pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: var(--radius-pill); font-size: 14px; line-height: 20px; font-weight: 500; background: var(--accent-tint); border: 1px solid var(--accent-border); color: var(--accent-strong); }
+.pb-tag { display: inline-flex; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid var(--border-strong); font-size: 14px; line-height: 20px; color: var(--text-default) !important; text-decoration: none; background: var(--surface-card); }
+.pb-tag:hover { background: var(--surface-subtle); }
+
+/* Buttons */
+.pb-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--radius-pill); font-weight: 500; font-size: 16px; line-height: 24px; text-decoration: none !important; background: var(--action-primary); color: var(--action-on-primary) !important; }
+.pb-btn:hover { background: var(--action-hover); }
+.pb-btn--outline { background: transparent; color: var(--text-default) !important; border: 1px solid var(--border-strong); }
+.pb-btn--outline:hover { background: var(--surface-subtle); }
+.pb-band .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-band .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+
+/* Placeholder: open content, never published as final (CLAUDE.md, open decisions) */
+.pb-placeholder { border: 1px dashed var(--warning-text); background: var(--warning-surface); color: var(--text-default); border-radius: 8px; padding: 12px 16px; font-size: 14px; line-height: 20px; }
+.pb-placeholder__label { display: block; font-weight: 600; color: var(--warning-text); margin-bottom: 2px; }
+.pb-band .pb-placeholder { color: var(--text-default); }
+
+/* Closing band: the existing "Continue exploring" links */
+.pb-closing { background: var(--surface-inverse); color: var(--text-on-inverse); border-radius: var(--radius-card); padding: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.pb-closing .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-closing .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+.pb-closing a:focus-visible { outline-color: var(--accent-on-inverse); }
+
+</style>
+</head>
+<body>
+<div class="pb-page"><header class="pb-header"><div class="pb-container pb-header__inner"><a class="pb-header__name" href="#">Jairo Enrique Diaz</a><nav aria-label="Primary"><ul class="pb-nav" role="list"><li><a href="#">Projects</a></li><li><a href="#">How I Can Help</a></li><li><a href="#" aria-current="page">Leadership</a></li><li><a href="#">Career Journey</a></li><li><a href="#">About</a></li><li><a class="pb-nav__cta" href="#">Contact</a></li></ul></nav></div></header><main><style>
+.la-hero{display:grid;gap:32px}
+.la-quote{font-size:32px;line-height:40px;letter-spacing:-0.015em;max-width:22ch}
+.la-body{display:grid;gap:12px;max-width:60ch}
+@media(min-width:1024px){.la-hero{grid-template-columns:1fr 1fr;align-items:start}}
+.la-list{border-top:1px solid var(--border-default)}
+.la-row{display:grid;gap:8px 32px;padding-block:28px;border-bottom:1px solid var(--border-default)}
+.la-num{font-size:40px;line-height:48px;color:var(--text-numeral);font-variant-numeric:tabular-nums}
+.la-row h3{font-size:24px;line-height:32px;letter-spacing:-0.005em;max-width:34ch}
+@media(min-width:768px){.la-row{grid-template-columns:96px 1fr 280px;align-items:start}}
+</style><section class="pb-band" aria-labelledby="t"><div class="pb-container"><h1 id="t" class="pb-title">Leadership</h1><div class="la-hero" style="margin-top:32px"><p class="la-quote">Projects succeed because people succeed.</p><div class="la-body pb-band__muted"><p>Technology alone does not solve business problems.</p><p>People do.</p><p>My responsibility is to create an environment where engineers can focus on building quality solutions, stakeholders understand what is happening, risks are managed proactively and communication becomes a competitive advantage rather than a source of uncertainty.</p><p>Success is measured not only by delivering on time, but by delivering solutions organizations trust, adopt and value.</p></div></div></div></section><section class="pb-container pb-section" aria-labelledby="pr"><div style="display:flex;gap:12px;align-items:center;margin-bottom:24px"><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4"/><path d="M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></svg><h2 id="pr" class="pb-h2">Leadership principles</h2></div><ol class="la-list" role="list"><li class="la-row"><span class="la-num" aria-hidden="true">01</span><h3>Projects succeed because people succeed.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">02</span><h3>Communication uncertainty is often a greater delivery risk than technical uncertainty.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">03</span><h3>Removing unnecessary friction allows technical teams to perform at their highest level.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">04</span><h3>Technology creates value only when it solves real business problems.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">05</span><h3>Predictability builds trust.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">06</span><h3>Every difficult project leaves a lesson worth documenting.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li><li class="la-row"><span class="la-num" aria-hidden="true">07</span><h3>Supporting people also means making timely decisions when additional support is no longer helping the individual, the team or the project.</h3><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Project decisions and related stories to be matched with Jairo.</div></li></ol></section><section class="pb-container" style="padding-bottom:48px" aria-labelledby="hl"><h2 id="hl" class="pb-h2" style="margin-bottom:16px">How I lead</h2><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>“How I lead” content pending approval.</div></section><section class="pb-container" style="padding-bottom:64px" aria-labelledby="ce"><div class="pb-closing"><h2 id="ce" class="pb-h3">Continue exploring</h2><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="pb-btn" href="#">See all Project Stories</a><a class="pb-btn pb-btn--outline" href="#">Contact me</a></div></div></section></main></div>
+
+</body>
+</html>

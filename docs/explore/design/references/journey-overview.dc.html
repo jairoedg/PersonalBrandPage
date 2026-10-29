@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Journey — JourneyOverview (D-032)</title>
+<!-- Design reference, not site code. Saved 2026-10-29 from the Design System artifact
+     "Jairo Diaz — Subpage Designs" (https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke),
+     component JourneyOverview. Where it differs from the decision log, the log governs. -->
+<style>
+:root{--surface-page:#fafaf9;--surface-card:#ffffff;--surface-subtle:#f5f5f4;--surface-inverse:#1c1917;--surface-inverse-raised:#292524;--text-default:#1c1917;--text-secondary:#57534e;--text-numeral:#78716c;--text-on-inverse:#fafaf9;--text-on-inverse-muted:#d6d3d1;--action-primary:#1c1917;--action-hover:#44403c;--action-on-primary:#ffffff;--accent:#1d4ed8;--accent-strong:#1e40af;--accent-tint:#eff6ff;--accent-tint-strong:#dbeafe;--accent-border:#93c5fd;--accent-on-inverse:#93c5fd;--border-default:#e7e5e4;--border-strong:#78716c;--border-inverse:#44403c;--focus-ring:#1d4ed8;--warning-text:#92400e;--warning-surface:#fffbeb;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--radius-card:12px;--radius-pill:999px;--elevation-raised:0 2px 6px rgba(15, 23, 42, 0.08);--elevation-floating:0 8px 24px rgba(15, 23, 42, 0.12);--font-sans:Inter,system-ui,sans-serif}
+body{margin:0}
+/* Shared page chrome for the subpage directions. Mirrors site/assets/css/base.css (monochrome, D-027). */
+
+.pb-page {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-default);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+}
+.pb-page *, .pb-page *::before, .pb-page *::after { box-sizing: border-box; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4, .pb-page p, .pb-page ul, .pb-page ol, .pb-page figure { margin: 0; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4 { font-weight: 400; }
+.pb-page ul[role="list"], .pb-page ol[role="list"] { list-style: none; padding: 0; }
+
+.pb-page a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.pb-page a:hover { text-decoration-thickness: 2px; }
+.pb-page a:focus-visible, .pb-page button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pb-container { max-width: 1120px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 768px) { .pb-container { padding-inline: 24px; } }
+
+.pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+.pb-header { background: var(--surface-card); border-bottom: 1px solid var(--border-default); }
+.pb-header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 16px; }
+.pb-header__name { font-weight: 600; color: var(--text-default) !important; text-decoration: none; }
+.pb-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; font-size: 14px; line-height: 20px; font-weight: 500; }
+.pb-nav a { color: var(--text-default); text-decoration: none; }
+.pb-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.pb-nav .pb-nav__cta { background: var(--action-primary); color: var(--action-on-primary); padding: 8px 16px; border-radius: var(--radius-pill); }
+
+/* Dark hero band (same family as the Projects band, D-028) */
+.pb-band { background: var(--surface-inverse); color: var(--text-on-inverse); padding-block: 40px 48px; }
+.pb-band a { color: var(--accent-on-inverse); }
+.pb-band a:focus-visible { outline-color: var(--accent-on-inverse); }
+.pb-band__muted { color: var(--text-on-inverse-muted); }
+@media (min-width: 1024px) { .pb-band { padding-block: 64px; } }
+
+.pb-title { font-size: 40px; line-height: 48px; letter-spacing: -0.02em; }
+@media (min-width: 1024px) { .pb-title { font-size: 48px; line-height: 56px; letter-spacing: -0.025em; } }
+.pb-h2 { font-size: 32px; line-height: 40px; letter-spacing: -0.015em; }
+.pb-h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.005em; }
+.pb-lead { font-size: 18px; line-height: 28px; }
+.pb-meta { font-size: 14px; line-height: 20px; color: var(--text-secondary); }
+.pb-label { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.005em; }
+
+.pb-section { padding-block: 48px; }
+@media (min-width: 1024px) { .pb-section { padding-block: 64px; } }
+
+/* Decorative heading icon (D-023): 24px grid, 1.75 stroke, aria-hidden */
+.pb-icon { width: 24px; height: 24px; flex: none; color: var(--accent); }
+
+/* Cards */
+.pb-card { background: var(--surface-card); border: 1px solid var(--border-default); border-radius: var(--radius-card); box-shadow: var(--elevation-raised); padding: 24px; }
+
+/* Pills and tags */
+.pb-pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: var(--radius-pill); font-size: 14px; line-height: 20px; font-weight: 500; background: var(--accent-tint); border: 1px solid var(--accent-border); color: var(--accent-strong); }
+.pb-tag { display: inline-flex; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid var(--border-strong); font-size: 14px; line-height: 20px; color: var(--text-default) !important; text-decoration: none; background: var(--surface-card); }
+.pb-tag:hover { background: var(--surface-subtle); }
+
+/* Buttons */
+.pb-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--radius-pill); font-weight: 500; font-size: 16px; line-height: 24px; text-decoration: none !important; background: var(--action-primary); color: var(--action-on-primary) !important; }
+.pb-btn:hover { background: var(--action-hover); }
+.pb-btn--outline { background: transparent; color: var(--text-default) !important; border: 1px solid var(--border-strong); }
+.pb-btn--outline:hover { background: var(--surface-subtle); }
+.pb-band .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-band .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+
+/* Placeholder: open content, never published as final (CLAUDE.md, open decisions) */
+.pb-placeholder { border: 1px dashed var(--warning-text); background: var(--warning-surface); color: var(--text-default); border-radius: 8px; padding: 12px 16px; font-size: 14px; line-height: 20px; }
+.pb-placeholder__label { display: block; font-weight: 600; color: var(--warning-text); margin-bottom: 2px; }
+.pb-band .pb-placeholder { color: var(--text-default); }
+
+/* Closing band: the existing "Continue exploring" links */
+.pb-closing { background: var(--surface-inverse); color: var(--text-on-inverse); border-radius: var(--radius-card); padding: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.pb-closing .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-closing .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+.pb-closing a:focus-visible { outline-color: var(--accent-on-inverse); }
+
+</style>
+</head>
+<body>
+<div class="pb-page"><header class="pb-header"><div class="pb-container pb-header__inner"><a class="pb-header__name" href="#">Jairo Enrique Diaz</a><nav aria-label="Primary"><ul class="pb-nav" role="list"><li><a href="#">Projects</a></li><li><a href="#">How I Can Help</a></li><li><a href="#">Leadership</a></li><li><a href="#" aria-current="page">Career Journey</a></li><li><a href="#">About</a></li><li><a class="pb-nav__cta" href="#">Contact</a></li></ul></nav></div></header><main><style>
+.jb-chart{background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-card);padding:24px;box-shadow:var(--elevation-raised)}
+.jb-rows{display:grid;gap:10px;margin-top:16px}
+.jb-row{display:grid;gap:6px;align-items:center;font-size:14px;line-height:20px}
+.jb-track{position:relative;height:28px;background:repeating-linear-gradient(to right,var(--border-default) 0 1px,transparent 1px calc(100%/16));border-radius:4px}
+.jb-bar{position:absolute;top:4px;bottom:4px;min-width:12px;border-radius:var(--radius-pill);background:var(--accent)}
+.jb-axis{display:grid;gap:16px;margin-top:8px}.jb-axis > span:first-child{display:none}
+@media(min-width:768px){.jb-row,.jb-axis{grid-template-columns:260px 1fr;gap:16px}.jb-axis > span:first-child{display:block}}
+.jb-ticks{display:flex;justify-content:space-between;font-size:12px;line-height:16px;color:var(--text-secondary)}
+.jb-acc{display:grid;gap:16px;margin-top:24px}
+.jb-co{background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-card);box-shadow:var(--elevation-raised);overflow:hidden}
+.jb-co > summary{display:grid;grid-template-columns:24px 1fr auto;gap:4px 12px;align-items:center;padding:20px 24px;cursor:pointer;list-style:none}
+.jb-co > summary::-webkit-details-marker,.jb-pj > summary::-webkit-details-marker{display:none}
+.jb-co > summary:hover{background:var(--surface-subtle)}
+.jb-co > summary:focus-visible,.jb-pj > summary:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-2px}
+.jb-tri{width:0;height:0;border-block:6px solid transparent;border-left:9px solid var(--accent);justify-self:center;transition:none}
+details[open] > summary .jb-tri{transform:rotate(90deg)}
+.jb-co__name{font-size:24px;line-height:32px;letter-spacing:-0.005em}
+.jb-co__meta{grid-column:2;font-size:14px;line-height:20px;color:var(--text-secondary)}
+.jb-co__years{grid-column:3;grid-row:1/3;font-weight:600;font-size:20px;line-height:28px;color:var(--accent)}
+.jb-co__body{border-top:1px solid var(--border-default);padding:8px 24px 24px 60px;display:grid;gap:24px}
+.jb-role{display:grid;gap:12px;padding-top:16px}
+.jb-role + .jb-role{border-top:1px solid var(--border-default)}
+.jb-role h3{font-size:20px;line-height:28px}
+.jb-stats{display:grid;gap:12px}
+@media(min-width:768px){.jb-stats{grid-template-columns:repeat(3,1fr)}}
+.jb-stat{background:var(--accent-tint);border-radius:8px;padding:12px 16px;font-size:14px;line-height:20px}
+.jb-stat b{display:block;font-size:24px;line-height:32px;font-weight:600;color:var(--accent-strong)}
+.jb-pjs{display:grid;gap:8px}
+.jb-pj{border:1px solid var(--border-default);border-radius:8px;background:var(--surface-page)}
+.jb-pj > summary{display:grid;grid-template-columns:16px 1fr;gap:2px 12px;align-items:center;padding:12px 16px;cursor:pointer;list-style:none}
+.jb-pj > summary:hover{background:var(--surface-subtle)}
+.jb-pj .jb-tri{border-block-width:5px;border-left-width:7px}
+.jb-pj__name{font-weight:500}
+.jb-pj__when{grid-column:2;font-size:14px;line-height:20px;color:var(--text-secondary)}
+.jb-pj__body{padding:0 16px 16px 44px;display:grid;gap:8px}
+@media(max-width:767px){.jb-co__body{padding-left:24px}.jb-co__years{grid-column:2;grid-row:auto;font-size:16px}}
+</style><section class="pb-band" aria-labelledby="t"><div class="pb-container" style="display:grid;gap:16px;max-width:1120px"><h1 id="t" class="pb-title">Career Journey</h1><div style="max-width:640px"><div class="pb-placeholder"><span class="pb-placeholder__label">Placeholder</span>Introduction on professional evolution pending approval.</div></div></div></section><div class="pb-container pb-section"><figure class="jb-chart" aria-labelledby="ov"><figcaption id="ov" class="pb-h3">Roles at a glance, 2011–2026</figcaption><ol class="jb-rows" role="list"><li class="jb-row"><span><b style="font-weight:500">Endava</b><br><span class="pb-meta">Agile Project Manager · 2021 – 2026</span></span><span class="jb-track" aria-hidden="true"><span class="jb-bar" style="left:65.3%;width:32.8%"></span></span></li><li class="jb-row"><span><b style="font-weight:500">TCS · Avianca Holdings</b><br><span class="pb-meta">Technical Project Manager · 2021</span></span><span class="jb-track" aria-hidden="true"><span class="jb-bar" style="left:62.5%;width:2.8%"></span></span></li><li class="jb-row"><span><b style="font-weight:500">TCS</b><br><span class="pb-meta">Project Lead · 2018 – 2021</span></span><span class="jb-track" aria-hidden="true"><span class="jb-bar" style="left:49.5%;width:13.0%"></span></span></li><li class="jb-row"><span><b style="font-weight:500">TCS · GlaxoSmithKline (GSK)</b><br><span class="pb-meta">e-Invoicing - Order to Cash (O2C) Stream Lead · 2017 – 2018</span></span><span class="jb-track" aria-hidden="true"><span class="jb-bar" style="left:40.6%;width:8.1%"></span></span></li><li class="jb-row"><span><b style="font-weight:500">Comverse / Mavenir</b><br><span class="pb-meta">Senior Project Lead · 2011 – 2016</span></span><span class="jb-track" aria-hidden="true"><span class="jb-bar" style="left:2.8%;width:34.4%"></span></span></li></ol><div class="jb-axis" aria-hidden="true"><span></span><span class="jb-ticks"><span>2011</span><span>2014</span><span>2017</span><span>2020</span><span>2023</span><span>2026</span></span></div></figure><h2 class="pb-h2" style="margin-top:64px">Roles by company</h2><p class="pb-meta" style="margin-top:8px">Open a company to see its roles, then open a project for its summary.</p><div class="jb-acc"><details class="jb-co" open><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-co__name">Endava</span><span class="jb-co__years">2021 – 2026</span><span class="jb-co__meta">1 role · 2 Project Stories</span></summary><div class="jb-co__body"><section class="jb-role" aria-labelledby="b-endava"><h3 id="b-endava">Agile Project Manager</h3><p class="pb-meta">Endava · June 2021 – September 2026</p><ul class="jb-stats" role="list"><li class="jb-stat"><b>5.0 → 8.7</b>Stakeholder satisfaction, through delivery transparency and predictability</li><li class="jb-stat"><b>&gt;30%</b>Project gross margin, FY22 and FY23</li><li class="jb-stat"><b>Top performer</b>Recognized by the client among Agile Project Managers/Scrum Masters</li></ul><p>Coordinating delivery activities for greenfield web and mobile platforms within cloud-native modernization initiatives (GCP), aligning cross-functional teams and managing dependencies, risks, and execution readiness across multiple technical workstreams.</p><h4 class="pb-label">Project Stories (2)</h4><ul class="jb-pjs" role="list"><li><details class="jb-pj" open><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">DCTX: Greenfield Web and Mobile Platform for Sports Media</span><span class="jb-pj__when">September 2025 – September 2026</span></summary><div class="jb-pj__body"><p>Led the web, mobile, back-end, data migration, and DevOps teams for a new sports media platform on GCP.</p><p><a href="#">Read the Project Story<span class="pb-sr">: DCTX</span></a></p></div></details></li><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">DFA Capital Markets: Cloud Integration and Process Refactoring</span><span class="jb-pj__when">August 2021 – September 2025</span></summary><div class="jb-pj__body"><p>Led Agile delivery of an API Gateway and the refactoring of approximately 60 business processes during a move to Azure.</p><p><a href="#">Read the Project Story<span class="pb-sr">: DFA Capital Markets</span></a></p></div></details></li></ul></section></div></details><details class="jb-co"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-co__name">TCS</span><span class="jb-co__years">2017 – 2021</span><span class="jb-co__meta">3 roles · 3 Project Stories</span></summary><div class="jb-co__body"><section class="jb-role" aria-labelledby="b-avianca"><h3 id="b-avianca">Technical Project Manager</h3><p class="pb-meta">TCS, on behalf of Avianca Holdings · January 2021 – June 2021</p><p>Contributed to creating the business case and Total Cost of Ownership (TCO) model in collaboration with Microsoft consultants to secure project funding.</p><h4 class="pb-label">Project Stories (1)</h4><ul class="jb-pjs" role="list"><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Avianca: Azure Data Warehouse Migration Definition</span><span class="jb-pj__when">January 2021 – June 2021</span></summary><div class="jb-pj__body"><p>Developed the business case, TCO model, and migration roadmap to move a data warehouse from on-premises Oracle to Azure.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Avianca</span></a></p></div></details></li></ul></section><section class="jb-role" aria-labelledby="b-tcs"><h3 id="b-tcs">Project Lead</h3><p class="pb-meta">TCS · December 2018 – January 2021</p><p>Coordinated distributed engineering teams across Colombia and India, overseeing delivery progress and cross-team collaboration.</p><h4 class="pb-label">Project Stories (1)</h4><ul class="jb-pjs" role="list"><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Tigo: SOX Big Data Automation Program</span><span class="jb-pj__when">December 2018 – October 2019</span></summary><div class="jb-pj__body"><p>Led delivery of a Big Data platform to automate approximately 25 SOX control processes, with teams in Colombia and India.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Tigo</span></a></p></div></details></li></ul></section><section class="jb-role" aria-labelledby="b-gsk"><h3 id="b-gsk">e-Invoicing - Order to Cash (O2C) Stream Lead</h3><p class="pb-meta">TCS, on behalf of GlaxoSmithKline (GSK) · July 2017 – October 2018</p><p>Led full-cycle e-Invoicing project, integrating SAP O2C (SD module) with various stakeholders</p><h4 class="pb-label">Project Stories (1)</h4><ul class="jb-pjs" role="list"><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">GSK: Order-to-Cash for an Andean SAP Migration</span><span class="jb-pj__when">July 2017 – October 2018</span></summary><div class="jb-pj__body"><p>Led the Order-to-Cash workstream, including e-invoicing integrations, across four countries in GSK’s SAP migration.</p><p><a href="#">Read the Project Story<span class="pb-sr">: GSK</span></a></p></div></details></li></ul></section></div></details><details class="jb-co"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-co__name">Comverse / Mavenir</span><span class="jb-co__years">2011 – 2016</span><span class="jb-co__meta">1 role · 5 Project Stories</span></summary><div class="jb-co__body"><section class="jb-role" aria-labelledby="b-comverse"><h3 id="b-comverse">Senior Project Lead</h3><p class="pb-meta">Comverse / Mavenir · June 2011 – December 2016</p><p>Led implementation and deployment of new VAS projects in Latin America and Caribbean. Coordinated activities for service platform implementation, ensuring on-time delivery and quality</p><h4 class="pb-label">Project Stories (5)</h4><ul class="jb-pjs" role="list"><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Entel Chile: Project Recovery and Customer Confidence</span><span class="jb-pj__when">January 2015 – June 2015</span></summary><div class="jb-pj__body"><p>Recovered a delayed project by rebuilding a credible delivery plan, then took the solution to production go-live.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Entel Chile</span></a></p></div></details></li><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Entel Peru: VAS Delivery for Market Expansion and 4G</span><span class="jb-pj__when">January 2014 – December 2014</span></summary><div class="jb-pj__body"><p>Led on-site implementation of value-added services for Entel’s entry into Peru and its new 4G network.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Entel Peru</span></a></p></div></details></li><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Claro Peru: VAS Platform Upgrade for 4G</span><span class="jb-pj__when">February 2013 – November 2013</span></summary><div class="jb-pj__body"><p>Coordinated the value-added services platform upgrade and its integration with Claro’s new 4G network.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Claro Peru</span></a></p></div></details></li><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">GT&amp;T Guyana: VAS Platform Implementation</span><span class="jb-pj__when">March 2012 – November 2012</span></summary><div class="jb-pj__body"><p>Led on-site implementation of a new value-added services platform, integrated with existing prepaid charging systems.</p><p><a href="#">Read the Project Story<span class="pb-sr">: GT&amp;T Guyana</span></a></p></div></details></li><li><details class="jb-pj"><summary><span class="jb-tri" aria-hidden="true"></span><span class="jb-pj__name">Digicel Jamaica: VAS Platform Relocation</span><span class="jb-pj__when">June 2011 – February 2012</span></summary><div class="jb-pj__body"><p>Led the on-site relocation of the value-added services platform to Jamaica after the Haiti earthquake.</p><p><a href="#">Read the Project Story<span class="pb-sr">: Digicel Jamaica</span></a></p></div></details></li></ul></section></div></details></div></div><section class="pb-container" style="padding-bottom:64px" aria-labelledby="ce"><div class="pb-closing"><h2 id="ce" class="pb-h3">Continue exploring</h2><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="pb-btn" href="#">See all Project Stories</a><a class="pb-btn pb-btn--outline" href="#">About: education and certifications</a><a class="pb-btn pb-btn--outline" href="#">Contact me</a></div></div></section></main></div>
+
+</body>
+</html>

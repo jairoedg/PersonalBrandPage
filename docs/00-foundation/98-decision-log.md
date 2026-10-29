@@ -303,6 +303,7 @@ Status
 Approved (2026-10-22)
 
 %%Updated 2026-10-22: timeline visual approved. The side-stripe rule on Career Journey is replaced by the connected timeline (site commit fd88153).%%
+%%Updated 2026-10-29: the timeline form is superseded by D-032 (span chart and company panels). Newest first, and projects shown inside the role they belong to, still apply.%%
 
 ---
 
