@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — AboutGray (D-033)</title>
+<!-- Design reference, not site code. Saved 2026-10-29 from the Design System artifact
+     "Jairo Diaz — Subpage Designs" (https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke),
+     component AboutGray. Where it differs from the decision log, the log governs.
+     The professional summary shown here is a draft, not approved for publication. -->
+<style>
+:root{--surface-page:#fafaf9;--surface-card:#ffffff;--surface-subtle:#f5f5f4;--surface-inverse:#1c1917;--surface-inverse-raised:#292524;--text-default:#1c1917;--text-secondary:#57534e;--text-numeral:#78716c;--text-on-inverse:#fafaf9;--text-on-inverse-muted:#d6d3d1;--action-primary:#1c1917;--action-hover:#44403c;--action-on-primary:#ffffff;--accent:#1d4ed8;--accent-strong:#1e40af;--accent-tint:#eff6ff;--accent-tint-strong:#dbeafe;--accent-border:#93c5fd;--accent-on-inverse:#93c5fd;--border-default:#e7e5e4;--border-strong:#78716c;--border-inverse:#44403c;--focus-ring:#1d4ed8;--warning-text:#92400e;--warning-surface:#fffbeb;--surface-gray:#e7e5e4;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--radius-card:12px;--radius-pill:999px;--elevation-raised:0 2px 6px rgba(15, 23, 42, 0.08);--elevation-floating:0 8px 24px rgba(15, 23, 42, 0.12);--font-sans:Inter,system-ui,sans-serif}
+body{margin:0}
+/* Shared page chrome for the subpage directions. Mirrors site/assets/css/base.css (monochrome, D-027). */
+
+.pb-page {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-default);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+}
+.pb-page *, .pb-page *::before, .pb-page *::after { box-sizing: border-box; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4, .pb-page p, .pb-page ul, .pb-page ol, .pb-page figure { margin: 0; }
+.pb-page h1, .pb-page h2, .pb-page h3, .pb-page h4 { font-weight: 400; }
+.pb-page ul[role="list"], .pb-page ol[role="list"] { list-style: none; padding: 0; }
+
+.pb-page a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.pb-page a:hover { text-decoration-thickness: 2px; }
+.pb-page a:focus-visible, .pb-page button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pb-container { max-width: 1120px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 768px) { .pb-container { padding-inline: 24px; } }
+
+.pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+.pb-header { background: var(--surface-card); border-bottom: 1px solid var(--border-default); }
+.pb-header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 16px; }
+.pb-header__name { font-weight: 600; color: var(--text-default) !important; text-decoration: none; }
+.pb-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; font-size: 14px; line-height: 20px; font-weight: 500; }
+.pb-nav a { color: var(--text-default); text-decoration: none; }
+.pb-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.pb-nav .pb-nav__cta { background: var(--action-primary); color: var(--action-on-primary); padding: 8px 16px; border-radius: var(--radius-pill); }
+
+/* Dark hero band (same family as the Projects band, D-028) */
+.pb-band { background: var(--surface-inverse); color: var(--text-on-inverse); padding-block: 40px 48px; }
+.pb-band a { color: var(--accent-on-inverse); }
+.pb-band a:focus-visible { outline-color: var(--accent-on-inverse); }
+.pb-band__muted { color: var(--text-on-inverse-muted); }
+@media (min-width: 1024px) { .pb-band { padding-block: 64px; } }
+
+.pb-title { font-size: 40px; line-height: 48px; letter-spacing: -0.02em; }
+@media (min-width: 1024px) { .pb-title { font-size: 48px; line-height: 56px; letter-spacing: -0.025em; } }
+.pb-h2 { font-size: 32px; line-height: 40px; letter-spacing: -0.015em; }
+.pb-h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.005em; }
+.pb-lead { font-size: 18px; line-height: 28px; }
+.pb-meta { font-size: 14px; line-height: 20px; color: var(--text-secondary); }
+.pb-label { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.005em; }
+
+.pb-section { padding-block: 48px; }
+@media (min-width: 1024px) { .pb-section { padding-block: 64px; } }
+
+/* Decorative heading icon (D-023): 24px grid, 1.75 stroke, aria-hidden */
+.pb-icon { width: 24px; height: 24px; flex: none; color: var(--accent); }
+
+/* Cards */
+.pb-card { background: var(--surface-card); border: 1px solid var(--border-default); border-radius: var(--radius-card); box-shadow: var(--elevation-raised); padding: 24px; }
+
+/* Pills and tags */
+.pb-pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: var(--radius-pill); font-size: 14px; line-height: 20px; font-weight: 500; background: var(--accent-tint); border: 1px solid var(--accent-border); color: var(--accent-strong); }
+.pb-tag { display: inline-flex; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid var(--border-strong); font-size: 14px; line-height: 20px; color: var(--text-default) !important; text-decoration: none; background: var(--surface-card); }
+.pb-tag:hover { background: var(--surface-subtle); }
+
+/* Buttons */
+.pb-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--radius-pill); font-weight: 500; font-size: 16px; line-height: 24px; text-decoration: none !important; background: var(--action-primary); color: var(--action-on-primary) !important; }
+.pb-btn:hover { background: var(--action-hover); }
+.pb-btn--outline { background: transparent; color: var(--text-default) !important; border: 1px solid var(--border-strong); }
+.pb-btn--outline:hover { background: var(--surface-subtle); }
+.pb-band .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-band .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+
+/* Placeholder: open content, never published as final (CLAUDE.md, open decisions) */
+.pb-placeholder { border: 1px dashed var(--warning-text); background: var(--warning-surface); color: var(--text-default); border-radius: 8px; padding: 12px 16px; font-size: 14px; line-height: 20px; }
+.pb-placeholder__label { display: block; font-weight: 600; color: var(--warning-text); margin-bottom: 2px; }
+.pb-band .pb-placeholder { color: var(--text-default); }
+
+/* Closing band: the existing "Continue exploring" links */
+.pb-closing { background: var(--surface-inverse); color: var(--text-on-inverse); border-radius: var(--radius-card); padding: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+.pb-closing .pb-btn { background: var(--surface-page); color: var(--text-default) !important; }
+.pb-closing .pb-btn--outline { background: transparent; color: var(--text-on-inverse) !important; border-color: var(--text-on-inverse-muted); }
+.pb-closing a:focus-visible { outline-color: var(--accent-on-inverse); }
+
+</style>
+</head>
+<body>
+<div class="pb-page"><header class="pb-header"><div class="pb-container pb-header__inner"><a class="pb-header__name" href="#">Jairo Enrique Diaz</a><nav aria-label="Primary"><ul class="pb-nav" role="list"><li><a href="#">Projects</a></li><li><a href="#">How I Can Help</a></li><li><a href="#">Leadership</a></li><li><a href="#">Career Journey</a></li><li><a href="#" aria-current="page">About</a></li><li><a class="pb-nav__cta" href="#">Contact</a></li></ul></nav></div></header><main><style>.pb-page h3,.pb-page h4{font-weight:600}.bio{display:grid;gap:8px;max-width:60ch}.bio-tag{justify-self:start;padding:2px 10px;border-radius:999px;font-size:12px;line-height:16px;font-weight:600;background:var(--warning-surface);color:var(--warning-text);border:1px dashed var(--warning-text)}.pb-band .bio p{color:var(--text-on-inverse-muted)}</style><style>
+.aa-hero{display:grid;gap:24px}
+@media(min-width:1024px){.aa-hero{grid-template-columns:1fr 1fr;align-items:start}}
+.aa-loc{display:flex;align-items:center;gap:8px;margin-top:12px}
+.aa-loc .pb-icon{color:var(--accent-on-inverse);width:20px;height:20px}
+.aa-certs{display:grid;gap:16px;margin-top:24px}
+@media(min-width:768px){.aa-certs{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.aa-certs{grid-template-columns:repeat(5,1fr)}}
+.aa-cert{display:grid;gap:4px;align-content:start}
+.aa-cert b{font-size:28px;line-height:36px;font-weight:600;color:var(--accent)}
+.aa-cert span{font-size:14px;line-height:20px}
+.aa-cert small{font-size:12px;line-height:16px;color:var(--text-secondary);font-family:var(--font-mono);margin-top:4px}
+.aa-two{display:grid;gap:48px}
+@media(min-width:1024px){.aa-two{grid-template-columns:5fr 7fr;gap:64px}}
+.aa-sh{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.aa-edu{position:relative;display:grid;gap:24px;padding-left:28px}
+.aa-edu::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--border-default)}
+.aa-edu li{position:relative;display:grid;gap:2px}
+.aa-edu li::before{content:"";position:absolute;left:-28px;top:4px;width:14px;height:14px;border:3px solid var(--accent);border-radius:50%;background:var(--surface-page)}
+.aa-yr{font-weight:600;color:var(--accent)}
+.aa-courses{display:grid;gap:12px}
+@media(min-width:768px){.aa-courses{grid-template-columns:1fr 1fr}}
+.aa-course{padding:16px 20px;display:grid;gap:4px}
+.aa-course h3{font-size:16px;line-height:24px}
+.aa-langs{display:grid;gap:16px}
+@media(min-width:768px){.aa-langs{grid-template-columns:repeat(3,1fr)}}
+.aa-lang{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px}
+.ab-meter{display:inline-flex;gap:4px}.ab-meter i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--accent)}.ab-meter i.on{background:var(--accent)}
+</style><style>
+.bb-hero{display:grid;gap:32px;padding-block:48px}
+@media(min-width:1024px){.bb-hero{grid-template-columns:7fr 4fr;gap:64px;align-items:center}}
+.bb-photo{border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--elevation-floating);max-width:360px;aspect-ratio:600/780;background:var(--surface-subtle)}
+.bb-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.bb-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.bb-grid{display:grid;gap:24px;padding-bottom:64px}
+@media(min-width:768px){.bb-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.bb-grid{grid-template-columns:repeat(12,1fr)}.bb-edu{grid-column:span 7}.bb-cert{grid-column:span 5;grid-row:span 2}.bb-lang{grid-column:span 7}.bb-co{grid-column:1/-1}}
+.bb-card{display:grid;gap:16px;align-content:start}
+.bb-card > header{display:flex;align-items:center;gap:12px}
+.bb-list{display:grid}
+.bb-list li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding-block:12px;border-top:1px solid var(--border-default)}
+.bb-list li:first-child{border-top:0;padding-top:0}
+.bb-list h3{font-size:16px;line-height:24px}
+.bb-list .yr{font-weight:600;color:var(--accent);grid-row:1/3;grid-column:2}
+.bb-cert .bb-list .yr{font-family:var(--font-mono);font-weight:400;font-size:12px;color:var(--text-secondary);grid-row:auto;grid-column:1}
+.bb-cert{background:var(--accent-tint);border-color:var(--accent-border)}
+.bb-cert h3 abbr{text-decoration:none}
+.bb-cols{display:grid;gap:0 32px}
+@media(min-width:768px){.bb-cols{grid-template-columns:1fr 1fr}}
+.bb-cols li:nth-child(2){border-top:0;padding-top:0}
+@media(max-width:767px){.bb-cols li:nth-child(2){border-top:1px solid var(--border-default);padding-top:12px}}
+.bb-langs{display:grid;gap:12px}
+@media(min-width:768px){.bb-langs{grid-template-columns:repeat(3,1fr)}}
+.bb-langs li{display:grid;gap:6px}
+.ab-meter{display:inline-flex;gap:4px}.ab-meter i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--accent)}.ab-meter i.on{background:var(--accent)}
+</style><style>
+.ah{padding-block:40px}
+@media(min-width:1024px){.ah{padding-block:56px}}
+.ah .pb-icon{color:inherit;width:20px;height:20px}
+.ah-bio .bio p{color:inherit}
+.pb-page .ah-loc{display:flex;align-items:center;gap:8px;margin-top:12px}
+</style><section class="ah" style="background:var(--surface-gray);color:var(--text-default)" aria-labelledby="t"><div class="pb-container aa-hero"><div><h1 id="t" class="pb-title">About</h1><p class="ah-loc pb-lead" style="color:var(--text-secondary)"><span style="color:var(--accent);display:inline-flex"><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>Based in Cali, Colombia.</p></div><div class="ah-bio" style="color:var(--text-default)"><div class="bio"><span class="bio-tag">Draft for approval</span><p class="pb-lead">I’m a Technical Project Manager with 15+ years leading software, cloud and data initiatives across telecommunications, capital markets, aeronautics, pharmaceuticals and media. I help organizations turn business ideas into technology that works, by connecting strategy, people and execution. My goal isn’t only to deliver on time, but to deliver solutions that solve real business problems and create measurable value.</p></div></div></div></section><div class="pb-container" style="padding-top:48px"><div class="bb-grid"><section class="pb-card bb-card bb-edu" aria-labelledby="ed"><header><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg><h2 id="ed" class="pb-h3">Education</h2></header><ul class="bb-list " role="list"><li><h3>MBA: Project Management</h3><span class="pb-meta">Universidad Arturo Prat, Chile</span><span class="yr">2017</span></li><li><h3>Master in Electronic Engineering: Telecommunications</h3><span class="pb-meta">Universidad de los Andes, Bogotá, DC</span><span class="yr">2008</span></li><li><h3>Electronic Engineer</h3><span class="pb-meta">Pontificia Universidad Javeriana, Colombia</span><span class="yr">1998</span></li></ul></section><section class="pb-card bb-card bb-cert" aria-labelledby="ct"><header><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14.5-1.5 7 4.5-2.5 4.5 2.5-1.5-7"/></svg><h2 id="ct" class="pb-h3">Certifications</h2></header><ul class="bb-list " role="list"><li><h3>PMI Agile Certified Practitioner <span class="pb-meta">(PMI-ACP)</span></h3><span class="yr">No. 3450231</span></li><li><h3>Project Management Professional <span class="pb-meta">(PMP)</span></h3><span class="yr">No. 1537295</span></li><li><h3>SAFe Agilist Foundation <span class="pb-meta">(SAFe)</span></h3><span class="yr">No. 94745562-8285</span></li><li><h3>ITIL Foundation v3 <span class="pb-meta">(ITIL)</span></h3><span class="yr">No. GR750287127JD</span></li><li><h3>Scrum Foundation Certificate <span class="pb-meta">(Scrum)</span></h3><span class="yr">No. 43312762</span></li></ul></section><section class="pb-card bb-card bb-lang" aria-labelledby="la"><header><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg><h2 id="la" class="pb-h3">Languages</h2></header><ul class="bb-langs" role="list"><li><b style="font-weight:600">Spanish</b><span class="pb-meta">Native</span><span class="ab-meter" aria-hidden="true"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i></span></li><li><b style="font-weight:600">English</b><span class="pb-meta">Advanced</span><span class="ab-meter" aria-hidden="true"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i></i></span></li><li><b style="font-weight:600">Portuguese</b><span class="pb-meta">Elementary</span><span class="ab-meter" aria-hidden="true"><i class=on></i><i class=on></i><i></i><i></i><i></i></span></li></ul></section><section class="pb-card bb-card bb-co" aria-labelledby="co"><header><svg class="pb-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5Z"/><path d="M4 19a2 2 0 0 1 2-2h14"/></svg><h2 id="co" class="pb-h3">Courses and professional development</h2></header><ul class="bb-list bb-cols" role="list"><li><h3>DevOps &amp; Cloud</h3><span class="pb-meta">MIT – Massachusetts Institute of Technology</span><span class="yr">2020</span></li><li><h3>AWS Machine Learning Foundations</h3><span class="pb-meta">Udacity</span><span class="yr">2021</span></li><li><h3>AWS Certified Cloud Practitioner</h3><span class="pb-meta">Udemy</span><span class="yr">2020</span></li><li><h3>Azure Spark Databricks &amp; Azure Synapse essential training</h3><span class="pb-meta">LinkedIn</span><span class="yr">2021</span></li><li><h3>Docker and Kubernetes: The complete Guide</h3><span class="pb-meta">Udemy</span><span class="yr">2020</span></li><li><h3>TOGAF Fundamentals: Enterprise Architectural Basics</h3><span class="pb-meta">Skillsoft</span><span class="yr">2017</span></li></ul></section></div></div><section class="pb-container" style="padding-bottom:64px" aria-labelledby="ce"><div class="pb-closing"><h2 id="ce" class="pb-h3">Continue exploring</h2><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="pb-btn" href="#">Career Journey</a><a class="pb-btn pb-btn--outline" href="#">See all Project Stories</a><a class="pb-btn pb-btn--outline" href="#">Contact me</a></div></div></section></main></div>
+
+</body>
+</html>
