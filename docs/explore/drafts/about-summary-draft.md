@@ -1,6 +1,6 @@
-# About: professional summary (draft)
+# About: professional summary
 
-**Draft, not approved.** For the right column of the About header (D-033). The site shows a placeholder until Jairo approves this wording.
+**Approved by Jairo, 2026-10-29.** For the right column of the About header (D-033); published on the site.
 
 Source: the AboutGray design in the Design System artifact "Jairo Diaz — Subpage Designs", 2026-10-29.
 
