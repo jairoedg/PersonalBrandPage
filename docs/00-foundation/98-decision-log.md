@@ -468,3 +468,5 @@ Reference: Design System artifact, component AboutGray. Where it differs from th
 Source: Jairo, 2026-10-29 (layout from the "AboutProfile" exploration; header color chosen from graphite, light gray and none). 
 
 Status: Approved (2026-10-29).
+
+%%Updated 2026-10-29: summary wording approved.%%
