@@ -380,6 +380,19 @@ def check_decisions(pages, r):
             r.check(first is not None and norm(first.text()) == summaries.get(key), journey.rel,
                     f'story item for "{key}" must show the approved card summary from the Projects page')
 
+    # D-033: four credential cards with their item counts, and every language level written out
+    # (the five-dot meter is decorative).
+    about = pages.get("about/index.html")
+    if r.check(about is not None, "about/index.html", "About page is missing"):
+        r.check(about.dom.find("section", cls="about-header") is not None, about.rel,
+                "About should open with the gray header band (D-033)")
+        counts = [len(list(card.find_all("li"))) for card in about.dom.find_all("section", cls="about-card")]
+        r.check(counts == [3, 5, 3, 6], about.rel,
+                f"expected Education 3, Certifications 5, Languages 3, Courses 6 (D-033), found {counts}")
+        levels = [norm(n.text()) for n in about.dom.find_all("span", cls="lang-list__level")]
+        r.check(levels == ["Native", "Advanced", "Elementary"], about.rel,
+                f"language levels must be written as text (D-033), found {levels}")
+
 
 def run_static(r):
     pages = {p.rel: p for p in (Page(f) for f in sorted(SITE.rglob("*.html")))}
