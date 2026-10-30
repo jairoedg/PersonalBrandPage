@@ -26,3 +26,25 @@
   font-display: swap;
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
 }
+
+/*
+ * EB Garamond (The EB Garamond Project Authors), self-hosted (D-036, amending D-019). Licensed
+ * under the SIL Open Font License 1.1; see ../fonts/OFL-EBGaramond.txt. From the Google Fonts
+ * repository (ofl/ebgaramond), fixed at weight 400 and subset to Latin. Regular and italic only.
+ */
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/EBGaramond-Italic.woff2") format("woff2");
+}
