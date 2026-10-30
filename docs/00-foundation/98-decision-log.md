@@ -504,3 +504,15 @@ Source: Jairo, 2026-10-29 (StoryChapters combined with the "story in 60 seconds"
 Status
 
 Approved (2026-10-29)
+
+---
+
+## D-036
+
+Home page layout (Jairo, 2026-10-29, option "HomeSignature", after Jairo's design reference). Home is a single hero, with no further sections. Amends D-014 (Home story previews), D-019 (typeface), D-022 (Home wording) and D-027 (hero buttons). On the left: a small letter-spaced label "PROJECT & DELIVERY MANAGER"; the name as the headline in EB Garamond over three lines, "Jairo / _Enrique_ / Diaz", with the middle word in italics; the positioning line "A trusted Delivery Leader for enterprise technology initiatives where business complexity, distributed teams, technical uncertainty and stakeholder management must work together successfully." (D-022 wording updated: the repeated name is removed), left-aligned, with no hyphenation; and two buttons, "Let's talk" (black, to Contact) and "Explore my projects" (outlined, to Projects). On the right: Jairo's new square corporate headshot, with the vision "Helping organizations transform business ideas into successful technology solutions by connecting strategy, people, and execution." as a quote card overlapping its lower left corner and extending past the photo's left edge, labeled "PROFESSIONAL VISION". Below the hero, centered: the three figures from D-028 (15+ years leading software and infrastructure delivery; 5 industries; 10+ projects, from on-site rollouts to cloud migrations). Then the site footer. On a laptop the page fits one screen. On mobile the photo and quote sit below the buttons. Removed from Home: the Project Story previews (they remain as Featured on Projects, D-028), the profile summary paragraphs (About carries the summary, D-033), "Explore more", and the "Get in touch" section; no CV link on Home (the CV lives on Contact, D-021). Typeface: EB Garamond (SIL OFL), regular and italic, self-hosted, used only for the Home name headline, the vision quote, the figures and the header site name on every page; Inter stays for everything else (amends D-019). Home stays monochrome (D-027). Reference: Design System artifact, component HomeSignature. Where it differs from this entry, this entry governs.
+
+Source: Jairo, 2026-10-29 (reference image; hero only; new headshot; figures approved; positioning line left-aligned).
+
+Status
+
+Approved (2026-10-29)
