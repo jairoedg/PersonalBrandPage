@@ -45,6 +45,9 @@
   --font-weight-h2: var(--font-weight-body);
   /* Emphasis that is not a heading: site name, current nav item, timeline years (D-024). */
   --font-weight-strong: 600;
+  /* EB Garamond, regular and italic only (D-036): the Home name, vision quote and figures, and the
+     header site name. Everything else stays Inter (D-019). */
+  --font-family-serif: "EB Garamond", Georgia, "Times New Roman", serif;
 
   --radius-pill: 999px;
   --radius-card: 12px;
@@ -200,9 +203,10 @@ main:focus {
 }
 
 .site-name {
-  font-size: var(--font-size-body-l);
-  line-height: var(--line-height-body-l);
-  font-weight: var(--font-weight-strong);
+  font-family: var(--font-family-serif);
+  font-size: 1.375rem; /* 22px (D-036) */
+  line-height: var(--line-height-h4);
+  font-weight: var(--font-weight-body); /* only regular is loaded; the current page shows as an underline */
   color: var(--color-text-default);
   text-decoration: none;
 }
@@ -236,10 +240,14 @@ main:focus {
 }
 
 /* Current page: weight and a thick underline, not color alone. */
-.nav-list a[aria-current="page"],
-.site-name[aria-current="page"] {
+.nav-list a[aria-current="page"] {
   color: var(--color-text-default);
   font-weight: var(--font-weight-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.site-name[aria-current="page"] {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
@@ -401,91 +409,181 @@ main:focus {
   max-width: 38rem;
 }
 
-/* Callout: a tinted panel, not a side stripe. */
-.vision {
-  max-width: 38rem;
-  padding: var(--space-4);
-  background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border-default); /* decorative */
+/* ---------- Home (D-036, "HomeSignature") ---------- */
+/* One hero, then the three D-028 figures. Text and buttons first; the headshot and the vision
+   quote follow on mobile and sit on the right from 1024px, where the quote card overlaps the
+   photo's lower left corner and sticks out past its left edge. */
+.signature-hero {
+  display: grid;
+  gap: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.signature-label {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1rem;
   font-weight: var(--font-weight-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--color-text-secondary);
 }
 
-.profile {
-  max-width: 38rem;
-  color: var(--color-text-secondary);
+/* The name in three lines; real spaces between the spans keep it "Jairo Enrique Diaz" when read. */
+.signature-name {
+  margin-top: var(--space-5);
+  font-family: var(--font-family-serif);
+  font-size: 4.5rem; /* 72px */
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
-/* ---------- Home hero (D-027) ---------- */
-/* Text and buttons, then the portrait: stacked on mobile, side by side from 1024px. */
-.hero__text > * + * {
+.signature-name > span {
+  display: block;
+}
+
+.signature-name__middle {
+  font-style: italic;
+  color: var(--color-text-secondary); /* stone-600, 7.3:1 on the page */
+}
+
+/* Left-aligned at every width, no hyphenation (Jairo, 2026-10-29). */
+.signature-lead {
+  max-width: 31rem;
   margin-top: var(--space-6);
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+  color: var(--color-text-secondary);
+  text-align: left;
+  hyphens: manual;
+  text-wrap: pretty;
 }
 
-/* Name and positioning read as one unit. */
-.hero__text > .lead {
-  margin-top: var(--space-4);
-}
-
-.hero__actions {
+.signature-actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-}
-
-.hero__photo {
-  max-width: 22rem;
   margin-top: var(--space-8);
 }
 
-.hero__photo img {
+.signature-portrait {
+  position: relative;
   width: 100%;
-  border-radius: var(--radius-card);
+  max-width: 28.75rem; /* 460px */
+}
+
+.signature-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
   background-color: var(--color-surface-subtle); /* shows while the photo loads */
 }
 
+/* Mobile: the card overlaps the photo's bottom edge, inset from both sides, never off screen. */
+.vision-card {
+  position: relative;
+  margin: calc(-1 * var(--space-8)) var(--space-4) 0;
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface-card);
+  border: 1px solid transparent; /* forced-colors edge; the shadow carries it otherwise */
+  border-radius: 2px;
+  box-shadow: var(--elevation-floating);
+}
+
+.vision-card blockquote {
+  margin: 0;
+  font-family: var(--font-family-serif);
+  font-style: italic;
+  font-size: 1.3125rem; /* 21px */
+  line-height: 1.75rem;
+}
+
+.vision-card figcaption {
+  margin-top: var(--space-3);
+  font-size: 0.6875rem; /* 11px; letter-spaced uppercase label, secondary to the quote */
+  line-height: 0.875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* A left-aligned column on phones (centred, the short "5 industries" row zig-zags); centred in one row from 768px. */
+.signature-figures {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3) var(--space-12);
+  padding: var(--space-6) 0 0;
+  border-top: 1px solid var(--color-border-default); /* decorative divider */
+  list-style: none;
+}
+
+.signature-figures li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.signature-figures strong {
+  font-family: var(--font-family-serif);
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem;
+  font-weight: var(--font-weight-body);
+  font-variant-numeric: lining-nums;
+}
+
+.signature-figures span {
+  max-width: 22ch;
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
 @media (min-width: 768px) {
-  .hero__text > .vision {
-    padding: var(--space-5) var(--space-6);
+  .signature-figures {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 @media (min-width: 1024px) {
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  /* The hero and figures fill the first screen below the header, centred vertically. */
+  .site-main--signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--space-10) var(--space-8);
+  }
+
+  .signature-hero {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
     align-items: center;
-    gap: var(--space-12);
+    gap: 7rem; /* 112px keeps the text and buttons at least 40px clear of the quote card */
   }
 
-  .hero h1 {
-    font-size: var(--font-size-display);
-    line-height: var(--line-height-display);
-    letter-spacing: var(--letter-spacing-display);
+  .signature-name {
+    font-size: 6rem; /* 96px */
+    line-height: 0.95;
   }
 
-  .hero__photo {
+  .signature-portrait {
     justify-self: end;
-    width: 100%;
-    max-width: 28rem;
-    margin-top: 0;
+    padding-bottom: var(--space-16); /* the card hangs lower, clear of the face (Jairo, 2026-10-29) */
   }
-}
 
-/* The profile starts a new group below the hero. */
-.intro > .profile {
-  margin-top: var(--space-12);
-}
+  .vision-card {
+    position: absolute;
+    left: -4.5rem; /* 72px past the photo's left edge */
+    bottom: 0;
+    max-width: 19rem; /* 304px */
+    margin: 0;
+    padding: var(--space-4) var(--space-5);
+  }
 
-/* One body line between profile paragraphs. */
-.intro .profile > * + * {
-  margin-top: var(--space-6);
-}
-
-/* More room after the intro before the first content section. */
-@media (min-width: 1024px) {
-  .intro + .section {
-    margin-top: var(--space-16);
+  .vision-card blockquote {
+    font-size: 1.1875rem; /* 19px */
+    line-height: 1.625rem;
   }
 }
 
@@ -497,64 +595,18 @@ main:focus {
   color: var(--color-warning-default);
 }
 
-/* ---------- Project Story cards ---------- */
-/* One column on mobile. --three: three from 1024px (Home previews). */
-.card-grid {
-  display: grid;
-  gap: var(--gap-list);
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: 1024px) {
-  .card-grid--three {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.story-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: var(--padding-card);
-  background-color: var(--color-surface-card);
-  border: 1px solid transparent; /* kept for forced-colors mode; the shadow carries the edge (D-026) */
-  border-radius: var(--radius-card);
-  box-shadow: var(--elevation-floating);
-}
-
-/* Rhythm: meta and role form one group under the title; the summary starts a new one. */
-.story-card > .story-card__meta {
-  margin-top: var(--space-3);
-}
-
-.story-card > .story-card__role {
-  margin-top: var(--space-1);
-}
-
-.story-card > .story-card__role + p {
-  margin-top: var(--space-3);
-}
-
+/* ---------- Card focus ---------- */
 /* The title link is the card's only control: ring the whole card instead of each wrapped title line. */
 /* Browsers without :has() keep the default link outline. */
 @supports selector(:has(*)) {
-  .story-card:has(:focus-visible),
   .project-card:has(:focus-visible) {
     outline: 3px solid var(--color-focus-visible);
     outline-offset: 2px;
   }
 
-  .story-card__title a:focus-visible,
   .project-card__title a:focus-visible {
     outline: none;
   }
-}
-
-.story-card__title {
-  font-size: var(--font-size-h4);
-  line-height: var(--line-height-h4);
-  letter-spacing: var(--letter-spacing-h4);
 }
 
 /* Decorative heading icons: outlined, inherit the heading color, never carry meaning alone (design-language.md). */
@@ -568,28 +620,10 @@ main:focus {
   color: var(--color-accent);
 }
 
-/* Lighter title underline; the link is still underlined, not identified by color alone. */
-.story-card__title a {
-  text-decoration-thickness: 1px;
-}
-
-.story-card__meta,
-.story-card__role {
+.story-card__meta {
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
   color: var(--color-text-secondary);
-}
-
-.story-card__role {
-  font-weight: var(--font-weight-label);
-}
-
-/* The bold "Outcome:" label marks the line; no color cue. */
-.story-card__outcome {
-  margin-top: auto;
-  padding-top: var(--space-3);
-  font-size: var(--font-size-body-s);
-  line-height: var(--line-height-body-s);
 }
 
 /* ---------- Dark page band (Projects hero, D-028) ---------- */
