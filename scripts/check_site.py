@@ -37,7 +37,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
-BLUEPRINT = ROOT / "docs" / "00-foundation" / "01-personal-brand-blueprint.md"
 
 TITLE_SUFFIX = " — Jairo Enrique Diaz"
 NAV_LINKS = ["Projects", "How I Can Help", "Leadership", "Career Journey", "About", "Contact"]
@@ -57,6 +56,16 @@ CHAPTER_KEYS = ["situation", "action", "outcome", "lessons"]
 STORY_WORDS = {"dctx-media": 2118, "dfa-capital-markets": 1516, "avianca-data-warehouse": 1445,
                "tigo-sox-big-data": 1826, "gsk-order-to-cash": 1452, "entel-chile": 1316, "entel-peru": 1187,
                "claro-peru": 850, "gtt-guyana": 144, "digicel-jamaica": 845}
+# D-036 Home wording (D-022 as updated 2026-10-29) and the D-028 figures it repeats.
+HOME_POSITIONING = ("A trusted Delivery Leader for enterprise technology initiatives where business complexity, "
+                    "distributed teams, technical uncertainty and stakeholder management must work together successfully.")
+HOME_VISION = ("Helping organizations transform business ideas into successful technology solutions by "
+               "connecting strategy, people, and execution.")
+KEY_FIGURES = ("15+ years leading software and infrastructure delivery", "5 industries",
+               "10+ projects, from on-site rollouts to cloud migrations")
+# Self-hosted fonts only (D-019, D-036): no font service anywhere in site/.
+FONT_SERVICES = re.compile(r"fonts\.(googleapis|gstatic)\.com|use\.typekit\.net|fonts\.bunny\.net|fast\.fonts\.net|"
+                           r"@import\s+url\(\s*['\"]?https?:", re.I)
 CV_FILE = "CV_JairoDiaz%20-%20Project%20Manager.pdf"
 # --strict (deploy): placeholder markers fail the run instead of warning (D-017).
 STRICT = False
@@ -291,27 +300,39 @@ def check_decisions(pages, r):
     home = pages.get("index.html")
     projects = pages.get("projects/index.html")
     if r.check(home is not None, "index.html", "Home page is missing"):
-        body = norm(home.dom.find("body").text())
-        r.check("approximately 60" in body and "about 60" not in body, "index.html",
-                'DFA card should say "approximately 60", not "about 60"')
-        lead = home.dom.find("p", cls="lead")
-        if BLUEPRINT.exists():
-            line = next((l.strip() for l in BLUEPRINT.read_text(encoding="utf-8").splitlines()
-                         if l.startswith("Jairo positions himself")), None)
-            r.check(line is not None and lead is not None and norm(lead.text()) == norm(line), "index.html",
-                    "positioning must match the blueprint sentence word for word")
-        else:
-            r.check(False, "index.html", f"cannot verify positioning: {BLUEPRINT} not found", warn=True)
-        previews = list(home.dom.find_all("article", cls="story-card"))
-        r.check(len(previews) == 3, "index.html", f"expected 3 Home preview cards, found {len(previews)}")
+        # D-036 "HomeSignature": one hero (label, name, positioning, two buttons, headshot with the
+        # vision quote), then the three D-028 figures. No story previews, profile or "Explore more".
+        main = home.dom.find("main")
+        body = norm(main.text()) if main else ""
+        h1s = list(home.dom.find_all("h1"))
+        r.check(len(h1s) == 1 and norm(h1s[0].text()) == "Jairo Enrique Diaz", "index.html",
+                'Home needs exactly one <h1>, reading "Jairo Enrique Diaz" (D-036)')
+        lead = home.dom.find("p", cls="signature-lead")
+        r.check(lead is not None and norm(lead.text()) == HOME_POSITIONING, "index.html",
+                "positioning line must match the D-036 wording word for word")
+        actions = home.dom.find("p", cls="signature-actions")
+        hrefs = [a.attrs.get("href") for a in actions.find_all("a")] if actions else []
+        r.check(hrefs == ["contact/", "projects/"], "index.html",
+                f"Home hero needs exactly two links, Contact then Projects (D-036), found {hrefs}")
+        quote = home.dom.find("blockquote")
+        r.check(quote is not None and norm(quote.text()).strip("“”\"") == HOME_VISION, "index.html",
+                "the vision quote must match the approved wording (D-036)")
+        for kpi in KEY_FIGURES:
+            r.check(kpi in body, "index.html", f'missing key figure "{kpi}" (D-036)')
+        r.check(home.dom.find(cls="story-card") is None and "Explore more" not in body, "index.html",
+                'Home has no story previews or "Explore more" (D-036)')
+        r.check(CV_FILE not in home.source, "index.html",
+                "no CV link on Home; the CV lives on Contact (D-036)")
+    for f in sorted(SITE.rglob("*")):
+        if f.suffix in (".html", ".css", ".js") and FONT_SERVICES.search(f.read_text(encoding="utf-8")):
+            r.check(False, str(f.relative_to(SITE)), "third-party font request; fonts are self-hosted (D-019, D-036)")
 
     if not r.check(projects is not None, "projects/index.html", "Projects page is missing"):
         return
     # D-028 layout; card anatomy per D-014 (amended 2026-10-24): sector pill and tags, year,
     # linked headline, "Client:" line, company and role, one-sentence summary. No Result on cards.
     body = norm(projects.dom.find("body").text())
-    for kpi in ("15+ years leading software and infrastructure delivery", "5 industries",
-                "10+ projects, from on-site rollouts to cloud migrations"):
+    for kpi in KEY_FIGURES:
         r.check(kpi in body, "projects/index.html", f'missing key figure "{kpi}" (D-028)')
     r.check("about 60" not in body and "about 25" not in body, "projects/index.html",
             'card summaries should say "approximately", as in the sources (D-028)')
