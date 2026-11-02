@@ -22,6 +22,24 @@
         ],
         "createdAt": "2026-10-28T02:43:59.143Z",
         "reason": "Claude, measured: page-band text is inset by .container padding (16px sides at 320px, 96px at 1280px; 40-64px top/bottom); the flush child is the full-width container"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-10-30T02:27:06.000Z",
+        "reason": "Jairo, D-036: the Home name in EB Garamond with \"Enrique\" in italics is his decision (HomeSignature)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-11-02T00:00:00.000Z",
+        "reason": "Jairo, D-036: the small uppercase label \"Project & Delivery Manager\" above the Home name is his approved design (HomeSignature); Home is closed"
       }
     ]
   }
