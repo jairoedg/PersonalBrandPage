@@ -326,6 +326,7 @@ Status
 Approved (2026-10-22)
 
 %%Updated 2026-10-22: one-open-at-a-time expandable sections approved, revoking the visible-sections rule in D-020. Short always-visible summary added above the sections. First section open on load; print expands all sections (answered by Jairo, 2026-10-22). Only the on-screen "expand all" control remains undecided.%%
+%%“Summaries approved by Jairo, 2026-10-31 to 2026-11-02%%
 
 ---
 
