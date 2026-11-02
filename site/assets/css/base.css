@@ -684,6 +684,11 @@ main:focus {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
+
+  /* Leadership: lift the philosophy so its first line starts level with the title. */
+  .page-band__split .page-band__body {
+    margin-top: calc(-1 * (var(--line-height-display) + var(--space-8)));
+  }
 }
 
 /* Key figures: three panels; the large value carries the emphasis. */
