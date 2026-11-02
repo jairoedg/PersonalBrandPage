@@ -1479,6 +1479,16 @@ main:focus {
   line-height: var(--line-height-body-s);
 }
 
+.ledger__evidence {
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+}
+
+.ledger__stories {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
 @media (min-width: 768px) {
   .ledger__row {
     grid-template-columns: 6rem minmax(0, 1fr) 17.5rem;
