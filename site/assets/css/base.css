@@ -1485,6 +1485,7 @@ main:focus {
 }
 
 .ledger__evidence {
+  max-width: 65ch;
   font-size: var(--font-size-body-s);
   line-height: var(--line-height-body-s);
 }
@@ -1496,7 +1497,8 @@ main:focus {
 
 @media (min-width: 768px) {
   .ledger__row {
-    grid-template-columns: 6rem minmax(0, 1fr) 17.5rem;
+    /* The evidence column is the wider one, so the paragraph reads in a few long lines. */
+    grid-template-columns: 6rem minmax(0, 1fr) minmax(0, 1.4fr);
     align-items: start;
   }
 }
