@@ -521,4 +521,10 @@ Source: Jairo, 2026-10-29 (reference image; hero only; new headshot; figures app
 
 Status
 
-Approved (2026-10-29)
+approved and closed (2026-11-02). Jairo approved the Home design and the Home text in full. Home is closed. Do not change the layout, copy, or positioning without a new decision.
+
+%% - The small uppercase label "Project & Delivery Manager" above the name is part of the approved design. It is recorded as an Impeccable exception.
+▎ - The italic "Enrique" in the EB Garamond name is part of the approved design (recorded as an Impeccable exception, D-036).
+▎ - The header site name is regular weight, with the current page shown as an underline on Home.
+▎ - The three figures sit centered below the hero. On mobile, the photo and the quote card come after the buttons.
+%%
