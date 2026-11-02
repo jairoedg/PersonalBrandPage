@@ -626,6 +626,12 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
+.story-summary {
+  max-width: 60ch;
+  font-size: var(--font-size-body-l);
+  line-height: var(--line-height-body-l);
+}
+
 /* ---------- Dark page band (Projects hero, D-028) ---------- */
 .page-band {
   padding-block: var(--space-10) var(--space-12);
