@@ -414,9 +414,15 @@ Reference: Design System artifact "Jairo Diaz — Subpage Designs", component Le
 
 Source: Jairo, comment on the Design System artifact, 2026-10-29 ("I select this design for leadership (leadershipLedger). No changes needed.").
 
-Status
+▎ Status (2026-11-03): Evidence and "How I lead" are approved and built. Principle 01 evidence is in place (with "instead of making them myself" removed, approved by Jairo). Principles 02 to 07 have approved evidence and story labels.
 
 Approved (2026-10-29)
+
+ %%Build notes, 2026-11-03:
+- From 1024px, the title sits left and the philosophy starts level with it on the right. The quote stays under the title.
+ - The evidence column is wider than the title column (about 1.4 to 1): from 768px, the evidence reads in a few long lines, capped at 65 characters per line. Page margins unchanged.
+  - "How I lead" (option C2, Jairo, 2026-11-03): four short steps (Analyze, Communicate, Solve together, Learn) in a dark band, in four columns from 1024px, two from 768px, one below. "Continue exploring" stays a separate band below it, 64px apart on desktop and 40px on mobile. This amends D-030 for the "How I lead" section only.
+ - Checked by Jairo on desktop, iPad, and iPhone (2026-11-03).%%
 
 ---
 
