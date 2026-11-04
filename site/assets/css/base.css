@@ -1960,11 +1960,12 @@ details[open] > summary > .disclosure-triangle {
 }
 
 /* ---------- About: AboutGray (D-033) ---------- */
-/* A light gray header on About. On stone-200,
-   text-default is 13.9:1, text-secondary 6.1:1 and the blue-700 pin 5.3:1. */
+/* A dark grey header on About (stone-800, 2026-11-04): light text and a light blue pin.
+   Title and summary (stone-50) 14.5:1, location (stone-300) 10.2:1, pin (blue-300) 8.4:1. */
 .about-header {
   padding-block: var(--space-10);
-  background-color: var(--color-surface-header-gray);
+  background-color: var(--color-surface-inverse-raised);
+  color: var(--color-text-on-inverse);
 }
 
 .about-header__inner {
@@ -1979,14 +1980,14 @@ details[open] > summary > .disclosure-triangle {
   margin-top: var(--space-3);
   font-size: var(--font-size-body-l);
   line-height: var(--line-height-body-l);
-  color: var(--color-text-secondary);
+  color: var(--color-text-on-inverse-muted);
 }
 
 .about-header__pin {
   flex: none;
   width: 1.25rem;
   height: 1.25rem;
-  color: var(--color-accent);
+  color: var(--color-accent-on-inverse);
 }
 
 .about-header__summary {
