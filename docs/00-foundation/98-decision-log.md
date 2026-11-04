@@ -408,13 +408,13 @@ Approved (2026-10-28)
 
 Leadership page layout (Jairo, 2026-10-29, option "LeadershipLedger", no changes). A dark band, in the same style as the Projects hero (D-028), holds the title "Leadership", the lead line "Projects succeed because people succeed.", and the leadership philosophy paragraphs. Below the band, the seven leadership principles form a numbered list: a large decorative numeral (01 to 07), the principle as a heading, and an evidence slot. The evidence slot sits to the right of the principle from 768px and below it on smaller screens. Then come "How I lead" and "Continue exploring".
 
-The principle wording and the philosophy text are unchanged. The evidence slots and "How I lead" stay labeled placeholders until Jairo matches each principle to Project Stories (open decision: Leadership principles). Numerals are decorative; the list itself carries the order. Heading weights follow D-027 (H1 and H2 at 400; H3 and smaller at 600). The page uses the blue accent allowed by the D-027 amendment.
+The principle wording and the philosophy text are unchanged.  Numerals are decorative; the list itself carries the order. Heading weights follow D-027 (H1 and H2 at 400; H3 and smaller at 600). The page uses the blue accent allowed by the D-027 amendment.
 
 Reference: Design System artifact "Jairo Diaz — Subpage Designs", component LeadershipLedger ([Jairo Diaz — Subpage Designs](https://claude.ai/artifact/AiTJdhwH6v1YXAJVmYN6Ke)). Where the reference differs from this entry, this entry governs.
 
 Source: Jairo, comment on the Design System artifact, 2026-10-29 ("I select this design for leadership (leadershipLedger). No changes needed.").
 
-▎ Status (2026-11-03): Evidence and "How I lead" are approved and built. Principle 01 evidence is in place (with "instead of making them myself" removed, approved by Jairo). Principles 02 to 07 have approved evidence and story labels.
+Status (2026-11-03): Evidence and "How I lead" are approved and built. Principle 01 evidence is in place (with "instead of making them myself" removed, approved by Jairo). Principles 02 to 07 have approved evidence and story labels.
 
 Approved (2026-10-29)
 
