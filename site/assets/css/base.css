@@ -54,6 +54,7 @@
   --radius-pill: 999px;
   --radius-card: 12px;
   --radius-band: 16px; /* dark bands on Leadership (C2, 2026-11-03) */
+  --size-chart-bar-phone: 0.875rem; /* 14px: Career Journey span-chart bar below 768px */
 
   /* "How I lead" step sizes (C2): no matching token exists in tokens.css yet. */
   --font-size-step: 1.375rem;       /* 22px */
@@ -1628,6 +1629,8 @@ main:focus {
    year ticks are decorative (aria-hidden). Every bar uses the one accent; color encodes nothing.
    Bar positions come from the role dates on a 2011–2026 axis (16 years, one gridline per year). */
 .span-chart {
+  display: flex;
+  flex-direction: column;
   padding: var(--space-6);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-card);
@@ -1643,7 +1646,8 @@ main:focus {
 
 .span-chart__rows {
   display: grid;
-  gap: var(--space-3);
+  order: 2;
+  gap: var(--space-6);
   margin-top: var(--space-4);
   padding: 0;
   list-style: none;
@@ -1670,29 +1674,37 @@ main:focus {
   color: var(--color-text-secondary);
 }
 
+/* Below 768px: no gridlines, and the track is exactly as high as the bar. */
 .span-chart__track {
   position: relative;
-  height: 1.75rem;
-  border-radius: var(--space-1);
-  /* One 1px gridline at the start of each year: a single-line gradient tiled 16 times. */
-  background-image: linear-gradient(to right, var(--color-border-default) 1px, transparent 1px);
-  background-size: calc(100% / 16) 100%;
+  height: var(--size-chart-bar-phone);
 }
 
 .span-chart__bar {
   position: absolute;
-  top: var(--space-1);
-  bottom: var(--space-1);
+  top: 0;
+  bottom: 0;
   left: var(--start);
   width: var(--span);
-  min-width: 0.75rem;
+  min-width: var(--size-chart-bar-phone);
   border-radius: var(--radius-pill);
   background-color: var(--color-accent);
 }
 
+/* Axis sits between the title and the first row, with only the two end years shown. */
 .span-chart__axis {
   display: grid;
+  order: 1;
   margin-top: var(--space-2);
+}
+
+.span-chart__ticks span:nth-child(n+2):nth-child(-n+5) {
+  display: none;
+}
+
+/* Title dates stay on one line at every width. */
+.nowrap {
+  white-space: nowrap;
 }
 
 .span-chart__ticks {
@@ -1712,6 +1724,37 @@ main:focus {
 }
 
 @media (min-width: 768px) {
+  .span-chart {
+    display: block;
+  }
+
+  .span-chart__rows {
+    order: 0;
+    gap: var(--space-3);
+  }
+
+  .span-chart__axis {
+    order: 0;
+  }
+
+  /* Gridlines (one per year) come back from 768px: a 1px line tiled 16 times. */
+  .span-chart__track {
+    height: 1.75rem;
+    border-radius: var(--space-1);
+    background-image: linear-gradient(to right, var(--color-border-default) 1px, transparent 1px);
+    background-size: calc(100% / 16) 100%;
+  }
+
+  .span-chart__bar {
+    top: var(--space-1);
+    bottom: var(--space-1);
+    min-width: 0.75rem;
+  }
+
+  .span-chart__ticks span:nth-child(n+2):nth-child(-n+5) {
+    display: block;
+  }
+
   .span-chart__row,
   .span-chart__axis {
     grid-template-columns: 16rem minmax(0, 1fr);
