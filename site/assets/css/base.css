@@ -2124,6 +2124,14 @@ details[open] > summary > .disclosure-triangle {
   color: var(--color-accent);
 }
 
+/* Line under the courses list that points to the public credential profiles. */
+.about-card__more {
+  margin-top: var(--space-4);
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body-s);
+  color: var(--color-text-secondary);
+}
+
 .lang-list {
   display: grid;
   gap: var(--space-4);

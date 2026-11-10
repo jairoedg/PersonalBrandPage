@@ -475,8 +475,8 @@ def check_decisions(pages, r):
         r.check(about.dom.find("section", cls="about-header") is not None, about.rel,
                 "About should open with the gray header band (D-033)")
         counts = [len(list(card.find_all("li"))) for card in about.dom.find_all("section", cls="about-card")]
-        r.check(counts == [3, 5, 3, 6], about.rel,
-                f"expected Education 3, Certifications 5, Languages 3, Courses 6 (D-033), found {counts}")
+        r.check(counts == [3, 5, 3, 8], about.rel,
+                f"expected Education 3, Certifications 5, Languages 3, Courses 8 (D-033, amended 2026-11-10), found {counts}")
         levels = [norm(n.text()) for n in about.dom.find_all("span", cls="lang-list__level")]
         r.check(levels == ["Native", "Advanced", "Elementary"], about.rel,
                 f"language levels must be written as text (D-033), found {levels}")
