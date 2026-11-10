@@ -1737,12 +1737,11 @@ main:focus {
     order: 0;
   }
 
-  /* Gridlines (one per year) come back from 768px: a 1px line tiled 16 times. */
+  /* No gridlines on desktop either (Jairo, 2026-11-10): only the bars and the axis years. */
   .span-chart__track {
     height: 1.75rem;
     border-radius: var(--space-1);
-    background-image: linear-gradient(to right, var(--color-border-default) 1px, transparent 1px);
-    background-size: calc(100% / 16) 100%;
+    background-image: none;
   }
 
   .span-chart__bar {
