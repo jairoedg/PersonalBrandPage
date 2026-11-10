@@ -261,6 +261,8 @@ Status
 
 Approved (2026-10-20)
 
+%%Updated 2026-11-09:  the CV download was replaced with the updated version (site commit 064d780).%%
+
 ---
 
 ## D-022
@@ -275,6 +277,7 @@ Approved (2026-10-20)
 
 %%Updated 2026-10-20: closes Q-07. Also updated in the PRD, HLD, boundary map, design sketch, and wireframes (open items closed, with comments in each file). CLAUDE.md in the project repo updated to match.%%
 %%Updated 2026-10-24: years of experience is 15+ years as a Project Manager (Jairo's correction). The profile paragraph and the CV source still say "10+ years" and must be updated to match: the Home profile text (site) by code, and the CV source by Jairo in Obsidian.%%
+%%Updated 2026-11-09: the CV source now says 15+ years. The Home profile text is updated by code.%%
 
 ---
 
@@ -353,6 +356,7 @@ Headings use Inter. H1 and H2 use regular weight (400); H3 and smaller headings 
 Home has a two-column hero on desktop: name, positioning, vision, and two buttons on the left; Jairo's portrait on the right. On mobile the photo sits below the buttons. Hero buttons: "Let's talk" (black, to Contact) and "Download CV" (outlined, the D-021 file). The primary navigation keeps the link text "Contact" and shows it as a black pill. The footer keeps "Contact". All approved Home wording (D-022) is unchanged. The monochrome palette applies to Home.
 
 Amended 2026-10-28 (Jairo in chat): the other pages may use color. Each page keeps the monochrome base, and adds one accent from the design-language blue scale: blue-700 for text, links, and focus, and blue-50 or blue-100 for tinted surfaces. Sector labels on Project cards keep their blue colors. Other palette hues may be used only where they carry meaning, such as a category or a status, and that meaning is always also written as text, so color is never the only cue. Text contrast meets WCAG 2.1 AA on every surface. Heading weight (400), the coal-black action color for buttons, and the placeholder and warning colors are unchanged.
+Note: (2026-11-04): The About header is a dark band, as an exception to the light-surface base. It is the only page header with a dark band that was previously light (see D-033).
 
 Source: Jairo in chat, 2026-10-23 (reference images: devin.ai and two other examples; layout only, no content or photos from them).
 
@@ -364,6 +368,7 @@ Approved (2026-10-23)
 %%Updated 2026-10-24: the Projects page colors are still open. Jairo will compare a monochrome option with the blue Option B using Artifacts. D-027 governs the rest of the site until he decides.%%
 %%Amended 2026-10-28: Jairo decided to allow color on pages other than Home. Home stays monochrome. The Projects page may use the blue accent, pending the Artifacts comparison.%%
 %%Updated 2026-10-28: the Projects page colors are decided. Projects follows the amended rule: monochrome base with the blue accent, like every page except Home. This closes the 2026-10-24 note. Heading weight clarified: H1 and H2 at 400, H3 and smaller at 600, as built.%%
+%%The Projects page uses the blue accent of Option B, as Jairo chose on 2026-10-28.%%
 
 ---
 
@@ -462,6 +467,7 @@ Status
 Approved (2026-10-29)
 
 %%Updated 2026-10-29: Career Journey layout recorded. Supersedes the timeline form in D-024.%%
+%%Amended 2026-11-09 :(Jairo, option A): the gray gridlines are removed. The chart shows only the blue bars. On phones, two year labels (2011 and 2026) sit above the first row, and the written dates carry the information.%%
 
 ---
 
@@ -476,7 +482,10 @@ Source: Jairo, 2026-10-29 (layout from the "AboutProfile" exploration; header co
 
 Status: Approved (2026-10-29).
 
+Amended 2026-11-04 (Jairo): The About header is a dark grey band, not the light grey band (stone-200) set in this decision. The band uses stone-800 (#292524) with light text (stone-50, about 14.5:1 contrast), a stone-300 location line (about 10.2:1), and a blue-300 pin (about 8.4:1). The title, summary, and card grid below the band are unchanged. This amends D-033 for the About header only, and it applies the dark-band look of D-028 and D-030 to About. Other pages are unchanged.
+
 %%Updated 2026-10-29: summary wording approved.%%
+%%Amended 2026-11-10 (Jairo): the “Courses and professional development” card lists eight entries, newest first: AI leadership (OpenAI, 2026); Practical Application of Gen AI for Project Managers and Data Landscape of GenAI for Project Managers (PMI, 2025); Prompt Design in Vertex AI and Explore Generative AI with the Vertex AI Gemini API (Google Cloud, 2024); Generative AI Overview for Project Managers (PMI, 2023); AWS Partner: Sales Accredited (AWS, 2023); DevOps & Cloud (MIT, 2020). A line under the list links to Jairo’s public Credly and Credential.net profiles. This replaces “course content is unchanged” for this card only.%%
 
 ---
 
