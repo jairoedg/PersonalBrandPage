@@ -542,3 +542,17 @@ approved and closed (2026-11-02). Jairo approved the Home design and the Home te
 ▎ - The header site name is regular weight, with the current page shown as an underline on Home.
 ▎ - The three figures sit centered below the hero. On mobile, the photo and the quote card come after the buttons.
 %%
+
+---
+## D-037
+
+Mobile navigation (Jairo, 2026-11-13, option B). Below 768px the header is a single row: the site name, the black Contact pill, and a Menu button. The button opens a panel under the header with the other five pages (Projects, How I Can Help, Leadership, Career Journey, About). The button reads "Close" while the panel is open, and Escape closes it. Below 360px the Contact pill moves into the panel. At 768px and above the header is unchanged. Without JavaScript the header is unchanged at every width. The panel has no animation, because none is approved. Amends D-027 (primary navigation).
+
+Reference: design canvas "Mobile Menu Options", option B (menu closed and open).
+
+Source: Jairo in chat, 2026-11-13.
+
+Status
+
+Approved (2026-11-13). Build by Code completed.
+
