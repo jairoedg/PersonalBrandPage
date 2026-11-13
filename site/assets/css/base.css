@@ -29,6 +29,7 @@
   --color-action-hover: var(--stone-700);
   --color-accent: var(--blue-700);
   --color-border-default: var(--stone-200);
+  --color-border-strong: var(--stone-500); /* outline of the mobile Menu button, 4.8:1 on white (non-text contrast) */
   --color-focus-visible: var(--blue-700);
   --color-text-numeral: var(--stone-500); /* large decorative numerals only, never body text */
   --color-surface-header-gray: var(--stone-200); /* About header band (D-033) */
@@ -52,6 +53,7 @@
   --font-family-serif: "EB Garamond", Georgia, "Times New Roman", serif;
 
   --radius-pill: 999px;
+  --size-header-mobile: 3.75rem; /* 60px: height of the one-row mobile header */
   --radius-card: 12px;
   --radius-band: 16px; /* dark bands on Leadership (C2, 2026-11-03) */
   --size-chart-bar-phone: 0.875rem; /* 14px: Career Journey span-chart bar below 768px */
@@ -276,6 +278,159 @@ main:focus {
 /* On the Contact page the pill keeps its colors; the thick underline marks the current page. */
 .nav-list a.nav-cta[aria-current="page"] {
   color: var(--color-action-on-primary);
+}
+
+/* ---------- Mobile header with a Menu button (below 768px) ----------
+   Everything here is gated by .has-menu, which nav-menu.js adds. Without JavaScript the header
+   stays as above at every width. The extra Contact link and the button stay out of sight
+   everywhere else, so wide screens look as before. */
+.nav-cta--header,
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .site-header.has-menu .site-header__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--size-header-mobile);
+    padding-block: var(--space-2);
+  }
+
+  .site-header.has-menu nav {
+    display: contents; /* the site name, Contact, Menu and the panel become items of one row */
+  }
+
+  .site-header.has-menu .site-name {
+    margin-right: auto;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem;
+  }
+
+  .site-header.has-menu .nav-cta--header {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--space-11); /* 44px touch target */
+    padding: 0 var(--space-4);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-action-primary);
+    color: var(--color-action-on-primary);
+    font-size: var(--font-size-label);
+    line-height: var(--line-height-label);
+    font-weight: var(--font-weight-label);
+    text-decoration: none;
+  }
+
+  .site-header.has-menu .nav-cta--header:hover {
+    background-color: var(--color-action-hover);
+  }
+
+  .site-header.has-menu .nav-cta--header[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .site-header.has-menu .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: var(--space-11);
+    padding: 0 14px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface-card);
+    color: var(--color-text-default);
+    font: inherit;
+    font-size: var(--font-size-label);
+    line-height: var(--line-height-label);
+    font-weight: var(--font-weight-label);
+    cursor: pointer;
+  }
+
+  .site-header.has-menu .nav-toggle[aria-expanded="true"] {
+    border-color: var(--color-action-primary);
+  }
+
+  .site-header.has-menu .nav-toggle__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: none;
+  }
+
+  /* The panel: a block under the row, full width, pushing the page down. */
+  .site-header.has-menu .nav-list {
+    display: none;
+    flex: 0 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    order: 3;
+    width: calc(100% + 2 * var(--space-4)); /* reaches the screen edges, so the hairline spans the page */
+    margin-inline: calc(-1 * var(--space-4));
+    padding: var(--space-2) var(--space-4);
+    border-top: 1px solid var(--color-border-default); /* decorative divider */
+  }
+
+  .site-header.has-menu.is-open .nav-list {
+    display: flex;
+  }
+
+  .site-header.has-menu .nav-list li {
+    border-bottom: 1px solid var(--color-border-default); /* decorative divider */
+  }
+
+  .site-header.has-menu .nav-list li:nth-child(5) {
+    border-bottom: 0;
+  }
+
+  .site-header.has-menu .nav-list a {
+    display: flex;
+    min-height: var(--space-13); /* 52px */
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.5rem;
+    font-weight: var(--font-weight-label);
+    color: var(--color-text-default);
+  }
+
+  .site-header.has-menu .nav-list a[aria-current="page"] {
+    font-weight: var(--font-weight-strong);
+  }
+
+  /* Contact stays in the row at 360px and wider; the in-list item is for wide screens only. */
+  .site-header.has-menu .nav-list__contact {
+    display: none;
+  }
+}
+
+/* Below 360px the row does not fit: Contact moves into the panel as the last item. */
+@media (max-width: 359px) {
+  .site-header.has-menu .nav-cta--header {
+    display: none;
+  }
+
+  .site-header.has-menu .nav-list li:nth-child(5) {
+    border-bottom: 1px solid var(--color-border-default); /* decorative divider */
+  }
+
+  .site-header.has-menu .nav-list__contact {
+    display: block;
+    padding-block: var(--space-3) var(--space-1);
+    border-bottom: 0;
+  }
+
+  .site-header.has-menu .nav-list a.nav-cta {
+    justify-content: center;
+    min-height: var(--space-12); /* 48px */
+    color: var(--color-action-on-primary);
+    font-weight: var(--font-weight-label);
+  }
+
+  .site-header.has-menu .nav-list a.nav-cta[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
 }
 
 /* ---------- Main ---------- */

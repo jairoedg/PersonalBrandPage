@@ -233,6 +233,16 @@ def check_page(page, r, all_ids):
         if not r.check(nav is not None, w, f'missing <nav aria-label="{label}">'):
             continue
         links = list(nav.find_all("a"))
+        if label == "Primary":
+            # Mobile header (2026-11-13): the Primary nav also holds a header copy of Contact. It must
+            # point where the in-list Contact link points, and it carries the same current-page mark.
+            extra = [a for a in links if "nav-cta--header" in a.attrs.get("class", "")]
+            main_contact = [a for a in links if "nav-cta--header" not in a.attrs.get("class", "") and norm(a.text()) == "Contact"]
+            r.check(len(extra) == 1 and len(main_contact) == 1
+                    and extra[0].attrs.get("href") == main_contact[0].attrs.get("href")
+                    and extra[0].attrs.get("aria-current") == main_contact[0].attrs.get("aria-current"),
+                    w, "Primary nav needs one header Contact link that matches the Contact link in the list")
+            links = [a for a in links if "nav-cta--header" not in a.attrs.get("class", "")]
         r.check([norm(a.text()) for a in links] == NAV_LINKS, w,
                 f"{label} nav links should be {', '.join(NAV_LINKS)}")
         current = [norm(a.text()) for a in links if a.attrs.get("aria-current") == "page"]

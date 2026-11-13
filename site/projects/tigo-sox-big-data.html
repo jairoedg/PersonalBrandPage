@@ -16,17 +16,23 @@
     <div class="container site-header__inner">
       <a class="site-name" href="../">Jairo Enrique Diaz</a>
       <nav aria-label="Primary">
-        <ul class="nav-list">
+        <a class="nav-cta nav-cta--header" href="../contact/">Contact</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" hidden>
+          <svg class="nav-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          <span class="nav-toggle__label">Menu</span>
+        </button>
+        <ul class="nav-list" id="site-menu">
           <li><a href="./" aria-current="page">Projects</a></li>
           <li><a href="../how-i-can-help/">How I Can Help</a></li>
           <li><a href="../leadership/">Leadership</a></li>
           <li><a href="../career-journey/">Career Journey</a></li>
           <li><a href="../about/">About</a></li>
-          <li><a class="nav-cta" href="../contact/">Contact</a></li>
+          <li class="nav-list__contact"><a class="nav-cta" href="../contact/">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  <script src="../assets/js/nav-menu.js"></script>
 
   <main id="main" class="site-main" tabindex="-1">
     <div class="container">
